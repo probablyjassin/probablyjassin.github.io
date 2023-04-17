@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gaugedle</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="stylege.css">
+	<script type="text/javascript" src="abilities.json"></script>
+	<audio controls autoplay loop>
+		<source src="./files/kahoot.mp3" type="audio/ogg">
+		<embed src="./files/kahoot.mp3" autostart="true" loop="true" hidden="true"> 
+	  </audio>
+</head>
+<body class="bg">
+
+	
+
+	<h1>The Genshin Gaugedle</h1>
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<h2>Try guessing a characters' ability using information like their <br> element, gauge units, cooldowns and more!</h2>
+
+<div class="container">
+  <img src="./images/gauge.png" class="image">
+  
+</div>
+
+
+<label for="guess-select">Guess an ability:</label>
+<p id="incorrect-guesses">Incorrect Guesses: <span id="incorrect-count">0</span>/30</p>
+<select id="guess-select">
+	<option value=""> --Guess an ability-- </option>
+	<option value="AlbedoSkill"> Albedo Skill </option>
+	<option value="AlbedoBurst"> Albedo Burst </option>
+	<option value="AlhaithamSkill"> Alhaitham Skill </option>
+	<option value="AlhaithamBurst"> Alhaitham Burst </option>
+	<option value="AloySkill"> Aloy Skill </option>
+	<option value="AloyBurst"> Aloy Burst </option>
+	<option value="AmberSkill"> Amber Skill </option>
+	<option value="AmberBurst"> Amber Burst </option>
+	<option value="AratakiIttoSkill"> Arataki Itto Skill </option>
+	<option value="AratakiIttoBurst"> Arataki Itto Burst </option>
+	<option value="BarbaraSkill"> Barbara Skill </option>
+	<option value="BarbaraBurst"> Barbara Burst </option>
+	<option value="BeidouSkill"> Beidou Skill </option>
+	<option value="BeidouBurst"> Beidou Burst </option>
+	<option value="BennettSkillPress"> Bennett Skill (Press) </option>
+	<option value="BennettSkillHold1"> Bennett Skill (Hold 1) </option>
+	<option value="BennettSkillHold2"> Bennett Skill (Hold 2) </option>
+	<option value="BennettBurst"> Bennett Burst </option>
+	<option value="CandaceSkillPress"> Candace Skill (Press) </option>
+	<option value="CandaceSkillHold"> Candace Skill (Hold) </option>
+	<option value="CandaceBurst"> Candace Burst </option>
+	<option value="ChongyunSkill"> Chongyun Skill </option>
+	<option value="ChongyunBurst"> Chongyun Burst </option>
+	<option value="ColleiSkill"> Collei Skill </option>
+	<option value="ColleiBurst"> Collei Burst </option>
+	<option value="CynoSkill"> Cyno Skill </option>
+	<option value="CynoBurst"> Cyno Burst </option>
+	<option value="DehyaSkill"> Dehya Skill </option>
+	<option value="DehyaBurst"> Dehya Burst </option>
+	<option value="DilucSkill"> Diluc Skill </option>
+	<option value="DilucBurst"> Diluc Burst </option>
+	<option value="DionaSkillPress"> Diona Skill (Press) </option>
+	<option value="DionaSkillHold"> Diona Skill (Hold) </option>
+	<option value="DionaBurst"> Diona Burst </option>
+	<option value="DoriSkill"> Dori Skill </option>
+	<option value="DoriBurst"> Dori Burst </option>
+	<option value="EulaSkillPress"> Eula Skill (Press) </option>
+	<option value="EulaSkillHold"> Eula Skill (Hold) </option>
+	<option value="EulaBurst"> Eula Burst </option>
+	<option value="FaruzanSkill"> Faruzan Skill </option>
+	<option value="FaruzanBurst"> Faruzan Burst </option>
+	<option value="FischlSkill"> Fischl Skill </option>
+	<option value="FischlBurst"> Fischl Burst </option>
+	<option value="GanyuSkill"> Ganyu Skill </option>
+	<option value="GanyuBurst"> Ganyu Burst </option>
+	<option value="GorouSkill"> Gorou Skill </option>
+	<option value="GorouBurst"> Gorou Burst </option>
+	<option value="HuTaoSkill"> Hu Tao Skill </option>
+	<option value="HuTaoBurst"> Hu Tao Burst </option>
+	<option value="JeanSkill"> Jean Skill </option>
+	<option value="JeanBurst"> Jean Burst </option>
+	<option value="KaedeharaKazuhaSkillPress"> Kaedehara Kazuha Skill (Press) </option>
+	<option value="KaedeharaKazuhaSkillHold"> Kaedehara Kazuha Skill (Hold) </option>
+	<option value="KaedeharaKazuhaBurst"> Kaedehara KazuhaBurst </option>
+	<option value="KaeyaSkill"> Kaeya Skill </option>
+	<option value="KaeyaBurst"> Kaeya Burst </option>
+	<option value="KamisatoAyakaSkill"> Kamisato Ayaka Skill </option>
+	<option value="KamisatoAyakaBurst"> Kamisato Ayaka Burst </option>
+	<option value="KamisatoAyatoSkill"> Kamisato Ayato Skill </option>
+	<option value="KamisatoAyatoBurst"> Kamisato Ayato Burst </option>
+	<option value="KavehSkill"> Kaveh Skill </option>
+	<option value="KavehBurst"> Kaveh Burst </option>
+	<option value="KeqingSkill"> Keqing Skill </option>
+	<option value="KeqingBurst"> Keqing Burst </option>
+	<option value="KleeSkill"> Klee Skill </option>
+	<option value="KleeBurst"> Klee Burst </option>
+	<option value="KujouSaraSkill"> Kujou Sara Skill </option>
+	<option value="KujouSaraBurst"> Kujou Sara Burst </option>
+	<option value="KukiShinobuSkill"> Kuki Shinobu Skill </option>
+	<option value="KukiShinobuBurst"> Kuki Shinobu Burst </option>
+	<option value="LaylaSkill"> Layla Skill </option>
+	<option value="LaylaBurst"> Layla Burst </option>
+	<option value="LisaSkillPress"> Lisa Skill (Press) </option>
+	<option value="LisaSkillHold"> Lisa Skill (Hold) </option>
+	<option value="LisaBurst"> Lisa Burst </option>
+	<option value="MikaSkill"> Mika Skill </option>
+	<option value="MikaBurst"> Mika Burst </option>
+	<option value="MonaSkill"> Mona Skill </option>
+	<option value="MonaBurst"> Mona Burst </option>
+	<option value="NahidaSkillPress"> Nahida Skill (Press) </option>
+	<option value="NahidaSkillHold"> Nahida Skill (Hold) </option>
+	<option value="NahidaBurst"> Nahida Burst </option>
+	<option value="NilouSkill"> Nilou Skill </option>
+	<option value="NilouBurst"> Nilou Burst </option>
+	<option value="NingguangSkill"> Ningguang Skill </option>
+	<option value="NingguangBurst"> Ningguang Burst </option>
+	<option value="NoelleSkill"> Noelle Skill </option>
+	<option value="NoelleBurst"> Noelle Burst </option>
+	<option value="QiqiSkill"> Qiqi Skill </option>
+	<option value="QiqiBurst"> Qiqi Burst </option>
+	<option value="RaidenShogunSkill"> Raiden Shogun Skill </option>
+	<option value="RaidenShogunBurst"> Raiden Shogun Burst </option>
+	<option value="RazorSkillPress"> RazorSkill (Press) </option>
+	<option value="RazorSkillHold"> RazorSkill (Hold) </option>
+	<option value="RazorBurst"> Razor Burst </option>
+	<option value="RosariaSkill"> Rosaria Skill </option>
+	<option value="RosariaBurst"> Rosaria Burst </option>
+	<option value="SangonomiyaKokomiSkill"> Sangonomiya Kokomi Skill </option>
+	<option value="SangonomiyaKokomiBurst"> Sangonomiya Kokomi Burst </option>
+	<option value="SayuSkill"> Sayu Skill </option>
+	<option value="SayuBurst"> Sayu Burst </option>
+	<option value="ShenheSkillPress"> Shenhe Skill Press </option>
+	<option value="ShenheSkillHold"> Shenhe Skill Hold </option>
+	<option value="ShenheBurst"> Shenhe Burst </option>
+	<option value="ShikanoinHeizouSkill"> Shikanoin Heizou Skill </option>
+	<option value="ShikanoinHeizouBurst"> Shikanoin Heizou Burst </option>
+	<option value="SucroseSkill"> Sucrose Skill </option>
+	<option value="SucroseBurst"> Sucrose Burst </option>
+	<option value="TartagliaSkill"> Tartaglia Skill </option>
+	<option value="TartagliaBurst"> Tartaglia Burst </option>
+	<option value="ThomaSkill"> Thoma Skill </option>
+	<option value="ThomaBurst"> Thoma Burst </option>
+	<option value="TighnariSkill"> Tighnari Skill </option>
+	<option value="TighnariBurst"> Tighnari Burst </option>
+	<option value="AnemoTravelerSkillPress"> Anemo Traveler Skill (Press) </option>
+	<option value="AnemoTravelerSkillHold"> Anemo Traveler Skill (Hold) </option>
+	<option value="AnemoTravelerBurst"> Anemo Traveler Burst </option>
+	<option value="DendroTravelerSkill"> Dendro Traveler Skill </option>
+	<option value="DendroTravelerBurst"> Dendro Traveler Burst </option>
+	<option value="ElectroTravelerSkill"> Electro Traveler Skill </option>
+	<option value="ElectroTravelerBurst"> Electro Traveler Burst </option>
+	<option value="GeoTravelerSkill"> Geo Traveler Skill </option>
+	<option value="GeoTravelerBurst"> Geo Traveler Burst </option>
+	<option value="VentiSkillPress"> Venti Skill (Press) </option>
+	<option value="VentiSkillHold"> Venti Skill (Hold) </option>
+	<option value="VentiBurst"> Venti Burst </option>
+	<option value="WandererSkill"> Wanderer Skill </option>
+	<option value="WandererBurst"> Wanderer Burst </option>
+	<option value="XianglingSkill"> Xiangling Skill </option>
+	<option value="XianglingBurst"> Xiangling Burst </option>
+	<option value="XiaoSkill"> Xiao Skill </option>
+	<option value="XiaoBurst"> Xiao Burst </option>
+	<option value="XingqiuSkill"> Xingqiu Skill </option>
+	<option value="XingqiuBurst"> Xingqiu Burst </option>
+	<option value="XinyanSkill"> Xinyan Skill </option>
+	<option value="XinyanBurst"> Xinyan Burst </option>
+	<option value="YaeMikoSkill"> Yae Miko Skill </option>
+	<option value="YaeMikoBurst"> Yae Miko Burst </option>
+	<option value="YanfeiSkill"> Yanfei Skill </option>
+	<option value="YanfeiBurst"> Yanfei Burst </option>
+	<option value="YaoyaoSkill"> Yaoyao Skill </option>
+	<option value="YaoyaoBurst"> Yaoyao Burst </option>
+	<option value="YelanSkill"> Yelan Skill </option>
+	<option value="YelanBurst"> Yelan Burst </option>
+	<option value="YoimiyaSkill"> Yoimiya Skill </option>
+	<option value="YoimiyaBurst"> Yoimiya Burst </option>
+	<option value="YunJinSkillPress"> Yun Jin Skill (Press) </option>
+	<option value="YunJinSkillHold"> Yun Jin Skill (Hold) </option>
+	<option value="YunJinBurst"> Yun Jin Burst </option>
+	<option value="ZhongliSkillPress"> ZhongliSkill (Press) </option>
+	<option value="ZhongliSkillHold"> ZhongliSkill (Hold) </option>
+	<option value="ZhongliBurst"> Zhongli Burst </option>	
+
+	
+
+	</select>
+	<button onclick="checkGuess()">Submit Guess</button>
+	<button id="concede-button" onclick="concede()">Concede</button>
+	<button onclick="resetTable()" onclick="reset-c" id="reset-button">Reset</button>
+	<table id="ability-table">
+		<tr>
+			<th>Ability</th>
+			<th>Cooldown</th>
+			<th>ICD</th>
+			<th>Gauge</th>
+			<th>Diameter/Width</th>
+			<th>Shape</th>
+			<th>Element</th>
+			<th>Blunt</th>
+		</tr>
+	</table>
+
+	<!--- <p id="correct-answer">Correct answer: </p> -->
+
+	<script>
+	const abilities = {
+           "AlbedoSkill": {
+			"CD": "4s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "6.8m",
+			"Shape": "Sphere",
+			"Element": "Geo",
+			"Blunt": "Yes"
+			},
+			"AlbedoBurst": {
+			"CD": "12s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "8m , 6m",
+			"Shape": "Cone, Sphere",
+			"Element": "Geo",
+			"Blunt": "Yes"
+			},
+			"AlhaithamSkill": {
+			"CD": "18s",
+			"ICD": "Special",
+			"Gauge": "1u",
+			"Diameter\/Width": "11m , 8m , 7m , 4.5m",
+			"Shape": "Cylinder, Box, Sphere",
+			"Element": "Dendro",
+			"Blunt": "No"
+			},
+			"AlhaithamBurst": {
+			"CD": "18s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "13.6m",
+			"Shape": "Cylinder",
+			"Element": "Dendro",
+			"Blunt": "No"
+			},
+			"AloySkill": {
+			"CD": "20s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "8m",
+			"Shape": "Sphere",
+			"Element": "Cryo",
+			"Blunt": "No"
+			},
+			"AloyBurst": {
+			"CD": "12s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "13m",
+			"Shape": "Sphere",
+			"Element": "Cryo",
+			"Blunt": "No"
+			},
+			"AmberSkill": {
+			"CD": "15s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "6m",
+			"Shape": "Sphere",
+			"Element": "Pyro",
+			"Blunt": "Yes"
+			},
+			"AmberBurst": {
+			"CD": "12s",
+			"ICD": "Special",
+			"Gauge": "1u",
+			"Diameter\/Width": "4m",
+			"Shape": "Sphere",
+			"Element": "Pyro",
+			"Blunt": "No"
+			},
+			"AratakiIttoSkill": {
+			"CD": "10s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "7m",
+			"Shape": "Cylinder",
+			"Element": "Geo",
+			"Blunt": "Yes"
+			},
+			"AratakiIttoBurst": {
+			"CD": "18s",
+			"ICD": "None",
+			"Gauge": "None",
+			"Diameter\/Width": "None",
+			"Shape": "None",
+			"Element": "Geo",
+			"Blunt": "No"
+			},
+			/*"BaizhuSkill": {
+			"Element": "Dendro",
+			"Blunt": "No"
+			},
+			"BaizhuBurst": {
+			"CD": "20s",
+			"Element": "Dendro",
+			"Blunt": "No"
+			},*/
+			"BarbaraSkill": {
+			"CD": "32s",
+			"ICD": "Special",
+			"Gauge": "1u",
+			"Diameter\/Width": "6m",
+			"Shape": "Cylinder",
+			"Element": "Hydro",
+			"Blunt": "No"
+			},
+			"BarbaraBurst": {
+			"CD": "20s",
+			"ICD": "None",
+			"Gauge": "None",
+			"Diameter\/Width": "None",
+			"Shape": "None",
+			"Element": "Hydro",
+			"Blunt": "No"
+			},
+			"BeidouSkill": {
+			"CD": "7.5s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "12m, 14m, 16m",
+			"Shape": "Cylinder",
+			"Element": "Electro",
+			"Blunt": "Yes"
+			},
+			"BeidouBurst": {
+			"CD": "20s",
+			"ICD": "Standard",
+			"Gauge": "4u, 1u",
+			"Diameter\/Width": "8m",
+			"Shape": "Cylinder",
+			"Element": "Electro",
+			"Blunt": "No"
+			},
+			"BennettSkillPress": {
+			"CD": "5s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "5m",
+			"Shape": "Cylinder",
+			"Element": "Pyro",
+			"Blunt": "No"
+			},
+			"BennettSkillHold1": {
+			"CD": "7.5s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "5m, 3m",
+			"Shape": "Cylinder, Box",
+			"Element": "Pyro",
+			"Blunt": "No"
+			},
+			"BennettSkillHold2": {
+			"CD": "10s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": ["5m", "4m", "7m"],
+			"Shape": "Cylinder, Box",
+			"Element": "Pyro",
+			"Blunt": "No"
+			},
+			"BennettBurst": {
+			"CD": "15s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "12m",
+			"Shape": "Cylinder",
+			"Element": "Pyro",
+			"Blunt": "No"
+			},
+			"CandaceSkillPress": {
+			"CD": "6s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "6m",
+			"Shape": "Cylinder",
+			"Element": "Hydro",
+			"Blunt": "Yes"
+			},
+			"CandaceSkillHold": {
+			"CD": "9s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "6m",
+			"Shape": "Cylinder",
+			"Element": "Hydro",
+			"Blunt": "Yes"
+			},
+			"CandaceBurst": {
+			"CD": "15s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "7m",
+			"Shape": "Sphere",
+			"Element": "Hydro",
+			"Blunt": "No"
+			},
+			"ChongyunSkill": {
+			"CD": "15s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "5m",
+			"Shape": "Sphere",
+			"Element": "Cryo",
+			"Blunt": "Yes"
+			},
+			"ChongyunBurst": {
+			"CD": "12s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "7m",
+			"Shape": "Sphere",
+			"Element": "Cryo",
+			"Blunt": "Yes"
+			},
+			"ColleiSkill": {
+			"CD": "12s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "???",
+			"Shape": "???",
+			"Element": "Dendro",
+			"Blunt": "No"
+			},
+			"ColleiBurst": {
+			"CD": "15s",
+			"ICD": "Special",
+			"Gauge": "1u",
+			"Diameter\/Width": "11m, 8m",
+			"Shape": "Cylinder, Sphere",
+			"Element": "Dendro",
+			"Blunt": "No"
+			},
+			"CynoSkill": {
+			"CD": "3s, 7.5s",
+			"ICD": "None, Special",
+			"Gauge": "1u",
+			"Diameter\/Width": "7m",
+			"Shape": "Cylinder",
+			"Element": "Electro",
+			"Blunt": "Yes"
+			},
+			"CynoBurst": {
+			"CD": "20s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "None",
+			"Shape": "None",
+			"Element": "Electro",
+			"Blunt": "Yes"
+			},
+			"DehyaSkill": {
+			"CD": "20s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "10m, 12m, 9m",
+			"Shape": "Cylinder",
+			"Element": "Pyro",
+			"Blunt": "Yes"
+			},
+			"DehyaBurst": {
+			"CD": "18s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "5m, 13m",
+			"Shape": "Cylinder, Box",
+			"Element": "Pyro",
+			"Blunt": "Yes"
+			},
+			"DilucSkill": {
+			"CD": "10s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "6m, 4.4m, 7m",
+			"Shape": "Cylinder, Box",
+			"Element": "Pyro",
+			"Blunt": "Yes"
+			},
+			"DilucBurst": {
+			"CD": "12s",
+			"ICD": "Standard",
+			"Gauge": "2u",
+			"Diameter\/Width": "16m",
+			"Shape": "Box",
+			"Element": "Pyro",
+			"Blunt": "Yes"
+			},
+			"DionaSkillPress": {
+			"CD": "6s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "1m",
+			"Shape": "Sphere",
+			"Element": "Cryo",
+			"Blunt": "No"
+			},
+			"DionaSkillHold": {
+			"CD": "15s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "1m",
+			"Shape": "Sphere",
+			"Element": "Cryo",
+			"Blunt": "No"
+			},
+			"DionaBurst": {
+			"CD": "20s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "6m, 13m",
+			"Shape": "Cylinder",
+			"Element": "Cryo",
+			"Blunt": "No"
+			},
+			"DoriSkill": {
+			"CD": "9s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "2m",
+			"Shape": "Sphere",
+			"Element": "Electro",
+			"Blunt": "No"
+			},
+			"DoriBurst": {
+			"CD": "20s",
+			"ICD": "Special",
+			"Gauge": "1u",
+			"Diameter\/Width": "1m",
+			"Shape": "Box",
+			"Element": "Electro",
+			"Blunt": "No"
+			},
+			"EulaSkillPress": {
+			"CD": "4s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "7m",
+			"Shape": "Cylinder",
+			"Element": "Cryo",
+			"Blunt": "Yes"
+			},
+			"EulaSkillHold": {
+			"CD": "10s",
+			"ICD": "None, Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "11m, 7m",
+			"Shape": "Cylinder, Sphere",
+			"Element": "Cryo",
+			"Blunt": "Yes"
+			},
+			"EulaBurst": {
+			"CD": "20s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "16m, 13m",
+			"Shape": "Cylinder, Sphere",
+			"Element": "Cryo",
+			"Blunt": "Yes"
+			},
+			"FaruzanSkill": {
+			"CD": "6s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "6m, 12m",
+			"Shape": "Cylinder, Sphere",
+			"Element": "Anemo",
+			"Blunt": "No"
+			},
+			"FaruzanBurst": {
+			"CD": "20s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "12.6m",
+			"Shape": "Sphere",
+			"Element": "Anemo",
+			"Blunt": "No"
+			},
+			"FischlSkill": {
+			"CD": "25s",
+			"ICD": "Special",
+			"Gauge": "1u",
+			"Diameter\/Width": "4m, 0.2m",
+			"Shape": "Sphere, Box",
+			"Element": "Electro",
+			"Blunt": "No"
+			},
+			"FischlBurst": {
+			"CD": "15s",
+			"ICD": "Special",
+			"Gauge": "2u",
+			"Diameter\/Width": "1m",
+			"Shape": "Sphere",
+			"Element": "Electro",
+			"Blunt": "Yes"
+			},
+			"GanyuSkill": {
+			"CD": "10s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "8m",
+			"Shape": "Cylinder",
+			"Element": "Cryo",
+			"Blunt": "No"
+			},
+			"GanyuBurst": {
+			"CD": "15s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "5m",
+			"Shape": "Sphere",
+			"Element": "Cryo",
+			"Blunt": "No"
+			},
+			"GorouSkill": {
+			"CD": "10s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "10m",
+			"Shape": "Cylinder",
+			"Element": "Geo",
+			"Blunt": "Yes"
+			},
+			"GorouBurst": {
+			"CD": "20s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "10m, 7m",
+			"Shape": "Cylinder",
+			"Element": "Geo",
+			"Blunt": "Yes"
+			},
+			"HuTaoSkill": {
+			"CD": "16s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "None",
+			"Shape": "None",
+			"Element": "Pyro",
+			"Blunt": "No"
+			},
+			"HuTaoBurst": {
+			"CD": "15s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "12m",
+			"Shape": "Cylinder",
+			"Element": "Pyro",
+			"Blunt": "No"
+			},
+			"JeanSkill": {
+			"CD": "6s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "4m",
+			"Shape": "Box",
+			"Element": "Anemo",
+			"Blunt": "No"
+			},
+			"JeanBurst": {
+			"CD": "20s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "12m",
+			"Shape": "Cylinder",
+			"Element": "Anemo",
+			"Blunt": "No"
+			},
+			"KaedeharaKazuhaSkillPress": {
+			"CD": "6s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "10m",
+			"Shape": "Cylinder",
+			"Element": "Anemo",
+			"Blunt": "No"
+			},
+			"KaedeharaKazuhaSkillHold": {
+			"CD": "9s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "18m",
+			"Shape": "Cylinder",
+			"Element": "Anemo",
+			"Blunt": "No"
+			},
+			"KaedeharaKazuhaBurst": {
+			"CD": "15s",
+			"ICD": "None",
+			"Gauge": "2u, 1u",
+			"Diameter\/Width": "18m",
+			"Shape": "Cylinder",
+			"Element": "Anemo",
+			"Blunt": "No"
+			},
+			"KaeyaSkill": {
+			"CD": "6s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "4m",
+			"Shape": "Box",
+			"Element": "Cryo",
+			"Blunt": "No"
+			},
+			"KaeyaBurst": {
+			"CD": "15s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "4m",
+			"Shape": "Sphere",
+			"Element": "Cryo",
+			"Blunt": "No"
+			},
+			"KamisatoAyakaSkill": {
+			"CD": "10s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "9m",
+			"Shape": "Cylinder",
+			"Element": "Cryo",
+			"Blunt": "No"
+			},
+			"KamisatoAyakaBurst": {
+			"CD": "20s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "6m , 10m",
+			"Shape": "Sphere",
+			"Element": "Cryo",
+			"Blunt": "No"
+			},
+			"KamisatoAyatoSkill": {
+			"CD": "12s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "7m",
+			"Shape": "Sphere",
+			"Element": "Hydro",
+			"Blunt": "No"
+			},
+			"KamisatoAyatoBurst": {
+			"CD": "20s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "7m",
+			"Shape": "Cylinder",
+			"Element": "Hydro",
+			"Blunt": "No"
+			},
+			/*"KavehSkill": {
+			"Element": "Dendro",
+			"Blunt": "No"
+			},
+			"KavehBurst": {
+			"CD": "20s",
+			"Element": "Dendro",
+			"Blunt": "No"
+			},*/
+			"KeqingSkill": {
+			"CD": "7.5s",
+			"ICD": "None, Standard",
+			"Gauge": "2u, 1u",
+			"Diameter\/Width": "3.2m, 6m, 5m",
+			"Shape": "Sphere, Cylinder",
+			"Element": "Electro",
+			"Blunt": "No"
+			},
+			"KeqingBurst": {
+			"CD": "12s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "16m",
+			"Shape": "Cylinder",
+			"Element": "Electro",
+			"Blunt": "No"
+			},
+			"KleeSkill": {
+			"CD": "20s",
+			"ICD": "Standard",
+			"Gauge": "2u, 1u",
+			"Diameter\/Width": "8m, 4m",
+			"Shape": "Sphere",
+			"Element": "Pyro",
+			"Blunt": "Yes"
+			},
+			"KleeBurst": {
+			"CD": "15s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "3m",
+			"Shape": "Sphere",
+			"Element": "Pyro",
+			"Blunt": "No"
+			},
+			"KujouSaraSkill": {
+			"CD": "10s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "12m",
+			"Shape": "Cylinder",
+			"Element": "Electro",
+			"Blunt": "No"
+			},
+			"KujouSaraBurst": {
+			"CD": "20s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "12m, 6m",
+			"Shape": "Cylinder",
+			"Element": "Electro",
+			"Blunt": "No"
+			},
+			"KukiShinobuSkill": {
+			"CD": "15s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "8m",
+			"Shape": "Cylinder",
+			"Element": "Electro",
+			"Blunt": "Yes"
+			},
+			"KukiShinobuBurst": {
+			"CD": "15s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "8m",
+			"Shape": "Cylinder",
+			"Element": "Electro",
+			"Blunt": "No"
+			},
+			"LaylaSkill": {
+			"CD": "12s",
+			"ICD": "Special",
+			"Gauge": "1u",
+			"Diameter\/Width": "5m, 1.6m",
+			"Shape": "Sphere, Cylinder",
+			"Element": "Cryo",
+			"Blunt": "No"
+			},
+			"LaylaBurst": {
+			"CD": "12s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "3m",
+			"Shape": "Sphere",
+			"Element": "Cryo",
+			"Blunt": "No"
+			},
+			"LisaSkillPress": {
+			"CD": "1s",
+			"ICD": "Special",
+			"Gauge": "1u",
+			"Diameter\/Width": "2m",
+			"Shape": "Sphere",
+			"Element": "Electro",
+			"Blunt": "No"
+			},
+			"LisaSkillHold": {
+			"CD": "16s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "20m",
+			"Shape": "Cylinder",
+			"Element": "Electro",
+			"Blunt": "No"
+			},
+			"LisaBurst": {
+			"CD": "20s",
+			"ICD": "Standard",
+			"Gauge": "1u, 0u",
+			"Diameter\/Width": "14m, 2m",
+			"Shape": "Cylinder, Sphere",
+			"Element": "Electro",
+			"Blunt": "No"
+			},
+			"MikaSkill": {
+			"CD": "15s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "2.5m, 0.3m, 0.2m",
+			"Shape": "Box",
+			"Element": "Cryo",
+			"Blunt": "No"
+			},
+			"MikaBurst": {
+			"CD": "18s",
+			"ICD": "None",
+			"Gauge": "None",
+			"Diameter\/Width": "None",
+			"Shape": "None",
+			"Element": "Cryo",
+			"Blunt": "No"
+			},
+			"MonaSkill": {
+			"CD": "12s",
+			"ICD": "None, Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "10m",
+			"Shape": "Sphere",
+			"Element": "Hydro",
+			"Blunt": "No"
+			},
+			"MonaBurst": {
+			"CD": "15s",
+			"ICD": "Standard",
+			"Gauge": "2u, 1u",
+			"Diameter\/Width": "20m",
+			"Shape": "Sphere",
+			"Element": "Hydro",
+			"Blunt": "No"
+			},
+			"NahidaSkillPress": {
+			"CD": "5s",
+			"ICD": "Special",
+			"Gauge": ["1.5u", "1u"],
+			"Diameter\/Width": "9.2m",
+			"Shape": "Cylinder",
+			"Element": "Dendro",
+			"Blunt": "No"
+			},
+			"NahidaSkillHold": {
+			"CD": "6s",
+			"ICD": "Special",
+			"Gauge": "1.5u, 1u",
+			"Diameter\/Width": "Big",
+			"Shape": "Sphere",
+			"Element": "Dendro",
+			"Blunt": "No"
+			},
+			"NahidaBurst": {
+			"CD": "13.5s",
+			"ICD": "None",
+			"Gauge": "None",
+			"Diameter\/Width": "None",
+			"Shape": "None",
+			"Element": "Dendro",
+			"Blunt": "No"
+			},
+			"NilouSkill": {
+			"CD": "18s",
+			"ICD": "Special",
+			"Gauge": "1u",
+			"Diameter\/Width": "5m, 1.75m, 3.6m, 5.4m, 2.7m",
+			"Shape": "Cylinder, Box",
+			"Element": "Hydro",
+			"Blunt": "No"
+			},
+			"NilouBurst": {
+			"CD": "18s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "???",
+			"Shape": "",
+			"Element": "Hydro",
+			"Blunt": "No"
+			},
+			"NingguangSkill": {
+			"CD": "12s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "10m",
+			"Shape": "Cylinder",
+			"Element": "Geo",
+			"Blunt": "Yes"
+			},
+			"NingguangBurst": {
+			"CD": "12s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "1m",
+			"Shape": "Sphere",
+			"Element": "Geo",
+			"Blunt": "Yes"
+			},
+			"NoelleSkill": {
+			"CD": "24s",
+			"ICD": "Standard",
+			"Gauge": "2u",
+			"Diameter\/Width": "4m",
+			"Shape": "Cylinder",
+			"Element": "Geo",
+			"Blunt": "Yes"
+			},
+			"NoelleBurst": {
+			"CD": "15s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "13m, 8m",
+			"Shape": "Cylinder",
+			"Element": "Geo",
+			"Blunt": "Yes"
+			},
+			"QiqiSkill": {
+			"CD": "30s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "5m",
+			"Shape": "Cylinder",
+			"Element": "Cryo",
+			"Blunt": "No"
+			},
+			"QiqiBurst": {
+			"CD": "20s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "14m",
+			"Shape": "Cylinder",
+			"Element": "Cryo",
+			"Blunt": "No"
+			},
+			"RaidenShogunSkill": {
+			"CD": "10s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "10m, 8m",
+			"Shape": "Sphere",
+			"Element": "Electro",
+			"Blunt": "No"
+			},
+			"RaidenShogunBurst": {
+			"CD": "18s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "13m",
+			"Shape": "Box",
+			"Element": "Electro",
+			"Blunt": "No"
+			},
+			"RazorSkillPress": {
+			"CD": "6s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "4.8m",
+			"Shape": "Cylinder",
+			"Element": "Electro",
+			"Blunt": "No"
+			},
+			"RazorSkillHold": {
+			"CD": "10s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "10m",
+			"Shape": "Sphere",
+			"Element": "Electro",
+			"Blunt": "Yes"
+			},
+			"RazorBurst": {
+			"CD": "20s",
+			"ICD": "Standard",
+			"Gauge": "2u, 1u",
+			"Diameter\/Width": "10m",
+			"Shape": "Sphere",
+			"Element": "Electro",
+			"Blunt": "Yes"
+			},
+			"RosariaSkill": {
+			"CD": "6s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "2m, 5.6m",
+			"Shape": "Box, Cylinder",
+			"Element": "Cryo",
+			"Blunt": "No"
+			},
+			"RosariaBurst": {
+			"CD": "15s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "7m, 13m, 12m",
+			"Shape": "Cylinder",
+			"Element": "Cryo",
+			"Blunt": "No"
+			},
+			"SangonomiyaKokomiSkill": {
+			"CD": "20s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "12m",
+			"Shape": "Sphere",
+			"Element": "Hydro",
+			"Blunt": "No"
+			},
+			"SangonomiyaKokomiBurst": {
+			"CD": "18s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "10m",
+			"Shape": "Sphere",
+			"Element": "Hydro",
+			"Blunt": "No"
+			},
+			"SayuSkill": {
+			"CD": "6s-11s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "5m, 6m",
+			"Shape": "Cylinder",
+			"Element": "Anemo",
+			"Blunt": "No"
+			},
+			"SayuBurst": {
+			"CD": "20s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "9m, 7m",
+			"Shape": "Cylinder",
+			"Element": "Anemo",
+			"Blunt": "No"
+			},
+			"ShenheSkillPress": {
+			"CD": "10s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "???",
+			"Element": "Cryo",
+			"Blunt": "No"
+			},
+			"ShenheSkillHold": {
+			"CD": "15s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "8m",
+			"Shape": "Sphere",
+			"Element": "Cryo",
+			"Blunt": "No"
+			},
+			"ShenheBurst": {
+			"CD": "20s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "8m, 14m",
+			"Shape": "Cylinder, Cone",
+			"Element": "Cryo",
+			"Blunt": "Yes"
+			},
+			"ShikanoinHeizouSkill": {
+			"CD": "10s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "3m, 4m",
+			"Shape": "Box",
+			"Element": "Anemo",
+			"Blunt": "No"
+			},
+			"ShikanoinHeizouBurst": {
+			"CD": "12s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "12m, 5m",
+			"Shape": "Sphere",
+			"Element": "Anemo",
+			"Blunt": "No"
+			},
+			"SucroseSkill": {
+			"CD": "15s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "12m",
+			"Shape": "Cylinder",
+			"Element": "Anemo",
+			"Blunt": "No"
+			},
+			"SucroseBurst": {
+			"CD": "20s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "10m",
+			"Shape": "Cylinder",
+			"Element": "Anemo",
+			"Blunt": "No"
+			},
+			"TartagliaSkill": {
+			"CD": "6s-36s, 45s",
+			"ICD": "None",
+			"Gauge": ["2u", "1u"],
+			"Diameter\/Width": "6m",
+			"Shape": "Sphere",
+			"Element": "Hydro",
+			"Blunt": "Yes"
+			},
+			"TartagliaBurst": {
+			"CD": "15s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "12m, 16m, 10m",
+			"Shape": ["Cylinder", "Sphere"],
+			"Element": "Hydro",
+			"Blunt": "No"
+			},
+			"ThomaSkill": {
+			"CD": "15s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "6m",
+			"Shape": "Cylinder",
+			"Element": "Pyro",
+			"Blunt": "No"
+			},
+			"ThomaBurst": {
+			"CD": "20s",
+			"ICD": "Standard",
+			"Gauge": "2u, 1u",
+			"Diameter\/Width": "8m, 4.5m",
+			"Shape": "Cylinder, Box",
+			"Element": "Pyro",
+			"Blunt": "No"
+			},
+			"TighnariSkill": {
+			"CD": "12s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "12m",
+			"Shape": "Cylinder",
+			"Element": "Dendro",
+			"Blunt": "No"
+			},
+			"TighnariBurst": {
+			"CD": "12s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "2m",
+			"Shape": "Sphere",
+			"Element": "Dendro",
+			"Blunt": "No"
+			},
+			"AnemoTravelerSkillPress": {
+			"CD": "5s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "6m",
+			"Shape": "Cone",
+			"Element": "Anemo",
+			"Blunt": "No"
+			},
+			"AnemoTravelerSkillHold": {
+			"CD": "8s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "6m",
+			"Shape": "Cone",
+			"Element": "Anemo",
+			"Blunt": "No"
+			},
+			"AnemoTravelerBurst": {
+			"CD": "15s",
+			"ICD": "Standard",
+			"Gauge": "2u, 1u",
+			"Diameter\/Width": "3m, 2.5m",
+			"Shape": "Box",
+			"Element": "Anemo",
+			"Blunt": "No"
+			},
+			"DendroTravelerSkill": {
+			"CD": "8s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "6.5m",
+			"Shape": "Cone",
+			"Element": "Dendro",
+			"Blunt": "No"
+			},
+			"DendroTravelerBurst": {
+			"CD": "20s",
+			"ICD": "Standard",
+			"Gauge": "2u, 1u",
+			"Diameter\/Width": "4m, 8m, 13m",
+			"Shape": "Cylinder",
+			"Element": "Dendro",
+			"Blunt": "No"
+			},
+			"ElectroTravelerSkill": {
+			"CD": "13.5s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "???",
+			"Shape": "???",
+			"Element": "Electro",
+			"Blunt": "No"
+			},
+			"ElectroTravelerBurst": {
+			"CD": "20s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "10m, 4m",
+			"Shape": "Sphere",
+			"Element": "Electro",
+			"Blunt": "Yes"
+			},
+			"GeoTravelerSkill": {
+			"CD": "8s",
+			"ICD": "Standard",
+			"Gauge": "2u",
+			"Diameter\/Width": "6m",
+			"Shape": "Cylinder",
+			"Element": "Geo",
+			"Blunt": "Yes"
+			},
+			"GeoTravelerBurst": {
+			"CD": "15s",
+			"ICD": "Standard",
+			"Gauge": "2u",
+			"Diameter\/Width": "12m",
+			"Shape": "Cylinder",
+			"Element": "Geo",
+			"Blunt": "Yes"
+			},
+			"VentiSkillPress": {
+			"CD": "6s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "6m",
+			"Shape": "Sphere",
+			"Element": "Anemo",
+			"Blunt": "No"
+			},
+			"VentiSkillHold": {
+			"CD": "15s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "12m",
+			"Shape": "Sphere",
+			"Element": "Anemo",
+			"Blunt": "No"
+			},
+			"VentiBurst": {
+			"CD": "15s",
+			"ICD": "Special",
+			"Gauge": "1u",
+			"Diameter\/Width": "8m, 12m",
+			"Shape": "Sphere",
+			"Element": "Anemo",
+			"Blunt": "No"
+			},
+			"WandererSkill": {
+			"CD": "6s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "12m",
+			"Shape": "Cylinder",
+			"Element": "Anemo",
+			"Blunt": "No"
+			},
+			"WandererBurst": {
+			"CD": "15s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "10m",
+			"Shape": "Cylinder",
+			"Element": "Anemo",
+			"Blunt": "No"
+			},
+			"XianglingSkill": {
+			"CD": "12s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "5m",
+			"Shape": "Cone",
+			"Element": "Pyro",
+			"Blunt": "No"
+			},
+			"XianglingBurst": {
+			"CD": "20s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "5m, 6m",
+			"Shape": "Cylinder",
+			"Element": "Pyro",
+			"Blunt": "No"
+			},
+			"XiaoSkill": {
+			"CD": "10s",
+			"ICD": "Special",
+			"Gauge": "1u",
+			"Diameter\/Width": "1.6m",
+			"Shape": "Sphere",
+			"Element": "Anemo",
+			"Blunt": "No"
+			},
+			"XiaoBurst": {
+			"CD": "18s",
+			"ICD": "None",
+			"Gauge": "None",
+			"Diameter\/Width": "None",
+			"Shape": "None",
+			"Element": "Anemo",
+			"Blunt": "No"
+			},
+			"XingqiuSkill": {
+			"CD": "21s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "6m, 3.5m",
+			"Shape": "Cylinder, Box",
+			"Element": "Hydro",
+			"Blunt": "Yes"
+			},
+			"XingqiuBurst": {
+			"CD": "20s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "1m",
+			"Shape": "Sphere",
+			"Element": "Hydro",
+			"Blunt": "No"
+			},
+			"XinyanSkill": {
+			"CD": "18s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "6m",
+			"Shape": "Cylinder",
+			"Element": "Pyro",
+			"Blunt": "No"
+			},
+			"XinyanBurst": {
+			"CD": "15s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "6m, 8m",
+			"Shape": "Cylinder",
+			"Element": "Pyro",
+			"Blunt": "No"
+			},
+			"YaeMikoSkill": {
+			"CD": "4s",
+			"ICD": "Standard",
+			"Gauge": "1u",
+			"Diameter\/Width": "1m",
+			"Shape": "Cylinder",
+			"Element": "Electro",
+			"Blunt": "No"
+			},
+			"YaeMikoBurst": {
+			"CD": "22s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "14m",
+			"Shape": "Cylinder",
+			"Element": "Electro",
+			"Blunt": "No"
+			},
+			"YanfeiSkill": {
+			"CD": "9s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "7m",
+			"Shape": "Sphere",
+			"Element": "Pyro",
+			"Blunt": "Yes"
+			},
+			"YanfeiBurst": {
+			"CD": "20s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "13m",
+			"Shape": "Cylinder",
+			"Element": "Pyro",
+			"Blunt": "Yes"
+			},
+			"YaoyaoSkill": {
+			"CD": "15s",
+			"ICD": "Special",
+			"Gauge": "1u",
+			"Diameter\/Width": "4m",
+			"Shape": "Sphere",
+			"Element": "Dendro",
+			"Blunt": "No"
+			},
+			"YaoyaoBurst": {
+			"CD": "20s",
+			"ICD": "Special",
+			"Gauge": "1u",
+			"Diameter\/Width": "6m, 4m",
+			"Shape": "Cylinder, Sphere",
+			"Element": "Dendro",
+			"Blunt": "No"
+			},
+			"YelanSkill": {
+			"CD": "10s",
+			"ICD": "None",
+			"Gauge": "1u",
+			"Diameter\/Width": "???",
+			"Shape": "???",
+			"Element": "Hydro",
+			"Blunt": "No"
+			},
+			"YelanBurst": {
+			"CD": "18s",
+			"ICD": "Special",
+			"Gauge": "2u, 1u",
+			"Diameter\/Width": "12m, 1m",
+			"Shape": "Cylinder, Sphere",
+			"Element": "Hydro",
+			"Blunt": "No"
+			},
+			"YoimiyaSkill": {
+			"CD": "18s",
+			"ICD": "None",
+			"Gauge": "None",
+			"Diameter\/Width": "None",
+			"Shape": "None",
+			"Element": "Pyro",
+			"Blunt": "No"
+			},
+			"YoimiyaBurst": {
+			"CD": "15s",
+			"ICD": "Standard",
+			"Gauge": "2u, 1u",
+			"Diameter\/Width": "12m, 6m",
+			"Shape": "Sphere",
+			"Element": "Pyro",
+			"Blunt": "Yes"
+			},
+			"YunJinSkillPress": {
+			"CD": "9s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "8m",
+			"Shape": "Cylinder",
+			"Element": "Geo",
+			"Blunt": "No"
+			},
+			"YunJinSkillHold": {
+			"CD": "9s",
+			"ICD": "None",
+			"Gauge": "4u, 2u",
+			"Diameter\/Width": "12m, 16m",
+			"Shape": "Cylinder",
+			"Element": "Geo",
+			"Blunt": "No"
+			},
+			"YunJinBurst": {
+			"CD": "15s",
+			"ICD": "None",
+			"Gauge": "2u",
+			"Diameter\/Width": "12m",
+			"Shape": "Cylinder",
+			"Element": "Geo",
+			"Blunt": "Yes"
+			},
+			"ZhongliSkillPress": {
+			"CD": "4s",
+			"ICD": "Standard",
+			"Gauge": "2u, 1u",
+			"Diameter\/Width": "4m, 8m",
+			"Shape": "Sphere, Box",
+			"Element": "Geo",
+			"Blunt": "Yes"
+			},
+			"ZhongliSkillHold": {
+			"CD": "12s",
+			"ICD": "Standard",
+			"Gauge": "2u, 1u",
+			"Diameter\/Width": "20m, 8m",
+			"Shape": "Cylinder, Box",
+			"Element": "Geo",
+			"Blunt": "Yes"
+			},
+			"ZhongliBurst": {
+			"CD": "12s",
+			"ICD": "None",
+			"Gauge": "4u",
+			"Diameter\/Width": "15m",
+			"Shape": "Cylinder",
+			"Element": "Geo",
+			"Blunt": "Yes"
+			},
+        }; 
+		/*
+		const abilities = fetch('abilities.json')
+  		.then(response => response.json())
+  		.catch(error => {
+    	console.error('Error fetching data:', error);
+  	});
+*/
+
+       // Chose random ability
+let randomAbility = "";
+function generateRandomAbility() {
+    const abilityOptions = Object.keys(abilities);
+    randomAbility = abilityOptions[Math.floor(Math.random() * abilityOptions.length)];
+}
+generateRandomAbility();
+
+// Select the guess select and ability table elements
+const guessSelect = document.getElementById("guess-select");
+const abilityTable = document.getElementById("ability-table");
+
+// Initialize the counter for incorrect guesses
+let incorrectGuesses = 0;
+
+// Select the incorrect guess count element
+const incorrectCount = document.getElementById("incorrect-count");
+
+/*
+// DEVELOPEMENT: Select the correct answer element
+
+const correctAnswer = document.getElementById("correct-answer");
+
+// DEVELOPEMENT: Display the correct answer
+
+correctAnswer.textContent += randomAbility; */
+
+// Function to check the guess and update the table
+function checkGuess() {
+	const selectedAbility = guessSelect.value;
+	if (selectedAbility === "") {
+		alert("Please select an ability to guess.");
+		return;
+	}
+
+	// Create a new row for the guess
+	const newRow = abilityTable.insertRow();
+	const newGuessCell = newRow.insertCell();
+	newGuessCell.textContent = selectedAbility;
+
+	let allMatch = true; // assume all properties match
+	for (let property in abilities[randomAbility]) {
+		const newValueCell = newRow.insertCell();
+		newValueCell.textContent = abilities[selectedAbility][property];
+
+		if (abilities[selectedAbility][property] === abilities[randomAbility][property]) {
+			newValueCell.classList.add("correct");
+		} else if (intersection(
+			abilities[selectedAbility][property].split(' '),
+			abilities[randomAbility][property].split(' ')
+		).length > 0) {
+			// Check if there is any overlap between the guessed and correct values
+			newValueCell.classList.add("partial");
+			allMatch = false; // at least one property doesn't match
+		} else {
+			newValueCell.classList.add("incorrect");
+			++incorrectGuesses;
+			incorrectCount.textContent = incorrectGuesses; // update the incorrect guess count on screen
+			allMatch = false; // at least one property doesn't match
+		}
+	}
+
+	// Initialize correctGuess variable
+		let correctGuess = false;
+
+		// Check if player has guessed the correct ability
+		if (selectedAbility === randomAbility) {
+			correctGuess = true;
+		}
+
+		// Insert new row if correct guess was made
+		/* if (correctGuess) {
+			const newRow = abilityTable.insertRow();
+			const newGuessCell = newRow.insertCell();
+			newGuessCell.textContent = randomAbility;
+			for (let property in abilities[randomAbility]) {
+				const newValueCell = newRow.insertCell();
+				newValueCell.textContent = abilities[randomAbility][property];
+				newValueCell.classList.add("correct");
+			}
+		} */
+
+		// Show alert and reset table
+		if (correctGuess) {
+			setTimeout(function() {
+				alert(`${randomAbility} was the correct ability. Congratulations!`);
+				resetTable();
+			}, 100);
+		}
+
+
+	// Check if player has reached 20 incorrect guesses
+	if (incorrectGuesses >= 30) {
+		alert(`You have reached 30 incorrect guesses. The correct ability was ${randomAbility}.`);
+		resetTable(); 
+		incorrectCount.textContent = `0`;
+	}
+}
+
+function intersection(a, b) {
+    // Returns the intersection of two arrays
+    return a.filter(value => b.includes(value));
+}
+
+// Function to reset the table and generate a new random ability item
+function resetTable() {
+    // Clear the table
+    while (abilityTable.rows.length > 1) {
+        abilityTable.deleteRow(1);
+
+	
+
+    // Generate a new random ability as correct answer
+    generateRandomAbility();
+
+    // Reset the incorrect guesses counter
+    incorrectGuesses = 0;
+}
+}
+// Add event listener to reset button
+	const resetButton = document.getElementById("reset-button");
+	resetButton.addEventListener("click", resetCounter);
+
+	function resetCounter() {
+	incorrectGuesses = 0;
+	incorrectCount.textContent = `0`;
+}
+
+// Select the concede button element
+const concedeButton = document.getElementById("concede-button");
+
+// Add event listener to concede button
+concedeButton.addEventListener("click", showCorrectAnswer);
+
+// Function to display the correct answer
+function showCorrectAnswer() {
+  alert(`The correct ability was ${randomAbility}.`); resetCounter(); resetTable();
+}
+
+    </script>
+	
+	<footer>
+		<h3><a href="version.html"> Version 2.2</a></h3>
+		<h3> Made by probablyjassin </h3>
+		<h3> Contact: Follow me on <a href="aboutme.html">my Social Media</a></h3>
+		<h3>The database this is based on was provided by <a href="https://www.twitch.tv/Zajef77"> Zajef77</a></h3>
+	</footer>
+
+</body>
+</html>
