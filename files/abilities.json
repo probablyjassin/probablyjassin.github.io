@@ -1,0 +1,1501 @@
+[
+    {"AlbedoSkill": {
+    "Type": "Skill",
+    "CD": "4s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "6.8m",
+    "Shape": "Sphere",
+    "Element": "Geo",
+    "Blunt": "Yes"
+    }},
+    {"AlbedoBurst": {
+    "Type": "Burst",
+    "CD": "12s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "8m , 6m",
+    "Shape": "Cone, Sphere",
+    "Element": "Geo",
+    "Blunt": "Yes"
+    }},
+    {"AlhaithamSkill": {
+    "Type": "Skill",
+    "CD": "18s",
+    "ICD": "Special",
+    "Gauge": "1u",
+    "Diameter\/Width": "11m , 8m , 7m , 4.5m",
+    "Shape": "Cylinder, Box, Sphere",
+    "Element": "Dendro",
+    "Blunt": "No"
+    }},
+    {"AlhaithamBurst": {
+    "Type": "Burst",
+    "CD": "18s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "13.6m",
+    "Shape": "Cylinder",
+    "Element": "Dendro",
+    "Blunt": "No"
+    }},
+    {"AloySkill": {
+    "Type": "Skill",
+    "CD": "20s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "8m",
+    "Shape": "Sphere",
+    "Element": "Cryo",
+    "Blunt": "No"
+    }},
+    {"AloyBurst": {
+    "Type": "Burst",
+    "CD": "12s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "13m",
+    "Shape": "Sphere",
+    "Element": "Cryo",
+    "Blunt": "No"
+    }},
+    {"AmberSkill": {
+    "Type": "Skill",
+    "CD": "15s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "6m",
+    "Shape": "Sphere",
+    "Element": "Pyro",
+    "Blunt": "Yes"
+    }},
+    {"AmberBurst": {
+    "Type": "Burst",
+    "CD": "12s",
+    "ICD": "Special",
+    "Gauge": "1u",
+    "Diameter\/Width": "4m",
+    "Shape": "Sphere",
+    "Element": "Pyro",
+    "Blunt": "No"
+    }},
+    {"AratakiIttoSkill": {
+    "Type": "Skill",
+    "CD": "10s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "7m",
+    "Shape": "Cylinder",
+    "Element": "Geo",
+    "Blunt": "Yes"
+    }},
+    {"AratakiIttoBurst": {
+    "Type": "Burst",
+    "CD": "18s",
+    "ICD": "None",
+    "Gauge": "None",
+    "Diameter\/Width": "None",
+    "Shape": "None",
+    "Element": "Geo",
+    "Blunt": "No"
+    }},
+    {"BarbaraSkill": {
+    "Type": "Skill",
+    "CD": "32s",
+    "ICD": "Special",
+    "Gauge": "1u",
+    "Diameter\/Width": "6m",
+    "Shape": "Cylinder",
+    "Element": "Hydro",
+    "Blunt": "No"
+    }},
+    {"BarbaraBurst": {
+    "Type": "Burst",
+    "CD": "20s",
+    "ICD": "None",
+    "Gauge": "None",
+    "Diameter\/Width": "None",
+    "Shape": "None",
+    "Element": "Hydro",
+    "Blunt": "No"
+    }},
+    {"BeidouSkill": {
+    "Type": "Skill",
+    "CD": "7.5s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "12m, 14m, 16m",
+    "Shape": "Cylinder",
+    "Element": "Electro",
+    "Blunt": "Yes"
+    }},
+    {"BeidouBurst": {
+    "Type": "Burst",
+    "CD": "20s",
+    "ICD": "Standard",
+    "Gauge": "4u, 1u",
+    "Diameter\/Width": "8m",
+    "Shape": "Cylinder",
+    "Element": "Electro",
+    "Blunt": "No"
+    }},
+    {"BennettSkillPress": {
+    "Type": "Skill",
+    "CD": "5s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "5m",
+    "Shape": "Cylinder",
+    "Element": "Pyro",
+    "Blunt": "No"
+    }},
+    {"BennettSkillHold1": {
+    "Type": "Skill",
+    "CD": "7.5s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "5m, 3m",
+    "Shape": "Cylinder, Box",
+    "Element": "Pyro",
+    "Blunt": "No"
+    }},
+    {"BennettSkillHold2": {
+    "Type": "Skill",
+    "CD": "10s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": ["5m", "4m", "7m"],
+    "Shape": "Cylinder, Box",
+    "Element": "Pyro",
+    "Blunt": "No"
+    }},
+    {"BennettBurst": {
+    "Type": "Burst",
+    "CD": "15s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "12m",
+    "Shape": "Cylinder",
+    "Element": "Pyro",
+    "Blunt": "No"
+    }},
+    {"CandaceSkillPress": {
+    "Type": "Skill",
+    "CD": "6s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "6m",
+    "Shape": "Cylinder",
+    "Element": "Hydro",
+    "Blunt": "Yes"
+    }},
+    {"CandaceSkillHold": {
+    "Type": "Skill",
+    "CD": "9s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "6m",
+    "Shape": "Cylinder",
+    "Element": "Hydro",
+    "Blunt": "Yes"
+    }},
+    {"CandaceBurst": {
+    "Type": "Burst",
+    "CD": "15s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "7m",
+    "Shape": "Sphere",
+    "Element": "Hydro",
+    "Blunt": "No"
+    }},
+    {"ChongyunSkill": {
+    "Type": "Skill",
+    "CD": "15s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "5m",
+    "Shape": "Sphere",
+    "Element": "Cryo",
+    "Blunt": "Yes"
+    }},
+    {"ChongyunBurst": {
+    "Type": "Burst",
+    "CD": "12s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "7m",
+    "Shape": "Sphere",
+    "Element": "Cryo",
+    "Blunt": "Yes"
+    }},
+    {"ColleiSkill": {
+    "Type": "Skill",
+    "CD": "12s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "???",
+    "Shape": "???",
+    "Element": "Dendro",
+    "Blunt": "No"
+    }},
+    {"ColleiBurst": {
+    "Type": "Burst",
+    "CD": "15s",
+    "ICD": "Special",
+    "Gauge": "1u",
+    "Diameter\/Width": "11m, 8m",
+    "Shape": "Cylinder, Sphere",
+    "Element": "Dendro",
+    "Blunt": "No"
+    }},
+    {"CynoSkill": {
+    "Type": "Skill",
+    "CD": "3s, 7.5s",
+    "ICD": "None, Special",
+    "Gauge": "1u",
+    "Diameter\/Width": "7m",
+    "Shape": "Cylinder",
+    "Element": "Electro",
+    "Blunt": "Yes"
+    }},
+    {"CynoBurst": {
+    "Type": "Burst",
+    "CD": "20s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "None",
+    "Shape": "None",
+    "Element": "Electro",
+    "Blunt": "Yes"
+    }},
+    {"DehyaSkill": {
+    "Type": "Skill",
+    "CD": "20s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "10m, 12m, 9m",
+    "Shape": "Cylinder",
+    "Element": "Pyro",
+    "Blunt": "Yes"
+    }},
+    {"DehyaBurst": {
+    "Type": "Burst",
+    "CD": "18s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "5m, 13m",
+    "Shape": "Cylinder, Box",
+    "Element": "Pyro",
+    "Blunt": "Yes"
+    }},
+    {"DilucSkill": {
+    "Type": "Skill",
+    "CD": "10s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "6m, 4.4m, 7m",
+    "Shape": "Cylinder, Box",
+    "Element": "Pyro",
+    "Blunt": "Yes"
+    }},
+    {"DilucBurst": {
+    "Type": "Burst",
+    "CD": "12s",
+    "ICD": "Standard",
+    "Gauge": "2u",
+    "Diameter\/Width": "16m",
+    "Shape": "Box",
+    "Element": "Pyro",
+    "Blunt": "Yes"
+    }},
+    {"DionaSkillPress": {
+    "Type": "Skill",
+    "CD": "6s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "1m",
+    "Shape": "Sphere",
+    "Element": "Cryo",
+    "Blunt": "No"
+    }},
+    {"DionaSkillHold": {
+    "Type": "Skill",
+    "CD": "15s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "1m",
+    "Shape": "Sphere",
+    "Element": "Cryo",
+    "Blunt": "No"
+    }},
+    {"DionaBurst": {
+    "Type": "Burst",
+    "CD": "20s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "6m, 13m",
+    "Shape": "Cylinder",
+    "Element": "Cryo",
+    "Blunt": "No"
+    }},
+    {"DoriSkill": {
+    "Type": "Skill",
+    "CD": "9s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "2m",
+    "Shape": "Sphere",
+    "Element": "Electro",
+    "Blunt": "No"
+    }},
+    {"DoriBurst": {
+    "Type": "Burst",
+    "CD": "20s",
+    "ICD": "Special",
+    "Gauge": "1u",
+    "Diameter\/Width": "1m",
+    "Shape": "Box",
+    "Element": "Electro",
+    "Blunt": "No"
+    }},
+    {"EulaSkillPress": {
+    "Type": "Skill",
+    "CD": "4s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "7m",
+    "Shape": "Cylinder",
+    "Element": "Cryo",
+    "Blunt": "Yes"
+    }},
+    {"EulaSkillHold": {
+    "Type": "Skill",
+    "CD": "10s",
+    "ICD": "None, Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "11m, 7m",
+    "Shape": "Cylinder, Sphere",
+    "Element": "Cryo",
+    "Blunt": "Yes"
+    }},
+    {"EulaBurst": {
+    "Type": "Burst",
+    "CD": "20s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "16m, 13m",
+    "Shape": "Cylinder, Sphere",
+    "Element": "Cryo",
+    "Blunt": "Yes"
+    }},
+    {"FaruzanSkill": {
+    "Type": "Skill",
+    "CD": "6s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "6m, 12m",
+    "Shape": "Cylinder, Sphere",
+    "Element": "Anemo",
+    "Blunt": "No"
+    }},
+    {"FaruzanBurst": {
+    "Type": "Burst",
+    "CD": "20s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "12.6m",
+    "Shape": "Sphere",
+    "Element": "Anemo",
+    "Blunt": "No"
+    }},
+    {"FischlSkill": {
+    "Type": "Skill",
+    "CD": "25s",
+    "ICD": "Special",
+    "Gauge": "1u",
+    "Diameter\/Width": "4m, 0.2m",
+    "Shape": "Sphere, Box",
+    "Element": "Electro",
+    "Blunt": "No"
+    }},
+    {"FischlBurst": {
+    "Type": "Burst",
+    "CD": "15s",
+    "ICD": "Special",
+    "Gauge": "2u",
+    "Diameter\/Width": "1m",
+    "Shape": "Sphere",
+    "Element": "Electro",
+    "Blunt": "Yes"
+    }},
+    {"GanyuSkill": {
+    "Type": "Skill",
+    "CD": "10s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "8m",
+    "Shape": "Cylinder",
+    "Element": "Cryo",
+    "Blunt": "No"
+    }},
+    {"GanyuBurst": {
+    "Type": "Burst",
+    "CD": "15s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "5m",
+    "Shape": "Sphere",
+    "Element": "Cryo",
+    "Blunt": "No"
+    }},
+    {"GorouSkill": {
+    "Type": "Skill",
+    "CD": "10s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "10m",
+    "Shape": "Cylinder",
+    "Element": "Geo",
+    "Blunt": "Yes"
+    }},
+    {"GorouBurst": {
+    "Type": "Burst",
+    "CD": "20s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "10m, 7m",
+    "Shape": "Cylinder",
+    "Element": "Geo",
+    "Blunt": "Yes"
+    }},
+    {"HuTaoSkill": {
+    "Type": "Skill",
+    "CD": "16s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "None",
+    "Shape": "None",
+    "Element": "Pyro",
+    "Blunt": "No"
+    }},
+    {"HuTaoBurst": {
+    "Type": "Burst",
+    "CD": "15s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "12m",
+    "Shape": "Cylinder",
+    "Element": "Pyro",
+    "Blunt": "No"
+    }},
+    {"JeanSkill": {
+    "Type": "Skill",
+    "CD": "6s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "4m",
+    "Shape": "Box",
+    "Element": "Anemo",
+    "Blunt": "No"
+    }},
+    {"JeanBurst": {
+    "Type": "Burst",
+    "CD": "20s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "12m",
+    "Shape": "Cylinder",
+    "Element": "Anemo",
+    "Blunt": "No"
+    }},
+    {"KaedeharaKazuhaSkillPress": {
+    "Type": "Skill",
+    "CD": "6s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "10m",
+    "Shape": "Cylinder",
+    "Element": "Anemo",
+    "Blunt": "No"
+    }},
+    {"KaedeharaKazuhaSkillHold": {
+    "Type": "Skill",
+    "CD": "9s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "18m",
+    "Shape": "Cylinder",
+    "Element": "Anemo",
+    "Blunt": "No"
+    }},
+    {"KaedeharaKazuhaBurst": {
+    "Type": "Burst",
+    "CD": "15s",
+    "ICD": "None",
+    "Gauge": "2u, 1u",
+    "Diameter\/Width": "18m",
+    "Shape": "Cylinder",
+    "Element": "Anemo",
+    "Blunt": "No"
+    }},
+    {"KaeyaSkill": {
+    "Type": "Skill",
+    "CD": "6s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "4m",
+    "Shape": "Box",
+    "Element": "Cryo",
+    "Blunt": "No"
+    }},
+    {"KaeyaBurst": {
+    "Type": "Burst",
+    "CD": "15s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "4m",
+    "Shape": "Sphere",
+    "Element": "Cryo",
+    "Blunt": "No"
+    }},
+    {"KamisatoAyakaSkill": {
+    "Type": "Skill",
+    "CD": "10s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "9m",
+    "Shape": "Cylinder",
+    "Element": "Cryo",
+    "Blunt": "No"
+    }},
+    {"KamisatoAyakaBurst": {
+    "Type": "Burst",
+    "CD": "20s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "6m , 10m",
+    "Shape": "Sphere",
+    "Element": "Cryo",
+    "Blunt": "No"
+    }},
+    {"KamisatoAyatoSkill": {
+    "Type": "Skill",
+    "CD": "12s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "7m",
+    "Shape": "Sphere",
+    "Element": "Hydro",
+    "Blunt": "No"
+    }},
+    {"KamisatoAyatoBurst": {
+    "Type": "Burst",
+    "CD": "20s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "7m",
+    "Shape": "Cylinder",
+    "Element": "Hydro",
+    "Blunt": "No"
+    }},
+    {"KeqingSkill": {
+    "Type": "Skill",
+    "CD": "7.5s",
+    "ICD": "None, Standard",
+    "Gauge": "2u, 1u",
+    "Diameter\/Width": "3.2m, 6m, 5m",
+    "Shape": "Sphere, Cylinder",
+    "Element": "Electro",
+    "Blunt": "No"
+    }},
+    {"KeqingBurst": {
+    "Type": "Burst",
+    "CD": "12s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "16m",
+    "Shape": "Cylinder",
+    "Element": "Electro",
+    "Blunt": "No"
+    }},
+    {"KleeSkill": {
+    "Type": "Skill",
+    "CD": "20s",
+    "ICD": "Standard",
+    "Gauge": "2u, 1u",
+    "Diameter\/Width": "8m, 4m",
+    "Shape": "Sphere",
+    "Element": "Pyro",
+    "Blunt": "Yes"
+    }},
+    {"KleeBurst": {
+    "Type": "Burst",
+    "CD": "15s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "3m",
+    "Shape": "Sphere",
+    "Element": "Pyro",
+    "Blunt": "No"
+    }},
+    {"KujouSaraSkill": {
+    "Type": "Skill",
+    "CD": "10s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "12m",
+    "Shape": "Cylinder",
+    "Element": "Electro",
+    "Blunt": "No"
+    }},
+    {"KujouSaraBurst": {
+    "Type": "Burst",
+    "CD": "20s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "12m, 6m",
+    "Shape": "Cylinder",
+    "Element": "Electro",
+    "Blunt": "No"
+    }},
+    {"KukiShinobuSkill": {
+    "Type": "Skill",
+    "CD": "15s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "8m",
+    "Shape": "Cylinder",
+    "Element": "Electro",
+    "Blunt": "Yes"
+    }},
+    {"KukiShinobuBurst": {
+    "Type": "Burst",
+    "CD": "15s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "8m",
+    "Shape": "Cylinder",
+    "Element": "Electro",
+    "Blunt": "No"
+    }},
+    {"LaylaSkill": {
+    "Type": "Skill",
+    "CD": "12s",
+    "ICD": "Special",
+    "Gauge": "1u",
+    "Diameter\/Width": "5m, 1.6m",
+    "Shape": "Sphere, Cylinder",
+    "Element": "Cryo",
+    "Blunt": "No"
+    }},
+    {"LaylaBurst": {
+    "Type": "Burst",
+    "CD": "12s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "3m",
+    "Shape": "Sphere",
+    "Element": "Cryo",
+    "Blunt": "No"
+    }},
+    {"LisaSkillPress": {
+    "Type": "Skill",
+    "CD": "1s",
+    "ICD": "Special",
+    "Gauge": "1u",
+    "Diameter\/Width": "2m",
+    "Shape": "Sphere",
+    "Element": "Electro",
+    "Blunt": "No"
+    }},
+    {"LisaSkillHold": {
+    "Type": "Skill",
+    "CD": "16s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "20m",
+    "Shape": "Cylinder",
+    "Element": "Electro",
+    "Blunt": "No"
+    }},
+    {"LisaBurst": {
+    "Type": "Burst",
+    "CD": "20s",
+    "ICD": "Standard",
+    "Gauge": "1u, 0u",
+    "Diameter\/Width": "14m, 2m",
+    "Shape": "Cylinder, Sphere",
+    "Element": "Electro",
+    "Blunt": "No"
+    }},
+    {"MikaSkill": {
+    "Type": "Skill",
+    "CD": "15s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "2.5m, 0.3m, 0.2m",
+    "Shape": "Box",
+    "Element": "Cryo",
+    "Blunt": "No"
+    }},
+    {"MikaBurst": {
+    "Type": "Burst",
+    "CD": "18s",
+    "ICD": "None",
+    "Gauge": "None",
+    "Diameter\/Width": "None",
+    "Shape": "None",
+    "Element": "Cryo",
+    "Blunt": "No"
+    }},
+    {"MonaSkill": {
+    "Type": "Skill",
+    "CD": "12s",
+    "ICD": "None, Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "10m",
+    "Shape": "Sphere",
+    "Element": "Hydro",
+    "Blunt": "No"
+    }},
+    {"MonaBurst": {
+    "Type": "Burst",
+    "CD": "15s",
+    "ICD": "Standard",
+    "Gauge": "2u, 1u",
+    "Diameter\/Width": "20m",
+    "Shape": "Sphere",
+    "Element": "Hydro",
+    "Blunt": "No"
+    }},
+    {"NahidaSkillPress": {
+    "Type": "Skill",
+    "CD": "5s",
+    "ICD": "Special",
+    "Gauge": ["1.5u", "1u"],
+    "Diameter\/Width": "9.2m",
+    "Shape": "Cylinder",
+    "Element": "Dendro",
+    "Blunt": "No"
+    }},
+    {"NahidaSkillHold": {
+    "Type": "Skill",
+    "CD": "6s",
+    "ICD": "Special",
+    "Gauge": "1.5u, 1u",
+    "Diameter\/Width": "Big",
+    "Shape": "Sphere",
+    "Element": "Dendro",
+    "Blunt": "No"
+    }},
+    {"NahidaBurst": {
+    "Type": "Burst",
+    "CD": "13.5s",
+    "ICD": "None",
+    "Gauge": "None",
+    "Diameter\/Width": "None",
+    "Shape": "None",
+    "Element": "Dendro",
+    "Blunt": "No"
+    }},
+    {"NilouSkill": {
+    "Type": "Skill",
+    "CD": "18s",
+    "ICD": "Special",
+    "Gauge": "1u",
+    "Diameter\/Width": "5m, 1.75m, 3.6m, 5.4m, 2.7m",
+    "Shape": "Cylinder, Box",
+    "Element": "Hydro",
+    "Blunt": "No"
+    }},
+    {"NilouBurst": {
+    "Type": "Burst",
+    "CD": "18s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "???",
+    "Shape": "",
+    "Element": "Hydro",
+    "Blunt": "No"
+    }},
+    {"NingguangSkill": {
+    "Type": "Skill",
+    "CD": "12s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "10m",
+    "Shape": "Cylinder",
+    "Element": "Geo",
+    "Blunt": "Yes"
+    }},
+    {"NingguangBurst": {
+    "Type": "Burst",
+    "CD": "12s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "1m",
+    "Shape": "Sphere",
+    "Element": "Geo",
+    "Blunt": "Yes"
+    }},
+    {"NoelleSkill": {
+    "Type": "Skill",
+    "CD": "24s",
+    "ICD": "Standard",
+    "Gauge": "2u",
+    "Diameter\/Width": "4m",
+    "Shape": "Cylinder",
+    "Element": "Geo",
+    "Blunt": "Yes"
+    }},
+    {"NoelleBurst": {
+    "Type": "Burst",
+    "CD": "15s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "13m, 8m",
+    "Shape": "Cylinder",
+    "Element": "Geo",
+    "Blunt": "Yes"
+    }},
+    {"QiqiSkill": {
+    "Type": "Skill",
+    "CD": "30s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "5m",
+    "Shape": "Cylinder",
+    "Element": "Cryo",
+    "Blunt": "No"
+    }},
+    {"QiqiBurst": {
+    "Type": "Burst",
+    "CD": "20s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "14m",
+    "Shape": "Cylinder",
+    "Element": "Cryo",
+    "Blunt": "No"
+    }},
+    {"RaidenShogunSkill": {
+    "Type": "Skill",
+    "CD": "10s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "10m, 8m",
+    "Shape": "Sphere",
+    "Element": "Electro",
+    "Blunt": "No"
+    }},
+    {"RaidenShogunBurst": {
+    "Type": "Burst",
+    "CD": "18s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "13m",
+    "Shape": "Box",
+    "Element": "Electro",
+    "Blunt": "No"
+    }},
+    {"RazorSkillPress": {
+    "Type": "Skill",
+    "CD": "6s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "4.8m",
+    "Shape": "Cylinder",
+    "Element": "Electro",
+    "Blunt": "No"
+    }},
+    {"RazorSkillHold": {
+    "Type": "Skill",
+    "CD": "10s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "10m",
+    "Shape": "Sphere",
+    "Element": "Electro",
+    "Blunt": "Yes"
+    }},
+    {"RazorBurst": {
+    "Type": "Burst",
+    "CD": "20s",
+    "ICD": "Standard",
+    "Gauge": "2u, 1u",
+    "Diameter\/Width": "10m",
+    "Shape": "Sphere",
+    "Element": "Electro",
+    "Blunt": "Yes"
+    }},
+    {"RosariaSkill": {
+    "Type": "Skill",
+    "CD": "6s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "2m, 5.6m",
+    "Shape": "Box, Cylinder",
+    "Element": "Cryo",
+    "Blunt": "No"
+    }},
+    {"RosariaBurst": {
+    "Type": "Burst",
+    "CD": "15s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "7m, 13m, 12m",
+    "Shape": "Cylinder",
+    "Element": "Cryo",
+    "Blunt": "No"
+    }},
+    {"SangonomiyaKokomiSkill": {
+    "Type": "Skill",
+    "CD": "20s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "12m",
+    "Shape": "Sphere",
+    "Element": "Hydro",
+    "Blunt": "No"
+    }},
+    {"SangonomiyaKokomiBurst": {
+    "Type": "Burst",
+    "CD": "18s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "10m",
+    "Shape": "Sphere",
+    "Element": "Hydro",
+    "Blunt": "No"
+    }},
+    {"SayuSkill": {
+    "Type": "Skill",
+    "CD": "6s-11s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "5m, 6m",
+    "Shape": "Cylinder",
+    "Element": "Anemo",
+    "Blunt": "No"
+    }},
+    {"SayuBurst": {
+    "Type": "Burst",
+    "CD": "20s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "9m, 7m",
+    "Shape": "Cylinder",
+    "Element": "Anemo",
+    "Blunt": "No"
+    }},
+    {"ShenheSkillPress": {
+    "Type": "Skill",
+    "CD": "10s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "???",
+    "Element": "Cryo",
+    "Blunt": "No"
+    }},
+    {"ShenheSkillHold": {
+    "Type": "Skill",
+    "CD": "15s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "8m",
+    "Shape": "Sphere",
+    "Element": "Cryo",
+    "Blunt": "No"
+    }},
+    {"ShenheBurst": {
+    "Type": "Burst",
+    "CD": "20s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "8m, 14m",
+    "Shape": "Cylinder, Cone",
+    "Element": "Cryo",
+    "Blunt": "Yes"
+    }},
+    {"ShikanoinHeizouSkill": {
+    "Type": "Skill",
+    "CD": "10s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "3m, 4m",
+    "Shape": "Box",
+    "Element": "Anemo",
+    "Blunt": "No"
+    }},
+    {"ShikanoinHeizouBurst": {
+    "Type": "Burst",
+    "CD": "12s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "12m, 5m",
+    "Shape": "Sphere",
+    "Element": "Anemo",
+    "Blunt": "No"
+    }},
+    {"SucroseSkill": {
+    "Type": "Skill",
+    "CD": "15s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "12m",
+    "Shape": "Cylinder",
+    "Element": "Anemo",
+    "Blunt": "No"
+    }},
+    {"SucroseBurst": {
+    "Type": "Burst",
+    "CD": "20s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "10m",
+    "Shape": "Cylinder",
+    "Element": "Anemo",
+    "Blunt": "No"
+    }},
+    {"TartagliaSkill": {
+    "Type": "Skill",
+    "CD": "6s-36s, 45s",
+    "ICD": "None",
+    "Gauge": ["2u", "1u"],
+    "Diameter\/Width": "6m",
+    "Shape": "Sphere",
+    "Element": "Hydro",
+    "Blunt": "Yes"
+    }},
+    {"TartagliaBurst": {
+    "Type": "Burst",
+    "CD": "15s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "12m, 16m, 10m",
+    "Shape": ["Cylinder", "Sphere"],
+    "Element": "Hydro",
+    "Blunt": "No"
+    }},
+    {"ThomaSkill": {
+    "Type": "Skill",
+    "CD": "15s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "6m",
+    "Shape": "Cylinder",
+    "Element": "Pyro",
+    "Blunt": "No"
+    }},
+    {"ThomaBurst": {
+    "Type": "Burst",
+    "CD": "20s",
+    "ICD": "Standard",
+    "Gauge": "2u, 1u",
+    "Diameter\/Width": "8m, 4.5m",
+    "Shape": "Cylinder, Box",
+    "Element": "Pyro",
+    "Blunt": "No"
+    }},
+    {"TighnariSkill": {
+    "Type": "Skill",
+    "CD": "12s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "12m",
+    "Shape": "Cylinder",
+    "Element": "Dendro",
+    "Blunt": "No"
+    }},
+    {"TighnariBurst": {
+    "Type": "Burst",
+    "CD": "12s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "2m",
+    "Shape": "Sphere",
+    "Element": "Dendro",
+    "Blunt": "No"
+    }},
+    {"AnemoTravelerSkillPress": {
+    "Type": "Skill",
+    "CD": "5s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "6m",
+    "Shape": "Cone",
+    "Element": "Anemo",
+    "Blunt": "No"
+    }},
+    {"AnemoTravelerSkillHold": {
+    "Type": "Skill",
+    "CD": "8s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "6m",
+    "Shape": "Cone",
+    "Element": "Anemo",
+    "Blunt": "No"
+    }},
+    {"AnemoTravelerBurst": {
+    "Type": "Burst",
+    "CD": "15s",
+    "ICD": "Standard",
+    "Gauge": "2u, 1u",
+    "Diameter\/Width": "3m, 2.5m",
+    "Shape": "Box",
+    "Element": "Anemo",
+    "Blunt": "No"
+    }},
+    {"DendroTravelerSkill": {
+    "Type": "Skill",
+    "CD": "8s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "6.5m",
+    "Shape": "Cone",
+    "Element": "Dendro",
+    "Blunt": "No"
+    }},
+    {"DendroTravelerBurst": {
+    "Type": "Burst",
+    "CD": "20s",
+    "ICD": "Standard",
+    "Gauge": "2u, 1u",
+    "Diameter\/Width": "4m, 8m, 13m",
+    "Shape": "Cylinder",
+    "Element": "Dendro",
+    "Blunt": "No"
+    }},
+    {"ElectroTravelerSkill": {
+    "Type": "Skill",
+    "CD": "13.5s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "???",
+    "Shape": "???",
+    "Element": "Electro",
+    "Blunt": "No"
+    }},
+    {"ElectroTravelerBurst": {
+    "Type": "Burst",
+    "CD": "20s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "10m, 4m",
+    "Shape": "Sphere",
+    "Element": "Electro",
+    "Blunt": "Yes"
+    }},
+    {"GeoTravelerSkill": {
+    "Type": "Skill",
+    "CD": "8s",
+    "ICD": "Standard",
+    "Gauge": "2u",
+    "Diameter\/Width": "6m",
+    "Shape": "Cylinder",
+    "Element": "Geo",
+    "Blunt": "Yes"
+    }},
+    {"GeoTravelerBurst": {
+    "Type": "Burst",
+    "CD": "15s",
+    "ICD": "Standard",
+    "Gauge": "2u",
+    "Diameter\/Width": "12m",
+    "Shape": "Cylinder",
+    "Element": "Geo",
+    "Blunt": "Yes"
+    }},
+    {"VentiSkillPress": {
+    "Type": "Skill",
+    "CD": "6s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "6m",
+    "Shape": "Sphere",
+    "Element": "Anemo",
+    "Blunt": "No"
+    }},
+    {"VentiSkillHold": {
+    "Type": "Skill",
+    "CD": "15s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "12m",
+    "Shape": "Sphere",
+    "Element": "Anemo",
+    "Blunt": "No"
+    }},
+    {"VentiBurst": {
+    "Type": "Burst",
+    "CD": "15s",
+    "ICD": "Special",
+    "Gauge": "1u",
+    "Diameter\/Width": "8m, 12m",
+    "Shape": "Sphere",
+    "Element": "Anemo",
+    "Blunt": "No"
+    }},
+    {"WandererSkill": {
+    "Type": "Skill",
+    "CD": "6s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "12m",
+    "Shape": "Cylinder",
+    "Element": "Anemo",
+    "Blunt": "No"
+    }},
+    {"WandererBurst": {
+    "Type": "Burst",
+    "CD": "15s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "10m",
+    "Shape": "Cylinder",
+    "Element": "Anemo",
+    "Blunt": "No"
+    }},
+    {"XianglingSkill": {
+    "Type": "Skill",
+    "CD": "12s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "5m",
+    "Shape": "Cone",
+    "Element": "Pyro",
+    "Blunt": "No"
+    }},
+    {"XianglingBurst": {
+    "Type": "Burst",
+    "CD": "20s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "5m, 6m",
+    "Shape": "Cylinder",
+    "Element": "Pyro",
+    "Blunt": "No"
+    }},
+    {"XiaoSkill": {
+    "Type": "Skill",
+    "CD": "10s",
+    "ICD": "Special",
+    "Gauge": "1u",
+    "Diameter\/Width": "1.6m",
+    "Shape": "Sphere",
+    "Element": "Anemo",
+    "Blunt": "No"
+    }},
+    {"XiaoBurst": {
+    "Type": "Burst",
+    "CD": "18s",
+    "ICD": "None",
+    "Gauge": "None",
+    "Diameter\/Width": "None",
+    "Shape": "None",
+    "Element": "Anemo",
+    "Blunt": "No"
+    }},
+    {"XingqiuSkill": {
+    "Type": "Skill",
+    "CD": "21s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "6m, 3.5m",
+    "Shape": "Cylinder, Box",
+    "Element": "Hydro",
+    "Blunt": "Yes"
+    }},
+    {"XingqiuBurst": {
+    "Type": "Burst",
+    "CD": "20s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "1m",
+    "Shape": "Sphere",
+    "Element": "Hydro",
+    "Blunt": "No"
+    }},
+    {"XinyanSkill": {
+    "Type": "Skill",
+    "CD": "18s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "6m",
+    "Shape": "Cylinder",
+    "Element": "Pyro",
+    "Blunt": "No"
+    }},
+    {"XinyanBurst": {
+    "Type": "Burst",
+    "CD": "15s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "6m, 8m",
+    "Shape": "Cylinder",
+    "Element": "Pyro",
+    "Blunt": "No"
+    }},
+    {"YaeMikoSkill": {
+    "Type": "Skill",
+    "CD": "4s",
+    "ICD": "Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "1m",
+    "Shape": "Cylinder",
+    "Element": "Electro",
+    "Blunt": "No"
+    }},
+    {"YaeMikoBurst": {
+    "Type": "Burst",
+    "CD": "22s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "14m",
+    "Shape": "Cylinder",
+    "Element": "Electro",
+    "Blunt": "No"
+    }},
+    {"YanfeiSkill": {
+    "Type": "Skill",
+    "CD": "9s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "7m",
+    "Shape": "Sphere",
+    "Element": "Pyro",
+    "Blunt": "Yes"
+    }},
+    {"YanfeiBurst": {
+    "Type": "Burst",
+    "CD": "20s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "13m",
+    "Shape": "Cylinder",
+    "Element": "Pyro",
+    "Blunt": "Yes"
+    }},
+    {"YaoyaoSkill": {
+    "Type": "Skill",
+    "CD": "15s",
+    "ICD": "Special",
+    "Gauge": "1u",
+    "Diameter\/Width": "4m",
+    "Shape": "Sphere",
+    "Element": "Dendro",
+    "Blunt": "No"
+    }},
+    {"YaoyaoBurst": {
+    "Type": "Burst",
+    "CD": "20s",
+    "ICD": "Special",
+    "Gauge": "1u",
+    "Diameter\/Width": "6m, 4m",
+    "Shape": "Cylinder, Sphere",
+    "Element": "Dendro",
+    "Blunt": "No"
+    }},
+    {"YelanSkill": {
+    "Type": "Skill",
+    "CD": "10s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "???",
+    "Shape": "???",
+    "Element": "Hydro",
+    "Blunt": "No"
+    }},
+    {"YelanBurst": {
+    "Type": "Burst",
+    "CD": "18s",
+    "ICD": "Special",
+    "Gauge": "2u, 1u",
+    "Diameter\/Width": "12m, 1m",
+    "Shape": "Cylinder, Sphere",
+    "Element": "Hydro",
+    "Blunt": "No"
+    }},
+    {"YoimiyaSkill": {
+    "Type": "Skill",
+    "CD": "18s",
+    "ICD": "None",
+    "Gauge": "None",
+    "Diameter\/Width": "None",
+    "Shape": "None",
+    "Element": "Pyro",
+    "Blunt": "No"
+    }},
+    {"YoimiyaBurst": {
+    "Type": "Burst",
+    "CD": "15s",
+    "ICD": "Standard",
+    "Gauge": "2u, 1u",
+    "Diameter\/Width": "12m, 6m",
+    "Shape": "Sphere",
+    "Element": "Pyro",
+    "Blunt": "Yes"
+    }},
+    {"YunJinSkillPress": {
+    "Type": "Skill",
+    "CD": "9s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "8m",
+    "Shape": "Cylinder",
+    "Element": "Geo",
+    "Blunt": "No"
+    }},
+    {"YunJinSkillHold": {
+    "Type": "Skill",
+    "CD": "9s",
+    "ICD": "None",
+    "Gauge": "4u, 2u",
+    "Diameter\/Width": "12m, 16m",
+    "Shape": "Cylinder",
+    "Element": "Geo",
+    "Blunt": "No"
+    }},
+    {"YunJinBurst": {
+    "Type": "Burst",
+    "CD": "15s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "12m",
+    "Shape": "Cylinder",
+    "Element": "Geo",
+    "Blunt": "Yes"
+    }},
+    {"ZhongliSkillPress": {
+    "Type": "Skill",
+    "CD": "4s",
+    "ICD": "Standard",
+    "Gauge": "2u, 1u",
+    "Diameter\/Width": "4m, 8m",
+    "Shape": "Sphere, Box",
+    "Element": "Geo",
+    "Blunt": "Yes"
+    }},
+    {"ZhongliSkillHold": {
+    "Type": "Skill",
+    "CD": "12s",
+    "ICD": "Standard",
+    "Gauge": "2u, 1u",
+    "Diameter\/Width": "20m, 8m",
+    "Shape": "Cylinder, Box",
+    "Element": "Geo",
+    "Blunt": "Yes"
+    }},
+    {"ZhongliBurst": {
+    "Type": "Burst",
+    "CD": "12s",
+    "ICD": "None",
+    "Gauge": "4u",
+    "Diameter\/Width": "15m",
+    "Shape": "Cylinder",
+    "Element": "Geo",
+    "Blunt": "Yes"
+    }}
+]
