@@ -1422,7 +1422,7 @@ function checkGuess() {
 				allMatch = false; // at least one property doesn't match
 			} else {
 				newValueCell.classList.add("incorrect");
-				++incorrectGuesses;
+				--incorrectGuesses;
 				incorrectCount.textContent = incorrectGuesses; // update the incorrect guess count on screen
 			}
 		}
