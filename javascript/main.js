@@ -1422,8 +1422,6 @@ function checkGuess() {
 				allMatch = false; // at least one property doesn't match
 			} else {
 				newValueCell.classList.add("incorrect");
-				--incorrectGuesses;
-				incorrectCount.textContent = incorrectGuesses; // update the incorrect guess count on screen
 			}
 		}
 	}
@@ -1435,7 +1433,11 @@ function checkGuess() {
 	if (selectedAbility === randomAbility) {
 		correctGuess = true;
 	}
-
+	else {
+		--incorrectGuesses;
+		incorrectCount.textContent = incorrectGuesses; // update the incorrect guess count on screen
+	}
+	
 	// Show alert and reset table
 	if (correctGuess) {
 		setTimeout(function() {
