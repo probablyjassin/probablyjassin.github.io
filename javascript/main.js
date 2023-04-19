@@ -30,7 +30,7 @@ let incorrectGuesses = 8;
 // Function to check the guess and update the table
 function checkGuess() {
 	const rawValue = guessSelect.value;
-	guessSelect.value = ""
+	// guessSelect.value = ""
 	const selectedAbility = rawValue.replace(/([ ])/g, "")
 	if (!abilityOptions.includes(selectedAbility)) {
 		alert("Please select an ability to guess.");
