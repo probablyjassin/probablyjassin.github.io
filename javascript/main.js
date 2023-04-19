@@ -6,8 +6,18 @@ function generateRandomAbility() {
 }
 generateRandomAbility();
 
+const guessTable = document.getElementById("guess-select")
+const abilityOptions = Object.keys(abilities)
+
+for (const iterator of abilityOptions) {
+	var option = document.createElement("option")
+	option.value = iterator.replace(/([A-Z0-9])/g, ' $1')
+	guessTable.appendChild(option)
+}
+
+
 // Select the guess select and ability table elements
-const guessSelect = document.getElementById("guess-select");
+const guessSelect = document.getElementById("guess-input");
 const abilityTable = document.getElementById("ability-table");
 
 // Select the incorrect guess counter element
@@ -18,7 +28,8 @@ let incorrectGuesses = 8;
 
 // Function to check the guess and update the table
 function checkGuess() {
-	const selectedAbility = guessSelect.value;
+	const rawValue = guessSelect.value;
+	const selectedAbility = rawValue.replace(/([ ])/g, "")
 	if (selectedAbility === "") {
 		alert("Please select an ability to guess.");
 		return;
@@ -27,7 +38,7 @@ function checkGuess() {
 	// Create a new row for the guess
 	const newRow = abilityTable.insertRow();
 	const newGuessCell = newRow.insertCell();
-	newGuessCell.textContent = selectedAbility;
+	newGuessCell.textContent = rawValue;
 
 	let allMatch = true; // assume all properties match
 	for (let property in abilities[randomAbility]) {
