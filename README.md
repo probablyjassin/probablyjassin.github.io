@@ -1,5 +1,4 @@
-# probablyjassin.github.io
-The Genshin Gaugedle, also known as ICDle <br>
+# The Genshin Gaugedle, also known as ICDle
 An idea by [Zajef77](https://www.twitch.tv/zajef77), 
 to have a Genshindle like guessing game, where the player guesses Genshin impact characters based on information about them. 
 The idea behind ICDle is this type of game, but based on more niche information related to TC (Theorycrafting). 
