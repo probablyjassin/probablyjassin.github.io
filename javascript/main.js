@@ -1,13 +1,14 @@
 // initiate the game by chosing a random ability to be set as the correct answer
 let randomAbility = "";
-function generateRandomAbility() {
-    const abilityOptions = Object.keys(abilities);
+const abilityOptions = Object.keys(abilities);
+
+function generateRandomAbility() {;
     randomAbility = abilityOptions[Math.floor(Math.random() * abilityOptions.length)];
 }
+
 generateRandomAbility();
 
 const guessTable = document.getElementById("guess-select")
-const abilityOptions = Object.keys(abilities)
 
 for (const iterator of abilityOptions) {
 	var option = document.createElement("option")
@@ -29,8 +30,9 @@ let incorrectGuesses = 8;
 // Function to check the guess and update the table
 function checkGuess() {
 	const rawValue = guessSelect.value;
+	guessSelect.value = ""
 	const selectedAbility = rawValue.replace(/([ ])/g, "")
-	if (selectedAbility === "") {
+	if (!abilityOptions.includes(selectedAbility)) {
 		alert("Please select an ability to guess.");
 		return;
 	}
@@ -70,6 +72,8 @@ function checkGuess() {
 	// Initialize correctGuess variable
 	let correctGuess = false;
 
+	const prettyRandom = randomAbility.replace(/([A-Z0-9])/g, ' $1')
+
 	// Check if player has guessed the correct ability
 	if (selectedAbility === randomAbility) {
 		correctGuess = true;
@@ -81,15 +85,15 @@ function checkGuess() {
 
 	// Show alert and reset table
 	if (correctGuess) {
-		setTimeout(function() {
-			alert(`${randomAbility} was the correct ability. Congratulations!`);
+		setTimeout(() => {
+			alert(`${prettyRandom} was the correct ability. Congratulations!`);
 			resetTable();
 		}, 100);
 	}
 
 	// Check if player has reached 8 incorrect guesses
 	if (incorrectGuesses < 1) {
-		alert(`You have reached 8 incorrect guesses. The correct ability was ${randomAbility}.`);
+		alert(`You have reached 8 incorrect guesses. The correct ability was ${prettyRandom}.`);
 		resetTable(); 
 		incorrectCount.textContent = `8`;
 	}
@@ -100,9 +104,6 @@ function resetTable() {
     // Clear the table
     while (abilityTable.rows.length > 1) {
         abilityTable.deleteRow(1);
-
-	
-
     // Generate a new random ability as correct answer
     generateRandomAbility();
 
@@ -115,8 +116,8 @@ function resetTable() {
 	resetButton.addEventListener("click", resetCounter);
 
 	function resetCounter() {
-	incorrectGuesses = 8;
-	incorrectCount.textContent = `8`;
+		incorrectGuesses = 8;
+		incorrectCount.textContent = `8`;
 }
 
 // Select the concede button element
@@ -127,7 +128,7 @@ concedeButton.addEventListener("click", showCorrectAnswer);
 
 // Function to display the correct answer
 function showCorrectAnswer() {
-  alert(`The correct ability was ${randomAbility}.`); resetCounter(); resetTable();
+  	alert(`The correct ability was ${randomAbility}.`); resetCounter(); resetTable();
 }
 
 // FOR DEVELOPEMENT: Select the correct-answer element on screen and display the answer
