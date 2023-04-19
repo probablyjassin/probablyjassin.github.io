@@ -83,7 +83,7 @@ function checkGuess() {
 		incorrectCount.textContent = incorrectGuesses; // update the incorrect guess count on screen
     }
 
-	// Show alert and reset table
+	// If correct, show alert and reset table
 	if (correctGuess) {
 		setTimeout(() => {
 			alert(`${prettyRandom} was the correct ability. Congratulations!`);
@@ -128,7 +128,7 @@ concedeButton.addEventListener("click", showCorrectAnswer);
 
 // Function to display the correct answer
 function showCorrectAnswer() {
-  	alert(`The correct ability was ${randomAbility}.`); resetCounter(); resetTable();
+  	alert(`The correct ability was ${prettyRandom}.`); resetCounter(); resetTable();
 }
 
 // FOR DEVELOPEMENT: Select the correct-answer element on screen and display the answer
