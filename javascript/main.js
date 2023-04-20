@@ -128,7 +128,7 @@ concedeButton.addEventListener("click", showCorrectAnswer);
 
 // Function to display the correct answer
 function showCorrectAnswer() {
-  	alert(`The correct ability was ${prettyRandom}.`); resetCounter(); resetTable();
+  	alert(`The correct ability was ${randomAbility}.`); resetCounter(); resetTable();
 }
 
 // FOR DEVELOPEMENT: Select the correct-answer element on screen and display the answer
