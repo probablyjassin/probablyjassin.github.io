@@ -87,48 +87,51 @@ function checkGuess() {
 	if (correctGuess) {
 		setTimeout(() => {
 			alert(`${prettyRandom} was the correct ability. Congratulations!`);
-			resetTable();
+			resetGame();
 		}, 100);
 	}
 
 	// Check if player has reached 8 incorrect guesses
 	if (incorrectGuesses < 1) {
 		alert(`You have reached 8 incorrect guesses. The correct ability was ${prettyRandom}.`);
-		resetTable(); 
+		resetGame(); 
 		incorrectCount.textContent = `8`;
 	}
 }
 
-// Function to reset the table and generate a new random ability item
-function resetTable() {
-    // Clear the table
-    while (abilityTable.rows.length > 1) {
-        abilityTable.deleteRow(1);
-    // Generate a new random ability as correct answer
-    generateRandomAbility();
-
-    // Reset the incorrect guesses counter
-    incorrectGuesses = 8;
-}
-}
 // Add event listener to reset button
 	const resetButton = document.getElementById("reset-button");
-	resetButton.addEventListener("click", resetCounter);
+	resetButton.addEventListener("click", resetGame);
 
-	function resetCounter() {
-		incorrectGuesses = 8;
-		incorrectCount.textContent = `8`;
+// Function to reset the game
+function resetGame() {
+	// Clear the table
+	while (abilityTable.rows.length > 1) {
+		abilityTable.deleteRow(1);
+	}
+	// Generate a new random ability as correct answer
+	generateRandomAbility();
+	//Reset incorrect guesses
+	incorrectGuesses = 8;
+	incorrectCount.textContent = `8`;
 }
 
 // Select the concede button element
 const concedeButton = document.getElementById("concede-button");
 
 // Add event listener to concede button
-concedeButton.addEventListener("click", showCorrectAnswer);
+concedeButton.addEventListener("click", function() {
+	resetGame();
+	showCorrectAnswer();
+	
+});
 
 // Function to display the correct answer
 function showCorrectAnswer() {
-  	alert(`The correct ability was ${prettyRandom}.`); resetCounter(); resetTable();
+	if (incorrectGuesses === 8) {return false}
+	else {
+  		alert(`The correct ability was ${randomAbility}.`);
+	}
 }
 
 // FOR DEVELOPEMENT: Select the correct-answer element on screen and display the answer
