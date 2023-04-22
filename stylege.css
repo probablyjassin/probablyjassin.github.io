@@ -44,6 +44,12 @@ table {
     width: 80%;
     max-width: 800px;
     text-align: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 td,
@@ -56,6 +62,12 @@ th {
     vertical-align: middle;
     background-color: lightgray;
     text-align: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 select {
@@ -75,6 +87,12 @@ button {
     font-size: 1.2em;
     border-radius: 5px;
     text-shadow: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .button2 {
@@ -84,6 +102,12 @@ button {
     font-size: 0.8em;
     border-radius: 5px;
     text-shadow: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 table {
@@ -105,8 +129,11 @@ table {
 
 /* Make the image to responsive */
 .image {
-    width: 10%;
+    width: 8%;
     height: auto;
+    border-right: 0cap;
+    margin-right: 0cap;
+    padding-right: 0cap;
 }
 
 /* The overlay effect (full height and width) - lays on top of the container and over the image */
@@ -137,4 +164,12 @@ table {
 input {
     width: 20em;
     height: 5vh;
+}
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
