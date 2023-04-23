@@ -152,7 +152,6 @@ function showCorrectAnswer() {
 
 // NEW: SAVING DATA ABOUT PAST GUESSES AS COOKIE TO SHOW AVERAGE GUESSES NEEDED
 	function saveIncorrectGuessesToCookie() {
-		console.log(incorrectGuesses)
 		// Get the existing incorrect guesses array from the cookie or create a new empty array
 		let incorrectGuessesArray = [getCookie("incorrectGuessesArray")]
 		// Add the current incorrect guesses count to the array
@@ -160,7 +159,7 @@ function showCorrectAnswer() {
 		// Save the updated array back into the cookie
 		setCookie("incorrectGuessesArray", incorrectGuessesArray);
 		console.log(getCookie("incorrectGuessesArray"))
-		}
+	}
 
 // Function to reset cookies
 function resetcookies() {
