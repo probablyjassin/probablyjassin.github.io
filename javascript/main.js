@@ -133,11 +133,13 @@ const concedeButton = document.getElementById("concede-button");
 
 // Add event listener to concede button
 concedeButton.addEventListener("click", function() {
+	if (incorrectGuesses === 0) {return false}
+	else {
 	incorrectGuesses = "C"
 	saveIncorrectGuessesToCookie()
 	showCorrectAnswer();
 	resetGame();
-	
+	}	
 });
 
 // Function to display the correct answer
