@@ -98,12 +98,12 @@ function checkGuess() {
 
 	// Check if player has reached 8 incorrect guesses
 	if (incorrectGuesses >= 8) {
+		saveIncorrectGuessesToCookie()
 		incorrectCount.textContent = `8`
 		setTimeout(() => {
 			alert(`You have reached 8 incorrect guesses. The correct ability was ${prettyRandom}.`);
 			resetGame(); 
 			// Save Incorrect Guesses To Cookies
-			saveIncorrectGuessesToCookie()
 			incorrectCount.textContent = `0`;
 		}, 100);
 	}
