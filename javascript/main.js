@@ -2,6 +2,9 @@
 let randomAbility = "";
 const abilityOptions = Object.keys(abilities);
 
+//initiate the check for when the game finished, in order to save cookies
+let gameEnd = false
+
 function generateRandomAbility() {;
     randomAbility = abilityOptions[Math.floor(Math.random() * abilityOptions.length)];
 }
@@ -77,6 +80,7 @@ function checkGuess() {
 	// Check if player has guessed the correct ability
 	if (selectedAbility === randomAbility) {
 		correctGuess = true;
+		gameEnd = true;
 	}
     else {
         --incorrectGuesses;
@@ -94,6 +98,7 @@ function checkGuess() {
 	// Check if player has reached 8 incorrect guesses
 	if (incorrectGuesses < 1) {
 		alert(`You have reached 8 incorrect guesses. The correct ability was ${prettyRandom}.`);
+		gameEnd = true;
 		resetGame(); 
 		incorrectCount.textContent = `8`;
 	}
@@ -114,6 +119,8 @@ function resetGame() {
 	//Reset incorrect guesses
 	incorrectGuesses = 8;
 	incorrectCount.textContent = `8`;
+	//Reset gameEnd in order to mark the beginning of a new game, for cookies
+	gameEnd = false;
 }
 
 // Select the concede button element
@@ -134,12 +141,14 @@ function showCorrectAnswer() {
 	}
 }
 
-/* // NEW: SAVING DATA ABOUT PAST GUESSES AS COOKIE TO SHOW AVERAGE GUESSES NEEDED
+// NEW: SAVING DATA ABOUT PAST GUESSES AS COOKIE TO SHOW AVERAGE GUESSES NEEDED
+
+if (gameEnd = true){
+	saveIncorrectGuessesToCookie();
+}
 
 // Function to save the incorrect guesses variable into cookies
 function saveIncorrectGuessesToCookie() {
-	// Check if temporary variable is true
-	if (tempVariable) {
 	  // Get the existing incorrect guesses array from the cookie or create a new empty array
 	  let incorrectGuessesArray = JSON.parse(getCookie("incorrectGuessesArray")) || [];
 	  // Add the current incorrect guesses count to the array
@@ -147,17 +156,6 @@ function saveIncorrectGuessesToCookie() {
 	  // Save the updated array back into the cookie
 	  setCookie("incorrectGuessesArray", JSON.stringify(incorrectGuessesArray));
 	}
-  }
-  
-  // Function to save the average number of incorrect guesses as a second cookie
-  function saveAverageIncorrectGuessesToCookie() {
-	// Get the existing incorrect guesses array from the cookie or create a new empty array
-	let incorrectGuessesArray = JSON.parse(getCookie("incorrectGuessesArray")) || [];
-	// Calculate the average number of incorrect guesses
-	let average = incorrectGuessesArray.reduce((acc, val) => acc + val, 0) / incorrectGuessesArray.length;
-	// Save the average as a cookie
-	setCookie("averageIncorrectGuesses", average);
-  }
   
   // Helper function to set cookies
   function setCookie(name, value) {
@@ -177,23 +175,15 @@ function saveIncorrectGuessesToCookie() {
 	return "";
   }
   
-  // Call the save functions wherever you want, for example after each incorrect guess:
-  function checkGuess() {
-	// ...
-	if (!abilityOptions.includes(selectedAbility)) {
-	  alert("Please select an ability to guess.");
-	  return;
-	}
-	// ...
-	else {
-	  --incorrectGuesses;
-	  incorrectCount.textContent = incorrectGuesses; // update the incorrect guess count on screen
-	  saveIncorrectGuessesToCookie();
-	  saveAverageIncorrectGuessesToCookie();
-	}
-	// ...
+   /* // Function to save the average number of incorrect guesses as a second cookie
+  function saveAverageIncorrectGuessesToCookie() {
+	// Get the existing incorrect guesses array from the cookie or create a new empty array
+	let incorrectGuessesArray = JSON.parse(getCookie("incorrectGuessesArray")) || [];
+	// Calculate the average number of incorrect guesses
+	let average = incorrectGuessesArray.reduce((acc, val) => acc + val, 0) / incorrectGuessesArray.length;
+	// Save the average as a cookie
+	setCookie("averageIncorrectGuesses", average); 
   } */
-  
 
 // FOR DEVELOPEMENT: Select the correct-answer element on screen and display the answer
 // const correctAnswer = document.getElementById("correct-answer");
