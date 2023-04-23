@@ -134,7 +134,7 @@ function showCorrectAnswer() {
 	}
 }
 
-// NEW: SAVING DATA ABOUT PAST GUESSES AS COOKIE TO SHOW AVERAGE GUESSES NEEDED
+/* // NEW: SAVING DATA ABOUT PAST GUESSES AS COOKIE TO SHOW AVERAGE GUESSES NEEDED
 
 // Function to save the incorrect guesses variable into cookies
 function saveIncorrectGuessesToCookie() {
@@ -193,7 +193,7 @@ function saveIncorrectGuessesToCookie() {
 	}
 	// ...
   }
-  
+  */
 
 // FOR DEVELOPEMENT: Select the correct-answer element on screen and display the answer
 // const correctAnswer = document.getElementById("correct-answer");
