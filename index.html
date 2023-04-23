@@ -140,18 +140,18 @@ function freezebg() {
 <script>
 if (!localStorage.hideAlert) {
 	$(function() {
-	  $("#cookie-popup").cookie-popup();
+	  $("#cookie-popup").dialog();
 	});
   } else {
 	$("#cookie-popup").css("display", "none");
   }
   $(".agree").on("click", function() {
 	localStorage.setItem('hideAlert', true);
-	$("#cookie-popup").cookie-popup("close");
+	$("#cookie-popup").dialog("close");
   });
   $(".decline").on("click", function() {
 	localStorage.setItem('hideAlert', true);
-	$("#cookie-popup").cookie-popup("close");
+	$("#cookie-popup").dialog("close");
   });
 </script>
 
