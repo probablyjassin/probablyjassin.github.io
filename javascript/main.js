@@ -98,6 +98,7 @@ function checkGuess() {
 
 	// Check if player has reached 8 incorrect guesses
 	if (incorrectGuesses >= 8) {
+		console.log(incorrectGuesses)
 		saveIncorrectGuessesToCookie()
 		incorrectCount.textContent = `8`
 		setTimeout(() => {
@@ -147,9 +148,9 @@ function showCorrectAnswer() {
 
 // NEW: SAVING DATA ABOUT PAST GUESSES AS COOKIE TO SHOW AVERAGE GUESSES NEEDED
 	function saveIncorrectGuessesToCookie() {
+		console.log(incorrectGuesses)
 		// Get the existing incorrect guesses array from the cookie or create a new empty array
 		let incorrectGuessesArray = [getCookie("incorrectGuessesArray")]
-		//let incorrectGuessesArray = [];
 		// Add the current incorrect guesses count to the array
 		incorrectGuessesArray.push(incorrectGuesses);
 		// Save the updated array back into the cookie
