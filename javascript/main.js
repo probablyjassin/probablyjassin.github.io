@@ -156,6 +156,7 @@ function showCorrectAnswer() {
 		if (noCookies) {
 			return "not saving cookies"
 		}
+		else {
 		console.log(incorrectGuesses)
 		// Get the existing incorrect guesses array from the cookie or create a new empty array
 		let incorrectGuessesArray = [getCookie("incorrectGuessesArray")]
@@ -164,6 +165,7 @@ function showCorrectAnswer() {
 		// Save the updated array back into the cookie
 		setCookie("incorrectGuessesArray", incorrectGuessesArray);
 		console.log(getCookie("incorrectGuessesArray"))
+		}
 	  }
 
 // Function to reset cookies
