@@ -1,9 +1,9 @@
+//initiate the check for when the game finished, in order to save cookies
+let gameEnd = false
+
 // initiate the game by chosing a random ability to be set as the correct answer
 let randomAbility = "";
 const abilityOptions = Object.keys(abilities);
-
-//initiate the check for when the game finished, in order to save cookies
-let gameEnd = false
 
 function generateRandomAbility() {;
     randomAbility = abilityOptions[Math.floor(Math.random() * abilityOptions.length)];
@@ -161,8 +161,8 @@ function saveIncorrectGuessesToCookie() {
 
 	function saveIncorrectGuessesToCookie() {
 		// Get the existing incorrect guesses array from the cookie or create a new empty array
-		let cookieValue = getCookie("incorrectGuessesArray");
-		let incorrectGuessesArray = [];
+		let incorrectGuessesArray = getCookie("incorrectGuessesArray");
+		//let incorrectGuessesArray = [];
 		// Add the current incorrect guesses count to the array
 		incorrectGuessesArray.push(incorrectGuesses);
 		// Save the updated array back into the cookie
