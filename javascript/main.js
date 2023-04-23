@@ -80,7 +80,6 @@ function checkGuess() {
 	// Check if player has guessed the correct ability
 	if (selectedAbility === randomAbility) {
 		correctGuess = true;
-		saveIncorrectGuessesToCookie()
 	}
     else {
         --incorrectGuesses;
@@ -98,7 +97,6 @@ function checkGuess() {
 	// Check if player has reached 8 incorrect guesses
 	if (incorrectGuesses < 1) {
 		alert(`You have reached 8 incorrect guesses. The correct ability was ${prettyRandom}.`);
-		saveIncorrectGuessesToCookie()
 		resetGame(); 
 		incorrectCount.textContent = `8`;
 	}
@@ -110,6 +108,8 @@ function checkGuess() {
 
 // Function to reset the game
 function resetGame() {
+	// Save Incorrect Guesses To Cookies
+	saveIncorrectGuessesToCookie()
 	// Clear the table
 	while (abilityTable.rows.length > 1) {
 		abilityTable.deleteRow(1);
@@ -120,7 +120,6 @@ function resetGame() {
 	incorrectGuesses = 8;
 	incorrectCount.textContent = `8`;
 	//Reset gameEnd in order to mark the beginning of a new game, for cookies
-	saveIncorrectGuessesToCookie()
 }
 
 // Select the concede button element
@@ -142,11 +141,6 @@ function showCorrectAnswer() {
 }
 
 // NEW: SAVING DATA ABOUT PAST GUESSES AS COOKIE TO SHOW AVERAGE GUESSES NEEDED
-
-if (gameEnd = true){
-	saveIncorrectGuessesToCookie();
-}
-
 	function saveIncorrectGuessesToCookie() {
 		// Get the existing incorrect guesses array from the cookie or create a new empty array
 		let incorrectGuessesArray = [getCookie("incorrectGuessesArray")]
@@ -157,7 +151,11 @@ if (gameEnd = true){
 		setCookie("incorrectGuessesArray", incorrectGuessesArray);
 		console.log(getCookie("incorrectGuessesArray"))
 	  }
-	  
+
+// Function to reset cookies
+function resetcookies() {
+	setCookie("incorrectGuessesArray", [])
+}
   
   // Helper function to set cookies
   function setCookie(name, value) {
