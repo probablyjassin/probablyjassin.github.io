@@ -28,7 +28,7 @@ const abilityTable = document.getElementById("ability-table");
 const incorrectCount = document.getElementById("incorrect-count");
 
 // Initialize the counter for incorrect guesses
-let incorrectGuesses = 8;
+let incorrectGuesses = 0;
 
 // Function to check the guess and update the table
 function checkGuess() {
@@ -82,7 +82,7 @@ function checkGuess() {
 		correctGuess = true;
 	}
     else {
-        --incorrectGuesses;
+        ++incorrectGuesses;
 		incorrectCount.textContent = incorrectGuesses; // update the incorrect guess count on screen
     }
 
@@ -95,10 +95,10 @@ function checkGuess() {
 	}
 
 	// Check if player has reached 8 incorrect guesses
-	if (incorrectGuesses < 1) {
+	if (incorrectGuesses > 8) {
 		alert(`You have reached 8 incorrect guesses. The correct ability was ${prettyRandom}.`);
 		resetGame(); 
-		incorrectCount.textContent = `8`;
+		incorrectCount.textContent = `0`;
 	}
 }
 
@@ -117,9 +117,8 @@ function resetGame() {
 	// Generate a new random ability as correct answer
 	generateRandomAbility();
 	//Reset incorrect guesses
-	incorrectGuesses = 8;
-	incorrectCount.textContent = `8`;
-	//Reset gameEnd in order to mark the beginning of a new game, for cookies
+	incorrectGuesses = 0;
+	incorrectCount.textContent = `0`;
 }
 
 // Select the concede button element
@@ -134,7 +133,7 @@ concedeButton.addEventListener("click", function() {
 
 // Function to display the correct answer
 function showCorrectAnswer() {
-	if (incorrectGuesses === 8) {return false}
+	if (incorrectGuesses === 0) {return false}
 	else {
   		alert(`The correct ability was ${randomAbility}.`);
 	}
@@ -142,8 +141,8 @@ function showCorrectAnswer() {
 
 // NEW: SAVING DATA ABOUT PAST GUESSES AS COOKIE TO SHOW AVERAGE GUESSES NEEDED
 	function saveIncorrectGuessesToCookie() {
-		if (incorrectGuesses < 1) {
-			incorrectGuesses = 1
+		if (incorrectGuesses > 8) {
+			incorrectGuesses = 8
 		}
 		// Get the existing incorrect guesses array from the cookie or create a new empty array
 		let incorrectGuessesArray = [getCookie("incorrectGuessesArray")]
