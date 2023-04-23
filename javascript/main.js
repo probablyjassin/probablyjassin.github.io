@@ -120,7 +120,9 @@ function resetGame() {
 	incorrectGuesses = 8;
 	incorrectCount.textContent = `8`;
 	//Reset gameEnd in order to mark the beginning of a new game, for cookies
+	console.log(gameEnd)
 	gameEnd = false;
+	console.log(gameEnd)
 }
 
 // Select the concede button element
@@ -147,7 +149,7 @@ if (gameEnd = true){
 	saveIncorrectGuessesToCookie();
 }
 
-// Function to save the incorrect guesses variable into cookies
+/* // Function to save the incorrect guesses variable into cookies
 function saveIncorrectGuessesToCookie() {
 	  // Get the existing incorrect guesses array from the cookie or create a new empty array
 	  let incorrectGuessesArray = JSON.parse(getCookie("incorrectGuessesArray")) || [];
@@ -155,7 +157,19 @@ function saveIncorrectGuessesToCookie() {
 	  incorrectGuessesArray.push(incorrectGuesses);
 	  // Save the updated array back into the cookie
 	  setCookie("incorrectGuessesArray", JSON.stringify(incorrectGuessesArray));
-	}
+	} */
+
+	function saveIncorrectGuessesToCookie() {
+		// Get the existing incorrect guesses array from the cookie or create a new empty array
+		let cookieValue = getCookie("incorrectGuessesArray");
+		let incorrectGuessesArray = [];
+		// Add the current incorrect guesses count to the array
+		incorrectGuessesArray.push(incorrectGuesses);
+		// Save the updated array back into the cookie
+		setCookie("incorrectGuessesArray", incorrectGuessesArray);
+		console.log(getCookie("incorrectGuessesArray"))
+	  }
+	  
   
   // Helper function to set cookies
   function setCookie(name, value) {
