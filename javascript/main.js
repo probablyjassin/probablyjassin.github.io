@@ -109,6 +109,9 @@ function checkGuess() {
 // Function to reset the game
 function resetGame() {
 	// Save Incorrect Guesses To Cookies
+	if (incorrectGuesses < 1) {
+		incorrectGuesses = 1
+	}
 	saveIncorrectGuessesToCookie()
 	// Clear the table
 	while (abilityTable.rows.length > 1) {
