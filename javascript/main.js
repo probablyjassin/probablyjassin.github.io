@@ -153,7 +153,7 @@ function showCorrectAnswer() {
 // NEW: SAVING DATA ABOUT PAST GUESSES AS COOKIE TO SHOW AVERAGE GUESSES NEEDED
 	function saveIncorrectGuessesToCookie() {
 		// if user has disagreed to cookies, don't continue here
-		if (noCookies = false) {
+		if (noCookies) {
 			return "not saving cookies"
 		}
 		console.log(incorrectGuesses)
