@@ -80,7 +80,7 @@ function checkGuess() {
 	// Check if player has guessed the correct ability
 	if (selectedAbility === randomAbility) {
 		correctGuess = true;
-		gameEnd = true;
+		saveIncorrectGuessesToCookie()
 	}
     else {
         --incorrectGuesses;
@@ -98,7 +98,7 @@ function checkGuess() {
 	// Check if player has reached 8 incorrect guesses
 	if (incorrectGuesses < 1) {
 		alert(`You have reached 8 incorrect guesses. The correct ability was ${prettyRandom}.`);
-		gameEnd = true;
+		saveIncorrectGuessesToCookie()
 		resetGame(); 
 		incorrectCount.textContent = `8`;
 	}
@@ -120,9 +120,7 @@ function resetGame() {
 	incorrectGuesses = 8;
 	incorrectCount.textContent = `8`;
 	//Reset gameEnd in order to mark the beginning of a new game, for cookies
-	console.log(gameEnd)
-	gameEnd = false;
-	console.log(gameEnd)
+	saveIncorrectGuessesToCookie()
 }
 
 // Select the concede button element
@@ -149,19 +147,9 @@ if (gameEnd = true){
 	saveIncorrectGuessesToCookie();
 }
 
-/* // Function to save the incorrect guesses variable into cookies
-function saveIncorrectGuessesToCookie() {
-	  // Get the existing incorrect guesses array from the cookie or create a new empty array
-	  let incorrectGuessesArray = JSON.parse(getCookie("incorrectGuessesArray")) || [];
-	  // Add the current incorrect guesses count to the array
-	  incorrectGuessesArray.push(incorrectGuesses);
-	  // Save the updated array back into the cookie
-	  setCookie("incorrectGuessesArray", JSON.stringify(incorrectGuessesArray));
-	} */
-
 	function saveIncorrectGuessesToCookie() {
 		// Get the existing incorrect guesses array from the cookie or create a new empty array
-		let incorrectGuessesArray = getCookie("incorrectGuessesArray");
+		let incorrectGuessesArray = [getCookie("incorrectGuessesArray")]
 		//let incorrectGuessesArray = [];
 		// Add the current incorrect guesses count to the array
 		incorrectGuessesArray.push(incorrectGuesses);
