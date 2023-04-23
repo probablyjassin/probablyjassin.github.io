@@ -96,9 +96,12 @@ function checkGuess() {
 
 	// Check if player has reached 8 incorrect guesses
 	if (incorrectGuesses >= 8) {
-		alert(`You have reached 8 incorrect guesses. The correct ability was ${prettyRandom}.`);
-		resetGame(); 
-		incorrectCount.textContent = `0`;
+		incorrectCount.textContent = `8`
+		setTimeout(() => {
+			alert(`You have reached 8 incorrect guesses. The correct ability was ${prettyRandom}.`);
+			resetGame(); 
+			incorrectCount.textContent = `0`;
+		}, 100);
 	}
 }
 
@@ -141,9 +144,6 @@ function showCorrectAnswer() {
 
 // NEW: SAVING DATA ABOUT PAST GUESSES AS COOKIE TO SHOW AVERAGE GUESSES NEEDED
 	function saveIncorrectGuessesToCookie() {
-		if (incorrectGuesses > 8) {
-			incorrectGuesses = 8
-		}
 		// Get the existing incorrect guesses array from the cookie or create a new empty array
 		let incorrectGuessesArray = [getCookie("incorrectGuessesArray")]
 		//let incorrectGuessesArray = [];
