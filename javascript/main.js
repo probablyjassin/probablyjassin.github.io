@@ -134,6 +134,67 @@ function showCorrectAnswer() {
 	}
 }
 
+// NEW: SAVING DATA ABOUT PAST GUESSES AS COOKIE TO SHOW AVERAGE GUESSES NEEDED
+
+// Function to save the incorrect guesses variable into cookies
+function saveIncorrectGuessesToCookie() {
+	// Check if temporary variable is true
+	if (tempVariable) {
+	  // Get the existing incorrect guesses array from the cookie or create a new empty array
+	  let incorrectGuessesArray = JSON.parse(getCookie("incorrectGuessesArray")) || [];
+	  // Add the current incorrect guesses count to the array
+	  incorrectGuessesArray.push(incorrectGuesses);
+	  // Save the updated array back into the cookie
+	  setCookie("incorrectGuessesArray", JSON.stringify(incorrectGuessesArray));
+	}
+  }
+  
+  // Function to save the average number of incorrect guesses as a second cookie
+  function saveAverageIncorrectGuessesToCookie() {
+	// Get the existing incorrect guesses array from the cookie or create a new empty array
+	let incorrectGuessesArray = JSON.parse(getCookie("incorrectGuessesArray")) || [];
+	// Calculate the average number of incorrect guesses
+	let average = incorrectGuessesArray.reduce((acc, val) => acc + val, 0) / incorrectGuessesArray.length;
+	// Save the average as a cookie
+	setCookie("averageIncorrectGuesses", average);
+  }
+  
+  // Helper function to set cookies
+  function setCookie(name, value) {
+	document.cookie = name + "=" + value + ";path=/";
+  }
+  
+  // Helper function to get cookies
+  function getCookie(name) {
+	const cookieString = decodeURIComponent(document.cookie);
+	const cookies = cookieString.split(';');
+	for (let i = 0; i < cookies.length; i++) {
+	  let cookie = cookies[i].trim();
+	  if (cookie.indexOf(name + "=") === 0) {
+		return cookie.substring(name.length + 1, cookie.length);
+	  }
+	}
+	return "";
+  }
+  
+  // Call the save functions wherever you want, for example after each incorrect guess:
+  function checkGuess() {
+	// ...
+	if (!abilityOptions.includes(selectedAbility)) {
+	  alert("Please select an ability to guess.");
+	  return;
+	}
+	// ...
+	else {
+	  --incorrectGuesses;
+	  incorrectCount.textContent = incorrectGuesses; // update the incorrect guess count on screen
+	  saveIncorrectGuessesToCookie();
+	  saveAverageIncorrectGuessesToCookie();
+	}
+	// ...
+  }
+  
+
 // FOR DEVELOPEMENT: Select the correct-answer element on screen and display the answer
 // const correctAnswer = document.getElementById("correct-answer");
 // correctAnswer.textContent += randomAbility;
