@@ -88,11 +88,11 @@ function checkGuess() {
 
 	// If correct, show alert and reset table
 	if (correctGuess) {
+		// Save Incorrect Guesses To Cookies
+		saveIncorrectGuessesToCookie()
 		setTimeout(() => {
 			alert(`${prettyRandom} was the correct ability. Congratulations!`);
 			resetGame();
-			// Save Incorrect Guesses To Cookies
-			saveIncorrectGuessesToCookie()
 		}, 100);
 	}
 
