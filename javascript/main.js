@@ -91,6 +91,8 @@ function checkGuess() {
 		setTimeout(() => {
 			alert(`${prettyRandom} was the correct ability. Congratulations!`);
 			resetGame();
+			// Save Incorrect Guesses To Cookies
+			saveIncorrectGuessesToCookie()
 		}, 100);
 	}
 
@@ -100,6 +102,8 @@ function checkGuess() {
 		setTimeout(() => {
 			alert(`You have reached 8 incorrect guesses. The correct ability was ${prettyRandom}.`);
 			resetGame(); 
+			// Save Incorrect Guesses To Cookies
+			saveIncorrectGuessesToCookie()
 			incorrectCount.textContent = `0`;
 		}, 100);
 	}
@@ -111,8 +115,6 @@ function checkGuess() {
 
 // Function to reset the game
 function resetGame() {
-	// Save Incorrect Guesses To Cookies
-	saveIncorrectGuessesToCookie()
 	// Clear the table
 	while (abilityTable.rows.length > 1) {
 		abilityTable.deleteRow(1);
@@ -129,6 +131,7 @@ const concedeButton = document.getElementById("concede-button");
 
 // Add event listener to concede button
 concedeButton.addEventListener("click", function() {
+	incorrectGuesses = "C"
 	resetGame();
 	showCorrectAnswer();
 	
