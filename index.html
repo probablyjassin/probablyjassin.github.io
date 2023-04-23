@@ -125,7 +125,7 @@ function freezebg() {
 </style>
 
 <!--- -->
-<div  id="cookie-popup">
+<div  id="cookie-popup" id="dialog">
 	<p>The game can now show statistics of how many guesses you need <br> per game, storing those numbers as a cookie in your browser.</p>
 	<button name="agree" class="agree" onclick="hidePopup()">Cool, I agree</button>
 	<button name="decline" class="decline" onclick="hidePopup()" onclick="noCookies = true">I don't want to use cookies</button>
@@ -139,20 +139,19 @@ function freezebg() {
 
 <script>
 if (!localStorage.hideAlert) {
-	$(function() {
-	  $("#cookie-popup").dialog();
-	});
-  } else {
-	$("#cookie-popup").css("display", "none");
-  }
-  $(".agree").on("click", function() {
-	localStorage.setItem('hideAlert', true);
-	$("#cookie-popup").dialog("close");
+  $(function() {
+    $("#dialog").dialog();
   });
-  $(".decline").on("click", function() {
-	localStorage.setItem('hideAlert', true);
-	$("#cookie-popup").dialog("close");
-  });
+} else {
+  $("#dialog").css("display", "none");
+}
+$(".yes").on("click", function() {
+  $("#dialog").dialog("close");
+});
+$(".no").on("click", function() {
+  localStorage.setItem('hideAlert', true);
+  $("#dialog").dialog("close");
+});
 </script>
 
 </body>
