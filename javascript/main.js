@@ -134,7 +134,6 @@ const concedeButton = document.getElementById("concede-button");
 // Add event listener to concede button
 concedeButton.addEventListener("click", function() {
 	incorrectGuesses = "C"
-	console.log(incorrectGuesses)
 	showCorrectAnswer();
 	resetGame();
 	
