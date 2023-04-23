@@ -98,6 +98,7 @@ function checkGuess() {
 
 	// Check if player has reached 8 incorrect guesses
 	if (incorrectGuesses >= 8) {
+		incorrectGuesses = 8
 		console.log(incorrectGuesses)
 		saveIncorrectGuessesToCookie()
 		incorrectCount.textContent = `8`
