@@ -133,7 +133,7 @@ const concedeButton = document.getElementById("concede-button");
 
 // Add event listener to concede button
 concedeButton.addEventListener("click", function() {
-	if (incorrectGuesses === 0) {return false}
+	if (incorrectGuesses === 0) {return}
 	else {
 	incorrectGuesses = "C"
 	saveIncorrectGuessesToCookie()
