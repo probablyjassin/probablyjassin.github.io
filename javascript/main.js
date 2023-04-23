@@ -192,8 +192,8 @@ function saveIncorrectGuessesToCookie() {
 	  saveAverageIncorrectGuessesToCookie();
 	}
 	// ...
-  }
-  */
+  } */
+  
 
 // FOR DEVELOPEMENT: Select the correct-answer element on screen and display the answer
 // const correctAnswer = document.getElementById("correct-answer");
