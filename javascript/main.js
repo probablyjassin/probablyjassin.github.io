@@ -165,7 +165,8 @@ function showCorrectAnswer() {
 
 // Function to reset cookies
 function resetcookies() {
-	document.cookie = ''
+	document.cookie.split(";").forEach(function(c) { 
+	document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
 }
   
   // Helper function to set cookies
