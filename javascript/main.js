@@ -7,7 +7,7 @@ function hidePopup() {
 }
 // hide popup if already agreed
 // Add event listener to popup button
-agree-button.addEventListener("click", function() {
+agreebutton.addEventListener("click", function() {
 	if (getCookie("cookiesAgreeGe") === 'true') {
 		hidePopup()
 	}
