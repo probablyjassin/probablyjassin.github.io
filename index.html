@@ -23,6 +23,7 @@
 			display: inline-block;
 		}
 	  </style>
+	<script src="./javascript/cookies.js" defer></script>
 	<script src="./javascript/abilities.js" defer></script>
 	<script src="./javascript/main.js" defer></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -131,12 +132,6 @@ function freezebg() {
 	<button id="agreebutton" name="agree" class="agree" onclick="hidePopup()" onclick="cookiesAgreeGe()" >OkaygeBuisness</button>
 	<!--- <button name="decline" class="decline" onclick="hidePopup()" onclick="noCookies = true">I don't want to use cookies</button> -->
 </div>
-
-<script>
-	if (getCookie("cookiesAgreeGe") === 'true') {
-	hidePopup()
-}
-</script>
 
 </body>
 </html>

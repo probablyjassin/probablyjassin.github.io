@@ -1,20 +1,4 @@
-//cookie popup hide
-function cookiesAgreeGe() {
-	setCookie("cookiesAgreeGe", true)
-}
-function hidePopup() {
-	document.getElementById("cookie-popup").style.display = "none";
-}
-// hide popup if already agreed
-// Add event listener to popup button
-agreebutton.addEventListener("click", function() {
-	if (getCookie("cookiesAgreeGe") === 'true') {
-		hidePopup()
-	}
-});
 
-// not showing popup during development
-// hidePopup()
 
 //initiate the check for when the game finished, in order to save cookies
 let gameEnd = false
