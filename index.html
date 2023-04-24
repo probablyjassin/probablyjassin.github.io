@@ -82,7 +82,7 @@ function freezebg() {
 <button class="button2" onclick="freezebg()">Freeze Background</button>
 
 <footer>
-	<h3><a href="version.html"> Version 3.0</a></h3>
+	<h3><a href="version.html"> Version 3.2</a></h3>
 	<h3> Made by probablyjassin </h3>
 	<h3> <a href="aboutme.html">Contact</a></h3>
 	<h3>The database this is based on was provided by <a href="https://www.twitch.tv/Zajef77"> Zajef77</a></h3>
@@ -128,13 +128,17 @@ function freezebg() {
 <div  id="cookie-popup">
 	<p>The game will soon be able to show you statistics of how many guesses you needed per game, storing those <br>
 		numbers as a cookie in your browser. By playing, you agree to that info being stored on your device.</p>
-	<button name="agree" class="agree" onclick="hidePopup()">OkaygeBuisness</button>
+	<button name="agree" class="agree" onclick="hidePopup()" onclick="setCookie(cookiesAgreeGe, true)" >OkaygeBuisness</button>
 	<!--- <button name="decline" class="decline" onclick="hidePopup()" onclick="noCookies = true">I don't want to use cookies</button> -->
 </div>
 
 <script>
 	function hidePopup() {
 		document.getElementById("cookie-popup").style.display = "none";
+	}
+// hide popup if already agreed
+	if (getCookie(cookiesAgreeGe) = true) {
+		hidePopup()
 	}
 // not showing popup during development
 // hidePopup()
