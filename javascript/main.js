@@ -6,7 +6,7 @@ function hidePopup() {
 	document.getElementById("cookie-popup").style.display = "none";
 }
 // hide popup if already agreed
-if (getCookie(cookiesAgreeGe) = true) {
+if (getCookie(cookiesAgreeGe) === true) {
 	hidePopup()
 }
 // not showing popup during development
