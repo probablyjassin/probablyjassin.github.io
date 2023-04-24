@@ -166,7 +166,7 @@ function showCorrectAnswer() {
 // Function to reset cookies
 function resetcookies() {
 	setCookie("incorrectGuessesArray", '');
-	setCookie("cookiesAgreeGe", 's');
+	setCookie("cookiesAgreeGe", '');
 }
   
   // Helper function to set cookies
