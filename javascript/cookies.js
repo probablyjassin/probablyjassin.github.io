@@ -17,7 +17,7 @@ function setCookie(name, value) {
   }
 
 //cookie popup things happening here
-agreebutton.addEventListener("click", cookiesAgreeGe = 'true');
+agreebutton.addEventListener("click", cookiesAgreeGe());
 
 if (cookiesAgreeGe === 'true') {
     cookiesAgreeGe()
