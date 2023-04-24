@@ -18,7 +18,7 @@ function setCookie(name, value) {
 
 //cookie popup hide
 function cookiesAgreeGe() {
-	setCookie("cookiesAgreeGe", true)
+	setCookie("cookiesAgreeGe", 'true')
 }
 function hidePopup() {
 	document.getElementById("cookie-popup").style.display = "none";
