@@ -6,9 +6,13 @@ function hidePopup() {
 	document.getElementById("cookie-popup").style.display = "none";
 }
 // hide popup if already agreed
-if (getCookie("cookiesAgreeGe") === 'true') {
-	hidePopup()
-}
+// Add event listener to popup button
+agree-button.addEventListener("click", function() {
+	if (getCookie("cookiesAgreeGe") === 'true') {
+		hidePopup()
+	}
+});
+
 // not showing popup during development
 // hidePopup()
 

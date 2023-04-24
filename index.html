@@ -128,9 +128,15 @@ function freezebg() {
 <div  id="cookie-popup">
 	<p>The game will soon be able to show you statistics of how many guesses you needed per game, storing those <br>
 		numbers as a cookie in your browser. By playing, you agree to that info being stored on your device.</p>
-	<button name="agree" class="agree" onclick="hidePopup()" onclick="cookiesAgreeGe()" >OkaygeBuisness</button>
+	<button id="agree-button" name="agree" class="agree" onclick="hidePopup()" onclick="cookiesAgreeGe()" >OkaygeBuisness</button>
 	<!--- <button name="decline" class="decline" onclick="hidePopup()" onclick="noCookies = true">I don't want to use cookies</button> -->
 </div>
+
+<script>
+	if (getCookie("cookiesAgreeGe") === 'true') {
+	hidePopup()
+}
+</script>
 
 </body>
 </html>
