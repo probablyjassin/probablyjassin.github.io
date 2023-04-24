@@ -1,8 +1,3 @@
-
-
-//initiate the check for when the game finished, in order to save cookies
-let gameEnd = false
-
 // initiate the game by chosing a random ability to be set as the correct answer
 let randomAbility = "";
 const abilityOptions = Object.keys(abilities);
