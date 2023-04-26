@@ -26,9 +26,11 @@ agreebutton.addEventListener("click", function() {
     cookiesAgreeGe();
 });
 
+// Buttons for agree/disagree with cookie agreement
 function cookiesAgreeGe() {
 	setCookie("cookiesAgreeGe", 'true')
 }
+const declineButton = document.getElementById("declinebutton");
 function declineCookies() {
 	var AINTNOCookie = true
 }
