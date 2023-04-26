@@ -191,7 +191,6 @@ const resetstatsButton = document.getElementById("resetstats");
 // Add event listener to resetstats button in statistic
 resetstatsButton.addEventListener("click", function() {
 	setCookie("incorrectGuessesArray", '')
-	setCookie("cookiesAgreeGe", '')
 	closestat()
 });
 
