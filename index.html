@@ -104,7 +104,13 @@ function freezebg() {
 		</div>
 	</div>
 
-	
+	<!--- sehr copium temporary fix because the functions isn't loaded from cookies.js before it's needed here for some fucking reason -->
+	<script>
+	const declineButton = document.getElementById("declinebutton");
+		function declineCookies() {
+			var AINTNOCookie = true
+		}
+	</script>
 	  
 
 </body>
