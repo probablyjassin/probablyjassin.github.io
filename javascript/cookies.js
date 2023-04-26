@@ -29,7 +29,7 @@ agreebutton.addEventListener("click", function() {
 function cookiesAgreeGe() {
 	setCookie("cookiesAgreeGe", 'true')
 }
-function AINTNOCookie() {
+function declineCookies() {
 	var AINTNOCookie = true
 }
 function hidePopup() {
