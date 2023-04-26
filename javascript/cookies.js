@@ -1,8 +1,8 @@
 // Helper function to set cookies
 function setCookie(name, value) {
 	document.cookie = name + "=" + value + ";path=/";
-  }
-  
+}
+
   // Helper function to get cookies
   function getCookie(name) {
 	const cookieString = decodeURIComponent(document.cookie);

@@ -16,7 +16,6 @@ for (const iterator of abilityOptions) {
 	guessTable.appendChild(option)
 }
 
-
 // Select the guess select and ability table elements
 const guessSelect = document.getElementById("guess-input");
 const abilityTable = document.getElementById("ability-table");
@@ -115,6 +114,8 @@ function checkGuess() {
 // Function to reset the game
 function resetGame() {
 	// Clear the table
+	document.getElementById("statistic-popup").style.display = 'initial';
+	makeChart()
 	while (abilityTable.rows.length > 1) {
 		abilityTable.deleteRow(1);
 	}
@@ -147,7 +148,7 @@ function showCorrectAnswer() {
 	}
 }
 
-// NEW: SAVING DATA ABOUT PAST GUESSES AS COOKIE TO SHOW AVERAGE GUESSES NEEDED
+// NEW: SAVING DATA ABOUT PAST GUESSES AS COOKIE TO SHOW AVERAGE INCORRECT GUESSES
 	function saveIncorrectGuessesToCookie() {
 		// Get the existing incorrect guesses array from the cookie or create a new empty array
 		let incorrectGuessesArray = [getCookie("incorrectGuessesArray")]
@@ -181,16 +182,17 @@ function resetcookies() {
 	}
 	return "";
   }
-  
-   /* // Function to save the average number of incorrect guesses as a second cookie
-  function saveAverageIncorrectGuessesToCookie() {
-	// Get the existing incorrect guesses array from the cookie or create a new empty array
-	let incorrectGuessesArray = JSON.parse(getCookie("incorrectGuessesArray")) || [];
-	// Calculate the average number of incorrect guesses
-	let average = incorrectGuessesArray.reduce((acc, val) => acc + val, 0) / incorrectGuessesArray.length;
-	// Save the average as a cookie
-	setCookie("averageIncorrectGuesses", average); 
-  } */
+
+
+// Select the concede button element
+const resetstatsButton = document.getElementById("resetstats");
+// Add event listener to resetstats button in statistic
+resetstatsButton.addEventListener("click", function() {
+	setCookie("incorrectGuessesArray", '')
+	setCookie("cookiesAgreeGe", '')
+	closestat()
+});
+
 
 // FOR DEVELOPEMENT: Select the correct-answer element on screen and display the answer
 // const correctAnswer = document.getElementById("correct-answer");

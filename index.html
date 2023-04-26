@@ -12,15 +12,28 @@
 	  <style>
 		
 	  </style>
+	  
 	<script src="./javascript/cookies.js" defer></script>
 	<script src="./javascript/statistic.js" defer></script>
 	<script src="./javascript/abilities.js" defer></script>
 	<script src="./javascript/main.js" defer></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 	<title>Gaugedle</title>
 </head>
 <body class="bg">
+
+<div  id="statistic-popup">
+	<canvas id="myChart" width="800" height="450"></canvas>	
+	<div class="parent">
+		<div class="child inline-block-child" style="float: left;">
+			<button id="closestat" onclick="closestat()"> Close </button>
+		</div>
+		<div class="child inline-block-child" style="float: right;">
+			<button id="resetstats" style="background-color: #f44336;" onclick="resetstats()"> Reset Stats </button>
+		</div>
+	</div>
+</div>
 
 <h1>The Genshin <img src="./images/gauge.png" class="image", class="icon"> dle</h1>
 
@@ -57,10 +70,6 @@
 	</table>
 </div>
 
-<div id="statistic-popup">
-	<p>test</p>
-</div>
-
 <!--- DEVELOPEMENT: Show correct answer (works only once) -->
 <!--- <p id="correct-answer">Correct answer:</p>  -->
 	
@@ -94,6 +103,9 @@ function freezebg() {
 			<button name="decline" class="decline" onclick="history.back()">NOPERS</button>
 		</div>
 	</div>
+
+	
+	  
 
 </body>
 </html>

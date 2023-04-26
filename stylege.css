@@ -182,13 +182,15 @@ input {
 #statistic-popup {
     position: fixed;
     top: 5%;
-    right: 60%;
-    background-color: rgba(255,255,255,0.9);
+    left: 22%;
+    background-color: rgba(255, 255, 255, 1);
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
     z-index: 9999;
+    width: "800"; 
+    height: "450";
 }
 #statistic-popup p {
     margin: 0;
@@ -211,3 +213,21 @@ input {
     background-color: #f44336;
     color: #fff;
 }
+
+
+.chart-container {
+    width: 300px;
+    height: 30px;
+    background-color: #eee;
+    margin-bottom: 20px;
+  }
+  
+  .bar {
+    height: 100%;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    background-color: #007bff;
+    transition: width 0.5s ease-in-out;
+  }
+  
