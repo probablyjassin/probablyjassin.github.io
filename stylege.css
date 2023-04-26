@@ -9,25 +9,24 @@ body {
 
     font-family: "Comic Sans MS", "Comic Sans";
     margin: 0;
-    margin-bottom: 9em;
+    margin-bottom: 5%;
     padding: 0;
     text-align: center;
     filter: none;
     text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 h1 {
-    font-size: 5em;
+    font-size: 750%;
     text-align: center;
-    margin-top: 0.5em;
+    margin-top: 0;
     filter: none;
 
 }
-
 h2 {
     text-align: center;
-    font-size: 2em;
-    padding-left: 30px;
-    padding-right: 30px;
+    font-size: 200%;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 h3 {
@@ -36,11 +35,12 @@ h3 {
 
 p {
     text-align: center;
+    font-size: 150%;
 }
 label {
-    font-size: 2em;
+    font-size: 300%;
     text-align: center;
-    margin-top: 0.5em;
+    margin-top: 5%;
     text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 table {

@@ -1,7 +1,9 @@
 // Helper function to set cookies
 function setCookie(name, value) {
+	if (AINTNOCookie) {console.log("Saving Cookies Was Aborted, Cookies Haven't Been Agreed To")}
+	else {
 	document.cookie = name + "=" + value + ";path=/";
-}
+}}
 
   // Helper function to get cookies
   function getCookie(name) {
@@ -23,6 +25,9 @@ agreebutton.addEventListener("click", function() {
 
 function cookiesAgreeGe() {
 	setCookie("cookiesAgreeGe", 'true')
+}
+function AINTNOCookie() {
+	var AINTNOCookie = true
 }
 function hidePopup() {
 	document.getElementById("cookie-popup").style.display = "none";
