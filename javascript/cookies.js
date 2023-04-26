@@ -1,3 +1,6 @@
+// No-Cookies variable needs to be false by default
+var AINTNOCookie = false
+
 // Helper function to set cookies
 function setCookie(name, value) {
 	if (AINTNOCookie) {console.log("Saving Cookies Was Aborted, Cookies Haven't Been Agreed To")}
