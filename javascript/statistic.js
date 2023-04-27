@@ -42,7 +42,7 @@ function getIndex(num) {
 
 // create chart
 function makeChart() {
-    if (AINTNOCookie === 'true') {console.log("Loading Chart Was Aborted, Cookies Haven't Been Agreed To")}
+    if (AINTNOCookie === 'true') {console.log("Loading statistics has been aborted, cookies haven't been agreed to")}
     else {
         // Make the div the chart will be loaded in visible
         document.getElementById("statistic-popup").style.display = 'initial';

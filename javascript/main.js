@@ -155,7 +155,6 @@ function saveIncorrectGuessesToCookie() {
 
 	// Save the updated array back into the cookie
 	setCookie("incorrectGuessesArray", incorrectGuessesArray);
-	console.log(getCookie("incorrectGuessesArray"))
 }
 
 // Function to reset cookies
@@ -166,7 +165,7 @@ function resetcookies() {
   
 // Helper function to set cookies
 function setCookie(name, value) {
-	if (AINTNOCookie === 'nopers') {console.log("Saving Cookies Was Aborted, Cookies Haven't Been Agreed To")}
+	if (AINTNOCookie === 'true') {console.log("Saving cookies has been aborted, cookies haven't been agreed to")}
 	else {
 	document.cookie = name + "=" + value + ";path=/";
 }}
