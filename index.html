@@ -13,8 +13,8 @@
 		
 	  </style>
 	  
-	<script src="./javascript/cookies.js" defer></script>
-	<script src="./javascript/statistic.js" defer></script>
+	<script src="./javascript/cookies.js"></script>
+	<script src="./javascript/statistic.js"></script>
 	<script src="./javascript/abilities.js" defer></script>
 	<script src="./javascript/main.js" defer></script>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -100,18 +100,9 @@ function freezebg() {
 			<button id="agreebutton" name="agree" class="agree" onclick="hidePopup()" onclick="cookiesAgreeGe()">OkaygeBuisness</button>
 		</div>
 		<div class='child inline-block-child'>
-			<button name="decline" class="decline" id="declinebutton" onclick="declineCookies(), hidePopup()">NOPERS</button>
+			<button name="decline" class="decline" id="declinebutton" onclick="declineCookies()" onclick="hidePopup()">NOPERS</button>
 		</div>
 	</div>
-
-	<!--- sehr copium temporary fix because the functions isn't loaded from cookies.js before it's needed here for some fucking reason -->
-	<script>
-	const declineButton = document.getElementById("declinebutton");
-		function declineCookies() {
-			var AINTNOCookie = true
-		}
-	</script>
-	  
 
 </body>
 </html>
