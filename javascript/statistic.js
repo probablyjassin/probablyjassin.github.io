@@ -62,6 +62,12 @@ function makeChart() {
                 ]
             },
             options: {
+                legend: {
+                    display: false
+                 },
+                tooltips: {
+                    enabled: false
+                },
                 indexAxis: 'y',
                 legend: {display: false},
                 title: {
