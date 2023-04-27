@@ -125,17 +125,29 @@ function resetGame() {
 
 // Select the concede button element
 const concedeButton = document.getElementById("concede-button");
+const confirmButton = document.getElementById("confirmButton");
+const cancelButton = document.getElementById("cancelButton")
+
+//Confirm popup hidden by default
+document.getElementById("confirm-popup").style.display = 'none';
 
 // Add event listener to concede button
 concedeButton.addEventListener("click", function() {
-	if (incorrectGuesses === 0) {return}
+	if (incorrectGuesses === 0) {alert(`You didn't even guess anything yet`);}
 	else {
+		document.getElementById("confirm-popup").style.display = 'initial';
+	}
+})
+confirmButton.addEventListener("click", function() {
+	document.getElementById("confirm-popup").style.display = 'none';
 	incorrectGuesses = "C"
 	saveIncorrectGuessesToCookie()
 	showCorrectAnswer();
 	resetGame();
-	}	
 });
+cancelButton.addEventListener("click", function() {
+	document.getElementById("confirm-popup").style.display = 'none';
+})
 
 // Function to display the correct answer
 function showCorrectAnswer() {
@@ -184,7 +196,7 @@ function getCookie(name) {
 }
 
 
-// Select the concede button element
+// Select the resetstats button element
 const resetstatsButton = document.getElementById("resetstats");
 
 // Add event listener to resetstats button in statistic
