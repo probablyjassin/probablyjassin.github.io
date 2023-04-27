@@ -3,7 +3,7 @@ var AINTNOCookie = false
 
 // Helper function to set cookies
 function setCookie(name, value) {
-	if (AINTNOCookie) {console.log("Saving Cookies Was Aborted, Cookies Haven't Been Agreed To")}
+	if (AINTNOCookie = 'true') {console.log("Saving Cookies Was Aborted, Cookies Haven't Been Agreed To")}
 	else {
 	document.cookie = name + "=" + value + ";path=/";
 }}
@@ -35,10 +35,11 @@ const declineButton = document.getElementById("declineButton");
 
 declineButton.addEventListener("click", function() {
 	declineCookies()
+	var AINTNOCookie = 'true'
 });
 // Setting this variable to true prevents cookies from being stored and the statistic chart being drawn
 function declineCookies() {
-	var AINTNOCookie = true
+	let AINTNOCookie = 'true'
 }
 function hidePopup() {
 	document.getElementById("cookie-popup").style.display = "none";
