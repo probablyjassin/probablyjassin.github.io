@@ -32,9 +32,9 @@ function cookiesAgreeGe() {
 }
 // Add event listener to decline Button for cookie popup
 const declineButton = document.getElementById("declinebutton");
-function declineCookies() {
+concedeButton.addEventListener("click", function() {
 	var AINTNOCookie = true
-}
+})
 function hidePopup() {
 	document.getElementById("cookie-popup").style.display = "none";
 }
