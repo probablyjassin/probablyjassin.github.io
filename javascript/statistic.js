@@ -55,7 +55,7 @@ function makeChart() {
                 labels: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "Conceded"],
                 datasets: [
                     {
-                        label: "Number of incorrect guesses needed per game",
+                        /* label: "Number of incorrect guesses needed per game",*/
                         backgroundColor: ["#3e95cd"],
                         data: counts
                     }
@@ -63,12 +63,9 @@ function makeChart() {
             },
             options: {
                 plugins: {
-                legend: {
-                    display: false
-                 },
-                tooltips: {
-                    enabled: false
-                },
+                    legend: {
+                        display: false
+                    },
                 },
                 ticks: {
                     precision:0
