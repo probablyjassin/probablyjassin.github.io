@@ -1,6 +1,10 @@
-// No-Cookies variable needs to be false by default
-var AINTNOCookie = false
-
+// Setting this variable to true prevents cookies from being stored and the statistic chart being drawn
+function declineCookies() {
+	AINTNOCookie = 'true'
+}
+function hidePopup() {
+	document.getElementById("cookie-popup").style.display = "none";
+}
 // Helper function to set cookies
 function setCookie(name, value) {
 	if (AINTNOCookie = 'true') {console.log("Saving Cookies Was Aborted, Cookies Haven't Been Agreed To")}
@@ -35,15 +39,7 @@ const declineButton = document.getElementById("declineButton");
 
 declineButton.addEventListener("click", function() {
 	declineCookies()
-	var AINTNOCookie = 'true'
 });
-// Setting this variable to true prevents cookies from being stored and the statistic chart being drawn
-function declineCookies() {
-	let AINTNOCookie = 'true'
-}
-function hidePopup() {
-	document.getElementById("cookie-popup").style.display = "none";
-}
 // hide popup if already agreed
 if (getCookie("cookiesAgreeGe") === 'true') {
 	hidePopup()
