@@ -1,3 +1,10 @@
+// Add event listener to decline Button for cookie popup
+const declineButton = document.getElementById("declineButton");
+
+declineButton.addEventListener("click", function() {
+	declineCookies()
+});
+
 // Setting this variable to true prevents cookies from being stored and the statistic chart being drawn
 function declineCookies() {
 	AINTNOCookie = 'true'
@@ -34,12 +41,6 @@ agreebutton.addEventListener("click", function() {
 function cookiesAgreeGe() {
 	setCookie("cookiesAgreeGe", 'true')
 }
-// Add event listener to decline Button for cookie popup
-const declineButton = document.getElementById("declineButton");
-
-declineButton.addEventListener("click", function() {
-	declineCookies()
-});
 // hide popup if already agreed
 if (getCookie("cookiesAgreeGe") === 'true') {
 	hidePopup()
