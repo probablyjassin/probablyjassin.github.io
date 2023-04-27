@@ -166,7 +166,7 @@ function resetcookies() {
   
 // Helper function to set cookies
 function setCookie(name, value) {
-	if (AINTNOCookie = 'true') {console.log("Saving Cookies Was Aborted, Cookies Haven't Been Agreed To")}
+	if (AINTNOCookie === 'nopers') {console.log("Saving Cookies Was Aborted, Cookies Haven't Been Agreed To")}
 	else {
 	document.cookie = name + "=" + value + ";path=/";
 }}

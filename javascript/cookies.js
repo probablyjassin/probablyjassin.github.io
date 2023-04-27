@@ -1,10 +1,10 @@
+var AINTNOCookie = ''
 // Add event listener to decline Button for cookie popup
-const declineButton = document.getElementById("declineButton");
+const NOPERSButton = document.getElementById("declineCookiesButton");
 
-declineButton.addEventListener("click", function() {
+NOPERSButton.addEventListener("click", function() {
 	declineCookies()
 });
-
 // Setting this variable to true prevents cookies from being stored and the statistic chart being drawn
 function declineCookies() {
 	AINTNOCookie = 'true'
@@ -14,7 +14,7 @@ function hidePopup() {
 }
 // Helper function to set cookies
 function setCookie(name, value) {
-	if (AINTNOCookie = 'true') {console.log("Saving Cookies Was Aborted, Cookies Haven't Been Agreed To")}
+	if (AINTNOCookie === 'true') {console.log("Saving Cookies Was Aborted, Cookies Haven't Been Agreed To")}
 	else {
 	document.cookie = name + "=" + value + ";path=/";
 }}
