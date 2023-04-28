@@ -74,11 +74,24 @@ td, th {
     -ms-user-select: none;
     user-select: none;
 }
+.mobile {
+    display: 'none';
+}
 @media only screen and (max-width: 990px) {
     th, td, tr 
-    { display: block; display: 'none'; float: left; padding: 1%; flex-wrap: wrap;}
-
-  }
+    { display: block; float: left; padding: 1%; flex-wrap: wrap;}
+    .buttondiv {
+        margin: 0;
+    }
+    .widescreen {
+        display: none;
+    }
+    .mobile {
+        font-size: 375%;
+    }
+    h2.mobile {
+    font-size: 200%;
+}}
 
 select {
     display: block;

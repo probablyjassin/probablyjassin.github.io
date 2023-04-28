@@ -36,9 +36,11 @@
 	</div>
 </div>
 
-<h1>The Genshin <img src="./images/gauge.png" class="image", class="icon"> dle</h1>
+<h1 class="widescreen">The Genshin <img src="./images/gauge.png" class="image", class="icon"> dle</h1>
+<h1 class="mobile">The Gaugedle <img src="./images/gauge.png" class="image", class="icon"></h1>
 
-<h2>Try guessing a character's ability using information like their <br> element, gauge units, cooldowns and more!</h2>
+<h2 class="widescreen">Try guessing a character's ability using information like it's <br> element, gauge units, cooldowns and more!</h2>
+<h2 class="mobile">Guess an ability with it's <br> element, gauge units, cooldowns and more!</h2>
 
 <label for="guess-select";>Guess an ability:</label>
 <p id="incorrect-guesses">Guesses: <span id="incorrect-count">0</span>/8</p>
@@ -46,7 +48,7 @@
 <input type="search" type="text" name="choicer" list="guess-select" id="guess-input" placeholder="--Guess an ability--">
 <datalist id="guess-select"> </datalist>
 
-<div class='parent' style="align-items: center;">
+<div class='parent' style="align-items: center;" class="buttonsdiv">
 	<div class='child inline-block-child'>
 		<button onclick="checkGuess()">Submit Guess</button>
 	</div>
