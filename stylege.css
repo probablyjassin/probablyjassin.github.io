@@ -74,9 +74,10 @@ td, th {
     -ms-user-select: none;
     user-select: none;
 }
+@media only screen and (min-width: 990px) {
 .mobile {
     display: none;
-}
+}}
 @media only screen and (max-width: 990px) {
     th, td, tr 
     { display: block; float: left; padding: 1%; flex-wrap: wrap;}
