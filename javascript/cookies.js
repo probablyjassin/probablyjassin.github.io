@@ -45,6 +45,3 @@ function cookiesAgreeGe() {
 if (getCookie("cookiesAgreeGe") === 'true') {
 	hidePopup()
 }
-
-// not showing popup during development
-// hidePopup()

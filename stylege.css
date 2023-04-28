@@ -47,7 +47,7 @@ table {
     margin: 0 auto;
     border-collapse: collapse;
     width: 80%;
-    max-width: 80%;
+    max-width: max-content;
     text-align: center;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -59,7 +59,7 @@ table {
 td, th {
     padding: 0.5em;
     border: 1px solid black;
-    font-size: 1.2em;
+    font-size: 150%;
     width: auto;
     height: 7%;
     vertical-align: middle;
@@ -72,6 +72,12 @@ td, th {
     -ms-user-select: none;
     user-select: none;
 }
+@media only screen and (max-width: 990px) {
+    th, td, tr 
+    { display: block; display: 'none'; float: left; padding: 1%; flex-wrap: wrap;}
+
+  }
+
 select {
     display: block;
     margin: 0 auto;
@@ -217,8 +223,6 @@ input {
 #confirm-popup {
     position: absolute;
     box-shadow: #836e6e;
-    top: 70%;
-    left: 42%;
     background-color: rgba(255, 255, 255, 1);
     border: 1px solid #ccc;
     padding: 10px;
