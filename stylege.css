@@ -6,6 +6,8 @@ body {
     background-repeat: repeat-y;
     background-blend-mode: darken;
     background-color: #836e6e;
+    max-width: 100%;
+    overflow-x: hidden;
 
     font-family: "Comic Sans MS", "Comic Sans";
     margin: 0;
