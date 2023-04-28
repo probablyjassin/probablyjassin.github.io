@@ -77,6 +77,9 @@ td, th {
 @media only screen and (min-width: 991px) {
 .mobile {
     display: none;
+}
+.widescreen {
+    display: initial;
 }}
 @media only screen and (max-width: 990px) {
     th, td, tr 
@@ -88,6 +91,7 @@ td, th {
         display: none;
     }
     .mobile {
+        display: initial;
         font-size: 375%;
     }
     h2.mobile {
