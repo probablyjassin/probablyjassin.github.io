@@ -74,7 +74,7 @@ td, th {
     -ms-user-select: none;
     user-select: none;
 }
-@media only screen and (min-width: 990px) {
+@media only screen and (min-width: 991px) {
 .mobile {
     display: none;
 }}
