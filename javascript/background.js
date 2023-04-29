@@ -20,7 +20,6 @@ function getCookie(name) {
 	return "";
 }
 
-console.log(AINTNOCookie, "test")
 // Background and Button to change it things here
 function freezebg() {
 	document.body.style.background = "url(./images/cooked.png)";
@@ -41,11 +40,9 @@ function unfreezebg() {
 }
 function swapbg() {
 	if (getCookie("background") === 'static') {
-			console.log("static")
 			unfreezebg()
 		}
 		else  {
-			console.log("gif")
 			freezebg()
 		}
 }
