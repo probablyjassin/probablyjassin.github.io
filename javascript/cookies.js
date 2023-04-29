@@ -28,7 +28,7 @@ agreebutton.addEventListener("click", function() {
 
 // Buttons for agree/disagree with cookie agreement
 function cookiesAgreeGe() {
-	setCookie("cookiesAgreeGe", 'true')
+	document.cookie = "cookiesAgreeGe" + "=" + 'true' + ";path=/";
 }
 // hide popup if already agreed
 if (getCookie("cookiesAgreeGe") === 'true') {
