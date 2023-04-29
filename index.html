@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
+	<title>Gaugedle</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="stylege.css">
 	<audio controls autoplay loop>
 		<source src="./files/kahoot.mp3" type="audio/ogg">
 		<embed src="./files/kahoot.mp3" autostart="true" loop="true" hidden="true"> 
-	  </audio>
-	  <style>
-		
-	  </style>
-	  
-	<script src="./javascript/abilities.js" defer></script>
-	<script src="./javascript/main.js" defer></script>
-	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-	<title>Gaugedle</title>
-</head>
-<body class="bg">
+	</audio>
 
 	<script src="./javascript/cookies.js" defer></script>
 	<script src="./javascript/statistic.js" defer></script>
+	<script src="./javascript/abilities.js" defer></script>
+	<script src="./javascript/main.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	
+
+	
+</head>
+<body class="bg">
+	<script> 
+	
+	</script>
+
 
 <div  id="statistic-popup">
 	<canvas id="myChart" width="800" height="450"></canvas>	
@@ -42,7 +43,7 @@
 <h2 class="widescreen">Try guessing a character's ability using information like it's <br> element, gauge units, cooldowns and more!</h2>
 <h2 class="mobile">Guess an ability with it's <br> element, gauge units, cooldowns and more!</h2>
 
-<label for="guess-select";>Guess an ability:</label>
+<label for="guess-select";> Guess an ability: </label>
 <p id="incorrect-guesses">Guesses: <span id="incorrect-count">0</span>/8</p>
 
 <input type="search" type="text" name="choicer" list="guess-select" id="guess-input" placeholder="--Guess an ability--">
@@ -93,15 +94,11 @@
 
 <!--- DEVELOPEMENT: Show correct answer (works only once) -->
 <!--- <p id="correct-answer">Correct answer:</p>  -->
-	
-<script>
-/* background img change button*/
-function freezebg() {
-   		document.body.style.background = "url(./images/cooked.png)";
-}
-</script>
-	
-<button class="button2" onclick="freezebg()">Freeze Background</button>
+
+
+<button id="bgbtn" class="button2" onclick="">Freeze Background</button>
+<script src="./javascript/background.js"></script>
+
 
 <footer>
 	<h3><a href="version.html"> Version 3.7</a></h3>

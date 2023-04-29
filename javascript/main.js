@@ -1,3 +1,4 @@
+
 // Initiate the game by chosing a random ability to be set as the correct answer
 let randomAbility = "";
 const abilityOptions = Object.keys(abilities);
