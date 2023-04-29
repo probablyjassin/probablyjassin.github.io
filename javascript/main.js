@@ -1,4 +1,3 @@
-
 // Initiate the game by chosing a random ability to be set as the correct answer
 let randomAbility = "";
 const abilityOptions = Object.keys(abilities);
@@ -158,36 +157,10 @@ function showCorrectAnswer() {
 	}
 }
 
-// Saving the number of incorrect guesses the player needed into cookies
-function saveIncorrectGuessesToCookie() {
-	// Get the existing incorrect guesses array from the cookie or create a new empty array
-	let incorrectGuessesArray = [getCookie("incorrectGuessesArray")]
 
-	// Add the current incorrect guesses count to the array
-	incorrectGuessesArray.push(incorrectGuesses);
-
-	// Save the updated array back into the cookie
-	setCookie("incorrectGuessesArray", incorrectGuessesArray);
-}
-
-// Function to reset cookies
-function resetcookies() {
-	const cookies = document.cookie.split(";");
-
-	for (let i = 0; i < cookies.length; i++) {
-		const cookie = cookies[i];
-		const eqPos = cookie.indexOf("=");
-		const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-		document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-	}
-	
-	/* setCookie("incorrectGuessesArray", '');
-	setCookie("cookiesAgreeGe", ''); */
-}
-  
 // Helper function to set cookies
 function setCookie(name, value) {
-	if (AINTNOCookie === 'true') {console.log("Saving cookies has been aborted, cookies haven't been agreed to")}
+	if (getCookie("cookiesAgreeGe") !== 'true') {console.log("Saving cookies has been aborted, cookies haven't been agreed to")}
 	else {
 	document.cookie = name + "=" + value + ";path=/";
 }}

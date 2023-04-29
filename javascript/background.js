@@ -1,8 +1,6 @@
-var AINTNOCookie = ''
-var bgimage = ''
 // Helper function to set cookies
 function setCookie(name, value) {
-	if (AINTNOCookie === 'true') {console.log("Saving cookies has been aborted, cookies haven't been agreed to")}
+	if (getCookie("cookiesAgreeGe") !== 'true') {console.log("Saving cookies has been aborted, cookies haven't been agreed to")}
 	else {
 	document.cookie = name + "=" + value + ";path=/";
 }}
@@ -28,6 +26,7 @@ function freezebg() {
     document.body.style.backgroundBlendMode = "darken";
 	document.getElementById("bgbtn").innerHTML = "Unfreeze Background";
 	setCookie("background", 'static')
+	bgimage = "static"
 }
 function unfreezebg() {
 	document.body.style.background = "url(https://frog.lowkey.gay/u/Fj1u1O.gif)";
@@ -37,9 +36,10 @@ function unfreezebg() {
     document.body.style.backgroundBlendMode = "darken";
 	document.getElementById("bgbtn").innerHTML = "Freeze Background";
 	setCookie("background", 'gif')
+	bgimage = "gif"
 }
 function swapbg() {
-	if (getCookie("background") === 'static') {
+	if (getCookie("background") === 'static' || bgimage === "static") {
 			unfreezebg()
 		}
 		else  {
@@ -56,5 +56,6 @@ if (getCookie("background") === 'static') {
 }
 else {
     unfreezebg()
-	setCookie("background", 'gif')
+	if (getCookie("cookiesAgreeGe") === 'true') {setCookie("background", 'gif')}
+	var bgimage = "gif"
 }
