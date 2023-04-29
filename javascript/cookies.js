@@ -1,4 +1,4 @@
-
+var AINTNOCookie = ''
 // Add event listener to decline Button for cookie popup
 const NOPERSButton = document.getElementById("declineCookiesButton");
 
