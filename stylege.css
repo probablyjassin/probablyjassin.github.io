@@ -216,7 +216,8 @@ input {
 #statistic-popup {
     position: fixed;
     top: 50%;
-    background-color: rgba(255, 255, 255, 1);
+    color: #ffffff;
+    background-color: #2a2a2a;
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
@@ -294,14 +295,18 @@ input {
     height: auto;
     background-color: #eee;
     margin-bottom: 20px;
-  }
+}
   
-  .bar {
+.bar {
     height: 100%;
     line-height: 30px;
     color: #fff;
     text-align: center;
     background-color: #007bff;
     transition: width 0.5s ease-in-out;
-  }
-  
+}
+footer {
+    width: 100%;
+    bottom: 0;
+    /* background-color: #2a2a2a; */
+} 

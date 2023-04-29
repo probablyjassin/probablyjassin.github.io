@@ -70,12 +70,16 @@ function makeChart() {
                 ticks: {
                     precision:0
                   },
+                grid: {
+                    color: "white"
+                },
                 indexAxis: 'y',
                 legend: {display: false},
                 title: {
                     display: true,
                     text: 'Number of incorrect guesses needed per game'
                 }
-            }
-    });
-}}
+            },
+        }); 
+    }
+}
