@@ -385,7 +385,7 @@ const abilities =
     "Diameter\/Width": "1m",
     "Shape": "Sphere",
     "Element": "Electro",
-    "Blunt": "Yes"
+    "Blunt": "Yes, No"
     },
     "GanyuSkill": {
     "CD": "10s",
@@ -565,7 +565,7 @@ const abilities =
     "Diameter\/Width": "8m, 4m",
     "Shape": "Sphere",
     "Element": "Pyro",
-    "Blunt": "Yes"
+    "Blunt": "Yes, No"
     },
     "KleeBurst": {
     "CD": "15s",
@@ -601,7 +601,7 @@ const abilities =
     "Diameter\/Width": "8m",
     "Shape": "Cylinder",
     "Element": "Electro",
-    "Blunt": "Yes"
+    "Blunt": "Yes, No"
     },
     "KukiShinobuBurst": {
     "CD": "15s",
@@ -835,7 +835,7 @@ const abilities =
     "Diameter\/Width": "10m",
     "Shape": "Sphere",
     "Element": "Electro",
-    "Blunt": "Yes"
+    "Blunt": "Yes, No"
     },
     "RosariaSkill": {
     "CD": "6s",
@@ -916,7 +916,7 @@ const abilities =
     "Diameter\/Width": "14m, 8m",
     "Shape": "Cone, Cylinder",
     "Element": "Cryo",
-    "Blunt": "Yes"
+    "Blunt": "Yes, No"
     },
     "ShikanoinHeizouSkill": {
     "CD": "10s",
@@ -961,7 +961,7 @@ const abilities =
     "Diameter\/Width": "6m",
     "Shape": "Sphere",
     "Element": "Hydro",
-    "Blunt": "Yes"
+    "Blunt": "Yes, No"
     },
     "TartagliaBurst": {
     "CD": "15s",
@@ -1069,7 +1069,7 @@ const abilities =
     "Diameter\/Width": "10m, 4m",
     "Shape": "Sphere",
     "Element": "Electro",
-    "Blunt": "Yes"
+    "Blunt": "Ye, No"
     },
     "GeoTravelerSkill": {
     "CD": "8s",
@@ -1195,7 +1195,7 @@ const abilities =
     "Diameter\/Width": "6m",
     "Shape": "Cylinder",
     "Element": "Pyro",
-    "Blunt": "No"
+    "Blunt": "Yes, No"
     },
     "XinyanBurst": {
     "CD": "15s",

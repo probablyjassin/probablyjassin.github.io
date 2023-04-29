@@ -61,11 +61,12 @@ table {
 td, th {
     padding: 0.5em;
     border: 1px solid black;
+    background-color: #2a2a2a;
+    color: white;
     font-size: 150%;
     width: auto;
     height: 7%;
     vertical-align: middle;
-    background-color: lightgray;
     text-align: center;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -116,6 +117,8 @@ button {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    background-color: #2a2a2a;
+    color: white;
 }
 .button2 {
     display: block;
@@ -146,9 +149,8 @@ table {
     background-color: red;
 }
 .partial {
-    background-color: orange;
+    background-color: rgb(255, 172, 17);
 }
-/* Make the icon image in the title to responsive */
 .image {
     width: 12%;
     height: auto;
@@ -157,8 +159,13 @@ table {
     padding-right: 0cap;
 }
 input {
-    width: 20em;
+    width: 17.5%;
     height: 5vh;
+    background-color: rgb(42, 42, 42);
+    color: white;
+}
+::placeholder {
+    color: white
 }
 .unselectable {
     -webkit-touch-callout: none;
@@ -173,7 +180,10 @@ input {
     bottom: 20px;
     left: 20%;
     right: 20%;
-    background-color: rgba(255,255,255,0.9);
+    background-color: #2a2a2a;
+    color: white;
+    text-shadow: none;
+    font-weight: 5;
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
@@ -192,6 +202,7 @@ input {
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
+    background-color: #2a2a2a;
 }
 #cookie-popup button.agree {
     background-color: #4CAF50;
@@ -204,17 +215,20 @@ input {
 
 #statistic-popup {
     position: fixed;
-    top: 5%;
-    left: 22%;
+    top: 50%;
     background-color: rgba(255, 255, 255, 1);
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-    z-index: 9999;
-    width: "800"; 
-    height: "450";
+    width: 50%; 
+    height: auto;
+    transform: translate(-65%, -50%);
 }
+@media only screen and (max-width: 990px) {
+    #statistic-popup {
+        transform: translate(-65%, -50%);
+}}
 #statistic-popup p {
     margin: 0;
     font-size: 16px;
@@ -237,16 +251,20 @@ input {
     color: #fff;
 }
 #confirm-popup {
-    position: absolute;
-    box-shadow: #836e6e;
-    background-color: rgba(255, 255, 255, 1);
+    display: block;
+    height: 4.5em;
+    width: 18em;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    background-color: #2a2a2a;
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-    z-index: 9999;
-    width: "35%"; 
-    height: "20%";
+    transform: translate(-50%, -50%);
+    
 }
 #confirm-popup p {
     margin: 0;
@@ -260,6 +278,7 @@ input {
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
+    background-color: #2a2a2a;
 }
 #confirm-popup button.confirm {
     background-color: #4CAF50;
