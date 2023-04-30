@@ -93,35 +93,32 @@ function checkGuess() {
 		newValueCell.textContent = abilities[selectedAbility][property];
 	
 		if (abilities[selectedAbility][property] === abilities[randomAbility][property]) {
-		  newValueCell.classList.add("correct");
+			newValueCell.classList.add("correct");
 		} else {
-		  // Check if there is any overlap between the guessed and correct values
-		  const guessedValues = abilities[selectedAbility][property]
-			.split(", ")
-			.join("|")
-			.split("-")
-			.join("|")
+			// Check if there is any overlap between the guessed and correct values
+			const guessedValues = abilities[selectedAbility][property]
+			.split(", ").join("|")
+			.split("-").join("|")
 			.split("|");
-		  const correctValues = abilities[randomAbility][property]
-			.split(", ")
-			.join("|")
-			.split("-")
-			.join("|")
+			const correctValues = abilities[randomAbility][property]
+			.split(", ").join("|")
+			.split("-").join("|")
 			.split("|");
-		  let partialMatch = false;
-		  for (let j = 0; j < guessedValues.length; j++) {
-			if (correctValues.includes(guessedValues[j])) {
-			  partialMatch = true;
-			  break;
+			let partialMatch = false;
+			for (let j = 0; j < guessedValues.length; j++) {
+				if (correctValues.includes(guessedValues[j])) {
+					partialMatch = true;
+					break;
+				}
 			}
-		  }
-		  if (partialMatch) {
-			newValueCell.classList.add("partial");
-		  } else {
-			newValueCell.classList.add("incorrect");
-		  }
+			if (partialMatch) {
+				newValueCell.classList.add("partial");
+			} 
+			else {
+				newValueCell.classList.add("incorrect");
+			}
 		}
-	  }
+	}
 
 	// Initialize correctGuess variable
 	let correctGuess = false;
