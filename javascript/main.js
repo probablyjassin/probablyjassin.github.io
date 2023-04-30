@@ -1,5 +1,24 @@
 // This is the game's code
 
+// NEW: GAMEMODE: Is Daily by Default
+var mode = "daily"
+// Unless User switches to endless
+const modeButton = document.getElementById("modeButton")
+modeButton.addEventListener("click", function() {
+	mode = "endless"
+	document.getElementById("modeButton").style.display = 'none';
+	generateRandomAbility()
+	document.getElementById("daily").style.display = 'none';
+	document.getElementById("endless").style.display = 'initial';
+})
+//Hide the corresponding title
+if (mode === "daily") {
+	document.getElementById("endless").style.display = 'none';
+}
+if (mode === "endless") {
+	document.getElementById("daily").style.display = 'none';
+}
+
 // Start by making the table on screen.
 // Array of all the properties that exist
 const allProperties = ["CD", "ICD", "Gauge", "Diameter\/Width", "Shape", "Element", "Blunt"];
@@ -53,7 +72,8 @@ const abilityOptions = Object.keys(abilities);
 function generateRandomAbility() {;
     randomAbility = abilityOptions[Math.floor(Math.random() * abilityOptions.length)];
 }
-generateRandomAbility();
+if (mode === "endless") {generateRandomAbility();}
+if (mode === "daily") {randomAbility = todaysAbility}
 
 // Read the guessable options from the list of abilities
 const guessTable = document.getElementById("guess-select")

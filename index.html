@@ -11,8 +11,11 @@
 		<embed src="./files/kahoot.mp3" autostart="true" loop="true" hidden="true"> 
 	</audio>
 
+	
+	<script src="./javascript/dailies.js"></script>
 	<script src="./javascript/cookies.js" defer></script>
 	<script src="./javascript/statistic.js" defer></script>
+	<script src="./javascript/daily.js"></script>
 	<script src="./javascript/abilities.js" defer></script>
 	<script src="./javascript/main.js" defer></script>
 	<script src="./javascript/background.js" defer></script>
@@ -43,7 +46,9 @@
 <h2 class="widescreen">Try guessing a character's ability using information like it's <br> element, gauge units, cooldowns and more!</h2>
 <h2 class="mobile">Guess an ability with it's <br> element, gauge units, cooldowns and more!</h2>
 
-<label for="guess-select";> Guess an ability: </label>
+<label id="endless"> Endless Mode </label>
+<label id="daily"> Daily Mode </label>
+<button id="modeButton"> Switch to Endless Mode</button>
 <p id="incorrect-guesses">Guesses: <span id="incorrect-count">0</span>/8</p>
 
 <input type="search" type="text" name="choicer" list="guess-select" id="guess-input" placeholder="--Guess an ability--">
