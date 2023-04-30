@@ -66,14 +66,30 @@ function makeTable() {
 }
 makeTable()
 
+// Chosing the ability that is the correct answer
+// Get date for daily mode
+// Get todays date
+const currentDate = new Date();
+const day = currentDate.getDate().toString().padStart(2, '0');
+const month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+const year = currentDate.getFullYear().toString();
+const today = `${day}/${month}/${year}`;
+console.log(today);
+
 // Initiate the game by chosing a random ability to be set as the correct answer
 let randomAbility = "";
 const abilityOptions = Object.keys(abilities);
 function generateRandomAbility() {;
     randomAbility = abilityOptions[Math.floor(Math.random() * abilityOptions.length)];
 }
+// Generate daily abilities using the date as seed
+function generateDailyAbility() {
+	var myrng = new Math.seedrandom(today);
+	randomAbility = abilityOptions[Math.floor(myrng() * abilityOptions.length)]
+}
+
 if (mode === "endless") {generateRandomAbility();}
-if (mode === "daily") {randomAbility = todaysAbility}
+if (mode === "daily") {generateDailyAbility()}
 
 // Read the guessable options from the list of abilities
 const guessTable = document.getElementById("guess-select")
@@ -194,6 +210,7 @@ function resetGame() {
 
 	// Generate a new random ability as correct answer
 	generateRandomAbility();
+	generateDailyAbility();
 
 	// Regenerate the table to have new random properties
 	const propertiesToDisplay = [];

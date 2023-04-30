@@ -6,13 +6,6 @@ const year = currentDate.getFullYear().toString();
 const today = `${day}/${month}/${year}`;
 console.log(today);
 
-// Find the ability corresponding to todays date 
-let targetValue = today; let todaysAbility = null;
-for (let key in dailies) {  
-    if (dailies[key] === targetValue) {
-        todaysAbility = key;
-      break;
-    }
-}
-console.log(todaysAbility);
-
+// Generate daily abilities
+var myrng = new Math.seedrandom(today);
+abilityOptions[Math.floor(myrng() * abilityOptions.length)]
