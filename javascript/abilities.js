@@ -7,6 +7,7 @@ const abilities =
     "Diameter\/Width": "6.8m",
     "Shape": "Sphere",
     "Element": "Geo",
+    "Weapon": "Catalyst",
     "Blunt": "Yes"
     },
     "AlbedoBurst": {
