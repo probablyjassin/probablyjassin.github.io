@@ -196,6 +196,13 @@ function checkGuess() {
 		}, 100);
 	}
 }
+// Pressing Enter in the text box should also submit the guess
+const node = document.getElementsByClassName("choicer")[0];
+node.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        checkGuess()
+    }
+});
 
 // Add event listener to reset button
 	const resetButton = document.getElementById("reset-button");
