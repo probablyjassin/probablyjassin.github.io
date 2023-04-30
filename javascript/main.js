@@ -5,12 +5,15 @@ var mode = "daily"
 // Unless User switches to endless
 const modeButton = document.getElementById("modeButton")
 modeButton.addEventListener("click", function() {
+	switchToEndless()
+})
+function switchToEndless() {
 	mode = "endless"
 	document.getElementById("modeButton").style.display = 'none';
 	generateRandomAbility()
 	document.getElementById("daily").style.display = 'none';
 	document.getElementById("endless").style.display = 'initial';
-})
+}
 //Hide the corresponding title
 if (mode === "daily") {
 	document.getElementById("endless").style.display = 'none';
@@ -209,7 +212,6 @@ function resetGame() {
 
 	// Generate a new random ability as correct answer
 	generateRandomAbility();
-	// generateDailyAbility();
 
 	// Regenerate the table to have new random properties
 	const propertiesToDisplay = [];
@@ -219,6 +221,9 @@ function resetGame() {
 	//Reset incorrect guesses
 	incorrectGuesses = 0;
 	incorrectCount.textContent = `0`;
+
+	// Switch to endless mode
+	switchToEndless()
 }
 
 // Select the concede button element
