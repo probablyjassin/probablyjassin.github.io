@@ -896,7 +896,7 @@ const abilities =
     "ICD": "Standard",
     "Gauge": "1u",
     "Diameter\/Width": "???",
-    "Shape": "None",
+    "Shape": "???",
     "Element": "Cryo",
     "Blunt": "No"
     },
