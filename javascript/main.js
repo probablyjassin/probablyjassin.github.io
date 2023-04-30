@@ -43,7 +43,6 @@ function randomizeTable() {
 	randomIndices.forEach(index => {
 		propertiesToDisplay.push(allProperties[index]);
 	});
-	console.log(propertiesToDisplay); // Outputs an array of 5 randomly selected elements in the original order
 	return propertiesToDisplay;
 }
 randomizeTable()
@@ -210,7 +209,7 @@ function resetGame() {
 
 	// Generate a new random ability as correct answer
 	generateRandomAbility();
-	generateDailyAbility();
+	// generateDailyAbility();
 
 	// Regenerate the table to have new random properties
 	const propertiesToDisplay = [];
