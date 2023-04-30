@@ -11,7 +11,7 @@ function randomizeTable() {
 	propertiesToDisplay.length = 0; // Reset from past games
 	// Get five random indices from allProperties
 	const randomIndices = [];
-	while (randomIndices.length < 5) {
+	while (randomIndices.length < 6) {
 	const randomIndex = Math.floor(Math.random() * allProperties.length);
 		if (!randomIndices.includes(randomIndex)) {
 			randomIndices.push(randomIndex);
