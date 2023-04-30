@@ -1,3 +1,23 @@
+// Find a <table> element with id="myTable":
+var table = document.getElementById("ability-table");
+
+// Create an empty <thead> element and add it to the table:
+var header = table.createTHead();
+
+// Create a new <tr> element and add it to the <thead>:
+var row = header.insertRow(0);
+
+// Add a first cell with the text "Ability":
+var cell = row.insertCell(0);cell.innerHTML = "<b>Ability</b>";
+
+// For each property in abilitiesToDisplay, insert a new cell (<th>) into the new <tr> element:
+const propertiesToDisplay = ["CD", "ICD", "Gauge", "Diameter\/Width", "Shape", "Element", "Blunt"];
+propertiesToDisplay.forEach((property) => {
+  var cell = row.insertCell(-1);
+  cell.innerHTML = "<b>" + property + "</b>";
+});
+
+
 // Initiate the game by chosing a random ability to be set as the correct answer
 let randomAbility = "";
 const abilityOptions = Object.keys(abilities);
@@ -24,6 +44,7 @@ const incorrectCount = document.getElementById("incorrect-count");
 // Initialize the counter for incorrect guesses
 let incorrectGuesses = 0;
 
+
 // Function to check the player's guess and update the table
 function checkGuess() {
 	const rawValue = guessSelect.value;
@@ -33,35 +54,49 @@ function checkGuess() {
 		return;
 	}
 
+	
+
+
 	// Create a new row for the guess
 	const newRow = abilityTable.insertRow();
 	const newGuessCell = newRow.insertCell();
 	newGuessCell.textContent = rawValue;
 
-	for (let property in abilities[randomAbility]) {
+	for (let i = 0; i < propertiesToDisplay.length; i++) {
+		const property = propertiesToDisplay[i];
 		const newValueCell = newRow.insertCell();
 		newValueCell.textContent = abilities[selectedAbility][property];
-
+	
 		if (abilities[selectedAbility][property] === abilities[randomAbility][property]) {
-			newValueCell.classList.add("correct");
+		  newValueCell.classList.add("correct");
 		} else {
-			// Check if there is any overlap between the guessed and correct values
-			const guessedValues = abilities[selectedAbility][property].split(', ').join('|').split('-').join('|').split('|');
-			const correctValues = abilities[randomAbility][property].split(', ').join('|').split('-').join('|').split('|');
-			let partialMatch = false;
-			for (let i = 0; i < guessedValues.length; i++) {
-				if (correctValues.includes(guessedValues[i])) {
-					partialMatch = true;
-					break;
-				}
+		  // Check if there is any overlap between the guessed and correct values
+		  const guessedValues = abilities[selectedAbility][property]
+			.split(", ")
+			.join("|")
+			.split("-")
+			.join("|")
+			.split("|");
+		  const correctValues = abilities[randomAbility][property]
+			.split(", ")
+			.join("|")
+			.split("-")
+			.join("|")
+			.split("|");
+		  let partialMatch = false;
+		  for (let j = 0; j < guessedValues.length; j++) {
+			if (correctValues.includes(guessedValues[j])) {
+			  partialMatch = true;
+			  break;
 			}
-			if (partialMatch) {
-				newValueCell.classList.add("partial");
-			} else {
-				newValueCell.classList.add("incorrect");
-			}
+		  }
+		  if (partialMatch) {
+			newValueCell.classList.add("partial");
+		  } else {
+			newValueCell.classList.add("incorrect");
+		  }
 		}
-	}
+	  }
 
 	// Initialize correctGuess variable
 	let correctGuess = false;
