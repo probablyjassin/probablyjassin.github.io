@@ -1,22 +1,57 @@
-// Find a <table> element with id="myTable":
-var table = document.getElementById("ability-table");
+// This is the game's code
 
-// Create an empty <thead> element and add it to the table:
-var header = table.createTHead();
+// Start by making the table on screen.
+// Array of all the properties that exist
+const allProperties = ["CD", "ICD", "Gauge", "Diameter\/Width", "Shape", "Element", "Blunt"];
 
-// Create a new <tr> element and add it to the <thead>:
-var row = header.insertRow(0);
+const propertiesToDisplay = []; // Array of the properties the game will use
 
-// Add a first cell with the text "Ability":
-var cell = row.insertCell(0);cell.innerHTML = "<b>Ability</b>";
+function randomizeTable() {
+	
+	// New: Chose 5 random properties to be displayed to the player each game
+	// Get five random indices from allProperties
+	propertiesToDisplay.length = 0; // Reset from past games
+	const randomIndices = [];
+	while (randomIndices.length < 5) {
+	const randomIndex = Math.floor(Math.random() * allProperties.length);
+	if (!randomIndices.includes(randomIndex)) {
+		randomIndices.push(randomIndex);
+	}
+	}
+	// Sort the indices in ascending order to preserve the order of elements 
+	// (Important, because the properties later get added in this fixed order)
+	randomIndices.sort();
+	// Add the selected elements to propertiesToDisplay in the original order
+	randomIndices.forEach(index => {
+		propertiesToDisplay.push(allProperties[index]);
+	});
+	console.log(propertiesToDisplay); // Outputs an array of 5 randomly selected elements in the original order
+	return propertiesToDisplay;
+}
+randomizeTable()
 
-// For each property in abilitiesToDisplay, insert a new cell (<th>) into the new <tr> element:
-const propertiesToDisplay = ["CD", "ICD", "Gauge", "Diameter\/Width", "Shape", "Element", "Blunt"];
-propertiesToDisplay.forEach((property) => {
-  var cell = row.insertCell(-1);
-  cell.innerHTML = "<b>" + property + "</b>";
-});
+function makeTable() {
+	document.getElementById("ability-table").deleteTHead(); // Clear head from previous games
+	// Find the table from the HTML
+	var table = document.getElementById("ability-table");
 
+	// Create an empty <thead> element and add it to the table:
+	var header = table.createTHead();
+
+	// Create a new <tr> element and add it to the <thead>:
+	var row = header.insertRow(0);
+
+	// Add a first cell with the text "Ability":
+	var cell = row.insertCell(0);cell.innerHTML = "<b>Ability</b>";
+
+	// For each property in abilitiesToDisplay, insert a new cell (<th>) into the new <tr> element:
+
+	propertiesToDisplay.forEach((property) => {
+	var cell = row.insertCell(-1);
+	cell.innerHTML = "<b>" + property + "</b>";
+	});
+}
+makeTable()
 
 // Initiate the game by chosing a random ability to be set as the correct answer
 let randomAbility = "";
@@ -152,6 +187,11 @@ function resetGame() {
 
 	// Generate a new random ability as correct answer
 	generateRandomAbility();
+
+	// Regenerate the table to have new random properties
+	const propertiesToDisplay = [];
+	randomizeTable()
+	makeTable()
 
 	//Reset incorrect guesses
 	incorrectGuesses = 0;
