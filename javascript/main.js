@@ -7,16 +7,15 @@ const allProperties = ["CD", "ICD", "Gauge", "Diameter\/Width", "Shape", "Elemen
 const propertiesToDisplay = []; // Array of the properties the game will use
 
 function randomizeTable() {
-	
 	// New: Chose 5 random properties to be displayed to the player each game
-	// Get five random indices from allProperties
 	propertiesToDisplay.length = 0; // Reset from past games
+	// Get five random indices from allProperties
 	const randomIndices = [];
 	while (randomIndices.length < 5) {
 	const randomIndex = Math.floor(Math.random() * allProperties.length);
-	if (!randomIndices.includes(randomIndex)) {
-		randomIndices.push(randomIndex);
-	}
+		if (!randomIndices.includes(randomIndex)) {
+			randomIndices.push(randomIndex);
+		}
 	}
 	// Sort the indices in ascending order to preserve the order of elements 
 	// (Important, because the properties later get added in this fixed order)
@@ -34,21 +33,16 @@ function makeTable() {
 	document.getElementById("ability-table").deleteTHead(); // Clear head from previous games
 	// Find the table from the HTML
 	var table = document.getElementById("ability-table");
-
 	// Create an empty <thead> element and add it to the table:
 	var header = table.createTHead();
-
 	// Create a new <tr> element and add it to the <thead>:
 	var row = header.insertRow(0);
-
 	// Add a first cell with the text "Ability":
 	var cell = row.insertCell(0);cell.innerHTML = "<b>Ability</b>";
-
 	// For each property in abilitiesToDisplay, insert a new cell (<th>) into the new <tr> element:
-
 	propertiesToDisplay.forEach((property) => {
-	var cell = row.insertCell(-1);
-	cell.innerHTML = "<b>" + property + "</b>";
+		var cell = row.insertCell(-1);
+		cell.innerHTML = "<b>" + property + "</b>";
 	});
 }
 makeTable()
@@ -79,7 +73,6 @@ const incorrectCount = document.getElementById("incorrect-count");
 // Initialize the counter for incorrect guesses
 let incorrectGuesses = 0;
 
-
 // Function to check the player's guess and update the table
 function checkGuess() {
 	const rawValue = guessSelect.value;
@@ -88,9 +81,6 @@ function checkGuess() {
 		alert("Please select an ability to guess.");
 		return;
 	}
-
-	
-
 
 	// Create a new row for the guess
 	const newRow = abilityTable.insertRow();
