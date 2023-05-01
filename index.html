@@ -6,11 +6,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="stylege.css">
-	<audio controls autoplay loop>
+	<audio controls autoplay loop id="music">
 		<source src="./files/kahoot.mp3" type="audio/ogg">
 		<embed src="./files/kahoot.mp3" autostart="true" loop="true" hidden="true"> 
 	</audio>
 
+	<script src="./javascript/cookies.js" defer></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
 	<script src="./javascript/cookies.js" defer></script>
 	<script src="./javascript/statistic.js" defer></script>
@@ -47,6 +48,9 @@
 <label id="endless"> Endless Mode </label>
 <label id="daily"> Daily Mode </label>
 <button id="modeButton"> Switch to Endless Mode</button>
+
+<div id="timer"></div>
+
 <p id="incorrect-guesses">Guesses: <span id="incorrect-count">0</span>/8</p>
 
 <input class="choicer" type="search" type="text" name="choicer" list="guess-select" id="guess-input" placeholder="--Guess an ability--">

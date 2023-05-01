@@ -68,6 +68,29 @@ function makeTable() {
 }
 makeTable()
 
+// Get time until next day, counter until next daily game
+// Counter until the next day
+var div=document.getElementById("timer");
+var tomorrow = ''
+setInterval(function(){ 
+  var toDate = new Date();
+  var tomorrow = new Date();
+  tomorrow.setHours(24,0,0,0);
+  var diffMS=tomorrow.getTime()/1000-toDate.getTime()/1000;
+  var diffHr=Math.floor(diffMS/3600);
+  diffMS=diffMS-diffHr*3600;
+  var diffMi=Math.floor(diffMS/60);
+  diffMS=diffMS-diffMi*60;
+  var diffS=Math.floor(diffMS);
+  var result=((diffHr<10)?"0"+diffHr:diffHr);
+  result+=" Hours "+((diffMi<10)?"0"+diffMi:diffMi);
+  result+=" Minutes, "+((diffS<10)?"0"+diffS:diffS) + " Seconds" ;
+  div.innerHTML="Time until the next daily ICDle: " + result;
+  return tomorrow
+},1000);
+// Timestamp for cookie expire
+var nextday = new Date();
+nextday.setHours(24,0,0,0);
 // Chosing the ability that is the correct answer
 // Get date for daily mode
 // Get todays date
@@ -231,6 +254,9 @@ function resetGame() {
 
 	// Switch to endless mode
 	switchToEndless()
+
+	// Remember the completion of the daily game
+	document.cookie = 'dailyComplete=true;expires='+nextday.toUTCString()+';path=/';
 }
 
 // Select the concede button element
@@ -297,7 +323,6 @@ resetstatsButton.addEventListener("click", function() {
 	setCookie("incorrectGuessesArray", '')
 	closestat()
 });
-
 
 // FOR DEVELOPEMENT: Select the correct-answer element on screen and display the answer
 // const correctAnswer = document.getElementById("correct-answer");
