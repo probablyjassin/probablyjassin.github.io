@@ -10,7 +10,7 @@ modeButton.addEventListener("click", function() {
 function switchToEndless() {
 	// Clear the table
 	mode = "endless"
-	document.getElementById("timer").style.display = 'none';
+	document.getElementById("dailyDiv").style.display = 'none';
 	document.getElementById("dailyText").style.display = 'none';
 	document.getElementById("modeButton").style.display = 'none';
 	document.getElementById("daily").style.display = 'none';
