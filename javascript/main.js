@@ -93,7 +93,7 @@ setInterval(function(){
   var diffS=Math.floor(diffMS);
   var result=((diffHr<10)?"0"+diffHr:diffHr);
   result+=" Hours "+((diffMi<10)?"0"+diffMi:diffMi);
-  result+=" Minutes, "+((diffS<10)?"0"+diffS:diffS) + " Seconds" ;
+  result+=" Minutes "+((diffS<10)?"0"+diffS:diffS) + " Seconds" ;
   timer.innerHTML="Time until the next: " + result;
   return tomorrow
 },1000);
@@ -334,7 +334,7 @@ resetstatsButton.addEventListener("click", function() {
 function dailyComplete() {
 	if (getCookie("dailyComplete") === 'true') {
 		document.getElementById("timer").style.display = 'initial';
-		document.getElementById("dailyText").style.display = 'initial';
+		document.getElementById("dailyDiv").style.display = 'initial';
 		document.getElementById("buttonsdiv").style.display = 'none';
 		document.getElementById("guess-input").style.display = 'none';
 		document.getElementById("incorrect-guesses").style.display = 'none';
