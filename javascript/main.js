@@ -8,11 +8,19 @@ modeButton.addEventListener("click", function() {
 	switchToEndless()
 })
 function switchToEndless() {
+	// Clear the table
 	mode = "endless"
+	document.getElementById("timer").style.display = 'none';
+	document.getElementById("dailyText").style.display = 'none';
 	document.getElementById("modeButton").style.display = 'none';
-	generateRandomAbility()
 	document.getElementById("daily").style.display = 'none';
 	document.getElementById("endless").style.display = 'initial';
+	document.getElementById("buttonsdiv").style.display = 'inherit'
+	document.getElementById("guess-input").style.display = 'initial'
+	document.getElementById("incorrect-guesses").style.display = 'inherit';
+	// Start game
+	resetGame()
+
 }
 //Hide the corresponding title
 if (mode === "daily") {
@@ -69,8 +77,10 @@ function makeTable() {
 makeTable()
 
 // Get time until next day, counter until next daily game
-// Counter until the next day
-var div=document.getElementById("timer");
+// Counter until the next day 
+var timer = document.getElementById("timer");
+document.getElementById("timer").style.display = 'none'; // (hide by default)
+document.getElementById("dailyText").style.display = 'none';
 var tomorrow = ''
 setInterval(function(){ 
   var toDate = new Date();
@@ -85,7 +95,7 @@ setInterval(function(){
   var result=((diffHr<10)?"0"+diffHr:diffHr);
   result+=" Hours "+((diffMi<10)?"0"+diffMi:diffMi);
   result+=" Minutes, "+((diffS<10)?"0"+diffS:diffS) + " Seconds" ;
-  div.innerHTML="Time until the next daily ICDle: " + result;
+  timer.innerHTML="Time until the next daily ICDle: " + result;
   return tomorrow
 },1000);
 // Timestamp for cookie expire
@@ -228,8 +238,8 @@ node.addEventListener("keyup", function(event) {
 });
 
 // Add event listener to reset button
-	const resetButton = document.getElementById("reset-button");
-	resetButton.addEventListener("click", resetGame);
+	//const resetButton = document.getElementById("reset-button");
+	//resetButton.addEventListener("click", resetGame);
 
 // Function to reset the game
 function resetGame() {
@@ -237,9 +247,6 @@ function resetGame() {
 	while (abilityTable.rows.length > 1) {
 		abilityTable.deleteRow(1);
 	}
-	// Show and create the statistics
-	makeChart()
-
 	// Generate a new random ability as correct answer
 	generateRandomAbility();
 
@@ -252,11 +259,11 @@ function resetGame() {
 	incorrectGuesses = 0;
 	incorrectCount.textContent = `0`;
 
-	// Switch to endless mode
-	switchToEndless()
-
 	// Remember the completion of the daily game
-	document.cookie = 'dailyComplete=true;expires='+nextday.toUTCString()+';path=/';
+	if (mode === 'daily') {
+		document.cookie = 'dailyComplete=true;expires='+nextday.toUTCString()+';path=/';
+		dailyComplete()
+	}
 }
 
 // Select the concede button element
@@ -323,6 +330,19 @@ resetstatsButton.addEventListener("click", function() {
 	setCookie("incorrectGuessesArray", '')
 	closestat()
 });
+
+// If the daily is already done, hide game elements and show the timer
+function dailyComplete() {
+	if (getCookie("dailyComplete") === 'true') {
+		document.getElementById("timer").style.display = 'initial';
+		document.getElementById("dailyText").style.display = 'initial';
+		document.getElementById("buttonsdiv").style.display = 'none';
+		document.getElementById("guess-input").style.display = 'none';
+		document.getElementById("incorrect-guesses").style.display = 'none';
+	}
+}
+dailyComplete()
+
 
 // FOR DEVELOPEMENT: Select the correct-answer element on screen and display the answer
 // const correctAnswer = document.getElementById("correct-answer");

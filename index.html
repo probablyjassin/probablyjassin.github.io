@@ -49,14 +49,18 @@
 <label id="daily"> Daily Mode </label>
 <button id="modeButton"> Switch to Endless Mode</button>
 
-<div id="timer"></div>
+<div id="dailyDiv">
+	<h2 id="dailyText">Congratulations, you solved the daily ICDle!</h2>
+	<br>
+	<div id="timer"></div>
+</div>
 
 <p id="incorrect-guesses">Guesses: <span id="incorrect-count">0</span>/8</p>
 
 <input class="choicer" type="search" type="text" name="choicer" list="guess-select" id="guess-input" placeholder="--Guess an ability--">
 <datalist id="guess-select"> </datalist>
 
-<div class='parent' style="align-items: center;" class="buttonsdiv">
+<div id="buttonsdiv" class='parent' style="align-items: center;" class="buttonsdiv">
 	<div class='child inline-block-child'>
 		<button onclick="checkGuess()">Submit Guess</button>
 	</div>
@@ -66,7 +70,7 @@
 	</div>
 
 	<div class='child inline-block-child'>
-		<button onclick="" onclick="reset-c" id="reset-button">Reset</button>
+		<button onclick="makeChart()" id="stats-button">Stats</button>
 	</div>
 
 	<table id="ability-table" style="text-shadow: none;">

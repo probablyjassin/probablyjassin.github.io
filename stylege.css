@@ -317,3 +317,6 @@ footer {
 #music {
     display: none;
 }
+#dailyDiv {
+    background-color: hsl(146, 30%, 36%);
+}
