@@ -335,6 +335,7 @@ resetstatsButton.addEventListener("click", function() {
 // If the daily is already done, hide game elements and show the timer
 function dailyComplete() {
 	if (getCookie("dailyComplete") === 'true') {
+		document.getElementById("dailyText").style.display = 'initial';
 		document.getElementById("timer").style.display = 'initial';
 		document.getElementById("dailyDiv").style.display = 'initial';
 		document.getElementById("buttonsdiv").style.display = 'none';
