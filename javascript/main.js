@@ -299,7 +299,7 @@ function showCorrectAnswer() {
 	}
 }
 
-
+/*
 // Helper function to set cookies
 function setCookie(name, value) {
 	if (getCookie("cookiesAgreeGe") !== 'true') {console.log("Saving cookies has been aborted, cookies haven't been agreed to")}
@@ -319,7 +319,7 @@ function getCookie(name) {
 }
 	return "";
 }
-
+*/
 
 // Select the resetstats button element
 const resetstatsButton = document.getElementById("resetstats");
