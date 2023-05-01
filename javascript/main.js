@@ -79,8 +79,7 @@ makeTable()
 // Get time until next day, counter until next daily game
 // Counter until the next day 
 var timer = document.getElementById("timer");
-document.getElementById("timer").style.display = 'none'; // (hide by default)
-document.getElementById("dailyText").style.display = 'none';
+document.getElementById("dailyText").style.display = 'none'; // (hide by default)
 var tomorrow = ''
 setInterval(function(){ 
   var toDate = new Date();
