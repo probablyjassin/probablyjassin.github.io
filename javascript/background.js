@@ -1,4 +1,4 @@
-// Helper function to set cookies
+/*// Helper function to set cookies
 function setCookie(name, value) {
 	if (getCookie("cookiesAgreeGe") !== 'true') {console.log("Saving cookies has been aborted, cookies haven't been agreed to")}
 	else {
@@ -12,12 +12,12 @@ function getCookie(name) {
 	for (let i = 0; i < cookies.length; i++) {
 		let cookie = cookies[i].trim();
 		if (cookie.indexOf(name + "=") === 0) {
-		return cookie.substring(name.length + 1, cookie.length);
+			return cookie.substring(name.length + 1, cookie.length);
+		}
 	}
-}
 	return "";
 }
-
+*/
 // Background and Button to change it things here
 function freezebg() {
 	document.body.style.background = "url(./images/cooked.png)";

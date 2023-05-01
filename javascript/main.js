@@ -1,6 +1,6 @@
-// This is the game's code
+// This is the game's main code
 
-// NEW: GAMEMODE: Is Daily by Default
+// Defaults to daily mode
 var mode = "daily"
 // Unless User switches to endless
 const modeButton = document.getElementById("modeButton")
@@ -19,9 +19,8 @@ function switchToEndless() {
 	document.getElementById("buttonsdiv").style.display = 'inherit'
 	document.getElementById("guess-input").style.display = 'initial'
 	document.getElementById("incorrect-guesses").style.display = 'inherit';
-	// Start game
+	// Restart game
 	resetGame()
-
 }
 //Hide the corresponding title
 if (mode === "daily") {
