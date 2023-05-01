@@ -80,6 +80,8 @@ makeTable()
 // Counter until the next day 
 var timer = document.getElementById("timer");
 document.getElementById("dailyDiv").style.display = 'none'; // (hide by default)
+document.getElementById("timer").style.display = 'none';
+document.getElementById("dailyText").style.display = 'none';
 var tomorrow = ''
 setInterval(function(){ 
   var toDate = new Date();
