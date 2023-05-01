@@ -59,7 +59,7 @@
 
 <div id="buttonsdiv" class='parent' style="align-items: center;" class="buttonsdiv">
 	<div class='child inline-block-child'>
-		<button onclick="checkGuess()">Submit Guess</button>
+		<button id="submit-button" onclick="checkGuess()">Submit Guess</button>
 	</div>
 
 	<div class='child inline-block-child'>
@@ -90,11 +90,14 @@
 
 <!---	DEVELOPEMENT: Show correct answer (works only once)
 		<p id="correct-answer">Correct answer:</p>  -->
+<div>
+	<button id="reset-button" onclick="resetGame()">Play again</button>
+</div>
 
 <button id="bgbtn" class="button2" onclick="">Freeze Background</button>
 
 <div id="cookie-popup">
-	<p>The game will soon be able to show you statistics of how many guesses you needed per game and fun stuff like that.
+	<p>The game can show you statistics of how many guesses you needed per game and other quality of life stuff.
 		To make that work it stores the numbers of guesses you needed every game as a cookie in your browser. </p>
 	<div class='parent'>
 		<div class='child inline-block-child'>

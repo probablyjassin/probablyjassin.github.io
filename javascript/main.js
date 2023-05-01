@@ -34,7 +34,7 @@ if (mode === "endless") {
 // Array of all the properties that exist
 const allProperties = ["CD", "ICD", "Gauge", "Diameter\/Width", "Shape", "Element", "Blunt"];
 
-const propertiesToDisplay = []; // Array of the properties the game will use
+var propertiesToDisplay = []; // Array of the properties the game will use
 
 function randomizeTable() {
 	// New: Chose 5 random properties to be displayed to the player each game
@@ -56,7 +56,12 @@ function randomizeTable() {
 	});
 	return propertiesToDisplay;
 }
-randomizeTable()
+if (mode === 'daily') {
+	propertiesToDisplay = allProperties
+}
+if (mode === 'endless') {
+	randomizeTable()
+}
 
 function makeTable() {
 	document.getElementById("ability-table").deleteTHead(); // Clear head from previous games
@@ -207,14 +212,14 @@ function checkGuess() {
 		incorrectCount.textContent = incorrectGuesses; 
     }
 
-	// If correct, show alert and reset table
+	// If correct, show alert and show reset button
 	if (correctGuess) {
 		// Save Incorrect Guesses To Cookies
 		saveIncorrectGuessesToCookie()
 		setTimeout(() => {
 			alert(`${prettyRandom} was the correct ability. Congratulations!`);
-			resetGame();
 		}, 100);
+		gameEnd()
 	}
 
 	// Check if player has reached 8 incorrect guesses
@@ -224,7 +229,7 @@ function checkGuess() {
 		incorrectCount.textContent = `8`
 		setTimeout(() => {
 			alert(`You have reached 8 incorrect guesses. The correct ability was ${prettyRandom}.`);
-			resetGame(); 
+			gameEnd(); 
 			// Save Incorrect Guesses To Cookies
 			incorrectCount.textContent = `0`;
 		}, 100);
@@ -238,12 +243,46 @@ node.addEventListener("keyup", function(event) {
     }
 });
 
+// Hide reset button by default
+document.getElementById("reset-button").style.display = 'none';
 // Add event listener to reset button
-	//const resetButton = document.getElementById("reset-button");
-	//resetButton.addEventListener("click", resetGame);
+const resetButton = document.getElementById("reset-button");
+resetButton.addEventListener("click", function() {
+	resetGame()
+});
+
+// Things to do after the game ended by winning, conceding or losing
+function gameEnd() {
+	// Disable guess inputs until game is restarted
+	node.disabled = true;
+	document.getElementById("concede-button").disabled = true;
+	document.getElementById("submit-button").disabled = true;
+	// Remember the completion of the daily game
+	if (mode === 'daily') {
+		document.cookie = 'dailyComplete=true;expires='+nextday.toUTCString()+';path=/';
+		if (mode === 'daily') {
+			document.getElementById("dailyText").style.display = 'initial';
+			document.getElementById("timer").style.display = 'initial';
+			document.getElementById("dailyDiv").style.display = 'initial';
+		}
+	}
+	// Show the reset button; Unless we're in daily mode
+	if (mode !== 'daily') {
+	document.getElementById("reset-button").style.display = 'initial';
+	}	
+	if (mode === 'endless') {}
+}
 
 // Function to reset the game
 function resetGame() {
+	// Hide replay button again
+	document.getElementById("reset-button").style.display = 'none';
+
+	// Re-enable guess inputs
+	node.disabled = false;
+	document.getElementById("concede-button").disabled = false;
+	document.getElementById("submit-button").disabled = false;
+
 	// Clear the table
 	while (abilityTable.rows.length > 1) {
 		abilityTable.deleteRow(1);
@@ -252,19 +291,13 @@ function resetGame() {
 	generateRandomAbility();
 
 	// Regenerate the table to have new random properties
-	const propertiesToDisplay = [];
+	propertiesToDisplay = [];
 	randomizeTable()
 	makeTable()
 
 	//Reset incorrect guesses
 	incorrectGuesses = 0;
 	incorrectCount.textContent = `0`;
-
-	// Remember the completion of the daily game
-	if (mode === 'daily') {
-		document.cookie = 'dailyComplete=true;expires='+nextday.toUTCString()+';path=/';
-		dailyComplete()
-	}
 }
 
 // Select the concede button element
@@ -287,7 +320,7 @@ confirmButton.addEventListener("click", function() {
 	incorrectGuesses = "C"
 	saveIncorrectGuessesToCookie()
 	showCorrectAnswer();
-	resetGame();
+	gameEnd();
 });
 cancelButton.addEventListener("click", function() {
 	document.getElementById("confirm-popup").style.display = 'none';
@@ -298,6 +331,7 @@ function showCorrectAnswer() {
 	if (incorrectGuesses === 0) {return false}
 	else {
   		alert(`The correct ability was ${randomAbility}.`);
+		  gameEnd()
 	}
 }
 
