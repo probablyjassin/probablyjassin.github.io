@@ -2,10 +2,12 @@
 <html>
 <head>
 	<title>Gaugedle</title>
-	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+	
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 	<link rel="stylesheet" href="stylege.css">
+
 	<audio controls autoplay loop id="music">
 		<source src="./files/kahoot.mp3" type="audio/ogg">
 		<embed src="./files/kahoot.mp3" autostart="true" loop="true" hidden="true"> 
@@ -13,19 +15,14 @@
 
 	<script src="./javascript/cookies.js" defer></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
-	<script src="./javascript/cookies.js" defer></script>
 	<script src="./javascript/statistic.js" defer></script>
 	<script src="./javascript/abilities.js" defer></script>
 	<script src="./javascript/main.js" defer></script>
 	<script src="./javascript/background.js" defer></script>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	
 
-	
 </head>
 <body class="bg">
-<div id="page-container">
-	<div id="content-wrap">
 
 <div  id="statistic-popup">
 	<canvas id="myChart" width="800" height="450"></canvas>	
@@ -58,7 +55,7 @@
 <p id="incorrect-guesses">Guesses: <span id="incorrect-count">0</span>/8</p>
 
 <input class="choicer" type="search" type="text" name="choicer" list="guess-select" id="guess-input" placeholder="--Guess an ability--">
-<datalist id="guess-select"> </datalist>
+<datalist id="guess-select"></datalist>
 
 <div id="buttonsdiv" class='parent' style="align-items: center;" class="buttonsdiv">
 	<div class='child inline-block-child'>
@@ -91,9 +88,8 @@
 	</div>
 </div>
 
-<!--- DEVELOPEMENT: Show correct answer (works only once) -->
-<!--- <p id="correct-answer">Correct answer:</p>  -->
-
+<!---	DEVELOPEMENT: Show correct answer (works only once)
+		<p id="correct-answer">Correct answer:</p>  -->
 
 <button id="bgbtn" class="button2" onclick="">Freeze Background</button>
 
@@ -110,10 +106,9 @@
 	</div>
 </div>
 
-<!--- -->
 <footer>
 	<h3> Made by <a href="aboutme.html"> probablyjassin:</a> <a href="version.html"> Version 4.2</a> </h3>
-	<h3>Idea and Database this is based on by <a href="https://www.twitch.tv/Zajef77"> Zajef77</a></h3>
+	<h3>Credit to <a href="https://www.twitch.tv/Zajef77"> Zajef77</a> who came up with this and provided the database</h3>
 </footer>
 
 </body>

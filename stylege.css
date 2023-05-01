@@ -34,7 +34,6 @@ h2 {
 h3 {
     text-align: center;
 }
-
 p {
     text-align: center;
     font-size: 150%;
@@ -95,7 +94,6 @@ td, th {
     h2.mobile {
     font-size: 200%;
 }}
-
 select {
     display: block;
     margin: 0 auto;
@@ -290,14 +288,12 @@ input {
     background-color: #f44336;
     color: #fff;
 }
-
 .chart-container {
     width: 50%;
     height: auto;
     background-color: #eee;
     margin-bottom: 20px;
-}
-  
+} 
 .bar {
     height: 100%;
     line-height: 30px;
