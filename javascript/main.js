@@ -95,7 +95,7 @@ setInterval(function(){
   var result=((diffHr<10)?"0"+diffHr:diffHr);
   result+=" Hours "+((diffMi<10)?"0"+diffMi:diffMi);
   result+=" Minutes, "+((diffS<10)?"0"+diffS:diffS) + " Seconds" ;
-  timer.innerHTML="Time until the next daily ICDle: " + result;
+  timer.innerHTML="Time until the next: " + result;
   return tomorrow
 },1000);
 // Timestamp for cookie expire
