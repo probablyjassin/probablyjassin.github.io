@@ -229,6 +229,8 @@ function checkGuess() {
 		incorrectCount.textContent = `8`
 		setTimeout(() => {
 			alert(`You have reached 8 incorrect guesses. The correct ability was ${prettyRandom}.`);
+//			// Work in progress: Reveal the correct answer in blue
+			//newValueCell.classList.add
 			gameEnd(); 
 			// Save Incorrect Guesses To Cookies
 			incorrectCount.textContent = `0`;
@@ -253,10 +255,13 @@ resetButton.addEventListener("click", function() {
 
 // Things to do after the game ended by winning, conceding or losing
 function gameEnd() {
-	// Disable guess inputs until game is restarted
+	// Disable guess inputs and make them greyed out until game is restarted
 	node.disabled = true;
+	node.style.backgroundColor = 'grey';
 	document.getElementById("concede-button").disabled = true;
+	document.getElementById("concede-button").style.backgroundColor = 'grey';
 	document.getElementById("submit-button").disabled = true;
+	document.getElementById("submit-button").style.backgroundColor = 'grey';
 	// Remember the completion of the daily game
 	if (mode === 'daily') {
 		document.cookie = 'dailyComplete=true;expires='+nextday.toUTCString()+';path=/';
@@ -278,10 +283,13 @@ function resetGame() {
 	// Hide replay button again
 	document.getElementById("reset-button").style.display = 'none';
 
-	// Re-enable guess inputs
+	// Re-enable guess inputs and change back their background color
 	node.disabled = false;
+	node.style.backgroundColor = '#2a2a2a';
 	document.getElementById("concede-button").disabled = false;
+	document.getElementById("concede-button").style.backgroundColor = '#2a2a2a';
 	document.getElementById("submit-button").disabled = false;
+	document.getElementById("submit-button").style.backgroundColor = '#2a2a2a';
 
 	// Clear the table
 	while (abilityTable.rows.length > 1) {
