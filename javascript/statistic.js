@@ -48,14 +48,14 @@ function makeChart() {
         document.getElementById("statistic-popup").style.display = 'initial';
         // Generate the chart
         const arr = getCookie("incorrectGuessesArray").split(',');
-        counts = countNumbersAndC(arr).map(v=> v+1);
+        counts = countNumbersAndC(arr)//.map(v=> v+1);
         chart = new Chart(document.getElementById("myChart"), {
             type: 'bar',
             data: {
                 labels: ["1", "2", "3", "4", "5", "6", "7", "8", "Lost", "Conceded"],
                 datasets: [
                     {
-                        /* label: "Number of incorrect guesses needed per game",*/
+                        /* label: "Number of guesses needed per game",*/
                         backgroundColor: ["#3e95cd"],
                         data: counts
                     }
