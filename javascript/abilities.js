@@ -91,6 +91,24 @@ const abilities =
     "Element": "Geo",
     "Blunt": "No"
     },
+    "BaizhuSkill": {
+    "CD": "10s",
+    "ICD": "Special",
+    "Gauge": "1U",
+    "Diameter\/Width": "1.2m",
+    "Shape": "Sphere",
+    "Element": "Dendro",
+    "Blunt": "No"
+    }, 
+    "BaizhuBurst": {
+    "CD": "20s",
+    "ICD": "None",
+    "Gauge": "1U",
+    "Diameter\/Width": "3m",
+    "Shape": "Sphere",
+    "Element": "Dendro",
+    "Blunt": "No"
+    },
     "BarbaraSkill": {
     "CD": "32s",
     "ICD": "Special",
@@ -539,6 +557,24 @@ const abilities =
     "Diameter\/Width": "7m",
     "Shape": "Cylinder",
     "Element": "Hydro",
+    "Blunt": "No"
+    },
+    "KavehSkill": {
+    "CD": "6s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "10m",
+    "Shape": "Cylinder",
+    "Element": "Dendro",
+    "Blunt": "No"
+    },
+    "KavehBurst": {
+    "CD": "20s",
+    "ICD": "None",
+    "Gauge": "2u",
+    "Diameter\/Width": "10m",
+    "Shape": "Cylinder",
+    "Element": "Dendro",
     "Blunt": "No"
     },
     "KeqingSkill": {
@@ -1350,4 +1386,25 @@ const abilities =
     "Shape": "Cylinder",
     "Element": "Geo",
     "Blunt": "Yes"
-    },}
+    },
+
+    /* For fun 
+    "FOCALORSSkill": {
+    "CD": "10s",
+    "ICD": "Special",
+    "Gauge": "1u, 1.5u",
+    "Diameter\/Width": "???",
+    "Shape": "???",
+    "Element": "Hydro",
+    "Blunt": "No"
+    },
+    "FOCALORSBurst": {
+    "CD": "13.5s",
+    "ICD": "None",
+    "Gauge": "None",
+    "Diameter\/Width": "None",
+    "Shape": "None",
+    "Element": "Hydro",
+    "Blunt": "No"
+    }, */
+}
