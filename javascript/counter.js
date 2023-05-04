@@ -21,5 +21,5 @@ if (timeleft < 0) {
     document.getElementById("hours").innerHTML = "" 
     document.getElementById("mins").innerHTML = ""
     document.getElementById("secs").innerHTML = ""
-    document.getElementById("end").innerHTML = "TIME UP!!";
+    document.getElementById("end").innerHTML = "Refresh the page";
 }
