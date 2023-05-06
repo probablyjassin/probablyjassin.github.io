@@ -1186,7 +1186,7 @@ const abilities =
     },
     "XianglingBurst": {
     "CD": "20s",
-    "ICD": "None",
+    "ICD": "Standard, None",
     "Gauge": "1u",
     "Diameter\/Width": "5m, 6m",
     "Shape": "Cylinder",
