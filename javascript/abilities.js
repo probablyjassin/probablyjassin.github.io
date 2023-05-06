@@ -1,5 +1,7 @@
 // import all properties that exist
 const allProperties = ["CD", "ICD", "Gauge", "Diameter\/Width", "Shape", "Element", "Blunt",];
+// exclude focalors from being the correct answer
+const abilitiesToExclude = ["FOCALORSSkill", "FOCALORSBurst"]
 // import abilities
 const abilities = 
     {"AlbedoSkill": {
@@ -1390,13 +1392,13 @@ const abilities =
     "Blunt": "Yes"
     },
 
-    /* For fun 
+    /* For fun */
     "FOCALORSSkill": {
     "CD": "10s",
     "ICD": "Special",
     "Gauge": "1u, 1.5u",
-    "Diameter\/Width": "???",
-    "Shape": "???",
+    "Diameter\/Width": "9m",
+    "Shape": "Cylinder",
     "Element": "Hydro",
     "Blunt": "No"
     },
@@ -1408,5 +1410,5 @@ const abilities =
     "Shape": "None",
     "Element": "Hydro",
     "Blunt": "No"
-    }, */
+    },
 }

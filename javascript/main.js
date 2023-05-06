@@ -121,6 +121,9 @@ let randomAbility = "";
 const abilityOptions = Object.keys(abilities);
 function generateRandomAbility() {;
     randomAbility = abilityOptions[Math.floor(Math.random() * abilityOptions.length)];
+	if (abilitiesToExclude.includes(randomAbility)) {
+		generateDailyAbility()
+	}
 }
 // Generate daily abilities using the date as seed
 function generateDailyAbility() {
