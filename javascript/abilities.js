@@ -1,3 +1,5 @@
+// import all properties that exist
+const allProperties = ["CD", "ICD", "Gauge", "Diameter\/Width", "Shape", "Element", "Blunt",];
 // import abilities
 const abilities = 
     {"AlbedoSkill": {
