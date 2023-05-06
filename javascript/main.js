@@ -32,7 +32,7 @@ if (mode === "endless") {
 
 // Start by making the table on screen.
 // Array of all the properties that exist
-const allProperties = ["CD", "ICD", "Gauge", "Diameter\/Width", "Shape", "Element", "Blunt"];
+const allProperties = ["CD", "ICD", "Gauge", "Diameter\/Width", "Shape", "Element", "Blunt",];
 
 var propertiesToDisplay = []; // Array of the properties the game will use
 
