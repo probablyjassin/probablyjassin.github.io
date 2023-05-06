@@ -119,7 +119,7 @@ console.log(today);
 // Initiate the game by chosing a random ability to be set as the correct answer
 let randomAbility = "";
 const abilityOptions = Object.keys(abilities);
-function generateRandomAbility() {;
+function generateRandomAbility() {
     randomAbility = abilityOptions[Math.floor(Math.random() * abilityOptions.length)];
 	if (abilitiesToExclude.includes(randomAbility)) {
 		generateDailyAbility()
