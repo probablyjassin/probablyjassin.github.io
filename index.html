@@ -8,11 +8,7 @@
 	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 	<link rel="stylesheet" href="stylege.css">
 
-	<iframe src="./files/silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
-	<audio controls autoplay loop id="music">
-		<source src="./files/kahoot.mp3" type="audio/ogg">
-		<embed src="./files/kahoot.mp3" autostart="true" loop="true"> 
-	</audio>
+	
 
 	<script src="./javascript/cookies.js" defer></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
@@ -24,11 +20,16 @@
 
 </head>
 <body class="bg">
-<!---
-<video autoplay muted loop id="cookingmp4">
-	<source src="./images/cooking.mp4" type="video/mp4">
-</video>
--->
+	<iframe src="./files/silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+	<audio controls autoplay loop id="music">
+		<source src="./files/kahoot.mp3" type="audio/ogg">
+		<embed src="./files/kahoot.mp3" autostart="true" loop="true"> 
+	</audio>
+	<!---
+	<video autoplay muted loop id="cookingmp4">
+		<source src="./images/cooking.mp4" type="video/mp4">
+	</video>
+	-->
 
 <div  id="statistic-popup">
 	<canvas id="myChart" width="800" height="450"></canvas>	
