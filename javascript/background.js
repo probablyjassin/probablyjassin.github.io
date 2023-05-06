@@ -46,13 +46,35 @@ function swapbg() {
 			freezebg()
 		}
 }
+/*
+// Get the video
+var video = document.getElementById("cookingmp4");
 
+// Get the button
+var btn = document.getElementById("bgbtn");
+
+// Pause and play the video, and change the button text
+function pausebg() {
+	if (video.paused) {
+	video.play();
+	setCookie("background", 'static')
+	bgimage = "static"
+	document.getElementById("bgbtn").innerHTML = "Unfreeze Background";
+	} else {
+	video.pause();
+	setCookie("background", 'gif')
+	bgimage = "gif"
+	document.getElementById("bgbtn").innerHTML = "Freeze Background";
+	}
+}
+*/
 
 const bgbutton = document.getElementById("bgbtn")
 bgbutton.addEventListener("click", function() { swapbg() })
 
 if (getCookie("background") === 'static') {
     freezebg()
+	//pausebg()
 }
 else {
     unfreezebg()
