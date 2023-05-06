@@ -30,96 +30,95 @@
 		<source src="./images/cooking.mp4" type="video/mp4">
 	</video>
 	-->
-
-<div  id="statistic-popup">
-	<canvas id="myChart" width="800" height="450"></canvas>	
-	<div class="parent">
-		<div class="child inline-block-child" style="float: left;">
-			<button id="closestat" onclick="closestat()" style="background-color: #9d9d9d";> Close </button>
+	<div id="cookie-popup">
+		<p>The game can show you statistics of how many guesses you needed per game and other quality of life stuff.
+			To make that work it stores the numbers of guesses you needed every game as a cookie in your browser. </p>
+		<div class='parent'>
+			<div class='child inline-block-child'>
+				<button id="agreebutton" name="agree" class="agree" onclick="hidePopup()" onclick="cookiesAgreeGe()">OkaygeBuisness</button>
+			</div>
+			<div class='child inline-block-child'>
+				<button name="decline" class="decline" name="declineCookiesButton" id="declineCookiesButton" onclick="hidePopup()">NOPERS</button>
+			</div>
 		</div>
-		<div class="child inline-block-child" style="float: right;">
-			<button id="resetstats" style="background-color: #f44336;"> Reset Stats </button>
-		</div>
-	</div>
-</div>
-
-<header>
-<h1 class="widescreen">The Genshin <img src="./images/gauge.png" class="image", class="icon"> dle</h1>
-<h1 class="mobile">The Gaugedle <img src="./images/gauge.png" class="image", class="icon"></h1>
-</header>
-
-<h2 class="widescreen">Try guessing a character's ability using information like it's element, gauge units, cooldowns and more!</h2>
-<h2 class="mobile">Guess an ability with it's element, gauge units, cooldowns and more!</h2>
-
-<label id="endless"> Endless Mode </label>
-<label id="daily"> Daily Mode </label>
-<button id="modeButton"> Switch to Endless Mode</button>
-
-<div id="dailyDiv"></div> <!-- For some fucking reason without this, the lines in the next Div don't stay together -->
-<div id="dailyDiv">
-	<h2 id="dailyText" >Congratulations, you completed the daily ICDle! <br> </h2> 
-	<div id="timer"></div>
-</div>
-
-<p id="incorrect-guesses">Guesses: <span id="incorrect-count">0</span>/8</p>
-
-<div>
-	<button id="reset-button" onclick="resetGame()">Play again</button>
-</div>
-
-<input class="choicer" type="search" type="text" name="choicer" list="guess-select" id="guess-input" placeholder="--Guess an ability--">
-<datalist id="guess-select"></datalist>
-
-<div id="buttonsdiv" class='parent' style="align-items: center;" class="buttonsdiv">
-	<div class='child inline-block-child'>
-		<button id="submit-button" onclick="checkGuess()">Submit Guess</button>
 	</div>
 
-	<div class='child inline-block-child'>
-		<button id="concede-button" onclick="">Concede</button>
+	<header>
+		<h1 class="widescreen">The Genshin <img src="./images/gauge.png" class="image", class="icon"> dle</h1>
+		<h1 class="mobile">The Gaugedle <img src="./images/gauge.png" class="image", class="icon"></h1>
+	</header>
+
+	<h2 class="widescreen">Try guessing a character's ability using information like it's element, gauge units, cooldowns and more!</h2>
+	<h2 class="mobile">Guess an ability with it's element, gauge units, cooldowns and more!</h2>
+
+	<label id="endless"> Endless Mode </label>
+	<label id="daily"> Daily Mode </label>
+	<button id="modeButton"> Switch to Endless Mode</button>
+
+	<div id="dailyDiv"></div> <!-- For some fucking reason without this, the lines in the next Div don't stay together -->
+	<div id="dailyDiv">
+		<h2 id="dailyText" >Congratulations, you completed the daily ICDle! <br> </h2> 
+		<div id="timer"></div>
 	</div>
 
-	<div class='child inline-block-child'>
-		<button onclick="makeChart()" id="stats-button">Stats</button>
+	<p id="incorrect-guesses">Guesses: <span id="incorrect-count">0</span>/8</p>
+
+	<div>
+		<button id="reset-button" onclick="resetGame()">Play again</button>
 	</div>
 
-	<table id="ability-table" style="text-shadow: none;">
-		<tr>
-		</tr> 
-	</table>
-</div>
+	<input class="choicer" type="search" type="text" name="choicer" list="guess-select" id="guess-input" placeholder="--Guess an ability--">
+	<datalist id="guess-select"></datalist>
 
-<div id="confirm-popup">
-	<p> Are you sure you want to concede?</p>
-	<div class='parent'>
+	<div id="buttonsdiv" class='parent' style="align-items: center;" class="buttonsdiv">
 		<div class='child inline-block-child'>
-			<button id="confirmButton" name="agree" class="confirm">Yes</button>
+			<button id="submit-button" onclick="checkGuess()">Submit Guess</button>
 		</div>
+
 		<div class='child inline-block-child'>
-			<button class="cancel" id="cancelButton">Cancel</button>
+			<button id="concede-button" onclick="">Concede</button>
+		</div>
+
+		<div class='child inline-block-child'>
+			<button onclick="makeChart()" id="stats-button">Stats</button>
+		</div>
+
+		<table id="ability-table" style="text-shadow: none;">
+			<tr></tr> <!-- Table gets filled automatically by js -->
+		</table>
+	</div>
+
+	<button id="bgbtn" class="button2" onclick="//pausebg()">Freeze Background</button>
+
+	<div id="confirm-popup">
+		<p> Are you sure you want to concede?</p>
+		<div class='parent'>
+			<div class='child inline-block-child'>
+				<button id="confirmButton" name="agree" class="confirm">Yes</button>
+			</div>
+			<div class='child inline-block-child'>
+				<button class="cancel" id="cancelButton">Cancel</button>
+			</div>
 		</div>
 	</div>
-</div>
 
-<button id="bgbtn" class="button2" onclick="//pausebg()">Freeze Background</button>
-
-<div id="cookie-popup">
-	<p>The game can show you statistics of how many guesses you needed per game and other quality of life stuff.
-		To make that work it stores the numbers of guesses you needed every game as a cookie in your browser. </p>
-	<div class='parent'>
-		<div class='child inline-block-child'>
-			<button id="agreebutton" name="agree" class="agree" onclick="hidePopup()" onclick="cookiesAgreeGe()">OkaygeBuisness</button>
-		</div>
-		<div class='child inline-block-child'>
-			<button name="decline" class="decline" name="declineCookiesButton" id="declineCookiesButton" onclick="hidePopup()">NOPERS</button>
+	<div  id="statistic-popup">
+		<canvas id="myChart" width="800" height="450"></canvas>	
+		<div class="parent">
+			<div class="child inline-block-child" style="float: left;">
+				<button id="closestat" onclick="closestat()" style="background-color: #9d9d9d";> Close </button>
+			</div>
+			<div class="child inline-block-child" style="float: right;">
+				<button id="resetstats" style="background-color: #f44336;"> Reset Stats </button>
+			</div>
 		</div>
 	</div>
-</div>
-<br>
-<footer>
-	<h3> Made by <a href="aboutme.html"> probablyjassin:</a> <a href="version.html"> Version 4.3</a> </h3>
-	<h3>Credit to <a href="https://www.twitch.tv/Zajef77"> Zajef77</a> who came up with the idea and provided the database</h3>
-</footer>
+
+	<footer>
+		<br>
+		<h3> Made by <a href="aboutme.html"> probablyjassin:</a> <a href="version.html"> Version 4.3</a> </h3>
+		<h3>Credit to <a href="https://www.twitch.tv/Zajef77"> Zajef77</a> who came up with the idea and provided the database</h3>
+	</footer>
 
 </body>
 </html>
