@@ -337,3 +337,7 @@ footer {
 #dailyText {
     width: 100%;
 }
+audio, embed {
+    position: absolute;
+    z-index: -9999;
+}
