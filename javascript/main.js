@@ -393,3 +393,18 @@ dailyComplete()
 // FOR DEVELOPEMENT: Select the correct-answer element on screen and display the answer
 // const correctAnswer = document.getElementById("correct-answer");
 // correctAnswer.textContent += randomAbility;
+
+//This is supposed to modify the search result text
+Callback = () => {
+    [...document.querySelectorAll(".gs-title")].forEach(el => {
+        el.innerHTML = "Jässin Aouani"; //testing
+    });
+};
+
+window.__gcse || (window.__gcse = {});
+
+window.__gcse.searchCallbacks = {
+    web: {
+        rendered: "Callback",
+    },
+};
