@@ -231,7 +231,7 @@ function checkGuess() {
 		incorrectCount.textContent = `8`
 		setTimeout(() => {
 			alert(`You have reached 8 incorrect guesses. The correct ability was ${prettyRandom}.`);
-//			// Work in progress: Reveal the correct answer in blue
+			// Work in progress: Reveal the correct answer in blue
 			//newValueCell.classList.add
 			gameEnd(); 
 			// Save Incorrect Guesses To Cookies
@@ -345,28 +345,6 @@ function showCorrectAnswer() {
 	}
 }
 
-/*
-// Helper function to set cookies
-function setCookie(name, value) {
-	if (getCookie("cookiesAgreeGe") !== 'true') {console.log("Saving cookies has been aborted, cookies haven't been agreed to")}
-	else {
-	document.cookie = name + "=" + value + ";path=/";
-}}
-  
-// Helper function to get cookies
-function getCookie(name) {
-	const cookieString = decodeURIComponent(document.cookie);
-	const cookies = cookieString.split(';');
-	for (let i = 0; i < cookies.length; i++) {
-		let cookie = cookies[i].trim();
-		if (cookie.indexOf(name + "=") === 0) {
-		return cookie.substring(name.length + 1, cookie.length);
-	}
-}
-	return "";
-}
-*/
-
 // Select the resetstats button element
 const resetstatsButton = document.getElementById("resetstats");
 
@@ -388,7 +366,6 @@ function dailyComplete() {
 	}
 }
 dailyComplete()
-
 
 // FOR DEVELOPEMENT: Select the correct-answer element on screen and display the answer
 // const correctAnswer = document.getElementById("correct-answer");
