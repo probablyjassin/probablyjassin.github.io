@@ -241,9 +241,7 @@ function checkGuess() {
 		incorrectCount.textContent = `8`
 		setTimeout(() => {
 			alert(`You have reached 8 incorrect guesses. The correct ability was ${prettyRandom}.`);
-			//Reveal the correct answer in blue
 			showAnswer()
-			//newValueCell.classList.add
 			gameEnd(); 
 			// Save Incorrect Guesses To Cookies
 			incorrectCount.textContent = `0`;
@@ -389,7 +387,6 @@ function dailyComplete() {
 	}
 }
 dailyComplete()
-
 
 // FOR DEVELOPEMENT: Select the correct-answer element on screen and display the answer
 // const correctAnswer = document.getElementById("correct-answer");
