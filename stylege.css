@@ -168,6 +168,9 @@ table {
 .partial {
     background-color: rgb(255, 172, 17);
 }
+.solution {
+    background-color: #007bff;
+}
 input {
     width: 17.5%;
     height: 5vh;
