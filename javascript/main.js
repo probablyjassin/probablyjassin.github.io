@@ -177,12 +177,20 @@ function checkGuess() {
 	const newRow = abilityTable.insertRow();
 	const newGuessCell = newRow.insertCell();
 	newGuessCell.textContent = rawValue;
-
+	// Add icon image
+	const img = document.createElement("img");	
+	img.src = abilities[selectedAbility].Image;
+	img.width = "40";
+    img.height = "40";
+	img.style.marginLeft = "200";
+	img.style.verticalAlign = "middle";
+	newGuessCell.appendChild(img);
+		
 	for (let i = 0; i < propertiesToDisplay.length; i++) {
 		const property = propertiesToDisplay[i];
 		const newValueCell = newRow.insertCell();
 		newValueCell.textContent = abilities[selectedAbility][property];
-	
+		
 		if (abilities[selectedAbility][property] === abilities[randomAbility][property]) {
 			newValueCell.classList.add("correct");
 		} else {
