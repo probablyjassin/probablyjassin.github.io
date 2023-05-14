@@ -282,12 +282,10 @@ function gameEnd() {
 	// Remember the completion of the daily game
 	if (mode === 'daily') {
 		document.cookie = 'dailyComplete=true;expires='+nextday.toUTCString()+';path=/';
-		/* if (mode === 'daily') {
-			document.getElementById("dailyText").style.display = 'initial';
-			document.getElementById("timer").style.display = 'initial';
-			document.getElementById("dailyDiv").style.display = 'initial';
-		} */
-		dailyComplete()
+		// Show contents for the completion of the daily game
+		document.getElementById("dailyText").style.display = 'initial';
+		document.getElementById("timer").style.display = 'initial';
+		document.getElementById("dailyDiv").style.display = 'initial';
 	}
 	// Show the reset button; Unless we're in daily mode
 	if (mode !== 'daily') {
