@@ -5,7 +5,7 @@ const abilitiesToExclude = ["FOCALORSSkill", "FOCALORSBurst"]
 // import abilities
 const abilities = 
     {"AlbedoSkill": {
-    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Talent_Abiogenesis_Solar_Isotoma.png/revision/latest?cb=20210607084738",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Talent_Abiogenesis_Solar_Isotoma.png",
     "CD": "4s",
     "ICD": "Standard",
     "Gauge": "1u",
