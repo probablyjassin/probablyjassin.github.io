@@ -16,6 +16,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "AlbedoBurst": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Talent_Rite_of_Progeniture_Tectonic_Tide.png",
     "CD": "12s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -25,6 +26,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "AlhaithamSkill": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Talent_Universality_An_Elaboration_on_Form.png",
     "CD": "18s",
     "ICD": "Special",
     "Gauge": "1u",
@@ -34,6 +36,7 @@ const abilities =
     "Blunt": "No"
     },
     "AlhaithamBurst": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/Talent_Particular_Field_Fetters_of_Phenomena.png",
     "CD": "18s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -43,6 +46,7 @@ const abilities =
     "Blunt": "No"
     },
     "AloySkill": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Talent_Frozen_Wilds.png/revision/latest?cb=20210901030941",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -52,6 +56,7 @@ const abilities =
     "Blunt": "No"
     },
     "AloyBurst": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Talent_Prophecies_of_Dawn.png/revision/latest?cb=20220521143803",
     "CD": "12s",
     "ICD": "None",
     "Gauge": "2u",
@@ -61,6 +66,7 @@ const abilities =
     "Blunt": "No"
     },
     "AmberSkill": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Talent_Explosive_Puppet.png/revision/latest?cb=20210607085822",
     "CD": "15s",
     "ICD": "None",
     "Gauge": "2u",
@@ -70,6 +76,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "AmberBurst": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Talent_Fiery_Rain.png/revision/latest?cb=20210607085953",
     "CD": "12s",
     "ICD": "Special",
     "Gauge": "1u",
@@ -79,6 +86,7 @@ const abilities =
     "Blunt": "No"
     },
     "AratakiIttoSkill": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Talent_Masatsu_Zetsugi_Akaushi_Burst%21.png/revision/latest?cb=20211214133201",
     "CD": "10s",
     "ICD": "None",
     "Gauge": "1u",
@@ -88,6 +96,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "AratakiIttoBurst": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Talent_Royal_Descent_Behold%2C_Itto_the_Evil%21.png/revision/latest?cb=20211214133926",
     "CD": "18s",
     "ICD": "None",
     "Gauge": "None",
@@ -97,6 +106,7 @@ const abilities =
     "Blunt": "No"
     },
     "BaizhuSkill": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Talent_Universal_Diagnosis.png/revision/latest?cb=20230502100641",
     "CD": "10s",
     "ICD": "Special",
     "Gauge": "1u",
@@ -106,6 +116,7 @@ const abilities =
     "Blunt": "No"
     }, 
     "BaizhuBurst": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Talent_Holistic_Revivification.png/revision/latest?cb=20230502100634",
     "CD": "20s",
     "ICD": "None",
     "Gauge": "1u",
@@ -115,6 +126,7 @@ const abilities =
     "Blunt": "No"
     },
     "BarbaraSkill": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Talent_Let_the_Show_Begin%E2%99%AA.png/revision/latest?cb=20210607090841",
     "CD": "32s",
     "ICD": "Special",
     "Gauge": "1u",
@@ -124,6 +136,7 @@ const abilities =
     "Blunt": "No"
     },
     "BarbaraBurst": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Talent_Shining_Miracle%E2%99%AA.png/revision/latest?cb=20210607091837",
     "CD": "20s",
     "ICD": "None",
     "Gauge": "None",
@@ -133,6 +146,7 @@ const abilities =
     "Blunt": "No"
     },
     "BeidouSkill": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Talent_Tidecaller.png/revision/latest?cb=20210607092512",
     "CD": "7.5s",
     "ICD": "None",
     "Gauge": "2u",
@@ -142,6 +156,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "BeidouBurst": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Talent_Stormbreaker.png/revision/latest?cb=20210607092304",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "4u, 1u",
@@ -151,6 +166,7 @@ const abilities =
     "Blunt": "No"
     },
     "BennettSkillPress": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Talent_Passion_Overload.png/revision/latest?cb=20210607091246",
     "CD": "5s",
     "ICD": "None",
     "Gauge": "2u",
@@ -160,6 +176,7 @@ const abilities =
     "Blunt": "No"
     },
     "BennettSkillHold1": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Talent_Passion_Overload.png/revision/latest?cb=20210607091246",
     "CD": "7.5s",
     "ICD": "None",
     "Gauge": "1u",
@@ -169,6 +186,7 @@ const abilities =
     "Blunt": "No"
     },
     "BennettSkillHold2": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Talent_Passion_Overload.png/revision/latest?cb=20210607091246",
     "CD": "10s",
     "ICD": "None",
     "Gauge": "1u",
@@ -178,6 +196,7 @@ const abilities =
     "Blunt": "No"
     },
     "BennettBurst": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Talent_Fantastic_Voyage.png/revision/latest?cb=20210607085835",
     "CD": "15s",
     "ICD": "None",
     "Gauge": "2u",
@@ -187,6 +206,7 @@ const abilities =
     "Blunt": "No"
     },
     "CandaceSkillPress": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Talent_Sacred_Rite_Heron%27s_Sanctum.png/revision/latest?cb=20220928021307",
     "CD": "6s",
     "ICD": "None",
     "Gauge": "1u",
@@ -196,6 +216,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "CandaceSkillHold": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Talent_Sacred_Rite_Heron%27s_Sanctum.png/revision/latest?cb=20220928021307",
     "CD": "9s",
     "ICD": "None",
     "Gauge": "1u",
@@ -205,6 +226,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "CandaceBurst": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Talent_Sacred_Rite_Wagtail%27s_Tide.png/revision/latest?cb=20220928021257",
     "CD": "15s",
     "ICD": "None",
     "Gauge": "1u",
@@ -214,6 +236,7 @@ const abilities =
     "Blunt": "No"
     },
     "ChongyunSkill": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Talent_Spirit_Blade_Chonghua%27s_Layered_Frost.png/revision/latest?cb=20210607092029",
     "CD": "15s",
     "ICD": "None",
     "Gauge": "2u",
@@ -223,6 +246,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "ChongyunBurst": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Talent_Spirit_Blade_Cloud-Parting_Star.png/revision/latest?cb=20210607092042",
     "CD": "12s",
     "ICD": "None",
     "Gauge": "1u",
@@ -232,6 +256,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "ColleiSkill": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Talent_Floral_Brush.png/revision/latest?cb=20220824024349",
     "CD": "12s",
     "ICD": "None",
     "Gauge": "1u",
@@ -241,6 +266,7 @@ const abilities =
     "Blunt": "No"
     },
     "ColleiBurst": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Trump-Card_Kitty.png/revision/latest?cb=20220824024343",
     "CD": "15s",
     "ICD": "Special",
     "Gauge": "1u",
@@ -250,6 +276,7 @@ const abilities =
     "Blunt": "No"
     },
     "CynoSkill": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Talent_Secret_Rite_Chasmic_Soulfarer.png/revision/latest?cb=20220928021214",
     "CD": "3s, 7.5s",
     "ICD": "None, Special",
     "Gauge": "1u",
@@ -259,6 +286,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "CynoBurst": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Talent_Sacred_Rite_Wolf%27s_Swiftness.png/revision/latest?cb=20220928021204",
     "CD": "20s",
     "ICD": "None",
     "Gauge": "1u",
@@ -268,6 +296,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "DehyaSkill": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Talent_Molten_Inferno.png/revision/latest?cb=20230301024352",
     "CD": "20s",
     "ICD": "None",
     "Gauge": "1u",
@@ -277,6 +306,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "DehyaBurst": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Talent_Leonine_Bite.png/revision/latest?cb=20230301024348",
     "CD": "18s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -286,6 +316,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "DilucSkill": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Talent_Searing_Onslaught.png/revision/latest?cb=20210607091725",
     "CD": "10s",
     "ICD": "None",
     "Gauge": "1u",
@@ -295,6 +326,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "DilucBurst": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Talent_Dawn.png/revision/latest?cb=20210607085517",
     "CD": "12s",
     "ICD": "Standard",
     "Gauge": "2u",
@@ -304,6 +336,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "DionaSkillPress": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Talent_Icy_Paws.png/revision/latest?cb=20210607090634",
     "CD": "6s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -313,6 +346,7 @@ const abilities =
     "Blunt": "No"
     },
     "DionaSkillHold": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Talent_Icy_Paws.png/revision/latest?cb=20210607090634",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -322,6 +356,7 @@ const abilities =
     "Blunt": "No"
     },
     "DionaBurst": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Talent_Signature_Mix.png/revision/latest?cb=20210607091851",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -331,6 +366,7 @@ const abilities =
     "Blunt": "No"
     },
     "DoriSkill": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Talent_Spirit-Warding_Lamp_Troubleshooter_Cannon.png/revision/latest?cb=20220909100329",
     "CD": "9s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -340,6 +376,7 @@ const abilities =
     "Blunt": "No"
     },
     "DoriBurst": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Talent_Alcazarzaray%27s_Exactitude.png/revision/latest?cb=20220909100037",
     "CD": "20s",
     "ICD": "Special",
     "Gauge": "1u",
@@ -349,6 +386,7 @@ const abilities =
     "Blunt": "No"
     },
     "EulaSkillPress": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Talent_Icetide_Vortex.png/revision/latest?cb=20210607090623",
     "CD": "4s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -358,6 +396,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "EulaSkillHold": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Talent_Icetide_Vortex.png/revision/latest?cb=20210607090623",
     "CD": "10s",
     "ICD": "None, Standard",
     "Gauge": "1u",
@@ -367,6 +406,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "EulaBurst": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Talent_Glacial_Illumination.png/revision/latest?cb=20210607090256",
     "CD": "20s",
     "ICD": "None",
     "Gauge": "2u",
@@ -376,6 +416,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "FaruzanSkill": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Talent_Wind_Realm_of_Nasamjnin.png/revision/latest?cb=20221207030149",
     "CD": "6s",
     "ICD": "None",
     "Gauge": "1u",
@@ -385,6 +426,7 @@ const abilities =
     "Blunt": "No"
     },
     "FaruzanBurst": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Talent_The_Wind%27s_Secret_Ways.png/revision/latest?cb=20221207030159",
     "CD": "20s",
     "ICD": "None",
     "Gauge": "1u",
@@ -394,6 +436,7 @@ const abilities =
     "Blunt": "No"
     },
     "FischlSkill": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Talent_Nightrider.png/revision/latest?cb=20210607091155",
     "CD": "25s",
     "ICD": "Special",
     "Gauge": "1u",
@@ -403,6 +446,7 @@ const abilities =
     "Blunt": "No"
     },
     "FischlBurst": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Talent_Midnight_Phantasmagoria.png/revision/latest?cb=20210607091055",
     "CD": "15s",
     "ICD": "Special",
     "Gauge": "2u",
@@ -412,6 +456,7 @@ const abilities =
     "Blunt": "Yes, No"
     },
     "GanyuSkill": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/d/d1/Talent_Trail_of_the_Qilin.png/revision/latest?cb=20210607092540",
     "CD": "10s",
     "ICD": "None",
     "Gauge": "1u",
@@ -421,6 +466,7 @@ const abilities =
     "Blunt": "No"
     },
     "GanyuBurst": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Talent_Celestial_Shower.png/revision/latest?cb=20210607085235",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -430,6 +476,7 @@ const abilities =
     "Blunt": "No"
     },
     "GorouSkill": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Talent_Inuzaka_All-Round_Defense.png/revision/latest?cb=20211124031341",
     "CD": "10s",
     "ICD": "None",
     "Gauge": "1u",
@@ -439,6 +486,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "GorouBurst": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Talent_Juuga_Forward_Unto_Victory.png/revision/latest?cb=20211124031355",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -448,6 +496,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "HuTaoSkill": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Talent_Guide_to_Afterlife.png/revision/latest?cb=20210607114520",
     "CD": "16s",
     "ICD": "None",
     "Gauge": "1u",
@@ -457,6 +506,7 @@ const abilities =
     "Blunt": "No"
     },
     "HuTaoBurst": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Talent_Spirit_Soother.png/revision/latest?cb=20210607114541",
     "CD": "15s",
     "ICD": "None",
     "Gauge": "2u",
@@ -466,6 +516,7 @@ const abilities =
     "Blunt": "No"
     },
     "JeanSkill": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Talent_Gale_Blade.png/revision/latest?cb=20210607090209",
     "CD": "6s",
     "ICD": "None",
     "Gauge": "2u",
@@ -475,6 +526,7 @@ const abilities =
     "Blunt": "No"
     },
     "JeanBurst": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Talent_Dandelion_Breeze.png/revision/latest?cb=20210607085505",
     "CD": "20s",
     "ICD": "None",
     "Gauge": "2u",
@@ -484,6 +536,7 @@ const abilities =
     "Blunt": "No"
     },
     "KaedeharaKazuhaSkillPress": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Talent_Chihayaburu.png/revision/latest?cb=20210629104053",
     "CD": "6s",
     "ICD": "None",
     "Gauge": "1u",
@@ -493,6 +546,7 @@ const abilities =
     "Blunt": "No"
     },
     "KaedeharaKazuhaSkillHold": {
+    "Image": "",
     "CD": "9s",
     "ICD": "None",
     "Gauge": "2u",
@@ -502,6 +556,7 @@ const abilities =
     "Blunt": "No"
     },
     "KaedeharaKazuhaBurst": {
+    "Image": "",
     "CD": "15s",
     "ICD": "None",
     "Gauge": "2u, 1u",
@@ -511,6 +566,7 @@ const abilities =
     "Blunt": "No"
     },
     "KaeyaSkill": {
+    "Image": "",
     "CD": "6s",
     "ICD": "None",
     "Gauge": "2u",
@@ -520,6 +576,7 @@ const abilities =
     "Blunt": "No"
     },
     "KaeyaBurst": {
+    "Image": "",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -529,6 +586,7 @@ const abilities =
     "Blunt": "No"
     },
     "KamisatoAyakaSkill": {
+    "Image": "",
     "CD": "10s",
     "ICD": "None",
     "Gauge": "2u",
@@ -538,6 +596,7 @@ const abilities =
     "Blunt": "No"
     },
     "KamisatoAyakaBurst": {
+    "Image": "",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -547,6 +606,7 @@ const abilities =
     "Blunt": "No"
     },
     "KamisatoAyatoSkill": {
+    "Image": "",
     "CD": "12s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -556,6 +616,7 @@ const abilities =
     "Blunt": "No"
     },
     "KamisatoAyatoBurst": {
+    "Image": "",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -565,6 +626,7 @@ const abilities =
     "Blunt": "No"
     },
     "KavehSkill": {
+    "Image": "",
     "CD": "6s",
     "ICD": "None",
     "Gauge": "1u",
@@ -574,6 +636,7 @@ const abilities =
     "Blunt": "No"
     },
     "KavehBurst": {
+    "Image": "",
     "CD": "20s",
     "ICD": "None",
     "Gauge": "2u",
@@ -583,6 +646,7 @@ const abilities =
     "Blunt": "No"
     },
     "KeqingSkill": {
+    "Image": "",
     "CD": "7.5s",
     "ICD": "None, Standard",
     "Gauge": "2u, 1u",
@@ -592,6 +656,7 @@ const abilities =
     "Blunt": "No"
     },
     "KeqingBurst": {
+    "Image": "",
     "CD": "12s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -601,6 +666,7 @@ const abilities =
     "Blunt": "No"
     },
     "KleeSkill": {
+    "Image": "",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "2u, 1u",
@@ -610,6 +676,7 @@ const abilities =
     "Blunt": "Yes, No"
     },
     "KleeBurst": {
+    "Image": "",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -619,6 +686,7 @@ const abilities =
     "Blunt": "No"
     },
     "KujouSaraSkill": {
+    "Image": "",
     "CD": "10s",
     "ICD": "None",
     "Gauge": "1u",
@@ -628,6 +696,7 @@ const abilities =
     "Blunt": "No"
     },
     "KujouSaraBurst": {
+    "Image": "",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -637,6 +706,7 @@ const abilities =
     "Blunt": "No"
     },
     "KukiShinobuSkill": {
+    "Image": "",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -646,6 +716,7 @@ const abilities =
     "Blunt": "Yes, No"
     },
     "KukiShinobuBurst": {
+    "Image": "",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -655,6 +726,7 @@ const abilities =
     "Blunt": "No"
     },
     "LaylaSkill": {
+    "Image": "",
     "CD": "12s",
     "ICD": "Special",
     "Gauge": "1u",
@@ -664,6 +736,7 @@ const abilities =
     "Blunt": "No"
     },
     "LaylaBurst": {
+    "Image": "",
     "CD": "12s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -673,6 +746,7 @@ const abilities =
     "Blunt": "No"
     },
     "LisaSkillPress": {
+    "Image": "",
     "CD": "1s",
     "ICD": "Special",
     "Gauge": "1u",
@@ -682,6 +756,7 @@ const abilities =
     "Blunt": "No"
     },
     "LisaSkillHold": {
+    "Image": "",
     "CD": "16s",
     "ICD": "None",
     "Gauge": "2u",
@@ -691,6 +766,7 @@ const abilities =
     "Blunt": "No"
     },
     "LisaBurst": {
+    "Image": "",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "1u, 0u",
@@ -700,6 +776,7 @@ const abilities =
     "Blunt": "No"
     },
     "MikaSkill": {
+    "Image": "",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -709,6 +786,7 @@ const abilities =
     "Blunt": "No"
     },
     "MikaBurst": {
+    "Image": "",
     "CD": "18s",
     "ICD": "None",
     "Gauge": "None",
@@ -718,6 +796,7 @@ const abilities =
     "Blunt": "No"
     },
     "MonaSkill": {
+    "Image": "",
     "CD": "12s",
     "ICD": "None, Standard",
     "Gauge": "1u",
@@ -727,6 +806,7 @@ const abilities =
     "Blunt": "No"
     },
     "MonaBurst": {
+    "Image": "",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "2u, 1u",
@@ -736,6 +816,7 @@ const abilities =
     "Blunt": "No"
     },
     "NahidaSkillPress": {
+    "Image": "",
     "CD": "5s",
     "ICD": "Special",
     "Gauge": "1.5u, 1u",
@@ -745,6 +826,7 @@ const abilities =
     "Blunt": "No"
     },
     "NahidaSkillHold": {
+    "Image": "",
     "CD": "6s",
     "ICD": "Special",
     "Gauge": "1.5u, 1u",
@@ -754,6 +836,7 @@ const abilities =
     "Blunt": "No"
     },
     "NahidaBurst": {
+    "Image": "",
     "CD": "13.5s",
     "ICD": "None",
     "Gauge": "None",
@@ -763,6 +846,7 @@ const abilities =
     "Blunt": "No"
     },
     "NilouSkill": {
+    "Image": "",
     "CD": "18s",
     "ICD": "Special",
     "Gauge": "1u",
@@ -772,6 +856,7 @@ const abilities =
     "Blunt": "No"
     },
     "NilouBurst": {
+    "Image": "",
     "CD": "18s",
     "ICD": "None",
     "Gauge": "1u",
@@ -781,6 +866,7 @@ const abilities =
     "Blunt": "No"
     },
     "NingguangSkill": {
+    "Image": "",
     "CD": "12s",
     "ICD": "None",
     "Gauge": "1u",
@@ -790,6 +876,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "NingguangBurst": {
+    "Image": "",
     "CD": "12s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -799,6 +886,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "NoelleSkill": {
+    "Image": "",
     "CD": "24s",
     "ICD": "Standard",
     "Gauge": "2u",
@@ -808,6 +896,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "NoelleBurst": {
+    "Image": "",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -817,6 +906,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "QiqiSkill": {
+    "Image": "",
     "CD": "30s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -826,6 +916,7 @@ const abilities =
     "Blunt": "No"
     },
     "QiqiBurst": {
+    "Image": "",
     "CD": "20s",
     "ICD": "None",
     "Gauge": "2u",
@@ -835,6 +926,7 @@ const abilities =
     "Blunt": "No"
     },
     "RaidenShogunSkill": {
+    "Image": "",
     "CD": "10s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -844,6 +936,7 @@ const abilities =
     "Blunt": "No"
     },
     "RaidenShogunBurst": {
+    "Image": "",
     "CD": "18s",
     "ICD": "None",
     "Gauge": "2u",
@@ -853,6 +946,7 @@ const abilities =
     "Blunt": "No"
     },
     "RazorSkillPress": {
+    "Image": "",
     "CD": "6s",
     "ICD": "None",
     "Gauge": "2u",
@@ -862,6 +956,7 @@ const abilities =
     "Blunt": "No"
     },
     "RazorSkillHold": {
+    "Image": "",
     "CD": "10s",
     "ICD": "None",
     "Gauge": "2u",
@@ -871,6 +966,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "RazorBurst": {
+    "Image": "",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "2u, 1u",
@@ -880,6 +976,7 @@ const abilities =
     "Blunt": "Yes, No"
     },
     "RosariaSkill": {
+    "Image": "",
     "CD": "6s",
     "ICD": "None",
     "Gauge": "1u",
@@ -889,6 +986,7 @@ const abilities =
     "Blunt": "No"
     },
     "RosariaBurst": {
+    "Image": "",
     "CD": "15s",
     "ICD": "None",
     "Gauge": "1u",
@@ -898,6 +996,7 @@ const abilities =
     "Blunt": "No"
     },
     "SangonomiyaKokomiSkill": {
+    "Image": "",
     "CD": "20s",
     "ICD": "None",
     "Gauge": "1u",
@@ -907,6 +1006,7 @@ const abilities =
     "Blunt": "No"
     },
     "SangonomiyaKokomiBurst": {
+    "Image": "",
     "CD": "18s",
     "ICD": "None",
     "Gauge": "2u",
@@ -916,7 +1016,9 @@ const abilities =
     "Blunt": "No"
     },
     "SayuSkill": {
-    "CD": "6s-11s",
+    "Image": "",
+    "CD": "6s-11s"
+    ,
     "ICD": "Standard",
     "Gauge": "1u",
     "Diameter\/Width": "5m, 6m",
@@ -925,6 +1027,7 @@ const abilities =
     "Blunt": "No"
     },
     "SayuBurst": {
+    "Image": "",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -934,6 +1037,7 @@ const abilities =
     "Blunt": "No"
     },
     "ShenheSkillPress": {
+    "Image": "",
     "CD": "10s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -943,6 +1047,7 @@ const abilities =
     "Blunt": "No"
     },
     "ShenheSkillHold": {
+    "Image": "",
     "CD": "15s",
     "ICD": "None",
     "Gauge": "2u",
@@ -952,6 +1057,7 @@ const abilities =
     "Blunt": "No"
     },
     "ShenheBurst": {
+    "Image": "",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -961,6 +1067,7 @@ const abilities =
     "Blunt": "Yes, No"
     },
     "ShikanoinHeizouSkill": {
+    "Image": "",
     "CD": "10s",
     "ICD": "None",
     "Gauge": "2u",
@@ -970,6 +1077,7 @@ const abilities =
     "Blunt": "No"
     },
     "ShikanoinHeizouBurst": {
+    "Image": "",
     "CD": "12s",
     "ICD": "None",
     "Gauge": "1u",
@@ -979,6 +1087,7 @@ const abilities =
     "Blunt": "No"
     },
     "SucroseSkill": {
+    "Image": "",
     "CD": "15s",
     "ICD": "None",
     "Gauge": "1u",
@@ -988,6 +1097,7 @@ const abilities =
     "Blunt": "No"
     },
     "SucroseBurst": {
+    "Image": "",
     "CD": "20s",
     "ICD": "None",
     "Gauge": "1u",
@@ -997,7 +1107,9 @@ const abilities =
     "Blunt": "No"
     },
     "TartagliaSkill": {
-    "CD": "6s-36s, 45s",
+    "Image": "",
+    "CD": "6s-36s, 45s"
+    ,
     "ICD": "None",
     "Gauge": "2u, 1u",
     "Diameter\/Width": "6m",
@@ -1006,6 +1118,7 @@ const abilities =
     "Blunt": "Yes, No"
     },
     "TartagliaBurst": {
+    "Image": "",
     "CD": "15s",
     "ICD": "None",
     "Gauge": "2u",
@@ -1015,6 +1128,7 @@ const abilities =
     "Blunt": "No"
     },
     "ThomaSkill": {
+    "Image": "",
     "CD": "15s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1024,6 +1138,7 @@ const abilities =
     "Blunt": "No"
     },
     "ThomaBurst": {
+    "Image": "",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "2u, 1u",
@@ -1033,6 +1148,7 @@ const abilities =
     "Blunt": "No"
     },
     "TighnariSkill": {
+    "Image": "",
     "CD": "12s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1042,6 +1158,7 @@ const abilities =
     "Blunt": "No"
     },
     "TighnariBurst": {
+    "Image": "",
     "CD": "12s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -1051,6 +1168,7 @@ const abilities =
     "Blunt": "No"
     },
     "AnemoTravelerSkillPress": {
+    "Image": "",
     "CD": "5s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1060,6 +1178,7 @@ const abilities =
     "Blunt": "No"
     },
     "AnemoTravelerSkillHold": {
+    "Image": "",
     "CD": "8s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -1069,6 +1188,7 @@ const abilities =
     "Blunt": "No"
     },
     "AnemoTravelerBurst": {
+    "Image": "",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "2u, 1u",
@@ -1078,6 +1198,7 @@ const abilities =
     "Blunt": "No"
     },
     "DendroTravelerSkill": {
+    "Image": "",
     "CD": "8s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1087,6 +1208,7 @@ const abilities =
     "Blunt": "No"
     },
     "DendroTravelerBurst": {
+    "Image": "",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "2u, 1u",
@@ -1096,6 +1218,7 @@ const abilities =
     "Blunt": "No"
     },
     "ElectroTravelerSkill": {
+    "Image": "",
     "CD": "13.5s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -1105,6 +1228,7 @@ const abilities =
     "Blunt": "No"
     },
     "ElectroTravelerBurst": {
+    "Image": "",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -1114,6 +1238,7 @@ const abilities =
     "Blunt": "Ye, No"
     },
     "GeoTravelerSkill": {
+    "Image": "",
     "CD": "8s",
     "ICD": "Standard",
     "Gauge": "2u",
@@ -1123,6 +1248,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "GeoTravelerBurst": {
+    "Image": "",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "2u",
@@ -1132,6 +1258,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "VentiSkillPress": {
+    "Image": "",
     "CD": "6s",
     "ICD": "None",
     "Gauge": "2u",
@@ -1141,6 +1268,7 @@ const abilities =
     "Blunt": "No"
     },
     "VentiSkillHold": {
+    "Image": "",
     "CD": "15s",
     "ICD": "None",
     "Gauge": "2u",
@@ -1150,6 +1278,7 @@ const abilities =
     "Blunt": "No"
     },
     "VentiBurst": {
+    "Image": "",
     "CD": "15s",
     "ICD": "Special",
     "Gauge": "1u",
@@ -1159,6 +1288,7 @@ const abilities =
     "Blunt": "No"
     },
     "WandererSkill": {
+    "Image": "",
     "CD": "6s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1168,6 +1298,7 @@ const abilities =
     "Blunt": "No"
     },
     "WandererBurst": {
+    "Image": "",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -1177,6 +1308,7 @@ const abilities =
     "Blunt": "No"
     },
     "XianglingSkill": {
+    "Image": "",
     "CD": "12s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1186,6 +1318,7 @@ const abilities =
     "Blunt": "No"
     },
     "XianglingBurst": {
+    "Image": "",
     "CD": "20s",
     "ICD": "Standard, None",
     "Gauge": "1u",
@@ -1195,6 +1328,7 @@ const abilities =
     "Blunt": "No"
     },
     "XiaoSkill": {
+    "Image": "",
     "CD": "10s",
     "ICD": "Special",
     "Gauge": "1u",
@@ -1204,6 +1338,7 @@ const abilities =
     "Blunt": "No"
     },
     "XiaoBurst": {
+    "Image": "",
     "CD": "18s",
     "ICD": "None",
     "Gauge": "None",
@@ -1213,6 +1348,7 @@ const abilities =
     "Blunt": "No"
     },
     "XingqiuSkill": {
+    "Image": "",
     "CD": "21s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1222,6 +1358,7 @@ const abilities =
     "Blunt": "No"
     },
     "XingqiuBurst": {
+    "Image": "",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -1231,6 +1368,7 @@ const abilities =
     "Blunt": "No"
     },
     "XinyanSkill": {
+    "Image": "",
     "CD": "18s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1240,6 +1378,7 @@ const abilities =
     "Blunt": "Yes, No"
     },
     "XinyanBurst": {
+    "Image": "",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -1249,6 +1388,7 @@ const abilities =
     "Blunt": "No"
     },
     "YaeMikoSkill": {
+    "Image": "",
     "CD": "4s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -1258,6 +1398,7 @@ const abilities =
     "Blunt": "No"
     },
     "YaeMikoBurst": {
+    "Image": "",
     "CD": "22s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1267,6 +1408,7 @@ const abilities =
     "Blunt": "No"
     },
     "YanfeiSkill": {
+    "Image": "",
     "CD": "9s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1276,6 +1418,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "YanfeiBurst": {
+    "Image": "",
     "CD": "20s",
     "ICD": "None",
     "Gauge": "2u",
@@ -1285,6 +1428,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "YaoyaoSkill": {
+    "Image": "",
     "CD": "15s",
     "ICD": "Special",
     "Gauge": "1u",
@@ -1294,6 +1438,7 @@ const abilities =
     "Blunt": "No"
     },
     "YaoyaoBurst": {
+    "Image": "",
     "CD": "20s",
     "ICD": "Special",
     "Gauge": "1u",
@@ -1303,6 +1448,7 @@ const abilities =
     "Blunt": "No"
     },
     "YelanSkill": {
+    "Image": "",
     "CD": "10s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1312,6 +1458,7 @@ const abilities =
     "Blunt": "No"
     },
     "YelanBurst": {
+    "Image": "",
     "CD": "18s",
     "ICD": "Special",
     "Gauge": "2u, 1u",
@@ -1321,6 +1468,7 @@ const abilities =
     "Blunt": "No"
     },
     "YoimiyaSkill": {
+    "Image": "",
     "CD": "18s",
     "ICD": "None",
     "Gauge": "None",
@@ -1330,6 +1478,7 @@ const abilities =
     "Blunt": "No"
     },
     "YoimiyaBurst": {
+    "Image": "",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "2u, 1u",
@@ -1339,6 +1488,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "YunJinSkillPress": {
+    "Image": "",
     "CD": "9s",
     "ICD": "None",
     "Gauge": "2u",
@@ -1348,6 +1498,7 @@ const abilities =
     "Blunt": "No"
     },
     "YunJinSkillHold": {
+    "Image": "",
     "CD": "9s",
     "ICD": "None",
     "Gauge": "4u, 2u",
@@ -1357,6 +1508,7 @@ const abilities =
     "Blunt": "No"
     },
     "YunJinBurst": {
+    "Image": "",
     "CD": "15s",
     "ICD": "None",
     "Gauge": "2u",
@@ -1366,6 +1518,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "ZhongliSkillPress": {
+    "Image": "",
     "CD": "4s",
     "ICD": "Standard",
     "Gauge": "2u, 1u",
@@ -1375,6 +1528,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "ZhongliSkillHold": {
+    "Image": "",
     "CD": "12s",
     "ICD": "Standard",
     "Gauge": "2u, 1u",
@@ -1384,6 +1538,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "ZhongliBurst": {
+    "Image": "",
     "CD": "12s",
     "ICD": "None",
     "Gauge": "4u",
@@ -1395,6 +1550,7 @@ const abilities =
 
     /* For fun */
     "FOCALORSSkill": {
+    "Image": "",
     "CD": "10s",
     "ICD": "Special",
     "Gauge": "1u, 1.5u",
@@ -1404,6 +1560,7 @@ const abilities =
     "Blunt": "No"
     },
     "FOCALORSBurst": {
+    "Image": "",
     "CD": "13.5s",
     "ICD": "None",
     "Gauge": "None",
