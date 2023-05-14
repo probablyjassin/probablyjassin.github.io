@@ -98,7 +98,7 @@ const abilities =
     "BaizhuSkill": {
     "CD": "10s",
     "ICD": "Special",
-    "Gauge": "1U",
+    "Gauge": "1u",
     "Diameter\/Width": "1.2m",
     "Shape": "Sphere",
     "Element": "Dendro",
@@ -107,7 +107,7 @@ const abilities =
     "BaizhuBurst": {
     "CD": "20s",
     "ICD": "None",
-    "Gauge": "1U",
+    "Gauge": "1u",
     "Diameter\/Width": "3m",
     "Shape": "Sphere",
     "Element": "Dendro",
