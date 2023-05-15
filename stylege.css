@@ -171,6 +171,9 @@ table {
 .solution {
     background-color: #007bff;
 }
+.false {
+    background-color: blue;
+}
 input {
     width: 17.5%;
     height: 5vh;
