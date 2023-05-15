@@ -5,7 +5,9 @@ function hidePopup() {
 function setCookie(name, value) {
 	if (getCookie("cookiesAgreeGe") !== 'true') {console.log("Saving cookies has been aborted, cookies haven't been agreed to")}
 	else {
-	document.cookie = name + "=" + value + ";path=/";
+	var cookieDate = new Date();
+	cookieDate.setDate(cookieDate.getDate() + 999);
+	document.cookie = name + "=" + value + ";expires=" + cookieDate.toUTCString() + ";path=/"; 
 }}
 
   // Helper function to get cookies
