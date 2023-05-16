@@ -6,7 +6,7 @@ function setCookie(name, value) {
 	if (getCookie("cookiesAgreeGe") !== 'true') {console.log("Saving cookies has been aborted, cookies haven't been agreed to")}
 	else {
 	var cookieDate = new Date();
-	cookieDate.setDate(cookieDate.getDate() + 999);
+	cookieDate.setDate(cookieDate.getDate() + 200);
 	document.cookie = name + "=" + value + ";expires=" + cookieDate.toUTCString() + ";path=/"; 
 }}
 
