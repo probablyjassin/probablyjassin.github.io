@@ -268,6 +268,8 @@ node.addEventListener("keyup", function(event) {
 // Create a new row for the guess
 function showAnswer() {
 	console.log("WIP, would fill the correct answer now")
+	
+	window.scrollTo(0, 0); // Then also scroll to the very top of the page
 }
 
 // Hide reset button by default
