@@ -1,13 +1,17 @@
 function hidePopup() {
 	document.getElementById("cookie-popup").style.display = "none";
 }
+// Predefine the date that cookies will expire, for setting cookies later
+var cookieDate = new Date();
+	cookieDate.setDate(cookieDate.getDate() + 9999);
+	cookieDate.setHours(24,0,0,0);
+	console.log(cookieDate)
+
 // Helper function to set cookies
 function setCookie(name, value) {
 	if (getCookie("cookiesAgreeGe") !== 'true') {console.log("Saving cookies has been aborted, cookies haven't been agreed to")}
 	else {
-	var cookieDate = new Date();
-	cookieDate.setDate(cookieDate.getDate() + 999);
-	document.cookie = name + "=" + value + ";expires=" + cookieDate.toUTCString() + ";path=/"; 
+	document.cookie = name + "=" + value + ";expires=" + cookieDate.toUTCString() + ";path=/;"; 
 }}
 
   // Helper function to get cookies
@@ -30,7 +34,7 @@ agreebutton.addEventListener("click", function() {
 
 // Buttons for agree/disagree with cookie agreement
 function cookiesAgreeGe() {
-	document.cookie = "cookiesAgreeGe" + "=" + 'true' + ";path=/";
+	document.cookie = "cookiesAgreeGe" + "=" + 'true' + ";expires=" + cookieDate.toUTCString() + ";path=/;"
 }
 // hide popup if already agreed
 if (getCookie("cookiesAgreeGe") === 'true') {
