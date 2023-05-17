@@ -67,7 +67,23 @@ function resetcookies() {
 		const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
 		document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
 	}
-	
-	/* setCookie("incorrectGuessesArray", '');
-	setCookie("cookiesAgreeGe", ''); */
 }
+
+// Function to renew all cookies 
+function renewCookies() {
+	if (document.cookie == '') {console.log("No cookies exist, aborted renewal")}
+	else {
+		temp = document.cookie.split('; ')
+		temp.forEach(element => {
+			if (element.includes("dailyComplete")) { //dailyComplete cookie should not be extended
+				//pass
+			}
+			else {
+				keks = element.split('='),
+				setCookie(keks[0], keks[1])
+			}
+		}
+		);
+	}
+}
+renewCookies()
