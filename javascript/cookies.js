@@ -3,9 +3,13 @@ function hidePopup() {
 }
 // Predefine the date that cookies will expire, for setting cookies later
 var cookieDate = new Date();
-	cookieDate.setDate(cookieDate.getDate() + 9999);
-	cookieDate.setHours(24,0,0,0);
-	console.log(cookieDate)
+cookieDate.setDate(cookieDate.getDate() + 400); // max cookie duration
+cookieDate.setHours(24,0,0,0);
+console.log(cookieDate)
+// renew the cookie agreement automatically
+if (getCookie("cookiesAgreeGe") == 'true') {
+	cookiesAgreeGe()
+}
 
 // Helper function to set cookies
 function setCookie(name, value) {
