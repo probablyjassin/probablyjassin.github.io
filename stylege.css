@@ -1,4 +1,4 @@
-body {
+body, #page {
     background: url('https://frog.lowkey.gay/u/Fj1u1O.gif');
     height: 100%;
     background-position: center;
@@ -121,7 +121,7 @@ select {
     max-width: 800px;
     border-radius: 5px;
 }
-button {
+button, .button {
     display: block;
     margin: 1em auto;
     padding: 0.5em;
@@ -136,6 +136,7 @@ button {
     user-select: none;
     background-color: #2a2a2a;
     color: white;
+    font-family: "Comic Sans MS", "Comic Sans";
 }
 .button2 {
     display: block;
@@ -150,6 +151,7 @@ button {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    font-family: "Comic Sans MS", "Comic Sans";
 }
 table {
     border-collapse: collapse;
