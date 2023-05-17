@@ -346,3 +346,46 @@ audio, embed {
     position: absolute;
     z-index: -9999;
 }
+#end-popup {
+    display: none; /* hidden by default*/
+    position: fixed;
+    top: 20px;
+    left: 30%;
+    right: 30%;
+    background-color: #2a2a2a;
+    color: white;
+    text-shadow: none;
+    text-align: center;
+    font-weight: 5;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    z-index: 9999;
+}
+#end-popup p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+#end-popup button {
+    align-self: center;
+    margin: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #2a2a2a;
+}
+.btncontainer { 
+    height: 4em;
+    position: relative;
+}
+.btncenter {
+    margin: 0;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

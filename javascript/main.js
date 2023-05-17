@@ -166,7 +166,7 @@ function checkGuess() {
 	const rawValue = guessSelect.value;
 	const selectedAbility = rawValue.replace(/([ ])/g, "")
 	if (!abilityOptions.includes(selectedAbility)) {
-		alert("Please select an ability to guess.");
+		popup("Please select an ability to guess.")
 		return;
 	}
 
@@ -232,14 +232,15 @@ function checkGuess() {
 		incorrectCount.textContent = incorrectGuesses; 
     }
 
-	// If correct, show alert and show reset button
+	// If correct, show popup and show reset button
 	if (correctGuess) {
+		gameEnd()
 		// Save Incorrect Guesses To Cookies
 		saveIncorrectGuessesToCookie()
 		setTimeout(() => {
-			alert(`${prettyRandom} was the correct ability. Congratulations!`);
+			popup(`${prettyRandom} was the correct ability. Congratulations!`)
 		}, 100);
-		gameEnd()
+		
 	}
 
 	// Check if player has reached 8 incorrect guesses
@@ -247,12 +248,12 @@ function checkGuess() {
 		incorrectGuesses = 8
 		saveIncorrectGuessesToCookie()
 		incorrectCount.textContent = `8`
+		gameEnd()
 		setTimeout(() => {
-			alert(`You have reached 8 incorrect guesses. The correct ability was ${prettyRandom}.`);
+			popup(`You have reached 8 incorrect guesses.` +
+			`The correct ability was ${prettyRandom}.`)
 			showAnswer()
-			gameEnd(); 
 			// Save Incorrect Guesses To Cookies
-			incorrectCount.textContent = `0`;
 		}, 100);
 	}
 }
@@ -278,6 +279,9 @@ document.getElementById("reset-button").style.display = 'none';
 const resetButton = document.getElementById("reset-button");
 resetButton.addEventListener("click", function() {
 	resetGame()
+	setTimeout(() => {
+		document.getElementById("guess-input").focus()
+	}, 100);
 });
 
 // Things to do after the game ended by winning, conceding or losing
@@ -344,7 +348,9 @@ document.getElementById("confirm-popup").style.display = 'none';
 
 // Add event listener to concede button
 concedeButton.addEventListener("click", function() {
-	if (incorrectGuesses === 0) {alert(`You didn't even guess anything yet`);}
+	if (incorrectGuesses === 0) {
+		popup(`You didn't even guess anything yet`)
+	}
 	else {
 		document.getElementById("confirm-popup").style.display = 'initial';
 		document.getElementById("confirmButton").focus();
@@ -366,8 +372,8 @@ cancelButton.addEventListener("click", function() {
 function showCorrectAnswer() {
 	if (incorrectGuesses === 0) {return false}
 	else {
-  		alert(`The correct ability was ${randomAbility}.`);
-		  gameEnd()
+		gameEnd()
+		popup(`The correct ability was ${randomAbility}.`)
 	}
 }
 
@@ -378,6 +384,27 @@ const resetstatsButton = document.getElementById("resetstats");
 resetstatsButton.addEventListener("click", function() {
 	setCookie("incorrectGuessesArray", '')
 	closestat()
+});
+
+//Function to show messages for events (lost/won/conceded game, ...)
+function popup(message) {
+	document.getElementById("end-popup").style.display = 'initial'
+	document.getElementById("end-popup p").innerHTML = message
+	document.getElementById("closeBtn").focus()
+}
+// Function to hide the popup
+function closeEndPopup() {
+	document.getElementById("end-popup").style.display = 'none'
+	document.getElementById("end-popup p").innerHTML = "---"
+	setTimeout(() => {
+		document.getElementById("guess-input").focus()
+	}, 100);
+	// focus on the play again button if it appeared
+	document.getElementById("reset-button").focus()
+}
+// Listen to the close button
+document.getElementById("closeBtn").addEventListener("click", function() {
+	closeEndPopup()
 });
 
 // If the daily is already done, hide game elements and show the timer
