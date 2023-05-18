@@ -38,7 +38,7 @@ agreebutton.addEventListener("click", function() {
 
 // Buttons for agree/disagree with cookie agreement
 function cookiesAgreeGe() {
-	document.cookie = "cookiesAgreeGe" + "=" + 'true' + ";expires=" + cookieDate.toUTCString() + ";path=/;"
+	document.cookie = "cookiesAgreeGe" + "=" + 'true' + ";expires=" + cookieDate.toUTCString() + ";path=/;" + "Domain=.jassin.aouani.de;"
 }
 // hide popup if already agreed
 if (getCookie("cookiesAgreeGe") === 'true') {
