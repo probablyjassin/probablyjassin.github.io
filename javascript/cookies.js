@@ -15,7 +15,7 @@ if (getCookie("cookiesAgreeGe") == 'true') {
 function setCookie(name, value) {
 	if (getCookie("cookiesAgreeGe") !== 'true') {console.log("Saving cookies has been aborted, cookies haven't been agreed to")}
 	else {
-	document.cookie = name + "=" + value + ";expires=" + cookieDate.toUTCString() + ";path=/;"; 
+	document.cookie = name + "=" + value + ";expires=" + cookieDate.toUTCString() + ";path=/;" + "Domain=.jassin.aouani.de;"; 
 }}
 
 // Helper function to get cookies
