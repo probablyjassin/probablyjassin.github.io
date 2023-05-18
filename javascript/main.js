@@ -295,7 +295,7 @@ function gameEnd() {
 	document.getElementById("submit-button").style.backgroundColor = 'grey';
 	// Remember the completion of the daily game
 	if (mode === 'daily') {
-		document.cookie = 'dailyComplete=true;expires='+nextday.toUTCString()+';path=/';
+		document.cookie = 'dailyComplete=true;expires='+nextday.toUTCString()+';path=/' + "Domain=.jassin.aouani.de;";
 		// Show contents for the completion of the daily game
 		document.getElementById("dailyText").style.display = 'initial';
 		document.getElementById("timer").style.display = 'initial';
