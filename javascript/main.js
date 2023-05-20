@@ -382,8 +382,9 @@ const resetstatsButton = document.getElementById("resetstats");
 
 // Add event listener to resetstats button in statistic
 resetstatsButton.addEventListener("click", function() {
-	setCookie("incorrectGuessesArray", '')
+	resetcookies()
 	closestat()
+	location.reload()
 });
 
 //Function to show messages for events (lost/won/conceded game, ...)

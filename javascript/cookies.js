@@ -73,8 +73,8 @@ function resetcookies() {
 function renewCookies() {
 	if (document.cookie == '') {console.log("No cookies exist, aborted renewal")}
 	else {
-		temp = document.cookie.split('; ')
-		temp.forEach(element => {
+		kekse = document.cookie.split('; ')
+		kekse.forEach(element => {
 			if (element.includes("dailyComplete")) { //dailyComplete cookie should not be extended
 				//pass
 			}
