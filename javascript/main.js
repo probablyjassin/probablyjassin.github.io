@@ -310,6 +310,8 @@ function gameEnd() {
 
 // Function to reset the game
 function resetGame() {
+	// If the popup has been ignored, ignore the popup lol
+	closeEndPopup()
 	// Hide replay button again
 	document.getElementById("reset-button").style.display = 'none';
 
