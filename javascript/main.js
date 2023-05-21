@@ -426,6 +426,13 @@ function dailyComplete() {
 }
 dailyComplete()
 
+// surely this will make music autoplay work
+document.addEventListener('click', musicPlay);
+function musicPlay() {
+    document.getElementById('musicPlay').play();
+    document.removeEventListener('click', musicPlay);
+}
+
 // FOR DEVELOPEMENT: Select the correct-answer element on screen and display the answer
 // const correctAnswer = document.getElementById("correct-answer");
 // correctAnswer.textContent += randomAbility;
