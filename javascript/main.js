@@ -1,5 +1,18 @@
 // This is the game's main code
 
+// Some simplicity improvements: hide multiple elements at once
+function hideElements(...ids) {
+	ids.forEach(id => {
+		document.getElementById(id).style.display = 'none'
+	});
+}
+function showElements(...ids) {
+	ids.forEach(id => {
+		document.getElementById(id).style.display = ''
+	});
+}
+hideElements(`popup-changelogs`) // hidden by default
+
 // Focus the input textfield for the player to start guessing immediately
 document.getElementById("guess-input").focus()
 // Defaults to daily mode
@@ -12,15 +25,8 @@ modeButton.addEventListener("click", function() {
 function switchToEndless() {
 	// Clear the table
 	mode = "endless"
-	document.getElementById("dailyDiv").style.display = 'none';
-	document.getElementById("timer").style.display = 'none';
-	document.getElementById("dailyText").style.display = 'none';
-	document.getElementById("modeButton").style.display = 'none';
-	document.getElementById("daily").style.display = 'none';
-	document.getElementById("endless").style.display = 'initial';
-	document.getElementById("buttonsdiv").style.display = 'inherit'
-	document.getElementById("guess-input").style.display = 'initial'
-	document.getElementById("incorrect-guesses").style.display = 'inherit';
+	hideElements("dailyDiv", "timer", "dailyText", "modeButton", "daily")
+	showElements("endless", "buttonsdiv", "guess-input", "incorrect-guesses")
 	// Restart game
 	resetGame()
 	// Focus on the input field to start guessing immediately; after delay not to trigger the tet input
@@ -410,12 +416,9 @@ document.getElementById("closeBtn").addEventListener("click", function() {
 // If the daily is already done, hide game elements and show the timer
 function dailyComplete() {
 	if (getCookie("dailyComplete") === 'true') {
-		document.getElementById("dailyText").style.display = 'initial';
-		document.getElementById("timer").style.display = 'initial';
-		document.getElementById("dailyDiv").style.display = 'initial';
-		document.getElementById("buttonsdiv").style.display = 'none';
-		document.getElementById("guess-input").style.display = 'none';
-		document.getElementById("incorrect-guesses").style.display = 'none';
+		hideElements("buttonsdiv", "guess-input", "incorrect-guesses")
+		showElements("dailyText", "timer", "dailyDiv")
+
 		// Focus on the button to go to endless mode
 		document.getElementById("modeButton").focus()
 		
