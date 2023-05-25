@@ -301,7 +301,7 @@ function gameEnd() {
 	document.getElementById("submit-button").style.backgroundColor = 'grey';
 	// Remember the completion of the daily game
 	if (mode === 'daily') {
-		document.cookie = 'dailyComplete=true;expires='+nextday.toUTCString()+';path=/';
+		document.cookie = 'dailyComplete=true;expires='+nextday.toUTCString()+';path=/' + ";Domain=.jassin.aouani.de;";
 		// Show contents for the completion of the daily game
 		document.getElementById("dailyText").style.display = 'initial';
 		document.getElementById("timer").style.display = 'initial';
@@ -316,6 +316,8 @@ function gameEnd() {
 
 // Function to reset the game
 function resetGame() {
+	// If the popup has been ignored, ignore the popup lol
+	closeEndPopup()
 	// Hide replay button again
 	document.getElementById("reset-button").style.display = 'none';
 
@@ -388,8 +390,9 @@ const resetstatsButton = document.getElementById("resetstats");
 
 // Add event listener to resetstats button in statistic
 resetstatsButton.addEventListener("click", function() {
-	setCookie("incorrectGuessesArray", '')
+	resetcookies()
 	closestat()
+	location.reload()
 });
 
 //Function to show messages for events (lost/won/conceded game, ...)
@@ -425,6 +428,13 @@ function dailyComplete() {
 	}
 }
 dailyComplete()
+
+// surely this will make music autoplay work
+document.addEventListener('click', musicPlay);
+function musicPlay() {
+    document.getElementById('musicPlay').play();
+    document.removeEventListener('click', musicPlay);
+}
 
 // FOR DEVELOPEMENT: Select the correct-answer element on screen and display the answer
 // const correctAnswer = document.getElementById("correct-answer");

@@ -65,7 +65,7 @@ function resetcookies() {
 		const cookie = cookies[i];
 		const eqPos = cookie.indexOf("=");
 		const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-		document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+		document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT" + ";Domain=.jassin.aouani.de;";
 	}
 }
 
@@ -73,8 +73,8 @@ function resetcookies() {
 function renewCookies() {
 	if (document.cookie == '') {console.log("No cookies exist, aborted renewal")}
 	else {
-		temp = document.cookie.split('; ')
-		temp.forEach(element => {
+		kekse = document.cookie.split('; ')
+		kekse.forEach(element => {
 			if (element.includes("dailyComplete")) { //dailyComplete cookie should not be extended
 				//pass
 			}
