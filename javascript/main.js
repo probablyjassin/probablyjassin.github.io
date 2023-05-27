@@ -1,5 +1,5 @@
 // This is the game's main code
-
+//var json = require('./data.json'); //mby at some point an external json will work
 // Some simplicity improvements: hide multiple elements at once
 function hideElements(...ids) {
 	ids.forEach(id => {
@@ -167,6 +167,9 @@ let incorrectGuesses = 0;
 // Initialize prettyRandom as text that is the correct ability, but with spaces, for display
 var prettyRandom = ''
 
+// Initialize correctGuess variable
+let correctGuess = false;
+
 // Function to check the player's guess and update the table
 function checkGuess() {
 	const rawValue = guessSelect.value;
@@ -225,8 +228,8 @@ function checkGuess() {
 		}
 	}
 
-	// Initialize correctGuess variable
-	let correctGuess = false;
+	// Reset correctGuess
+	correctGuess = false;
 
 	// Check if player has guessed the correct ability
 	if (selectedAbility === randomAbility) {
@@ -311,8 +314,28 @@ function gameEnd() {
 	if (mode !== 'daily') {
 	document.getElementById("reset-button").style.display = 'initial';
 	}	
-	if (mode === 'endless') {}
+	if (mode === 'endless') {
+		//pass
+	}
+	// If the game was lost, reveal the correct answer in the table as well
+	if (!correctGuess) {
+		revealAnswer()
+	}
 }
+// Function to disable multiple buttons
+function disableElements(...ids) {
+	ids.forEach(id => {
+		document.getElementById(id).disabled = true;
+	});
+}
+// Function to re-enable buttons
+function enableElements(...ids) {
+	ids.forEach(id => {
+		document.getElementById(id).disabled = false;
+	});
+}
+// Function to style multiple elements
+function styleElement(...ids)
 
 // Function to reset the game
 function resetGame() {
@@ -436,6 +459,30 @@ function musicPlay() {
     document.removeEventListener('click', musicPlay);
 }
 
+// Function to fill the correct answer in blue
+function revealAnswer() {
+	const rawValue = randomAbility;
+
+	// Update prettyRandom
+	prettyRandom = randomAbility.replace(/([A-Z0-9])/g, ' $1')
+
+	// Create a new row for the guess
+	const newRow = abilityTable.insertRow();
+	const newGuessCell = newRow.insertCell();
+	newGuessCell.textContent = rawValue;
+	// Add icon image
+	const img = document.createElement("img");	
+	img.src = abilities[randomAbility].Image;
+	img.classList.add("icon")
+	newGuessCell.appendChild(img);
+		
+	for (let i = 0; i < propertiesToDisplay.length; i++) {
+		const property = propertiesToDisplay[i];
+		const newValueCell = newRow.insertCell();
+		newValueCell.textContent = abilities[randomAbility][property];
+		newValueCell.classList.add("solution");
+	}
+}
 // FOR DEVELOPEMENT: Select the correct-answer element on screen and display the answer
 // const correctAnswer = document.getElementById("correct-answer");
 // correctAnswer.textContent += randomAbility;

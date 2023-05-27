@@ -665,6 +665,36 @@ const abilities =
     "Element": "Electro",
     "Blunt": "No"
     },
+    "KiaraSkillPress": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Talent_Meow-teor_Kick.png/revision/latest?cb=20230524022047",
+    "CD": "8s",
+    "ICD": "None",
+    "Gauge": "1u",
+    "Diameter\/Width": "5m",
+    "Shape": "Cylinder",
+    "Element": "Dendro",
+    "Blunt": "No"
+    },
+    "KiaraSkillHold": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Talent_Meow-teor_Kick.png/revision/latest?cb=20230524022047",
+    "CD": "12s",
+    "ICD": "None, Standard",
+    "Gauge": "1u",
+    "Diameter\/Width": "5.2m",
+    "Shape": "Cylinder",
+    "Element": "Dendro",
+    "Blunt": "Dendro"
+    },
+    "KiaraBurst": {
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Talent_Secret_Art_Surprise_Dispatch.png/revision/latest?cb=20230524022054",
+    "CD": "15s",
+    "ICD": "None, Standard",
+    "Gauge": "2u, 1u",
+    "Diameter\/Width": "13m, 4m",
+    "Shape": "Cylinder, Sphere",
+    "Element": "Dendro",
+    "Blunt": "No"
+    },
     "KleeSkill": {
     "Image": "",
     "CD": "20s",
@@ -1108,8 +1138,7 @@ const abilities =
     },
     "TartagliaSkill": {
     "Image": "",
-    "CD": "6s-36s, 45s"
-    ,
+    "CD": "6s-36s, 45s",
     "ICD": "None",
     "Gauge": "2u, 1u",
     "Diameter\/Width": "6m",
