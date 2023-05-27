@@ -1,5 +1,18 @@
 // This is the game's main code
 
+
+// For simplicity, function to hide multiple elements at once
+function hideElements(...ids) {
+    ids.forEach(id => {
+		document.getElementById(id).style.display = "none"
+	}); 
+}
+// Reveal multiple elements at once
+function showElements(...ids) {
+	ids.forEach(id => {
+		document.getElementById(id).style.display = ""
+	});
+}
 // Focus the input textfield for the player to start guessing immediately
 document.getElementById("guess-input").focus()
 // Defaults to daily mode
@@ -12,11 +25,7 @@ modeButton.addEventListener("click", function() {
 function switchToEndless() {
 	// Clear the table
 	mode = "endless"
-	document.getElementById("dailyDiv").style.display = 'none';
-	document.getElementById("timer").style.display = 'none';
-	document.getElementById("dailyText").style.display = 'none';
-	document.getElementById("modeButton").style.display = 'none';
-	document.getElementById("daily").style.display = 'none';
+	hideElements("dailyDiv", "timer", "dailyText", "modeButton", "daily")
 	document.getElementById("endless").style.display = 'initial';
 	document.getElementById("buttonsdiv").style.display = 'inherit'
 	document.getElementById("guess-input").style.display = 'initial'
@@ -180,10 +189,11 @@ function checkGuess() {
 	// Add icon image
 	const img = document.createElement("img");	
 	img.src = abilities[selectedAbility].Image;
-	img.width = "40";
+	img.classList.add("icon")
+	/* img.width = "40";
     img.height = "40";
 	img.style.marginLeft = "200";
-	img.style.verticalAlign = "middle";
+	img.style.verticalAlign = "middle"; */
 	newGuessCell.appendChild(img);
 		
 	for (let i = 0; i < propertiesToDisplay.length; i++) {
@@ -416,9 +426,7 @@ function dailyComplete() {
 		document.getElementById("dailyText").style.display = 'initial';
 		document.getElementById("timer").style.display = 'initial';
 		document.getElementById("dailyDiv").style.display = 'initial';
-		document.getElementById("buttonsdiv").style.display = 'none';
-		document.getElementById("guess-input").style.display = 'none';
-		document.getElementById("incorrect-guesses").style.display = 'none';
+		hideElements("buttonsdiv", "guess-input", "incorrect-guesses");
 		// Focus on the button to go to endless mode
 		document.getElementById("modeButton").focus()
 		
