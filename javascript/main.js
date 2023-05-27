@@ -189,10 +189,11 @@ function checkGuess() {
 	// Add icon image
 	const img = document.createElement("img");	
 	img.src = abilities[selectedAbility].Image;
-	img.width = "40";
+	img.classList.add("icon")
+	/* img.width = "40";
     img.height = "40";
 	img.style.marginLeft = "200";
-	img.style.verticalAlign = "middle";
+	img.style.verticalAlign = "middle"; */
 	newGuessCell.appendChild(img);
 		
 	for (let i = 0; i < propertiesToDisplay.length; i++) {
