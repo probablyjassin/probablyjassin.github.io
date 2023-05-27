@@ -1,5 +1,5 @@
 // This is the game's main code
-const abilities = require('../files/abilities.json'); //mby at some point an external json will work
+//const abilities = require('../files/abilities.json'); //mby at some point an external json will work
 // Some simplicity improvements: hide multiple elements at once
 function hideElements(...ids) {
 	ids.forEach(id => {
