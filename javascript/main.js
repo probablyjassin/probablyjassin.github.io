@@ -1,18 +1,18 @@
 // This is the game's main code
 
-
-// For simplicity, function to hide multiple elements at once
+// Some simplicity improvements: hide multiple elements at once
 function hideElements(...ids) {
-    ids.forEach(id => {
-		document.getElementById(id).style.display = "none"
-	}); 
-}
-// Reveal multiple elements at once
-function showElements(...ids) {
 	ids.forEach(id => {
-		document.getElementById(id).style.display = ""
+		document.getElementById(id).style.display = 'none'
 	});
 }
+function showElements(...ids) {
+	ids.forEach(id => {
+		document.getElementById(id).style.display = ''
+	});
+}
+hideElements(`popup-changelogs`) // hidden by default
+
 // Focus the input textfield for the player to start guessing immediately
 document.getElementById("guess-input").focus()
 // Defaults to daily mode
@@ -26,10 +26,7 @@ function switchToEndless() {
 	// Clear the table
 	mode = "endless"
 	hideElements("dailyDiv", "timer", "dailyText", "modeButton", "daily")
-	document.getElementById("endless").style.display = 'initial';
-	document.getElementById("buttonsdiv").style.display = 'inherit'
-	document.getElementById("guess-input").style.display = 'initial'
-	document.getElementById("incorrect-guesses").style.display = 'inherit';
+	showElements("endless", "buttonsdiv", "guess-input", "incorrect-guesses")
 	// Restart game
 	resetGame()
 	// Focus on the input field to start guessing immediately; after delay not to trigger the tet input
@@ -423,10 +420,9 @@ document.getElementById("closeBtn").addEventListener("click", function() {
 // If the daily is already done, hide game elements and show the timer
 function dailyComplete() {
 	if (getCookie("dailyComplete") === 'true') {
-		document.getElementById("dailyText").style.display = 'initial';
-		document.getElementById("timer").style.display = 'initial';
-		document.getElementById("dailyDiv").style.display = 'initial';
-		hideElements("buttonsdiv", "guess-input", "incorrect-guesses");
+		hideElements("buttonsdiv", "guess-input", "incorrect-guesses")
+		showElements("dailyText", "timer", "dailyDiv")
+
 		// Focus on the button to go to endless mode
 		document.getElementById("modeButton").focus()
 		
