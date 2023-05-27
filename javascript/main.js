@@ -1,5 +1,5 @@
 // This is the game's main code
-//var json = require('./data.json'); //mby at some point an external json will work
+//const abilities = require('../files/abilities.json'); //mby at some point an external json will work
 // Some simplicity improvements: hide multiple elements at once
 function hideElements(...ids) {
 	ids.forEach(id => {
@@ -336,11 +336,10 @@ function enableElements(...ids) {
 	});
 }
 // Function to style multiple elements
-function styleElement(...ids)
+function styleElement(...ids) {}
 
 // Function to reset the game
 function resetGame() {
-	// If the popup has been ignored, ignore the popup lol
 	closeEndPopup()
 	// Hide replay button again
 	document.getElementById("reset-button").style.display = 'none';
