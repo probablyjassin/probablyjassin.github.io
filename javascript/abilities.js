@@ -3,7 +3,7 @@ const allProperties = ["CD", "ICD", "Gauge", "Diameter\/Width", "Shape", "Elemen
 // exclude focalors from being the correct answer
 const abilitiesToExclude = ["FOCALORSSkill", "FOCALORSBurst"]
 // import abilities
-const abilities = 
+const abilitiess = 
     {"AlbedoSkill": {
     "Image": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Talent_Abiogenesis_Solar_Isotoma.png",
     "CD": "4s",
