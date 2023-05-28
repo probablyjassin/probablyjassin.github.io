@@ -666,7 +666,7 @@ const abilities =
     "Blunt": "No"
     },
     "KiraraSkillPress": {
-    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Talent_Meow-teor_Kick.png/revision/latest?cb=20230524022047",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Talent_Meow-teor_Kick.png",
     "CD": "8s",
     "ICD": "None",
     "Gauge": "1u",
@@ -676,7 +676,7 @@ const abilities =
     "Blunt": "No"
     },
     "KiraraSkillHold": {
-    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Talent_Meow-teor_Kick.png/revision/latest?cb=20230524022047",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Talent_Meow-teor_Kick.png",
     "CD": "12s",
     "ICD": "None, Standard",
     "Gauge": "1u",
@@ -686,7 +686,7 @@ const abilities =
     "Blunt": "Dendro"
     },
     "KiraraBurst": {
-    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Talent_Secret_Art_Surprise_Dispatch.png/revision/latest?cb=20230524022054",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Talent_Secret_Art_Surprise_Dispatch.png",
     "CD": "15s",
     "ICD": "None, Standard",
     "Gauge": "2u, 1u",
