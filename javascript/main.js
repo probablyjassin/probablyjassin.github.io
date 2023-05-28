@@ -305,7 +305,7 @@ function gameEnd() {
 	document.getElementById("submit-button").style.backgroundColor = 'grey';
 	// Remember the completion of the daily game
 	if (mode === 'daily') {
-		document.cookie = 'dailyComplete=true;expires='+nextday.toUTCString()+';path=/' + ";Domain=.jassin.aouani.de;";
+		document.cookie = 'dailyComplete=true;expires='+nextday.toUTCString()+';path=/';
 		// Show contents for the completion of the daily game
 		document.getElementById("dailyText").style.display = 'initial';
 		document.getElementById("timer").style.display = 'initial';
@@ -392,22 +392,12 @@ confirmButton.addEventListener("click", function() {
 	incorrectGuesses = "C"
 	saveIncorrectGuessesToCookie();
 	showAnswer();
-	showCorrectAnswer();
 	gameEnd();
+	popup(`The correct ability was ${randomAbility}.`)
 });
 cancelButton.addEventListener("click", function() {
 	document.getElementById("confirm-popup").style.display = 'none';
 })
-
-// Function to display the correct answer
-function showCorrectAnswer() {
-	if (incorrectGuesses === 0) {return false}
-	else {
-		gameEnd()
-		popup(`The correct ability was ${randomAbility}.`)
-	}
-}
-
 // Select the resetstats button element
 const resetstatsButton = document.getElementById("resetstats");
 
@@ -461,6 +451,7 @@ function musicPlay() {
 
 // Function to fill the correct answer in blue
 function revealAnswer() {
+	console.log("revealanswer is running")
 	const rawValue = randomAbility;
 
 	// Update prettyRandom

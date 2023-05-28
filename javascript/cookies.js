@@ -15,7 +15,7 @@ if (getCookie("cookiesAgreeGe") == 'true') {
 function setCookie(name, value) {
 	if (getCookie("cookiesAgreeGe") !== 'true') {console.log("Saving cookies has been aborted, cookies haven't been agreed to")}
 	else {
-	document.cookie = name + "=" + value + ";expires=" + cookieDate.toUTCString() + ";path=/;" + "Domain=.jassin.aouani.de;"; 
+	document.cookie = name + "=" + value + ";expires=" + cookieDate.toUTCString() + ";path=/;"
 }}
 
 // Helper function to get cookies
@@ -38,7 +38,7 @@ agreebutton.addEventListener("click", function() {
 
 // Buttons for agree/disagree with cookie agreement
 function cookiesAgreeGe() {
-	document.cookie = "cookiesAgreeGe" + "=" + 'true' + ";expires=" + cookieDate.toUTCString() + ";path=/;" + "Domain=.jassin.aouani.de;"
+	document.cookie = "cookiesAgreeGe" + "=" + 'true' + ";expires=" + cookieDate.toUTCString() + ";path=/;"
 }
 // hide popup if already agreed
 if (getCookie("cookiesAgreeGe") === 'true') {
@@ -65,7 +65,7 @@ function resetcookies() {
 		const cookie = cookies[i];
 		const eqPos = cookie.indexOf("=");
 		const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-		document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT" + ";Domain=.jassin.aouani.de;";
+		document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT"
 	}
 }
 
