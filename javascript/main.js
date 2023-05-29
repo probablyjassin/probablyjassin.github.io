@@ -458,7 +458,7 @@ function revealAnswer() {
 	prettyRandom = randomAbility.replace(/([A-Z0-9])/g, ' $1')
 
 	// Create a new row for the guess
-	const newRow = abilityTable.insertRow();
+	const newRow = abilityTable.insertRow(1);
 	const newGuessCell = newRow.insertCell();
 	newGuessCell.textContent = rawValue;
 	// Add icon image
