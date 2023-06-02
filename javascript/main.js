@@ -1,5 +1,10 @@
 // This is the game's main code
-
+/*
+// Import abilities  as json file mby???
+fetch('../files/abilities.json')
+    .then((abilities) => abilities.json())
+	.then((abilities1) => abilities = JSON.parse(JSON.stringify(abilities1)))
+*/
 // Some simplicity improvements: hide multiple elements at once
 function hideElements(...ids) {
 	ids.forEach(id => {
@@ -9,6 +14,12 @@ function hideElements(...ids) {
 function showElements(...ids) {
 	ids.forEach(id => {
 		document.getElementById(id).style.display = ''
+	});
+}
+// Function to change the bg color of multiple elements
+function styleElement(hex, ...ids) {
+	ids.forEach(id => {
+		document.getElementById(id).style.backgroundColor = hex		
 	});
 }
 hideElements(`popup-changelogs`) // hidden by default
@@ -335,8 +346,6 @@ function enableElements(...ids) {
 		document.getElementById(id).disabled = false;
 	});
 }
-// Function to style multiple elements
-function styleElement(...ids) {}
 
 // Function to reset the game
 function resetGame() {
