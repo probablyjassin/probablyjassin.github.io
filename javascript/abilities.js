@@ -546,7 +546,7 @@ const abilities =
     "Blunt": "No"
     },
     "KaedeharaKazuhaSkillHold": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Talent_Chihayaburu.png",
     "CD": "9s",
     "ICD": "None",
     "Gauge": "2u",
@@ -556,7 +556,7 @@ const abilities =
     "Blunt": "No"
     },
     "KaedeharaKazuhaBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Talent_Kazuha_Slash.png",
     "CD": "15s",
     "ICD": "None",
     "Gauge": "2u, 1u",
@@ -566,7 +566,7 @@ const abilities =
     "Blunt": "No"
     },
     "KaeyaSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Talent_Frostgnaw.png",
     "CD": "6s",
     "ICD": "None",
     "Gauge": "2u",
@@ -576,7 +576,7 @@ const abilities =
     "Blunt": "No"
     },
     "KaeyaBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Talent_Glacial_Waltz.png",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -586,7 +586,7 @@ const abilities =
     "Blunt": "No"
     },
     "KamisatoAyakaSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Talent_Kamisato_Art_Hyouka.png",
     "CD": "10s",
     "ICD": "None",
     "Gauge": "2u",
@@ -596,7 +596,7 @@ const abilities =
     "Blunt": "No"
     },
     "KamisatoAyakaBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Talent_Kamisato_Art_Soumetsu.png",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -606,7 +606,7 @@ const abilities =
     "Blunt": "No"
     },
     "KamisatoAyatoSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Talent_Kamisato_Art_Kyouka.png",
     "CD": "12s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -616,7 +616,7 @@ const abilities =
     "Blunt": "No"
     },
     "KamisatoAyatoBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Talent_Kamisato_Art_Suiyuu.png",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -626,7 +626,7 @@ const abilities =
     "Blunt": "No"
     },
     "KavehSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Talent_Artistic_Ingenuity.png",
     "CD": "6s",
     "ICD": "None",
     "Gauge": "1u",
@@ -636,7 +636,7 @@ const abilities =
     "Blunt": "No"
     },
     "KavehBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Talent_Painted_Dome.png",
     "CD": "20s",
     "ICD": "None",
     "Gauge": "2u",
@@ -646,7 +646,7 @@ const abilities =
     "Blunt": "No"
     },
     "KeqingSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Talent_Stellar_Restoration.png",
     "CD": "7.5s",
     "ICD": "None, Standard",
     "Gauge": "2u, 1u",
@@ -656,7 +656,7 @@ const abilities =
     "Blunt": "No"
     },
     "KeqingBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Talent_Starward_Sword.png",
     "CD": "12s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -696,7 +696,7 @@ const abilities =
     "Blunt": "No"
     },
     "KleeSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Talent_Jumpy_Dumpty.png",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "2u, 1u",
@@ -706,7 +706,7 @@ const abilities =
     "Blunt": "Yes, No"
     },
     "KleeBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Talent_Sparks_%27n%27_Splash.png",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -716,7 +716,7 @@ const abilities =
     "Blunt": "No"
     },
     "KujouSaraSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Talent_Tengu_Stormcall.png",
     "CD": "10s",
     "ICD": "None",
     "Gauge": "1u",
@@ -726,7 +726,7 @@ const abilities =
     "Blunt": "No"
     },
     "KujouSaraBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Talent_Subjugation_Koukou_Sendou.png",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -736,7 +736,7 @@ const abilities =
     "Blunt": "No"
     },
     "KukiShinobuSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Talent_Sanctifying_Ring.png",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -746,7 +746,7 @@ const abilities =
     "Blunt": "Yes, No"
     },
     "KukiShinobuBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Talent_Gyoei_Narukami_Kariyama_Rite.png",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -756,7 +756,7 @@ const abilities =
     "Blunt": "No"
     },
     "LaylaSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Talent_Nights_of_Formal_Focus.png",
     "CD": "12s",
     "ICD": "Special",
     "Gauge": "1u",
@@ -766,7 +766,7 @@ const abilities =
     "Blunt": "No"
     },
     "LaylaBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Talent_Dream_of_the_Star-Stream_Shaker.png",
     "CD": "12s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -776,7 +776,7 @@ const abilities =
     "Blunt": "No"
     },
     "LisaSkillPress": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Talent_Violet_Arc.png",
     "CD": "1s",
     "ICD": "Special",
     "Gauge": "1u",
@@ -786,7 +786,7 @@ const abilities =
     "Blunt": "No"
     },
     "LisaSkillHold": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Talent_Violet_Arc.png",
     "CD": "16s",
     "ICD": "None",
     "Gauge": "2u",
@@ -796,7 +796,7 @@ const abilities =
     "Blunt": "No"
     },
     "LisaBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Talent_Lightning_Rose.png",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "1u, 0u",
@@ -806,7 +806,7 @@ const abilities =
     "Blunt": "No"
     },
     "MikaSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Talent_Starfrost_Swirl.png",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -816,7 +816,7 @@ const abilities =
     "Blunt": "No"
     },
     "MikaBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Talent_Skyfeather_Song.png",
     "CD": "18s",
     "ICD": "None",
     "Gauge": "None",
@@ -826,7 +826,7 @@ const abilities =
     "Blunt": "No"
     },
     "MonaSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Talent_Mirror_Reflection_of_Doom.png",
     "CD": "12s",
     "ICD": "None, Standard",
     "Gauge": "1u",
@@ -836,7 +836,7 @@ const abilities =
     "Blunt": "No"
     },
     "MonaBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Talent_Stellaris_Phantasm.png",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "2u, 1u",
@@ -846,7 +846,7 @@ const abilities =
     "Blunt": "No"
     },
     "NahidaSkillPress": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Talent_All_Schemes_to_Know.png",
     "CD": "5s",
     "ICD": "Special",
     "Gauge": "1.5u, 1u",
@@ -856,7 +856,7 @@ const abilities =
     "Blunt": "No"
     },
     "NahidaSkillHold": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Talent_All_Schemes_to_Know.png",
     "CD": "6s",
     "ICD": "Special",
     "Gauge": "1.5u, 1u",
@@ -866,7 +866,7 @@ const abilities =
     "Blunt": "No"
     },
     "NahidaBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Talent_Illusory_Heart.png",
     "CD": "13.5s",
     "ICD": "None",
     "Gauge": "None",
@@ -876,7 +876,7 @@ const abilities =
     "Blunt": "No"
     },
     "NilouSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Talent_Dance_of_Haftkarsvar.png",
     "CD": "18s",
     "ICD": "Special",
     "Gauge": "1u",
@@ -886,7 +886,7 @@ const abilities =
     "Blunt": "No"
     },
     "NilouBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Talent_Dance_of_Abzendegi_Distant_Dreams%2C_Listening_Spring.png",
     "CD": "18s",
     "ICD": "None",
     "Gauge": "1u",
@@ -896,7 +896,7 @@ const abilities =
     "Blunt": "No"
     },
     "NingguangSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Talent_Jade_Screen.png",
     "CD": "12s",
     "ICD": "None",
     "Gauge": "1u",
@@ -906,7 +906,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "NingguangBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Talent_Starshatter.png",
     "CD": "12s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -916,7 +916,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "NoelleSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Talent_Breastplate.png",
     "CD": "24s",
     "ICD": "Standard",
     "Gauge": "2u",
@@ -926,7 +926,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "NoelleBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Talent_Sweeping_Time.png",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -936,7 +936,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "QiqiSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Talent_Adeptus_Art_Herald_of_Frost.png",
     "CD": "30s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -946,7 +946,7 @@ const abilities =
     "Blunt": "No"
     },
     "QiqiBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Talent_Adeptus_Art_Preserver_of_Fortune.png",
     "CD": "20s",
     "ICD": "None",
     "Gauge": "2u",
@@ -956,7 +956,7 @@ const abilities =
     "Blunt": "No"
     },
     "RaidenShogunSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/3/3c/Talent_Transcendence_Baleful_Omen.png",
     "CD": "10s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -966,7 +966,7 @@ const abilities =
     "Blunt": "No"
     },
     "RaidenShogunBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Talent_Secret_Art_Musou_Shinsetsu.png",
     "CD": "18s",
     "ICD": "None",
     "Gauge": "2u",
@@ -976,7 +976,7 @@ const abilities =
     "Blunt": "No"
     },
     "RazorSkillPress": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Talent_Claw_and_Thunder.png",
     "CD": "6s",
     "ICD": "None",
     "Gauge": "2u",
@@ -986,7 +986,7 @@ const abilities =
     "Blunt": "No"
     },
     "RazorSkillHold": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Talent_Claw_and_Thunder.png",
     "CD": "10s",
     "ICD": "None",
     "Gauge": "2u",
@@ -996,7 +996,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "RazorBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Talent_Lightning_Fang.png",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "2u, 1u",
@@ -1006,7 +1006,7 @@ const abilities =
     "Blunt": "Yes, No"
     },
     "RosariaSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Talent_Ravaging_Confession.png",
     "CD": "6s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1016,7 +1016,7 @@ const abilities =
     "Blunt": "No"
     },
     "RosariaBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Talent_Rites_of_Termination.png",
     "CD": "15s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1026,7 +1026,7 @@ const abilities =
     "Blunt": "No"
     },
     "SangonomiyaKokomiSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Talent_Kurage%27s_Oath.png",
     "CD": "20s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1036,7 +1036,7 @@ const abilities =
     "Blunt": "No"
     },
     "SangonomiyaKokomiBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Talent_Nereid%27s_Ascension.png",
     "CD": "18s",
     "ICD": "None",
     "Gauge": "2u",
@@ -1046,9 +1046,8 @@ const abilities =
     "Blunt": "No"
     },
     "SayuSkill": {
-    "Image": "",
-    "CD": "6s-11s"
-    ,
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Talent_Yoohoo_Art_Fuuin_Dash.png",
+    "CD": "6s-11s",
     "ICD": "Standard",
     "Gauge": "1u",
     "Diameter\/Width": "5m, 6m",
@@ -1057,7 +1056,7 @@ const abilities =
     "Blunt": "No"
     },
     "SayuBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Talent_Yoohoo_Art_Mujina_Flurry.png",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -1067,7 +1066,7 @@ const abilities =
     "Blunt": "No"
     },
     "ShenheSkillPress": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Talent_Spring_Spirit_Summoning.png",
     "CD": "10s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -1077,7 +1076,7 @@ const abilities =
     "Blunt": "No"
     },
     "ShenheSkillHold": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Talent_Spring_Spirit_Summoning.png",
     "CD": "15s",
     "ICD": "None",
     "Gauge": "2u",
@@ -1087,7 +1086,7 @@ const abilities =
     "Blunt": "No"
     },
     "ShenheBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Talent_Divine_Maiden%27s_Deliverance.png",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -1097,7 +1096,7 @@ const abilities =
     "Blunt": "Yes, No"
     },
     "ShikanoinHeizouSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Talent_Heartstopper_Strike.png",
     "CD": "10s",
     "ICD": "None",
     "Gauge": "2u",
@@ -1107,7 +1106,7 @@ const abilities =
     "Blunt": "No"
     },
     "ShikanoinHeizouBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Talent_Windmuster_Kick.png",
     "CD": "12s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1117,7 +1116,7 @@ const abilities =
     "Blunt": "No"
     },
     "SucroseSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Talent_Astable_Anemohypostasis_Creation_-_6308.png",
     "CD": "15s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1127,7 +1126,7 @@ const abilities =
     "Blunt": "No"
     },
     "SucroseBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Talent_Forbidden_Creation_-_Isomer_75_Type_II.png",
     "CD": "20s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1137,7 +1136,7 @@ const abilities =
     "Blunt": "No"
     },
     "TartagliaSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Talent_Foul_Legacy_Raging_Tide.png",
     "CD": "6s-36s, 45s",
     "ICD": "None",
     "Gauge": "2u, 1u",
@@ -1147,7 +1146,7 @@ const abilities =
     "Blunt": "Yes, No"
     },
     "TartagliaBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Talent_Havoc_Obliteration.png",
     "CD": "15s",
     "ICD": "None",
     "Gauge": "2u",
@@ -1157,7 +1156,7 @@ const abilities =
     "Blunt": "No"
     },
     "ThomaSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Talent_Blazing_Blessing.png",
     "CD": "15s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1167,7 +1166,7 @@ const abilities =
     "Blunt": "No"
     },
     "ThomaBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Talent_Crimson_Ooyoroi.png",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "2u, 1u",
@@ -1177,7 +1176,7 @@ const abilities =
     "Blunt": "No"
     },
     "TighnariSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Talent_Vijnana-Phala_Mine.png",
     "CD": "12s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1187,7 +1186,7 @@ const abilities =
     "Blunt": "No"
     },
     "TighnariBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Talent_Fashioner%27s_Tanglevine_Shaft.png",
     "CD": "12s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -1197,7 +1196,7 @@ const abilities =
     "Blunt": "No"
     },
     "AnemoTravelerSkillPress": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Talent_Palm_Vortex.png",
     "CD": "5s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1207,7 +1206,7 @@ const abilities =
     "Blunt": "No"
     },
     "AnemoTravelerSkillHold": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Talent_Palm_Vortex.png",
     "CD": "8s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -1217,7 +1216,7 @@ const abilities =
     "Blunt": "No"
     },
     "AnemoTravelerBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Talent_Gust_Surge.png",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "2u, 1u",
@@ -1227,7 +1226,7 @@ const abilities =
     "Blunt": "No"
     },
     "DendroTravelerSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Talent_Razorgrass_Blade.png",
     "CD": "8s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1237,7 +1236,7 @@ const abilities =
     "Blunt": "No"
     },
     "DendroTravelerBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Talent_Surgent_Manifestation.png",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "2u, 1u",
@@ -1247,7 +1246,7 @@ const abilities =
     "Blunt": "No"
     },
     "ElectroTravelerSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Talent_Lightning_Blade.png",
     "CD": "13.5s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -1257,17 +1256,17 @@ const abilities =
     "Blunt": "No"
     },
     "ElectroTravelerBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Talent_Bellowing_Thunder.png",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "1u",
     "Diameter\/Width": "10m, 4m",
     "Shape": "Sphere",
     "Element": "Electro",
-    "Blunt": "Ye, No"
+    "Blunt": "Yes, No"
     },
     "GeoTravelerSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Talent_Starfell_Sword.png",
     "CD": "8s",
     "ICD": "Standard",
     "Gauge": "2u",
@@ -1277,7 +1276,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "GeoTravelerBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Talent_Wake_of_Earth.png",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "2u",
@@ -1287,7 +1286,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "VentiSkillPress": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Talent_Skyward_Sonnet.png",
     "CD": "6s",
     "ICD": "None",
     "Gauge": "2u",
@@ -1297,7 +1296,7 @@ const abilities =
     "Blunt": "No"
     },
     "VentiSkillHold": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Talent_Skyward_Sonnet.png",
     "CD": "15s",
     "ICD": "None",
     "Gauge": "2u",
@@ -1307,7 +1306,7 @@ const abilities =
     "Blunt": "No"
     },
     "VentiBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Talent_Wind%27s_Grand_Ode.png",
     "CD": "15s",
     "ICD": "Special",
     "Gauge": "1u",
@@ -1317,7 +1316,7 @@ const abilities =
     "Blunt": "No"
     },
     "WandererSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Talent_Hanega_Song_of_the_Wind.png",
     "CD": "6s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1327,7 +1326,7 @@ const abilities =
     "Blunt": "No"
     },
     "WandererBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Talent_Kyougen_Five_Ceremonial_Plays.png",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -1337,7 +1336,7 @@ const abilities =
     "Blunt": "No"
     },
     "XianglingSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Talent_Guoba_Attack.png",
     "CD": "12s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1347,7 +1346,7 @@ const abilities =
     "Blunt": "No"
     },
     "XianglingBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Talent_Pyronado.png",
     "CD": "20s",
     "ICD": "Standard, None",
     "Gauge": "1u",
@@ -1357,7 +1356,7 @@ const abilities =
     "Blunt": "No"
     },
     "XiaoSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Talent_Lemniscatic_Wind_Cycling.png",
     "CD": "10s",
     "ICD": "Special",
     "Gauge": "1u",
@@ -1367,7 +1366,7 @@ const abilities =
     "Blunt": "No"
     },
     "XiaoBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Talent_Bane_of_All_Evil.png",
     "CD": "18s",
     "ICD": "None",
     "Gauge": "None",
@@ -1377,7 +1376,7 @@ const abilities =
     "Blunt": "No"
     },
     "XingqiuSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Talent_Guhua_Sword_Fatal_Rainscreen.png",
     "CD": "21s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1387,7 +1386,7 @@ const abilities =
     "Blunt": "No"
     },
     "XingqiuBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Talent_Guhua_Sword_Raincutter.png",
     "CD": "20s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -1397,7 +1396,7 @@ const abilities =
     "Blunt": "No"
     },
     "XinyanSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Talent_Sweeping_Fervor.png",
     "CD": "18s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1407,7 +1406,7 @@ const abilities =
     "Blunt": "Yes, No"
     },
     "XinyanBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Talent_Riff_Revolution.png",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -1417,7 +1416,7 @@ const abilities =
     "Blunt": "No"
     },
     "YaeMikoSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Talent_Yakan_Evocation_Sesshou_Sakura.png",
     "CD": "4s",
     "ICD": "Standard",
     "Gauge": "1u",
@@ -1427,7 +1426,7 @@ const abilities =
     "Blunt": "No"
     },
     "YaeMikoBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Talent_Great_Secret_Art_Tenko_Kenshin.png",
     "CD": "22s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1437,7 +1436,7 @@ const abilities =
     "Blunt": "No"
     },
     "YanfeiSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Talent_Signed_Edict.png",
     "CD": "9s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1447,7 +1446,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "YanfeiBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Talent_Done_Deal.png",
     "CD": "20s",
     "ICD": "None",
     "Gauge": "2u",
@@ -1457,7 +1456,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "YaoyaoSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Talent_Raphanus_Sky_Cluster.png",
     "CD": "15s",
     "ICD": "Special",
     "Gauge": "1u",
@@ -1467,7 +1466,7 @@ const abilities =
     "Blunt": "No"
     },
     "YaoyaoBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Talent_Moonjade_Descent.png",
     "CD": "20s",
     "ICD": "Special",
     "Gauge": "1u",
@@ -1477,7 +1476,7 @@ const abilities =
     "Blunt": "No"
     },
     "YelanSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Talent_Lingering_Lifeline.png",
     "CD": "10s",
     "ICD": "None",
     "Gauge": "1u",
@@ -1487,7 +1486,7 @@ const abilities =
     "Blunt": "No"
     },
     "YelanBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Talent_Depth-Clarion_Dice.png",
     "CD": "18s",
     "ICD": "Special",
     "Gauge": "2u, 1u",
@@ -1497,7 +1496,7 @@ const abilities =
     "Blunt": "No"
     },
     "YoimiyaSkill": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Talent_Niwabi_Fire-Dance.png",
     "CD": "18s",
     "ICD": "None",
     "Gauge": "None",
@@ -1507,7 +1506,7 @@ const abilities =
     "Blunt": "No"
     },
     "YoimiyaBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Talent_Ryuukin_Saxifrage.png",
     "CD": "15s",
     "ICD": "Standard",
     "Gauge": "2u, 1u",
@@ -1517,7 +1516,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "YunJinSkillPress": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Talent_Opening_Flourish.png",
     "CD": "9s",
     "ICD": "None",
     "Gauge": "2u",
@@ -1527,7 +1526,7 @@ const abilities =
     "Blunt": "No"
     },
     "YunJinSkillHold": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Talent_Opening_Flourish.png",
     "CD": "9s",
     "ICD": "None",
     "Gauge": "4u, 2u",
@@ -1537,7 +1536,7 @@ const abilities =
     "Blunt": "No"
     },
     "YunJinBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Talent_Cliffbreaker%27s_Banner.png",
     "CD": "15s",
     "ICD": "None",
     "Gauge": "2u",
@@ -1547,7 +1546,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "ZhongliSkillPress": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Talent_Dominus_Lapidis.png",
     "CD": "4s",
     "ICD": "Standard",
     "Gauge": "2u, 1u",
@@ -1557,7 +1556,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "ZhongliSkillHold": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Talent_Dominus_Lapidis.png",
     "CD": "12s",
     "ICD": "Standard",
     "Gauge": "2u, 1u",
@@ -1567,7 +1566,7 @@ const abilities =
     "Blunt": "Yes"
     },
     "ZhongliBurst": {
-    "Image": "",
+    "Image": "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Talent_Planet_Befall.png",
     "CD": "12s",
     "ICD": "None",
     "Gauge": "4u",
@@ -1579,7 +1578,7 @@ const abilities =
 
     /* For fun */
     "FOCALORSSkill": {
-    "Image": "",
+    "Image": "https://cdn.7tv.app/emote/63e925494c6d6cdd17430958/4x.webp",
     "CD": "10s",
     "ICD": "Special",
     "Gauge": "1u, 1.5u",
@@ -1589,7 +1588,7 @@ const abilities =
     "Blunt": "No"
     },
     "FOCALORSBurst": {
-    "Image": "",
+    "Image": "https://cdn.7tv.app/emote/63e925494c6d6cdd17430958/4x.webp",
     "CD": "13.5s",
     "ICD": "None",
     "Gauge": "None",
