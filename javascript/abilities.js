@@ -1264,7 +1264,7 @@ const abilities =
     "Diameter\/Width": "10m, 4m",
     "Shape": "Sphere",
     "Element": "Electro",
-    "Blunt": "Ye, No"
+    "Blunt": "Yes, No"
     },
     "GeoTravelerSkill": {
     "Image": "",
