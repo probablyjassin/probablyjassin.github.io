@@ -683,7 +683,7 @@ const abilities =
     "Diameter\/Width": "5.2m",
     "Shape": "Cylinder",
     "Element": "Dendro",
-    "Blunt": "Dendro"
+    "Blunt": "No"
     },
     "KiraraBurst": {
     "Image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Talent_Secret_Art_Surprise_Dispatch.png",
