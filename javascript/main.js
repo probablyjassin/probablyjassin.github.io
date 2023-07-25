@@ -1,11 +1,6 @@
-// This is the game's main code
-/*
-// Import abilities  as json file mby???
-fetch('../files/abilities.json')
-    .then((abilities) => abilities.json())
-	.then((abilities1) => abilities = JSON.parse(JSON.stringify(abilities1)))
-*/
-// Some simplicity improvements: hide multiple elements at once
+/* This is the game's main code*/
+
+// hide multiple elements at once
 function hideElements(...ids) {
 	ids.forEach(id => {
 		document.getElementById(id).style.display = 'none'
@@ -23,6 +18,7 @@ function styleElement(hex, ...ids) {
 	});
 }
 hideElements(`popup-changelogs`) // hidden by default
+/*------------------------------*/
 
 // Focus the input textfield for the player to start guessing immediately
 document.getElementById("guess-input").focus()
@@ -154,8 +150,22 @@ function generateDailyAbility() {
 	randomAbility = abilityOptions[Math.floor(myrng() * abilityOptions.length)]
 }
 
+//--------new game mode?
+function generateRandomProperty(obj) {
+    const keysArray = Object.keys(obj);
+    const randomKey = keysArray[Math.floor(Math.random() * keysArray.length)];
+    jsonprop = JSON.stringify({[randomKey]: obj[randomKey]})
+    displprop = `${randomKey.charAt(0).toUpperCase() + randomKey.slice(1)}: ${obj[randomKey]}`
+}
+//----
+
 if (mode === "endless") {generateRandomAbility();}
 if (mode === "daily") {generateDailyAbility()}
+if (mode === 'new') {generateRandomAbility(); generateRandomProperty(randomAbility)}
+
+function newMode() {
+	mode === 'new'
+}
 
 // Read the guessable options from the list of abilities
 const guessTable = document.getElementById("guess-select")
