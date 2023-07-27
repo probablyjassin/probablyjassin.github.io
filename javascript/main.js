@@ -55,6 +55,7 @@ if (mode === "endless") {
 var propertiesToDisplay = []; // Array of the properties the game will use
 
 function randomizeTable() {
+  if (mode === 'new') {propertiesToDisplay = allProperties; return;}
   // New: Chose 5 random properties to be displayed to the player each game
   propertiesToDisplay.length = 0; // Reset from past games
   // Get five random indices from allProperties
@@ -153,17 +154,15 @@ function generateDailyAbility() {
 }
 
 //--------new game mode?
-
 function generateRandomProperty(obj) {
   excludedProperties = ["Image", "Weapon", "Blunt"];
   const keysArray = Object.keys(obj).filter(
-    (key) => !excludedProperties.includes(key)
+    (key) => !excludedProperties.includes(key) && obj[key] !== "???"
   );
   const randomKey = keysArray[Math.floor(Math.random() * keysArray.length)];
   jsonprop = obj[randomKey];
-  displprop = `${randomKey.charAt(0).toUpperCase() + randomKey.slice(1)}: ${
-    obj[randomKey]
-  }`;
+  if (true) jsonprop = jsonprop.split(",")[0].split("-")[0].trim()
+  displprop = `${randomKey.charAt(0).toUpperCase() + randomKey.slice(1)}: ${jsonprop}`;
 }
 //----
 
@@ -179,6 +178,7 @@ if (mode === "new") {
 }
 
 function newMode() {
+  propertiesToDisplay = allProperties
   mode = "new";
   hideElements(
     "endless",
@@ -189,7 +189,8 @@ function newMode() {
     "daily",
     "incorrect-guesses"
   );
-  showElements("buttonsdiv", "guess-input", "ability-table");
+  showElements("buttonsdiv", "guess-input", "ability-table", "propCounter");
+  document.getElementById("propCounter").style.display = "initial"
   resetGame();
   generateRandomAbility();
   console.log(randomAbility, abilities[randomAbility]);
@@ -198,6 +199,10 @@ function newMode() {
   document.getElementById("prop").innerHTML = displprop;
   document.getElementById("proptext").innerHTML =
     "Find an ability with this property!";
+  amount = countProps(jsonprop) > 5 ? 5 : countProps(jsonprop)
+  console.log(amount)
+  document.getElementById("propCount").innerHTML = amount
+  propCount = amount
 }
 
 // Read the guessable options from the list of abilities
@@ -215,8 +220,9 @@ const abilityTable = document.getElementById("ability-table");
 // Select the incorrect guess counter element
 const incorrectCount = document.getElementById("incorrect-count");
 
-// Initialize the counter for incorrect guesses
+// Initialize the counter for incorrect guesses and props (new)
 let incorrectGuesses = 0;
+let propCount = 0;
 
 // Initialize prettyRandom as text that is the correct ability, but with spaces, for display
 var prettyRandom = "";
@@ -229,8 +235,8 @@ function checkGuess() {
   const rawValue = guessSelect.value;
   const selectedAbility = rawValue.replace(/([ ])/g, "");
   if (mode === "new") {
-    console.log(checkProps(abilities[selectedAbility]));
-    return;
+    correctProperty = checkProps(abilities[selectedAbility]);
+    console.log("correct? ", correctProperty)
   }
   if (!abilityOptions.includes(selectedAbility)) {
     popup("Please select an ability to guess.");
@@ -254,6 +260,13 @@ function checkGuess() {
     const newValueCell = newRow.insertCell();
     newValueCell.textContent = abilities[selectedAbility][property];
 
+    if (mode === 'new') {
+      if (correctProperty) {
+        newValueCell.classList.add("correct")
+      }
+      else {newValueCell.classList.add("incorrect")}
+      continue
+    }
     if (
       abilities[selectedAbility][property] ===
       abilities[randomAbility][property]
@@ -300,6 +313,12 @@ function checkGuess() {
     incorrectCount.textContent = incorrectGuesses;
   }
 
+  if (mode === 'new' && correctProperty) {
+    propCount -= 1
+    document.getElementById("propCount").innerHTML = propCount
+    return
+  }
+
   // If correct, show popup and show reset button
   if (correctGuess) {
     gameEnd();
@@ -326,13 +345,29 @@ function checkGuess() {
     }, 100);
   }
 }
+
+function countProps(property) {
+	const regex = new RegExp(`\\b\\d*${property}\\b(?!\\d)`, "g");
+	let count = 0;
+	for (let zaAbility in abilities) {
+	  if (abilitiesToExclude.includes(zaAbility)) {
+		  continue;
+	  }
+	  const ability = abilities[zaAbility];
+	  for (const value of Object.values(ability)) {
+		const matches = value.match(regex) || [];
+		for (const match of matches) {
+		  count++;
+		}
+	  }
+	}
+	return count;
+}
 function checkProps(characterObject) {
 	function hasProp(characterObject) {
 	  valueToFind = jsonprop;
-	  console.log(valueToFind)
 	  for (const key in characterObject) {
 		const value = characterObject[key];
-		console.log(value)
   
 		if (typeof value === "object") {
 		  if (hasProp(value, valueToFind)) {
@@ -390,48 +425,7 @@ function checkProps(characterObject) {
 	  return value;
 	}
   
-	console.log(hasProp(characterObject));
-  
-  /* const newRow = abilityTable.insertRosw();
-	const newGuessCell = newRow.insertCell();
-	newGuessCell.textContent = rawValue;
-	const img = document.createElement("img");	
-	img.src = abilities[selectedAbility].Image;
-	img.classList.add("icon")
-	newGuessCell.appendChild(img);
-		
-	for (let i = 0; i < propertiesToDisplay.length; i++) {
-		const property = propertiesToDisplay[i];
-		const newValueCell = newRow.insertCell();
-		newValueCell.textContent = abilities[selectedAbility][property];
-		
-		if (abilities[selectedAbility][property] === abilities[randomAbility][property]) {
-			newValueCell.classList.add("correct");
-		} else {
-			// Check if there is any overlap between the guessed and correct values
-			const guessedValues = abilities[selectedAbility][property]
-			.split(", ").join("|")
-			.split("-").join("|")
-			.split("|");
-			const correctValues = abilities[randomAbility][property]
-			.split(", ").join("|")
-			.split("-").join("|")
-			.split("|");
-			let partialMatch = false;
-			for (let j = 0; j < guessedValues.length; j++) {
-				if (correctValues.includes(guessedValues[j])) {
-					partialMatch = true;
-					break;
-				}
-			}
-			if (partialMatch) {
-				newValueCell.classList.add("partial");
-			} 
-			else {
-				newValueCell.classList.add("incorrect");
-			}
-		}
-	} */
+	return hasProp(characterObject);
 }
 
 // Pressing Enter in the text box should also submit the guess

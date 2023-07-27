@@ -59,7 +59,7 @@
 	<h2 class="widescreen">Try guessing a character's ability using information like it's element, gauge units, cooldowns and more!</h2>
 	<h2 class="mobile">Guess an ability with it's element, gauge units, cooldowns and more!</h2>
 
-	<!-- <button onclick="newMode()">New Gamemode!</button> -->
+	<button onclick="newMode()">Work in Progress: a new gamemode!</button>
 
 	<label id="endless"> Endless Mode </label>
 	<label id="daily"> Daily Mode </label>
@@ -76,6 +76,9 @@
 	</div>
 
 	<p id="incorrect-guesses">Guesses: <span id="incorrect-count">0</span>/8</p>
+	<p id="propCounter">Can you guess <span id="propCount"></span> more abilities?<br>
+		(you can click the gamemode's button again to roll a new property)
+	</p>
 
 	<div>
 		<button id="reset-button" onclick="resetGame()">Play again</button>
