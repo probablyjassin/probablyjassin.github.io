@@ -388,7 +388,7 @@ const abilities =
     "EulaSkillPress": {
     "Image": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Talent_Icetide_Vortex.png",
     "CD": "4s",
-    "ICD": "Standard",
+    "ICD": "None",
     "Gauge": "1u",
     "Diameter\/Width": "7m",
     "Shape": "Cylinder",
