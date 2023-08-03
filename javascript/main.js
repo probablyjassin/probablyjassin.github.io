@@ -236,7 +236,16 @@ function checkGuess() {
   const selectedAbility = rawValue.replace(/([ ])/g, "");
   if (mode === "new") {
     correctProperty = checkProps(abilities[selectedAbility]);
-    console.log("correct? ", correctProperty)
+    var datalist = document.getElementById("guess-select");
+    var inputValue = selectedAbility.replace(/([A-Z0-9])/g, " $1");
+    var optionIndex = -1;
+    for (var i = 0; i < datalist.options.length; i++) {
+      if (datalist.options[i].value === inputValue) {
+        optionIndex = i;
+        break;
+      }
+    }
+    datalist.removeChild(datalist.options[optionIndex])
   }
   if (!abilityOptions.includes(selectedAbility)) {
     popup("Please select an ability to guess.");
@@ -313,9 +322,18 @@ function checkGuess() {
     incorrectCount.textContent = incorrectGuesses;
   }
 
-  if (mode === 'new' && correctProperty) {
-    propCount -= 1
+  if (mode === 'new') {
+    if (correctProperty) {
+      propCount -= 1
     document.getElementById("propCount").innerHTML = propCount
+    if (propCount <= 0) {
+      gameEnd()
+      popup("Congratulations!")
+    }
+    }
+    else {
+    }
+    guessSelect.value = ""
     return
   }
 
@@ -481,7 +499,7 @@ function gameEnd() {
     //pass
   }
   // If the game was lost, reveal the correct answer in the table as well
-  if (!correctGuess) {
+  if (!correctGuess && mode != "new") {
     revealAnswer();
   }
 }
