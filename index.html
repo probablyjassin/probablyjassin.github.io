@@ -4,6 +4,8 @@
 	<title>Genshin Gaugedle</title>
 	<meta name=”Description” content="Try guessing a Genshin character's ability using information like it's element, gauge units, cooldowns and more!"> 	<!-- Description of this page for users and search engines. -->
 
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 	<meta name="google-site-verification" content="QebuNazTMUuNlD6GgSrmAbVf5mxRFWJgaJLpGL9ValE" /> <!-- Google Search verification tag -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,14 +26,57 @@
 	<script src="./javascript/background.js" defer></script>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+	<script defer>
+		function submitSurvey(event) {
+			event.preventDefault();  // Prevent the form from submitting normally
+			const form = event.target; 
+			const formData = new FormData(form);
+			fetch(form.action, {
+				method: 'POST',
+				body: JSON.stringify(Object.fromEntries(formData)),
+				headers: {
+					'Content-Type': 'application/json',
+				},
+			})
+			.then(response => response.json())
+			.then(data => {
+				console.log(data);  // Handle the response from the server
+			})
+			.catch(error => {
+				console.error('Error:', error);
+			});
+		}
+	</script>
+
 </head>
 <body class="bg" id="page">
+	<!-- Survey stuff -->
+	<!-- <div style="all: unset;">
+		<button onclick="document.getElementById('survey-popup').style.display = 'initial'" class="btn btn-primary custom-button">
+			Feedback <i class="bi bi-question-circle"></i>
+		</button>
+	</div>
+	
+	<div id="survey-popup">
+		<form id="survey" action="http://PAGE:PORT/submit_survey" method="POST" onsubmit="submitSurvey(event)">
+			<p>What do you like most about the Gaugedle?</p>
+        	<input type="text" id="feedback" name="feedback">
+			<p>Do you have problems with the Gaugedle? (e.g. bugs, difficulty too high/low, ...)</p>
+        	<input type="text" id="problems" name="problems">
+			<p>(-for the new gamemode-) How would you modify the new gamemode to make it more enjoyable?</p>
+			<p>Possible ideas: time limit, wrong guess limit, different amounts of properties to guess</p>
+        	<input type="text" id="new" name="new">
+			<button type="submit" onclick="document.getElementById('survey-popup').style.display = 'none'">Submit</button>
+		</form>
+	</div> -->
+<!-- no more -->
+	<header>
+		<h1 class="widescreen">The Genshin <img src="./images/gauge.png" alt="Gauge" class="image", class="icon"> dle</h1>
+		<h1 class="mobile">The Gaugedle <img src="./images/gauge.png" class="image", class="icon"></h1>
+	</header>
+
 	<h1 style="display: none;">"Try guessing a Genshin character's ability using information like it's element, gauge units, cooldowns and more!"</h1>
-	<!---
-	<video autoplay muted loop id="cookingmp4">
-		<source src="./images/cooking.mp4" type="video/mp4">
-	</video>
-	-->
+
 	<div id="cookie-popup">
 		<p>The game can show you statistics of how many guesses you needed per game and other quality of life stuff.
 			To make that work it stores the numbers of guesses you needed every game as a cookie in your browser. </p>
@@ -50,11 +95,6 @@
 		<p>some internal optimisations</p>
 		<button onclick="hideElements(`popup-changelogs`);">Close</button>
 	</div>
-
-	<header>
-		<h1 class="widescreen">The Genshin <img src="./images/gauge.png" alt="Gauge" class="image", class="icon"> dle</h1>
-		<h1 class="mobile">The Gaugedle <img src="./images/gauge.png" class="image", class="icon"></h1>
-	</header>
 
 	<h2 class="widescreen">Try guessing a character's ability using information like it's element, gauge units, cooldowns and more!</h2>
 	<h2 class="mobile">Guess an ability with it's element, gauge units, cooldowns and more!</h2>

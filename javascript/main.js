@@ -653,3 +653,5 @@ function revealAnswer() {
 // FOR DEVELOPEMENT: Select the correct-answer element on screen and display the answer
 // const correctAnswer = document.getElementById("correct-answer");
 // correctAnswer.textContent += randomAbility;
+/* hide survery by default */
+document.getElementById('survey-popup').style.display = 'none'
