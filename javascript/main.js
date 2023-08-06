@@ -654,4 +654,4 @@ function revealAnswer() {
 // const correctAnswer = document.getElementById("correct-answer");
 // correctAnswer.textContent += randomAbility;
 /* hide survery by default */
-document.getElementById('survey-popup').style.display = 'none'
+//document.getElementById('survey-popup').style.display = 'none'

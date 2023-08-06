@@ -29,7 +29,7 @@ function freezebg() {
 	bgimage = "static"
 }
 function unfreezebg() {
-	document.body.style.background = "url(./images/cooking.gif)";
+	document.body.style.background = "url(./images/cooking.webp)";
     document.body.style.background.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover"
     document.body.style.backgroundRepeat = "repeat-y"
