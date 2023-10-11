@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Genshin Gaugedle</title>
+	<meta name="Description" content="Try guessing a Genshin character's ability using information like it's element, gauge units, cooldowns and more!"> 	<!-- Description of this page for users and search engines. -->
+	<meta name="author" content="probablyjassin">
+	<meta name="title" content="Genshin Gaugedle">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+	<meta name="google-site-verification" content="QebuNazTMUuNlD6GgSrmAbVf5mxRFWJgaJLpGL9ValE" /> <!-- Google Search verification tag -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+	<link rel="icon" href="./images/favicon.ico">
+	<link rel="stylesheet" href="stylege.css">
+
+	<audio id="musicPlay">
+		<source src="./files/kahoot.mp3">
+  	</audio>
+
+	<script src="./javascript/cookies.js" defer></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+	<script src="./javascript/statistic.js" defer></script>
+	<script src="./javascript/abilities.js" defer></script>
+	<script src="./javascript/main.js" defer></script>
+	<script src="./javascript/background.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+	<script defer>
+		function submitSurvey(event) {
+			event.preventDefault();  // Prevent the form from submitting normally
+			const form = event.target; 
+			const formData = new FormData(form);
+			fetch(form.action, {
+				method: 'POST',
+				body: JSON.stringify(Object.fromEntries(formData)),
+				headers: {
+					'Content-Type': 'application/json',
+				},
+			})
+			.then(response => response.json())
+			.then(data => {
+				console.log(data);  // Handle the response from the server
+			})
+			.catch(error => {
+				console.error('Error:', error);
+			});
+		}
+	</script>
+
+</head>
+<body class="bg" id="page">
+	<!-- Survey stuff -->
+	<!-- <div style="all: unset;">
+		<button onclick="document.getElementById('survey-popup').style.display = 'initial'" class="btn btn-primary custom-button">
+			Feedback <i class="bi bi-question-circle"></i>
+		</button>
+	</div>
+	
+	<div id="survey-popup">
+		<form id="survey" action="http://PAGE:PORT/submit_survey" method="POST" onsubmit="submitSurvey(event)">
+			<p>What do you like most about the Gaugedle?</p>
+        	<input type="text" id="feedback" name="feedback">
+			<p>Do you have problems with the Gaugedle? (e.g. bugs, difficulty too high/low, ...)</p>
+        	<input type="text" id="problems" name="problems">
+			<p>(-for the new gamemode-) How would you modify the new gamemode to make it more enjoyable?</p>
+			<p>Possible ideas: time limit, wrong guess limit, different amounts of properties to guess</p>
+        	<input type="text" id="new" name="new">
+			<button type="submit" onclick="document.getElementById('survey-popup').style.display = 'none'">Submit</button>
+		</form>
+	</div> -->
+<!-- no more -->
+	<header>
+		<h1 class="widescreen">The Genshin <img src="./images/gauge.png" alt="Gauge" class="image", class="icon"> dle</h1>
+		<h1 class="mobile">The Gaugedle <img src="./images/gauge.png" class="image", class="icon"></h1>
+	</header>
+
+	<h1 style="display: none;">"Try guessing a Genshin character's ability using information like it's element, gauge units, cooldowns and more!"</h1>
+
+	<div id="cookie-popup">
+		<p>The game can show you statistics of how many guesses you needed per game and other quality of life stuff.
+			To make that work it stores the numbers of guesses you needed every game as a cookie in your browser. </p>
+		<div class='parent'>
+			<div class='child inline-block-child'>
+				<button id="agreebutton" name="agree" class="agree" onclick="hidePopup()" onclick="cookiesAgreeGe()">OkaygeBuisness</button>
+			</div>
+			<div class='child inline-block-child'>
+				<button name="decline" class="decline" name="declineCookiesButton" id="declineCookiesButton" onclick="hidePopup()">NOPERS</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="popup-changelogs">
+		<h2>Most recent changelogs</h2>
+		<p>some internal optimisations</p>
+		<button onclick="hideElements(`popup-changelogs`);">Close</button>
+	</div>
+
+	<h2 class="widescreen">Try guessing a character's ability using information like it's element, gauge units, cooldowns and more!</h2>
+	<h2 class="mobile">Guess an ability with it's element, gauge units, cooldowns and more!</h2>
+
+	<button onclick="newMode()">Work in Progress: a new gamemode!</button>
+
+	<label id="endless"> Endless Mode </label>
+	<label id="daily"> Daily Mode </label>
+
+	<label id="prop"></label>
+	<p id="proptext"></p>
+
+	<button id="modeButton"> Switch to Endless Mode</button>
+
+	<div id="dailyDiv"></div>
+	<div id="dailyDiv">
+		<h2 id="dailyText" >Congratulations, you completed the daily ICDle! <br> </h2> 
+		<div id="timer"></div>
+	</div>
+
+	<p id="incorrect-guesses">Guesses: <span id="incorrect-count">0</span>/8</p>
+	<p id="propCounter">Can you guess <span id="propCount"></span> more abilities?<br>
+		(you can click the gamemode's button again to roll a new property)
+	</p>
+
+	<div>
+		<button id="reset-button" onclick="resetGame()">Play again</button>
+	</div>
+
+	<input class="choicer" type="search" type="text" name="choicer" list="guess-select" id="guess-input" placeholder="--Guess an ability--">
+	<datalist id="guess-select"></datalist>
+
+	<div id="buttonsdiv" class='parent' style="align-items: center;" class="buttonsdiv">
+		<div class='child inline-block-child'>
+			<button id="submit-button" onclick="checkGuess()" onclick="closeEndPopup()">Submit Guess</button>
+		</div>
+
+		<div class='child inline-block-child'>
+			<button id="concede-button" onclick="">Concede</button>
+		</div>
+
+		<div class='child inline-block-child'>
+			<button onclick="makeChart()" id="stats-button">Stats</button>
+		</div>
+
+		<table id="ability-table" style="text-shadow: none;">
+			<tr></tr> <!-- Table gets filled automatically by js -->
+		</table>
+	</div>
+
+	<button id="bgbtn" class="button2" onclick="//pausebg()">Freeze Background</button>
+
+	<div id="confirm-popup">
+		<p> Are you sure you want to concede?</p>
+		<div class='parent'>
+			<div class='child inline-block-child'>
+				<button id="confirmButton" name="agree" class="confirm">Yes</button>
+			</div>
+			<div class='child inline-block-child'>
+				<button class="cancel" id="cancelButton">Cancel</button>
+			</div>
+		</div>
+	</div>
+
+	<div  id="statistic-popup">
+		<canvas id="myChart" width="800" height="450"></canvas>	
+		<div class="parent">
+			<div class="child inline-block-child" style="float: left;">
+				<button id="closestat" onclick="closestat()" style="background-color: #9d9d9d";> Close </button>
+			</div>
+			<div class="child inline-block-child" style="float: right;">
+				<button id="resetstats" style="background-color: #f44336;"> Reset Stats </button>
+			</div>
+		</div>
+	</div>
+
+	<div  id="end-popup">
+		<p id="end-popup p">---</p>
+		<div class="btncontainer">
+			<div class="btncenter">
+				<button id="closeBtn" onclick="closeEndPopup()" style="background-color: #9d9d9d";> Close </button>
+			</div>
+		  </div>
+	</div>
+
+	<footer>
+		<br>
+		<h5> Made by <a href="./aboutme/"> probablyjassin:</a> <a href="./version/"> Version 4.6</a> </h5>
+		<h5>Credit to <a href="https://www.twitch.tv/Zajef77"> Zajef77</a> who came up with the idea and provided the database</h5>
+	</footer>
+
+</body>
+</html>
