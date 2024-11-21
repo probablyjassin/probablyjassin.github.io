@@ -1,16 +1,31 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: false },
-  modules: ['@nuxt/content', '@nuxtjs/tailwindcss'],
-  routeRules: {
-    '/': { prerender: false }
-  },
-  css: ['~/assets/css/main.css'],
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  },
-  compatibilityDate: '2024-11-21',
-})
+	devtools: { enabled: false },
+	compatibilityDate: "2024-11-21",
+
+	modules: ["@nuxt/content", "@nuxtjs/tailwindcss", "shadcn-nuxt"],
+	css: ["~/assets/css/main.css"],
+
+	routeRules: {
+		"/": { prerender: false },
+	},
+
+	postcss: {
+		plugins: {
+			tailwindcss: {},
+			autoprefixer: {},
+		},
+	},
+
+	shadcn: {
+		/**
+		 * Prefix for all the imported component
+		 */
+		prefix: "",
+		/**
+		 * Directory that the component lives in.
+		 * @default "./components/ui"
+		 */
+		componentDir: "./components/ui",
+	},
+});
