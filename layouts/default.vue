@@ -1,13 +1,13 @@
 <template>
     <div>
         <nav>
-            <ul>
+            <ul class="flex">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
-        <main>
+        <main class="">
             <slot></slot>
         </main>
     </div>
@@ -15,17 +15,18 @@
 
 <script>
 export default {
-    name: 'DefaultLayout'
+    name: 'default'
 }
 </script>
 
 <style scoped>
 nav {
-    background-color: #333;
+    /* background-color: #333;
     color: white;
-    padding: 1rem;
+    padding: 1rem; */
 }
 
+/* 
 nav ul {
     list-style: none;
     display: flex;
@@ -35,10 +36,5 @@ nav ul {
 nav ul li a {
     color: white;
     text-decoration: none;
-}
-
-main {
-    padding: 1rem;
-}
+} */
 </style>
-</div>
