@@ -7,7 +7,7 @@ export default defineNuxtConfig({
 	css: ["~/assets/css/main.css"],
 
 	routeRules: {
-		"/": { prerender: false },
+		"/": { prerender: true },
 	},
 
 	postcss: {

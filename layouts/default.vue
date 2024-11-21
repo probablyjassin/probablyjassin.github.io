@@ -1,22 +1,37 @@
 <template>
 	<div>
-		<nav>
-			<ul class="flex">
-				<li><a href="/">Home</a></li>
-				<li><a href="/about">About</a></li>
-				<li><a href="/contact">Contact</a></li>
-			</ul>
-		</nav>
-		<main class="">
+		<NavigationMenu>
+			<NavigationMenuList>
+				<NavigationMenuItem>
+					<NuxtLink to="/docs">
+						<NavigationMenuLink :class="navigationMenuTriggerStyle()"> Documentation </NavigationMenuLink>
+					</NuxtLink>
+				</NavigationMenuItem>
+				<NavigationMenuItem>
+					<NavigationMenuTrigger>Item One</NavigationMenuTrigger>
+					<NavigationMenuContent>
+						<NavigationMenuLink>Link</NavigationMenuLink>
+					</NavigationMenuContent>
+				</NavigationMenuItem>
+			</NavigationMenuList>
+		</NavigationMenu>
+
+		<main class="px-[2em]">
 			<slot></slot>
 		</main>
 	</div>
 </template>
 
-<script>
-	export default {
-		name: "default",
-	};
+<script setup lang="ts">
+	import {
+		NavigationMenu,
+		NavigationMenuContent,
+		NavigationMenuItem,
+		NavigationMenuLink,
+		NavigationMenuList,
+		NavigationMenuTrigger,
+		navigationMenuTriggerStyle,
+	} from "@/components/ui/navigation-menu";
 </script>
 
 <style scoped></style>
