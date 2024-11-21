@@ -273,3 +273,12 @@ hr {
 .text-secondary {
 	@apply text-[var(--secondary-500)];
 }
+
+nav[aria-label="breadcrumb"] ol li a {
+	text-decoration: none;
+	@apply text-xl;
+}
+
+nav[aria-label="breadcrumb"] ol li a:hover {
+	text-decoration: underline;
+}
