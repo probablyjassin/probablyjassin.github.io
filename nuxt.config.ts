@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   routeRules: {
     '/': { prerender: false }
   },
+  css: ['~/assets/css/main.css'],
   postcss: {
     plugins: {
       tailwindcss: {},
