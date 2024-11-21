@@ -1,68 +1,71 @@
-name: build and deploy Nuxt site to pages
+name: Deploy Docker Image
 
 on:
-  # Runs on pushes targeting the default branch
   push:
-    branches: ["master"]
-
-  # Allows you to run this workflow manually from the Actions tab
+    branches:
+      - main
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  packages: write
 
 jobs:
-  # Build job
-  build:
+  build-and-push:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+      actions: write
+
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
 
-      - name: Cache Node Modules
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check for existing cache
+        id: cache-check
         uses: actions/cache@v4
         with:
-          path: node_modules
-          key: ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-modules-
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.ref }}-${{ hashFiles('Dockerfile', 'requirements.txt') }}
 
-      - name: Install dependencies
-        run: npm install
+      - name: Delete old caches if no cache found
+        if: steps.cache-check.outputs.cache-hit != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if gh cache list --repo probablyjassin/probablyjassin | grep -q 'buildx'; then
+            gh cache delete --all --repo probablyjassin/probablyjassin
+          else
+            echo "No caches to delete."
+          fi
 
-      - name: Static HTML export with Nuxt
-        run: npx nuxi generate
-
-      - name: Create .nojekyll for github pages
-        run: touch ./dist/.nojekyll
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Cache Docker layers
+        uses: actions/cache@v4
         with:
-          path: ./dist
+          path: |
+            /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.ref }}-${{ hashFiles('Dockerfile', 'requirements.txt')  }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-
 
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          platforms: linux/amd64,linux/arm64
+          tags: ghcr.io/probablyjassin/mk8dx-yuzu-bot:latest
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache
