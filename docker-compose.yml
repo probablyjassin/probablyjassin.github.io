@@ -1,0 +1,18 @@
+services:
+  website:
+    container_name: probablyjassin.github.io
+    image: ghcr.io/probablyjassin/probablyjassin.github.io
+    restart: unless-stopped
+    ports:
+        - "3000"
+    volumes:
+      - ./content:/app/content
+    #env_file:
+    #  - .env
+
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 120 --cleanup # every 2 minutes
+    restart: unless-stopped
