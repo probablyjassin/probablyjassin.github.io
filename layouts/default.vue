@@ -47,12 +47,12 @@
 		<Breadcrumb>
 			<BreadcrumbList>
 				<BreadcrumbItem>
-					<BreadcrumbLink href="/"> Home </BreadcrumbLink>
+					<BreadcrumbLink class="cursor-pointer" @click="router.push('/')"> Home </BreadcrumbLink>
 				</BreadcrumbItem>
 				<template v-for="(location, index) in route.fullPath.split('/').filter(Boolean)" :key="index">
 					<BreadcrumbSeparator class="mt-1" />
 					<BreadcrumbItem>
-						<BreadcrumbLink :href="`/${route.fullPath.split('/').slice(1).join('/')}`">
+						<BreadcrumbLink class="cursor-pointer">
 							{{ location.charAt(0).toUpperCase() + location.slice(1) }}
 						</BreadcrumbLink>
 					</BreadcrumbItem>
@@ -71,6 +71,7 @@
 	import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 
 	const route = useRoute();
+	const router = useRouter();
 
 	const isMounted = ref(false);
 	onMounted(() => {
