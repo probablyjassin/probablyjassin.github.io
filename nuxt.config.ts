@@ -6,6 +6,7 @@ export default defineNuxtConfig({
 	modules: ["@nuxt/content", "@nuxtjs/tailwindcss", "shadcn-nuxt", "@nuxt/icon"],
 	css: ["~/assets/css/main.css"],
 
+	// gh-pages
 	routeRules: {
 		"/*": { prerender: true },
 	},
