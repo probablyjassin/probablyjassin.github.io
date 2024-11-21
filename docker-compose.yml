@@ -4,7 +4,7 @@ services:
     image: ghcr.io/probablyjassin/probablyjassin.github.io
     restart: unless-stopped
     ports:
-        - "3000:32768"
+        - "3000:3000"
     #env_file:
     #  - .env
 
