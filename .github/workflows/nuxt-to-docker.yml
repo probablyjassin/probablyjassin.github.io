@@ -9,6 +9,7 @@ on:
 permissions:
   contents: read
   packages: write
+  actions: write
 
 jobs:
   build-and-push:
@@ -47,7 +48,7 @@ jobs:
       - name: Delete old caches if no cache found
         if: steps.cache-check.outputs.cache-hit != 'true'
         env:
-          GH_TOKEN: ${{ secrets.FOR_CACHE_REPO_PAT }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if gh cache list --repo probablyjassin/bot-mk8dx | grep -q 'buildx'; then
             gh cache delete --all --repo probablyjassin/bot-mk8dx
@@ -70,7 +71,7 @@ jobs:
           # This cannot be specified with `num-old-versions-to-delete`. By default, `min-versions-to-keep` takes precedence over `num-old-versions-to-delete`.
           # When set to 0, all deletable versions will be deleted.
           # When set greater than 0, all deletable package versions except the specified number will be deleted.
-          min-versions-to-keep: 2
+          #min-versions-to-keep: 2
 
       - name: Cache Docker layers
         uses: actions/cache@v4
