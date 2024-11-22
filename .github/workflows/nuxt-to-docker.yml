@@ -50,8 +50,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if gh cache list --repo probablyjassin/bot-mk8dx | grep -q 'buildx'; then
-            gh cache delete --all --repo probablyjassin/bot-mk8dx
+          if gh cache list --repo probablyjassin/probablyjassin.github.io | grep -q 'buildx'; then
+            gh cache delete --all --repo probablyjassin/probablyjassin.github.io
           else
             echo "No caches to delete."
           fi
