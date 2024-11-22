@@ -1,33 +1,45 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-				devtools: { enabled: false },
-				compatibilityDate: "2024-11-21",
+	devtools: { enabled: false },
+	compatibilityDate: "2024-11-21",
 
-				modules: [
-				 "@nuxt/content",
-				 "@nuxtjs/tailwindcss",
-				 "shadcn-nuxt",
-				 "@nuxt/icon",
-				 "@nuxthq/studio",
-				],
-				css: ["~/assets/css/main.css"],
+	modules: [
+		"@nuxt/content",
+		"@nuxtjs/tailwindcss",
+		"shadcn-nuxt",
+		"@nuxt/icon",
+		"@nuxthq/studio",
+	],
+	css: ["~/assets/css/main.css"],
 
-				postcss: {
-								plugins: {
-												tailwindcss: {},
-												autoprefixer: {},
-								},
-				},
+	postcss: {
+		plugins: {
+			tailwindcss: {},
+			autoprefixer: {},
+		},
+	},
 
-				shadcn: {
-								/**
-									* Prefix for all the imported component
-									*/
-								prefix: "",
-								/**
-									* Directory that the component lives in.
-									* @default "./components/ui"
-									*/
-								componentDir: "./components/ui",
-				},
+	content: {
+		sources: {
+			github: {
+				prefix: '',
+				driver: 'github',
+				repo: "probablyjassin/blog-content",
+				branch: "main",
+				dir: "content",
+			},
+		}
+	},
+
+	shadcn: {
+		/**
+			* Prefix for all the imported component
+			*/
+		prefix: "",
+		/**
+			* Directory that the component lives in.
+			* @default "./components/ui"
+			*/
+		componentDir: "./components/ui",
+	},
 });
