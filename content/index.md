@@ -8,4 +8,4 @@ This is set up with NuxtJS and it's `content` module to make writing my content 
 
 This is written in markdown and then rendered to HTML at build time.
 
-More coming soon~
+More coming soon\~
