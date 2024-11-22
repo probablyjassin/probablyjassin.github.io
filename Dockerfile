@@ -1,6 +1,8 @@
 # Build stage
 FROM node:20-slim AS builder
 
+LABEL org.opencontainers.image.source="https://github.com/probablyjassin/probablyjassin.github.io"
+
 WORKDIR /app
 
 COPY package*.json ./
