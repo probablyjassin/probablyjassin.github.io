@@ -20,7 +20,6 @@ COPY --from=builder /app/.nuxt ./.nuxt
 COPY --from=builder /app/package*.json ./
 
 EXPOSE 3000
-VOLUME /app/.nuxt/content-cache/parsed/content
 ENV NODE_ENV=production
 
 CMD ["node", ".output/server/index.mjs"]
