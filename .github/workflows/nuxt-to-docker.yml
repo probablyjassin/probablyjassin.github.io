@@ -43,7 +43,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-buildx-${{ github.ref }}-${{ hashFiles('Dockerfile', 'requirements.txt') }}
+          key: ${{ runner.os }}-buildx-${{ hashFiles('**/Dockerfile', '**/package*.json') }}
 
       - name: Delete old caches if no cache found
         if: steps.cache-check.outputs.cache-hit != 'true'
