@@ -1,11 +1,11 @@
 # probablyjassin
 
-## Nuxt Content
+## Work in progress
 
-This page corresponds to the `/` route of your website. You can delete it or create another file in the `content/` directory.
+I'm rewriting my entire website to become more of a blog than a showcase.
 
-Try to navigate to [/about](/about). These 2 pages are rendered by the `pages/[...slug].vue` component.
+This is set up with NuxtJS and it's `content` module to make writing my content easier.
 
----
+This is written in markdown and then rendered to HTML at build time.
 
-Look at the [Content documentation](https://content.nuxtjs.org/) to learn more.
+More coming soon~
