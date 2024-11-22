@@ -223,6 +223,22 @@ blockquote {
 	@apply border-l-4 border-[var(--primary-500)] pl-4 italic mb-4;
 }
 
+ul {
+	list-style-type: disc;
+}
+
+ul ul {
+	list-style-type: circle;
+}
+
+ul ul ul {
+	list-style-type: square;
+}
+
+ol {
+	list-style-type: decimal;
+}
+
 pre {
 	@apply bg-[var(--code-bg-color)] p-4 rounded mb-4 overflow-x-auto;
 }
