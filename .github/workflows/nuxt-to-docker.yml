@@ -36,7 +36,25 @@ jobs:
           tags: |
             type=raw,value=latest
             type=sha,prefix=
-            
+
+      - name: Check for existing cache
+        id: cache-check
+        uses: actions/cache@v4
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.ref }}-${{ hashFiles('Dockerfile', 'requirements.txt') }}
+
+      - name: Delete old caches if no cache found
+        if: steps.cache-check.outputs.cache-hit != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.FOR_CACHE_REPO_PAT }}
+        run: |
+          if gh cache list --repo probablyjassin/bot-mk8dx | grep -q 'buildx'; then
+            gh cache delete --all --repo probablyjassin/bot-mk8dx
+          else
+            echo "No caches to delete."
+          fi
+
       - name: Cache Docker layers
         uses: actions/cache@v4
         with:
