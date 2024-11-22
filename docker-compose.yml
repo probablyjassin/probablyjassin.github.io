@@ -1,7 +1,7 @@
 services:
   website:
     container_name: probablyjassin.github.io
-    image: ghcr.io/probablyjassin/probablyjassin.github.io
+    image: ghcr.io/probablyjassin/probablyjassin.github.io:latest
     restart: unless-stopped
     ports:
         - "3000:3000"
