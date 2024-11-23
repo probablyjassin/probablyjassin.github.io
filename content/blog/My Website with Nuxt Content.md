@@ -11,21 +11,25 @@ image: https://i.ibb.co/pJSd4kg/jassin.webp
 
 What was clear from the start, is that I wanted to use [Nuxt.js](https://nuxt.com/) (based on [Vue](https://vuejs.org)), since that's what I know best and prefer.
 
+::CodeWithCopyButton
+
 ```vue [page.vue]
 <script setup>
-import { ref } from 'vue'
-const count = ref(0)
+	import { ref } from "vue";
+	const count = ref(0);
 </script>
 
 <template>
-  <button @click="count++">Count is: {{ count }}</button>
+	<button @click="count++">Count is: {{ count }}</button>
 </template>
 
 <style scoped>
-button {
-  font-weight: bold;
-}
+	button {
+		font-weight: bold;
+	}
 </style>
 ```
+
+::
 
 I find Single-file components to be pretty simple and easy to get behind.
