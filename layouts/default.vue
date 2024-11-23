@@ -83,13 +83,27 @@
 		return segments.map((segment): BreadcrumbSegment => {
 			currentPath += `/${segment}`;
 
-			if (currentPath.startsWith("/blog/") && contentData.value?.title) {
+			// For blog articles
+			if (currentPath.startsWith("/blog/")) {
+				if (segment === "blog") {
+					return {
+						path: currentPath,
+						title: routeTitles[segment] ?? "Blog",
+					};
+				}
+				// For actual blog posts, use content title or clean up filename
 				return {
 					path: currentPath,
-					title: contentData.value.title,
+					title:
+						contentData.value?.title ??
+						segment
+							.split("-")
+							.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+							.join(" "),
 				};
 			}
 
+			// Default handling for other routes
 			return {
 				path: currentPath,
 				title: routeTitles[segment] ?? segment.charAt(0).toUpperCase() + segment.slice(1),
