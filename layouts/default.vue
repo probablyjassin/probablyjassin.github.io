@@ -3,13 +3,17 @@
 		<nav id="navbar" class="h-[40px] mb-[24px]">
 			<ul class="flex justify-start text-center">
 				<template v-for="link in links" :key="link.name">
-					<li v-if="link.href" class="flex items-center group">
-						<Icon :name="`line-md:${link.linemdicon}`" class="w-5 h-5 text-[var(--text-900)] group-hover:text-[var(--secondary-400)] mr-2" />
-						<a :href="link.to" class="text-[var(--text-900)] group-hover:text-[var(--secondary-400)]">{{ link.name }}</a>
+					<li v-if="link.href">
+						<a :href="link.to" class="flex items-center group text-[var(--text-900)] group-hover:text-[var(--secondary-400)]">
+							<Icon :name="`line-md:${link.linemdicon}`" class="w-5 h-5 text-[var(--text-900)] group-hover:text-[var(--secondary-400)] mr-2" />
+							<span class="group-hover:text-[var(--secondary-400)]">{{ link.name }}</span>
+						</a>
 					</li>
-					<li v-else class="flex items-center group">
-						<Icon :name="`line-md:${link.linemdicon}`" class="w-5 h-5 text-[var(--text-900)] group-hover:text-[var(--secondary-400)] mr-2" />
-						<NuxtLink :to="link.to" class="no-underline text-[var(--text-900)] group-hover:text-[var(--secondary-400)]"> {{ link.name }}</NuxtLink>
+					<li v-else>
+						<NuxtLink :to="link.to" class="flex items-center group no-underline text-[var(--text-900)]">
+							<Icon :name="`line-md:${link.linemdicon}`" class="w-5 h-5 text-[var(--text-900)] group-hover:text-[var(--secondary-400)] mr-2" />
+							<span class="group-hover:text-[var(--secondary-400)]">{{ link.name }}</span>
+						</NuxtLink>
 					</li>
 				</template>
 			</ul>
@@ -109,6 +113,10 @@
 <style scoped>
 	#navbar {
 		background-color: var(--primary-300);
+	}
+
+	ul {
+		list-style-type: none;
 	}
 
 	nav ul {
