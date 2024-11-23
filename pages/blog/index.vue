@@ -10,11 +10,12 @@
 		</div>
 
 		<div v-else-if="posts?.length" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-			<article
+			<NuxtLink
+				:to="post._path"
 				v-for="post in posts"
 				:key="post._path"
-				class="p-6 w-full rounded-lg border border-[var(--primary-200)] hover:border-[var(--primary-400)] transition-colors">
-				<NuxtLink :to="post._path" class="no-underline">
+				class="p-6 w-full rounded-lg border border-[var(--primary-200)] hover:border-[var(--primary-400)] transition-colors no-underline">
+				<article>
 					<h2 class="text-2xl font-semibold mb-2 text-[var(--text-900)]">
 						{{ post.title }}
 					</h2>
@@ -22,10 +23,11 @@
 						{{ post.description }}
 					</div>
 					<div class="text-sm text-[var(--text-600)]">
-						{{ formatDate(post) }}
+						{{ post.date }}
 					</div>
-				</NuxtLink>
-			</article>
+					<NuxtImg v-if="post.image" class="w-full h-48 object-cover rounded-lg mb-4" :src="post.image" :alt="post.title" />
+				</article>
+			</NuxtLink>
 		</div>
 
 		<div v-else class="text-center py-12 text-[var(--text-700)]">No blog posts found.</div>
@@ -37,6 +39,7 @@
 		_path: string;
 		title: string;
 		description?: string;
+		image?: string;
 		date?: string;
 		_file: string;
 		_dir: string;
@@ -53,20 +56,4 @@
 			.sort({ _path: 1 })
 			.find()
 	);
-
-	// Format date with fallback
-	const formatDate = (post: BlogPost): string => {
-		const now = new Date().toLocaleDateString("en-US", {
-			year: "numeric",
-			month: "long",
-			day: "numeric",
-		});
-		return post.date
-			? new Date(post.date).toLocaleDateString("en-US", {
-					year: "numeric",
-					month: "long",
-					day: "numeric",
-			  })
-			: "";
-	};
 </script>
