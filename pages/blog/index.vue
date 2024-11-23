@@ -9,11 +9,11 @@
 			</div>
 		</div>
 
-		<div v-else-if="posts?.length" class="space-y-8">
+		<div v-else-if="posts?.length" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 			<article
 				v-for="post in posts"
 				:key="post._path"
-				class="p-6 rounded-lg border border-[var(--primary-200)] hover:border-[var(--primary-400)] transition-colors">
+				class="p-6 w-full rounded-lg border border-[var(--primary-200)] hover:border-[var(--primary-400)] transition-colors">
 				<NuxtLink :to="post._path" class="no-underline">
 					<h2 class="text-2xl font-semibold mb-2 text-[var(--text-900)]">
 						{{ post.title }}
@@ -67,6 +67,6 @@
 					month: "long",
 					day: "numeric",
 			  })
-			: now;
+			: "";
 	};
 </script>
