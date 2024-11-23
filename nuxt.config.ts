@@ -13,6 +13,13 @@ export default defineNuxtConfig({
 		},
 	},
 
+	content: {
+		highlight: {
+			theme: "github-dark",
+			preload: ["vue", "typescript", "javascript", "bash", "python", "json", "yml"],
+		},
+	},
+
 	shadcn: {
 		/**
 		 * Prefix for all the imported component
