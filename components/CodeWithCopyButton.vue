@@ -1,8 +1,8 @@
 <template>
 	<div class="code-block-wrapper group">
 		<slot></slot>
-		<button class="copy-button" @click="copyCode" :title="copied ? 'Copied!' : 'Copy code'">
-			<Icon :name="copied ? 'line-md:check' : 'line-md:content-copy'" class="w-4 h-4" />
+		<button class="copy-button" @click="copyCode">
+			<Icon :name="copied ? 'line-md:confirm' : 'line-md:document-code'" class="w-8 h-8 text-[var(--accent-50)]" />
 		</button>
 	</div>
 </template>
@@ -23,3 +23,16 @@
 		}
 	};
 </script>
+
+<style scoped>
+	.code-block-wrapper {
+		@apply relative;
+	}
+
+	.copy-button {
+		@apply absolute right-2 w-12 h-12 top-2 p-2 rounded-2xl 
+			bg-[var(--accent-400)] text-[var(--text-700)]
+			hover:bg-[var(--accent-600)] hover:text-[var(--text-900)]
+			transition-colors duration-200 opacity-0 group-hover:opacity-100;
+	}
+</style>

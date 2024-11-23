@@ -246,17 +246,6 @@ pre:has(code) {
 	@apply p-4 rounded-3xl;
 }
 
-.code-block-wrapper {
-	@apply relative;
-}
-
-.copy-button {
-	@apply absolute right-2 top-2 p-2 rounded-md 
-    bg-[var(--background-300)] text-[var(--text-700)]
-    hover:bg-[var(--background-400)] hover:text-[var(--text-900)]
-    transition-colors duration-200 opacity-0 group-hover:opacity-100;
-}
-
 @media (prefers-color-scheme: dark) {
 	pre {
 		@apply bg-[var(--background-700)] text-[var(--text-200)];
