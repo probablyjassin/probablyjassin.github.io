@@ -1,6 +1,6 @@
 <template>
 	<main class="max-w-4xl mx-auto px-4">
-		<h1 class="text-4xl font-bold mb-8">Blog Posts</h1>
+		<h1 class="text-4xl font-bold mb-8">Things I wrote about</h1>
 
 		<div v-if="pending" class="animate-pulse">
 			<div v-for="i in 3" :key="i" class="mb-8">
