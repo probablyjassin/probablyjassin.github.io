@@ -3,10 +3,11 @@
 	"type": "module",
 	"scripts": {
 		"build": "nuxt build",
-		"dev": "nuxt dev",
+		"dev": "nuxt dev --host",
 		"generate": "nuxt generate",
 		"preview": "nuxt preview",
-		"start": "nuxt start"
+		"start": "nuxt start",
+		"upgrade": "nuxt upgrade"
 	},
 	"dependencies": {
 		"@nuxt/content": "^2.13.4",
