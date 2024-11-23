@@ -50,8 +50,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if gh cache list --repo probablyjassin/probablyjassin.github.io | grep -q 'buildx'; then
-            gh cache delete --all --repo probablyjassin/probablyjassin.github.io
+          if gh cache list --repo ${{ github.repository }} | grep -q 'buildx'; then
+            gh cache delete --all --repo ${{ github.repository }}
           else
             echo "No caches to delete."
           fi
@@ -61,7 +61,7 @@ jobs:
         with:
           # Name of the package.
           # Required
-          package-name: probablyjassin.github.io
+          package-name: ${{ github.event.repository.name }}
 
           # Type of the package. Can be one of docker (v4 or older), container (v5 or newer), maven, npm, nuget, or rubygems.
           # Required
