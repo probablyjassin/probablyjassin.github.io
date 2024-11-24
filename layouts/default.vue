@@ -42,7 +42,7 @@
 		<footer class="mt-auto p-6 bg-[var(--primary-100)]">
 			<div class="container mx-auto flex justify-between items-center">
 				<div class="flex items-center space-x-4">
-					<img src="/blog-previews/probablyjassin.webp" alt="Footer logo" class="h-10 w-10 rounded-full" />
+					<NuxtImg src="/blog-previews/probablyjassin.webp" alt="Footer logo" class="h-10 w-10 rounded-full" />
 					<p class="text-[var(--text-900)]">© 2024 <span class="whitespace-nowrap">Jässin Aouani</span></p>
 				</div>
 				<div class="flex space-x-6">
