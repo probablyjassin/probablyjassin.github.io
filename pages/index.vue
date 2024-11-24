@@ -1,9 +1,11 @@
 <template>
-	<NuxtLayout>
-		<main>
-			<ContentDoc />
-		</main>
-	</NuxtLayout>
+	<div>
+		<NuxtLayout>
+			<main>
+				<ContentDoc />
+			</main>
+		</NuxtLayout>
+	</div>
 </template>
 
 <script setup>

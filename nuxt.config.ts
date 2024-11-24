@@ -6,6 +6,10 @@ export default defineNuxtConfig({
 	modules: ["@nuxt/content", "@nuxtjs/tailwindcss", "shadcn-nuxt", "@nuxt/icon", "@nuxthq/studio", "@nuxt/image", "@nuxtjs/sitemap", "@nuxtjs/robots"],
 	css: ["~/assets/css/main.css"],
 
+	app: {
+		pageTransition: { name: "page", mode: "out-in" },
+	},
+
 	postcss: {
 		plugins: {
 			tailwindcss: {},
