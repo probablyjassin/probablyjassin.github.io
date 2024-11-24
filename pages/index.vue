@@ -1,7 +1,9 @@
 <template>
-	<main>
-		<ContentDoc />
-	</main>
+	<NuxtLayout>
+		<main>
+			<ContentDoc />
+		</main>
+	</NuxtLayout>
 </template>
 
 <script setup>
