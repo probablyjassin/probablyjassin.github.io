@@ -43,7 +43,7 @@
 			<div class="container mx-auto flex justify-between items-center">
 				<div class="flex items-center space-x-4">
 					<img src="/blog-previews/probablyjassin.webp" alt="Footer logo" class="h-10 w-10 rounded-full" />
-					<p class="text-[var(--text-900)]">© 2024 Jässin Aouani</p>
+					<p class="text-[var(--text-900)]">© 2024 <span class="whitespace-nowrap">Jässin Aouani</span></p>
 				</div>
 				<div class="flex space-x-6">
 					<a href="https://github.com/probablyjassin" class="text-[var(--text-900)] hover:text-[var(--secondary-400)] transition-colors">
