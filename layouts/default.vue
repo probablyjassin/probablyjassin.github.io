@@ -4,7 +4,7 @@
 			<ul class="flex justify-start text-center">
 				<template v-for="link in links" :key="link.name">
 					<li v-if="link.href">
-						<a :href="link.to" class="hidden sm:flex items-center group text-[var(--text-900)] group-hover:text-[var(--secondary-400)]">
+						<a :href="link.to" :title="link.name" class="hidden sm:flex items-center group text-[var(--text-900)] group-hover:text-[var(--secondary-400)]">
 							<Icon :name="`line-md:${link.linemdicon}`" class="w-5 h-5 text-[var(--text-900)] group-hover:text-[var(--secondary-400)] mr-2" />
 							<span class="group-hover:text-[var(--secondary-400)]">{{ link.name }}</span>
 						</a>
@@ -46,10 +46,10 @@
 					<p class="text-[var(--text-900)]">© 2024 <span class="whitespace-nowrap">Jässin Aouani</span></p>
 				</div>
 				<div class="flex space-x-6">
-					<a href="https://github.com/probablyjassin" class="text-[var(--text-900)] hover:text-[var(--secondary-400)] transition-colors">
+					<a title="github" href="https://github.com/probablyjassin" class="text-[var(--text-900)] hover:text-[var(--secondary-400)] transition-colors">
 						<Icon name="line-md:github" class="w-6 h-6" />
 					</a>
-					<a href="mailto:jassin@aouani.de" class="text-[var(--text-900)] hover:text-[var(--secondary-400)] transition-colors">
+					<a title="email" href="mailto:jassin@aouani.de" class="text-[var(--text-900)] hover:text-[var(--secondary-400)] transition-colors">
 						<Icon name="line-md:email" class="w-6 h-6" />
 					</a>
 				</div>
