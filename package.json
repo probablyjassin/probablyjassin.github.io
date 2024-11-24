@@ -13,6 +13,8 @@
 		"@nuxt/icon": "^1.8.2",
 		"@nuxt/image": "^1.8.1",
 		"@nuxthq/studio": "^2.2.1",
+		"@nuxtjs/robots": "^5.0.0",
+		"@nuxtjs/sitemap": "^7.0.0",
 		"@nuxtjs/tailwindcss": "^6.12.2",
 		"class-variance-authority": "^0.7.0",
 		"clsx": "^2.1.1",
