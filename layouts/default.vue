@@ -4,7 +4,7 @@
 			<ul class="flex justify-start text-center">
 				<template v-for="link in links" :key="link.name">
 					<li v-if="link.href">
-						<a :href="link.to" class="flex items-center group text-[var(--text-900)] group-hover:text-[var(--secondary-400)]">
+						<a :href="link.to" class="hidden sm:flex items-center group text-[var(--text-900)] group-hover:text-[var(--secondary-400)]">
 							<Icon :name="`line-md:${link.linemdicon}`" class="w-5 h-5 text-[var(--text-900)] group-hover:text-[var(--secondary-400)] mr-2" />
 							<span class="group-hover:text-[var(--secondary-400)]">{{ link.name }}</span>
 						</a>

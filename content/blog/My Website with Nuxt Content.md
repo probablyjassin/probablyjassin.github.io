@@ -14,22 +14,24 @@ image: /blog-previews/probablyjassin.webp
 What was clear from the start, is that I wanted to use [Nuxt.js](https://nuxt.com/) (based on [Vue](https://vuejs.org)), since that's what I know best and prefer.
 
 ::code-with-copy-button
+
 ```vue [page.vue]
 <script setup>
-    import { ref } from "vue";
-    const count = ref(0);
+	import { ref } from "vue";
+	const count = ref(0);
 </script>
 
 <template>
-    <button @click="count++">Count is: {{ count }}</button>
+	<button @click="count++">Count is: {{ count }}</button>
 </template>
 
 <style scoped>
-    button {
-        font-weight: bold;
-    }
+	button {
+		font-weight: bold;
+	}
 </style>
 ```
+
 ::
 
 I find single-file components to be pretty simple and easy to get behind. It's not the most popular framework, but it has a great community with great support for what matters to me:
@@ -57,6 +59,7 @@ The challenge is that Nuxt Content seemingly requires [SSR (Server Side Renderin
 So here is the current pipeline for how my Website is deployed:
 
 ::code-with-copy-button
+
 ```yaml [workflow.yml]
 jobs:
   build-and-push:
@@ -77,11 +80,13 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 ```
+
 ::
 
 We log into the container registry and checkout the codebase to get ready for building
 
 ::code-with-copy-button
+
 ```yaml [workflow.yml]
 - name: Check for existing cache
         id: cache-check
@@ -116,11 +121,13 @@ We log into the container registry and checkout the codebase to get ready for bu
           restore-keys: |
             ${{ runner.os }}-buildx-
 ```
+
 ::
 
 We want to cache the Docker layers to improve the time it takes to run this workflow, but also have to manage deleting this cache if it became invalid. Same goes for old package versions. GitHub keeps these around by default, but for a project like this, I don't want that. So I made the workflow delete them.
 
 ::code-with-copy-button
+
 ```yaml [workflow.yml]
 - name: Build and push Docker image
         uses: docker/build-push-action@v6
@@ -133,6 +140,7 @@ We want to cache the Docker layers to improve the time it takes to run this work
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
 ```
+
 ::
 
 And at last, we build and push the Docker Image, to be pulled down by me and hosted.
