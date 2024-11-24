@@ -13,7 +13,7 @@
 		</main>
 		<hr v-if="$route.path.startsWith('/blog/')" />
 		<section v-if="!pending && posts?.length && $route.path.startsWith('/blog/')" class="mt-8">
-			<h2 class="text-2xl font-bold mb-4">Have you also read these yet ? 👀</h2>
+			<h2 class="text-2xl font-bold mb-4">Did you also read these? 👀</h2>
 			<ul>
 				<li v-for="post in shuffled(posts.filter((p) => p._path !== $route.path).slice(0, 3))" :key="post._path">
 					<NuxtLink :to="post._path" class="text-primary underline">{{ post.title }}</NuxtLink>
