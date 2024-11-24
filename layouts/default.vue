@@ -35,9 +35,26 @@
 			</BreadcrumbList>
 		</Breadcrumb>
 
-		<main class="px-6">
+		<main class="min-h-screen px-6">
 			<slot></slot>
 		</main>
+
+		<footer class="mt-auto p-6 bg-[var(--primary-100)]">
+			<div class="container mx-auto flex justify-between items-center">
+				<div class="flex items-center space-x-4">
+					<img src="/blog-previews/probablyjassin.webp" alt="Footer logo" class="h-10 w-10 rounded-full" />
+					<p class="text-[var(--text-900)]">© 2024 Jässin ***REMOVED***</p>
+				</div>
+				<div class="flex space-x-6">
+					<a href="https://github.com/probablyjassin" class="text-[var(--text-900)] hover:text-[var(--secondary-400)] transition-colors">
+						<Icon name="line-md:github" class="w-6 h-6" />
+					</a>
+					<a href="mailto:***REMOVED***" class="text-[var(--text-900)] hover:text-[var(--secondary-400)] transition-colors">
+						<Icon name="line-md:email" class="w-6 h-6" />
+					</a>
+				</div>
+			</div>
+		</footer>
 	</div>
 </template>
 
