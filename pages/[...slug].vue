@@ -11,6 +11,7 @@
 				</template>
 			</ContentDoc>
 		</main>
+		<hr v-if="$route.path.startsWith('/blog/')" />
 		<section v-if="!pending && posts?.length && $route.path.startsWith('/blog/')" class="mt-8">
 			<h2 class="text-2xl font-bold mb-4">Have you also read these yet ? 👀</h2>
 			<ul>
