@@ -7,7 +7,7 @@
 <script setup lang="ts">
 	useHead({
 		htmlAttrs: {
-			lang: "de",
+			lang: "en",
 		},
 	});
 </script>
