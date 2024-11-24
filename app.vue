@@ -9,7 +9,21 @@
 		htmlAttrs: {
 			lang: "en",
 		},
+		link: [
+			{
+				rel: "apple-touch-icon",
+				sizes: "128x128",
+				href: "/favicon.ico",
+			},
+			{
+				rel: "icon",
+				type: "image/x-icon",
+				sizes: "128x128",
+				href: "/favicon.ico",
+			}
+		],
 	});
+</script>
 </script>
 
 <style>
