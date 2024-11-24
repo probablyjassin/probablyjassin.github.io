@@ -4,7 +4,7 @@
 			<h1 class="text-4xl font-bold mb-8">Things I wrote about</h1>
 
 			<div v-if="pending" class="animate-pulse grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-				<div v-for="i in 6" :key="i" class="mb-8 bg-gray-400 h-[35em]">
+				<div v-for="i in 6" :key="i" class="mb-8 bg-slate-800 rounded-3xl h-[35em]">
 					<div class="px-6 w-full rounded-lg border border-[var(--primary-200)] hover:border-[var(--primary-400)] bg-gray-200"></div>
 				</div>
 			</div>
