@@ -20,10 +20,9 @@
 				type: "image/x-icon",
 				sizes: "128x128",
 				href: "/favicon.ico",
-			}
+			},
 		],
 	});
-</script>
 </script>
 
 <style>
