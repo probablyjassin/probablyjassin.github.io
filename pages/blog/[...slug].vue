@@ -5,6 +5,7 @@
 				<Suspense>
 					<template #default>
 						<main>
+							<p class="mb-[-30px] text-[var(--background-400)]">{{ page?.date }}</p>
 							<ContentLoader />
 							<hr />
 							<RelatedPosts v-if="showRelated" />
@@ -26,8 +27,24 @@
 <script setup lang="ts">
 const showRelated = ref(false)
 
-// Only show related posts after main content loads
+// Only show after main content loads
 onMounted(() => {
 	showRelated.value = true
+})
+
+const route = useRoute()
+
+const { data: page } = await useAsyncData(`content-${route.path}`, () => {
+	return queryContent()
+		.where({ _path: route.path })
+		.only(['description', 'tags', 'date'])
+		.findOne()
+})
+
+useHead({
+	meta: [
+		{ name: 'description', content: page.value?.description },
+		{ name: 'keywords', content: page.value?.tags }
+	]
 })
 </script>
