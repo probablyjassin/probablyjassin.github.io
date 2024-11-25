@@ -5,11 +5,17 @@
 </template>
 
 <script setup lang="ts">
+const route = useRoute();
+
 useHead({
 	htmlAttrs: {
 		lang: "en",
 	},
 	link: [
+		{
+			rel: 'canonical',
+			href: 'https://jassin.aouani.de' + route.path,
+		},
 		{
 			rel: "apple-touch-icon",
 			sizes: "128x128",
