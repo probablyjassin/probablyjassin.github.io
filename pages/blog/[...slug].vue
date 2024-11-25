@@ -5,7 +5,9 @@
 				<Suspense>
 					<template #default>
 						<main>
-							<p class="mb-[-30px] text-[var(--background-400)]">{{ page?.date }}</p>
+							<div class="mb-[-30px]">
+								<LazyPostMeta />
+							</div>
 							<ContentLoader />
 							<hr />
 							<RelatedPosts v-if="showRelated" />
@@ -37,7 +39,7 @@ const route = useRoute()
 const { data: page } = await useAsyncData(`content-${route.path}`, () => {
 	return queryContent()
 		.where({ _path: route.path })
-		.only(['description', 'tags', 'date'])
+		.only(['description', 'tags'])
 		.findOne()
 })
 
