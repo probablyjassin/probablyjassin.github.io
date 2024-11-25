@@ -13,10 +13,10 @@
 				</ContentDoc>
 			</main>
 			<hr />
-			<section v-if="!pending && posts?.length" class="mt-8">
+			<section v-if="postsState?.length" class="mt-8">
 				<h2 class="text-2xl font-bold mb-4">Did you also read these? 👀</h2>
 				<ul>
-					<li v-for="post in shuffled(posts.filter((p) => p._path !== $route.path).slice(0, 3))"
+					<li v-for="post in shuffled(postsState.filter((p) => p._path !== $route.path).slice(0, 3))"
 						:key="post._path">
 						<NuxtLink :to="post._path" class="text-primary underline">{{ post.title }}</NuxtLink>
 					</li>
@@ -37,17 +37,7 @@ interface BlogPost {
 	_dir: string;
 }
 
-// Filter and sort blog posts
-const { data: posts, pending } = await useAsyncData("blog-posts", () =>
-	queryContent<BlogPost>("blog")
-		.where({
-			_partial: false,
-			_draft: false,
-			_path: { $ne: "/blog" }, // Exclude index page
-		})
-		.sort({ _path: 1 })
-		.find()
-);
+const postsState = useState<BlogPost[]>("posts", () => []);
 
 const shuffled = <T>(items: T[]): T[] =>
 	items
