@@ -15,6 +15,7 @@ jobs:
   build-and-push:
     runs-on: ubuntu-latest
 
+    # Prepare
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -38,6 +39,35 @@ jobs:
             type=raw,value=latest
             type=sha,prefix=
 
+      # Caching
+      - name: Check for existing cache
+        id: cache-check
+        uses: actions/cache@v4
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.ref }}-${{ hashFiles('Dockerfile', 'package*.json') }}
+
+      - name: Delete old caches if no cache found
+        if: steps.cache-check.outputs.cache-hit != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.FOR_CACHE_REPO_PAT }}
+        run: |
+          if gh cache list --repo ${{ github.repository }} | grep -q 'buildx'; then
+            gh cache delete --all --repo ${{ github.repository }}
+          else
+            echo "No caches to delete."
+          fi
+
+      - name: Cache Docker layers
+        uses: actions/cache@v4
+        with:
+          path: |
+            /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.ref }}-${{ hashFiles('Dockerfile', 'package*.json')  }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-
+
+        # Delete old packages
       - name: Delete old package versions
         uses: actions/delete-package-versions@v5
         with:
@@ -55,6 +85,7 @@ jobs:
           # When set greater than 0, all deletable package versions except the specified number will be deleted.
           min-versions-to-keep: 3
 
+        # Build
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
@@ -63,5 +94,5 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache
