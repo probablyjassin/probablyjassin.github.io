@@ -6,11 +6,11 @@
 					<template #default>
 						<main>
 							<div class="mb-[-30px]">
-								<LazyPostMeta />
+								<LazyPostMeta v-if="isMounted" />
 							</div>
 							<ContentLoader />
 							<hr />
-							<RelatedPosts v-if="showRelated" />
+							<RelatedPosts v-if="isMounted" />
 						</main>
 					</template>
 					<template #fallback>
@@ -27,11 +27,11 @@
 </template>
 
 <script setup lang="ts">
-const showRelated = ref(false)
+const isMounted = ref(false)
 
 // Only show after main content loads
 onMounted(() => {
-	showRelated.value = true
+	isMounted.value = true
 })
 
 const route = useRoute()
