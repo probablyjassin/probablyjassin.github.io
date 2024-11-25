@@ -4,8 +4,7 @@
 			<main class="max-w-4xl mb-4 mx-auto px-4">
 				<h1 class="text-4xl font-bold mb-8">Things I wrote about</h1>
 
-				<div v-if="pending && !posts?.length"
-					class="animate-pulse grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+				<div v-if="!posts?.length" class="animate-pulse grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 					<div v-for="i in 6" :key="i" class="mb-8 bg-slate-800 rounded-3xl h-[35em]">
 						<div class="px-6 w-full rounded-lg border border-[var(--primary-200)]"></div>
 					</div>
@@ -64,7 +63,7 @@ interface BlogPost {
 	_dir: string;
 }
 
-const { data: posts, pending } = await useAsyncData("blog-posts", () =>
+const { data: posts, status, error, refresh, clear } = await useAsyncData("blog-posts", () =>
 	queryContent<BlogPost>("blog")
 		.where({
 			_partial: false,

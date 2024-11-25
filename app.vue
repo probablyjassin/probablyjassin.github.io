@@ -24,28 +24,6 @@ useHead({
 	],
 });
 
-interface BlogPost {
-	_path: string;
-	title: string;
-	description?: string;
-	image?: string;
-	date?: string;
-	_file: string;
-	_dir: string;
-}
-
-const { data: posts, status, error, refresh, clear } = await useAsyncData("blog-posts", async () =>
-	await queryContent<BlogPost>("blog")
-		.where({
-			_partial: false,
-			_draft: false,
-			_path: { $ne: "/blog" }, // Exclude index page
-		})
-		.sort({ _path: 1 })
-		.find()
-);
-
-const postsState = useState<BlogPost[]>("posts", () => posts.value || []);
 </script>
 
 <style>

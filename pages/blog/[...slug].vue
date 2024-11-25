@@ -7,7 +7,7 @@
 						<main>
 							<ContentLoader />
 							<hr />
-							<RelatedPosts v-if="showRelated" :current-path="$route.path" />
+							<RelatedPosts v-if="showRelated" />
 						</main>
 					</template>
 					<template #fallback>
