@@ -44,7 +44,7 @@ When I decided "Hey, I could write a little about my journey with my projects", 
 
 And it get's better! I don't know how I haven't heard of this any earlier, but there is an entire Git-based CMS for Nuxt Content - Nuxt Studio. The UI is great and it's what I'm using right now to write this! Not only does it feel better than writing my markdown in VSCode or a Terminal, it has a live preview directly on my Website, and commits changes to my GitHub-Repo to deploy to it in just a few minutes.
 
-![nuxtstudio.webp](/blog-images/nuxtstudio.webp){.mx-auto width="1000"}
+![nuxtstudio.webp](/blog-images/nuxtstudio.webp){width="1000"}
 
 ## Where is this hosted and how?
 
