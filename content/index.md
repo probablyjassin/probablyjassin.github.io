@@ -19,7 +19,7 @@ I enjoy coding things just because I'm interested.
 
 This website is a place for me to present these things and write about them, or anything else I want to!
 
-# About me
+## About me
 
 I finished school in June 2024, and since October of the same year I'm attending something called [vocational/dual education](https://en.wikipedia.org/wiki/Vocational_education), where I go to Uni for 3 months at a time, and then Work for 3 months to then swap back again, for 3 years total. I hope to learn a lot more about IT/Computer Science and eventually work there.
 
