@@ -26,7 +26,7 @@
 								</div>
 							</div>
 							<div class="mt-auto">
-								<NuxtImg v-if="post.image" class="w-full h-48 object-cover rounded-lg mt-4"
+								<NuxtPicture v-if="post.image" class="w-full h-48 object-cover rounded-lg mt-4"
 									:src="post.image" :alt="post.title" />
 							</div>
 						</article>
