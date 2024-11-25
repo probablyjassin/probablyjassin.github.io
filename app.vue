@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<!-- <NuxtLoadingIndicator color="pink" error-color="red" /> -->
+		<NuxtLoadingIndicator color="pink" error-color="red" />
 		<NuxtPage />
 	</div>
 </template>

@@ -6,7 +6,7 @@
 					<template #default>
 						<main>
 							<div class="mb-[-30px]">
-								<!-- <LazyPostMeta v-if="isMounted" /> -->
+								<LazyPostMeta v-if="isMounted" />
 							</div>
 							<ContentLoader />
 							<hr />
@@ -34,7 +34,7 @@ onMounted(() => {
 	isMounted.value = true
 })
 
-/* const route = useRoute()
+const route = useRoute()
 
 const { data: page } = await useAsyncData(`content-${route.path}`, () => {
 	return queryContent()
@@ -48,5 +48,5 @@ useHead({
 		{ name: 'description', content: page.value?.description },
 		{ name: 'keywords', content: page.value?.tags }
 	]
-}) */
+})
 </script>
