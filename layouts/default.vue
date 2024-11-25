@@ -4,14 +4,17 @@
 			<ul class="flex justify-start text-center">
 				<template v-for="link in links" :key="link.name">
 					<li v-if="link.href">
-						<a :href="link.to" :title="link.name" class="hidden sm:flex items-center group text-[var(--text-900)] group-hover:text-[var(--secondary-400)]">
-							<Icon :name="`line-md:${link.linemdicon}`" class="w-5 h-5 text-[var(--text-900)] group-hover:text-[var(--secondary-400)] mr-2" />
+						<a :href="link.to" :title="link.name"
+							class="hidden sm:flex items-center group text-[var(--text-900)] group-hover:text-[var(--secondary-400)]">
+							<Icon :name="`line-md:${link.linemdicon}`"
+								class="w-5 h-5 text-[var(--text-900)] group-hover:text-[var(--secondary-400)] mr-2" />
 							<span class="group-hover:text-[var(--secondary-400)]">{{ link.name }}</span>
 						</a>
 					</li>
 					<li v-else>
 						<NuxtLink :to="link.to" class="flex items-center group no-underline text-[var(--text-900)]">
-							<Icon :name="`line-md:${link.linemdicon}`" class="w-5 h-5 text-[var(--text-900)] group-hover:text-[var(--secondary-400)] mr-2" />
+							<Icon :name="`line-md:${link.linemdicon}`"
+								class="w-5 h-5 text-[var(--text-900)] group-hover:text-[var(--secondary-400)] mr-2" />
 							<span class="group-hover:text-[var(--secondary-400)]">{{ link.name }}</span>
 						</NuxtLink>
 					</li>
@@ -42,14 +45,17 @@
 		<footer class="mt-auto p-6 bg-[var(--primary-100)]">
 			<div class="container mx-auto flex justify-between items-center">
 				<div class="flex items-center space-x-4">
-					<NuxtImg src="/blog-previews/probablyjassin.webp" alt="Footer logo" class="h-10 w-10 rounded-full" />
+					<NuxtPicture src="/blog-previews/probablyjassin.webp" alt="Footer logo"
+						class="h-10 w-10 rounded-full" />
 					<p class="text-[var(--text-900)]">© 2024 <span class="whitespace-nowrap">Jässin Aouani</span></p>
 				</div>
 				<div class="flex space-x-6">
-					<a title="github" href="https://github.com/probablyjassin" class="text-[var(--text-900)] hover:text-[var(--secondary-400)] transition-colors">
+					<a title="github" href="https://github.com/probablyjassin"
+						class="text-[var(--text-900)] hover:text-[var(--secondary-400)] transition-colors">
 						<Icon name="line-md:github" class="w-6 h-6" />
 					</a>
-					<a title="email" href="mailto:jassin@aouani.de" class="text-[var(--text-900)] hover:text-[var(--secondary-400)] transition-colors">
+					<a title="email" href="mailto:jassin@aouani.de"
+						class="text-[var(--text-900)] hover:text-[var(--secondary-400)] transition-colors">
 						<Icon name="line-md:email" class="w-6 h-6" />
 					</a>
 				</div>
@@ -59,129 +65,130 @@
 </template>
 
 <script setup lang="ts">
-	import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
-	import { computed } from "vue";
-	import type { RouteLocationNormalizedLoaded, Router } from "vue-router";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
+import { computed } from "vue";
+import type { RouteLocationNormalizedLoaded, Router } from "vue-router";
 
-	interface BreadcrumbSegment {
-		path: string;
-		title: string;
+interface BreadcrumbSegment {
+	path: string;
+	title: string;
+}
+
+interface ContentMeta {
+	_path?: string;
+	title?: string;
+	[key: string]: unknown;
+}
+
+const route: RouteLocationNormalizedLoaded = useRoute();
+const router: Router = useRouter();
+
+// Type-safe route titles mapping
+const routeTitles: Record<string, string> = {
+	projects: "Projects",
+	blog: "Blog",
+};
+
+// Type-safe content query
+const { data: contentData } = await useAsyncData<ContentMeta | null>("content", async () => {
+	if (route.path.startsWith("/blog/")) {
+		const content = await queryContent<ContentMeta>().where({ _path: route.path }).findOne();
+		return content;
 	}
+	return null;
+});
 
-	interface ContentMeta {
-		_path?: string;
-		title?: string;
-		[key: string]: unknown;
-	}
+const breadcrumbSegments = computed<BreadcrumbSegment[]>(() => {
+	const cleanPath = route.path.split("?")[0];
+	const segments = cleanPath.split("/").filter(Boolean);
 
-	const route: RouteLocationNormalizedLoaded = useRoute();
-	const router: Router = useRouter();
+	let currentPath = "";
+	return segments.map((segment): BreadcrumbSegment => {
+		currentPath += `/${segment}`;
 
-	// Type-safe route titles mapping
-	const routeTitles: Record<string, string> = {
-		projects: "Projects",
-		blog: "Blog",
-	};
-
-	// Type-safe content query
-	const { data: contentData } = await useAsyncData<ContentMeta | null>("content", async () => {
-		if (route.path.startsWith("/blog/")) {
-			const content = await queryContent<ContentMeta>().where({ _path: route.path }).findOne();
-			return content;
-		}
-		return null;
-	});
-
-	const breadcrumbSegments = computed<BreadcrumbSegment[]>(() => {
-		const cleanPath = route.path.split("?")[0];
-		const segments = cleanPath.split("/").filter(Boolean);
-
-		let currentPath = "";
-		return segments.map((segment): BreadcrumbSegment => {
-			currentPath += `/${segment}`;
-
-			// For blog articles
-			if (currentPath.startsWith("/blog/")) {
-				if (segment === "blog") {
-					return {
-						path: currentPath,
-						title: routeTitles[segment] ?? "Blog",
-					};
-				}
-				// For actual blog posts, use content title or clean up filename
+		// For blog articles
+		if (currentPath.startsWith("/blog/")) {
+			if (segment === "blog") {
 				return {
 					path: currentPath,
-					title:
-						contentData.value?.title ??
-						segment
-							.split("-")
-							.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-							.join(" "),
+					title: routeTitles[segment] ?? "Blog",
 				};
 			}
-
-			// Default handling for other routes
+			// For actual blog posts, use content title or clean up filename
 			return {
 				path: currentPath,
-				title: routeTitles[segment] ?? segment.charAt(0).toUpperCase() + segment.slice(1),
+				title:
+					contentData.value?.title ??
+					segment
+						.split("-")
+						.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+						.join(" "),
 			};
-		});
-	});
+		}
 
-	const isMounted = ref(false);
-	onMounted(() => {
-		isMounted.value = true;
+		// Default handling for other routes
+		return {
+			path: currentPath,
+			title: routeTitles[segment] ?? segment.charAt(0).toUpperCase() + segment.slice(1),
+		};
 	});
+});
 
-	const links = [
-		{ name: "Home", to: "/", linemdicon: "home" },
-		{ name: "Projects", to: "/projects", linemdicon: "document-code" },
-		{ name: "Blog", to: "/blog", linemdicon: "text-box" },
-		{ name: "Github", to: "https://github.com/probablyjassin", linemdicon: "github-loop", href: true },
-	];
+const isMounted = ref(false);
+onMounted(() => {
+	isMounted.value = true;
+});
+
+const links = [
+	{ name: "Home", to: "/", linemdicon: "home" },
+	{ name: "Projects", to: "/projects", linemdicon: "document-code" },
+	{ name: "Blog", to: "/blog", linemdicon: "text-box" },
+	{ name: "Github", to: "https://github.com/probablyjassin", linemdicon: "github-loop", href: true },
+];
 </script>
 
 <style scoped>
-	#navbar {
-		background-color: var(--primary-300);
+#navbar {
+	background-color: var(--primary-300);
+}
+
+ul {
+	list-style-type: none;
+}
+
+nav ul {
+	padding-top: 0.3rem;
+}
+
+nav ul li {
+	color: var(--text-900);
+}
+
+nav ul li:first-child {
+	padding-right: 1rem;
+}
+
+nav ul li:not(:first-child) {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.placeholder {
+	height: 40px;
+	margin-bottom: 24px;
+	background-color: #f0f0f0;
+	animation: fadeInOut 0.5s infinite;
+}
+
+@keyframes fadeInOut {
+
+	0%,
+	100% {
+		opacity: 0.5;
 	}
 
-	ul {
-		list-style-type: none;
+	50% {
+		opacity: 1;
 	}
-
-	nav ul {
-		padding-top: 0.3rem;
-	}
-
-	nav ul li {
-		color: var(--text-900);
-	}
-
-	nav ul li:first-child {
-		padding-right: 1rem;
-	}
-
-	nav ul li:not(:first-child) {
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
-
-	.placeholder {
-		height: 40px;
-		margin-bottom: 24px;
-		background-color: #f0f0f0;
-		animation: fadeInOut 0.5s infinite;
-	}
-
-	@keyframes fadeInOut {
-		0%,
-		100% {
-			opacity: 0.5;
-		}
-
-		50% {
-			opacity: 1;
-		}
-	}
+}
 </style>
