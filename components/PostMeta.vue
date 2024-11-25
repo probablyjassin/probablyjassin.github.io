@@ -14,7 +14,15 @@
 </template>
 
 <script setup lang="ts">
-const { page } = useContent()
+const route = useRoute()
+
+const { data: page } = await useLazyAsyncData(`content-${route.path}`, () => {
+    return queryContent()
+        .where({ _path: route.path })
+        .only(['body', 'date'])
+        .findOne()
+})
+
 const wordCount = computed(() => {
     if (!page.value?.body) return 0
     const content = JSON.stringify(page.value.body)
