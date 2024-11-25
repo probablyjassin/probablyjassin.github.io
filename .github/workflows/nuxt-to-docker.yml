@@ -50,7 +50,7 @@ jobs:
       - name: Delete old caches if no cache found
         if: steps.cache-check.outputs.cache-hit != 'true'
         env:
-          GH_TOKEN: ${{ secrets.FOR_CACHE_REPO_PAT }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if gh cache list --repo ${{ github.repository }} | grep -q 'buildx'; then
             gh cache delete --all --repo ${{ github.repository }}
