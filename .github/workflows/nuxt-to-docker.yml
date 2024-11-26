@@ -7,7 +7,6 @@ on:
     paths-ignore:
       - 'README.md'
       - '.gitignore'
-      - '${{ github.workflow_ref }}'
   workflow_dispatch:
 
 permissions:
