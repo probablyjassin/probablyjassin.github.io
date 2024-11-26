@@ -1,10 +1,11 @@
 ---
 title: Hosting my own Mailserver
-description: My Domain provider only gives me one E-Mail address. How do I host E-Mails on my own anyway? This is how I used docker mailserver to send and receive emails.
-date: 23.11.2024
+description: My domain provider for my other domain doesn't offer E-Mail. So I was wondering how I can self-host a mailserver on my own. It turned out to be a lot more of a pain than expected, but here is my process.
+tags: docker, mail, email, self-host, mailserver
+date: 26.11.2024
 image: /blog-previews/docker-mailserver.webp
 ---
 
 # Hosting my own Mailserver
 
-> My Domain provider only gives me one E-Mail address. How do I host E-Mails on my own anyway? This is how I used docker mailserver to send and receive emails.
+> My domain provider for my other domain doesn't offer E-Mail. So I was wondering how I can self-host a mailserver on my own. It turned out to be a lot more of a pain than expected, but here is my process.
