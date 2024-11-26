@@ -103,6 +103,6 @@ jobs:
           BUILDX_NO_DEFAULT_ATTESTATIONS: 1
 
       # Temp fix for growing cache size
-      #- name: Move cache
-      #  run: |
-      #    rm -rf /tmp/.buildx-cache
+      - name: Move cache
+        run: |
+          rm -rf /tmp/.buildx-cache
