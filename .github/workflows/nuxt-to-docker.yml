@@ -102,3 +102,8 @@ jobs:
           cache-to: type=local,dest=/tmp/.buildx-cache
         env:
           BUILDX_NO_DEFAULT_ATTESTATIONS: 1
+
+      # Temp fix for growing cache size
+      - name: Move cache
+        run: |
+          rm -rf /tmp/.buildx-cache
