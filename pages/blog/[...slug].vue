@@ -5,9 +5,12 @@
 				<Suspense>
 					<template #default>
 						<main>
+							<div class="mb-[-30px]">
+								<LazyPostMeta v-if="isMounted" />
+							</div>
 							<ContentLoader />
 							<hr />
-							<RelatedPosts v-if="showRelated" />
+							<RelatedPosts v-if="isMounted" />
 						</main>
 					</template>
 					<template #fallback>
@@ -24,10 +27,26 @@
 </template>
 
 <script setup lang="ts">
-const showRelated = ref(false)
+const isMounted = ref(false)
 
-// Only show related posts after main content loads
+// Only show after main content loads
 onMounted(() => {
-	showRelated.value = true
+	isMounted.value = true
+})
+
+const route = useRoute()
+
+const { data: page } = await useAsyncData(`content-${route.path}`, () => {
+	return queryContent()
+		.where({ _path: route.path })
+		.only(['description', 'tags'])
+		.findOne()
+})
+
+useHead({
+	meta: [
+		{ name: 'description', content: page.value?.description },
+		{ name: 'keywords', content: page.value?.tags }
+	]
 })
 </script>
