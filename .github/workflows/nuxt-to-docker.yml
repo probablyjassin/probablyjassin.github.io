@@ -3,7 +3,7 @@ name: Push Nuxt App to Docker
 on:
   push:
     branches:
-      - master
+      - main
     paths-ignore:
       - 'README.md'
       - '.gitignore'
