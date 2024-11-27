@@ -21,7 +21,7 @@ export default defineNuxtConfig({
 		documentDriven: true,
 		highlight: {
 			theme: "github-dark",
-			preload: ["vue", "typescript", "javascript", "bash", "python", "json", "yml"],
+			preload: ["vue", "typescript", "javascript", "bash", "python", "json", "yml", "diff"],
 		},
 	},
 
