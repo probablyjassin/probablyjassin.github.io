@@ -25,9 +25,8 @@
 									{{ post.description }}
 								</div>
 							</div>
-							<div class="mt-auto">
-								<NuxtPicture v-if="post.image" class="w-full h-48 object-cover rounded-lg mt-4"
-									:src="post.image" :alt="post.title" style="aspect-ratio: 1 / 1;" />
+							<div class="mt-auto w-48 h-48">
+								<NuxtImg v-if="post.image" class="w-48 h-48" :src="post.image" :alt="post.title" />
 							</div>
 						</article>
 					</NuxtLink>
