@@ -1,7 +1,7 @@
 <template>
     <Suspense>
         <template #default>
-            <p class="text-[var(--background-400)]">
+            <p class="min-h-4 text-[var(--background-400)]">
                 {{ page?.date }} · {{ wordCount }} words
             </p>
         </template>

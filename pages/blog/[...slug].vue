@@ -5,9 +5,10 @@
 				<Suspense>
 					<template #default>
 						<main>
-							<div class="mb-[-30px]">
+							<div class="min-h-[1.65rem] mb-[-30px]">
 								<LazyPostMeta v-if="isMounted" />
 							</div>
+
 							<ContentLoader />
 							<hr />
 							<RelatedPosts v-if="isMounted" />
