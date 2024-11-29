@@ -2,8 +2,7 @@ name: build and deploy nuxt app
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
   # allow running this workflow manually from the Actions tab
   workflow_dispatch:
 
