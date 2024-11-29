@@ -52,7 +52,7 @@ If you try to send an E-Mail now, it'll most likely **get rejected, fail and get
 
 To send E-Mails, you need **trust**. As with all of this, read up on the docker-mailserver docs for SSL, but very basically:
 
-- specify your FQDN (&#x5F;Fully Qualified Domain Name_) on the container
+- specify your FQDN (Fully Qualified Domain Name) on the container
 - install letsencrypt's certbot for handling SSL certificates\* this was a little tedious for me because it involves many substeps like aquiring a Cloudflare API Token for access to your account
 - DKIM, DMARC & SPF
 
