@@ -5,7 +5,7 @@ image: /blog-previews/probablyjassin.webp
 # probablyjassin | Coding and Blogging
 
 ::prose-em
-Jässin Aouani
+Jässin
 ::
 
 ---
