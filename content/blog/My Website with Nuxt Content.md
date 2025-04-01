@@ -1,6 +1,8 @@
 ---
 title: My Website With Nuxt Content
-description: In November 2024 I decided to rewrite my website, since it was outdated and I decided that it needed a touch up. Here's the process of how I did it, and what decisions I made along the way.
+description: In November 2024 I decided to rewrite my website, since it was
+  outdated and I decided that it needed a touch up. Here's the process of how I
+  did it, and what decisions I made along the way.
 tags: website, content, vue, nuxt, github, docker, blog
 date: 23.11.2024
 image: /blog-previews/probablyjassin.webp
