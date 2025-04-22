@@ -34,6 +34,14 @@ This is about a discord bot. That means we don't have a direct look into the cod
    - the error handling works the exact same wayWhen there is an error, the bot catches this and sends back a predefined response. This is good, but unless you copy-paste this code for every single command, the best way to do it is in a complex error handling block. Again, very suspect to have done this to this extent, in so little time, and so similarly to ours.
 3. Of course, when it comes to a bot for playing Mario Kart, some commands are going to be the same.`/l`, `/join` and `/close` , of course they also coded those up. But here is the biggest indicator that our codebase is at the very least involved, probably a lot:`/start vote` and `/team tag`These commands are 100% just the same. They have no reason to name them that. Even worse, to have the command name have two words like that you need a `SlashCommandGroup`(`/start` is the command **group** here, and `vote` is the **subcommand**. This only makes sense if you have at least one more subcommand. In our case, we have `/start force` .But on their side, this is a seperate command, `/force`. So there is no reason to have a command group for this. Why would anyone do this? Most likely only as a result of copying ours.
 
+## It gets better
+
+Quick Sidenote that I have to tell you because it's pretty funny:
+
+As of writing this, the bot calls for the user to use `/mogi create` to open a new mogi. But their command for opening a new mogi is `/open` . How did that happen?
+
+The most likely explanation is that when they fed our codebase to some AI, it recognized the command names like `/start vote` , `/points collect` and so on. So when tasked with creating more commands, it adapted this style, resulting in made-up command names that aren't actually present in their bot.
+
 ## What now?
 
 Well, the code was open source. But open source doesn't mean open for everyone to use without permission. In fact, when no licsene is added to a codebase, the [no licsense](https://choosealicense.com/no-permission/) terms apply.
