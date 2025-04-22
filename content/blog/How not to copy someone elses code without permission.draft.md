@@ -14,6 +14,8 @@ image: /blog-previews/probablyjassin.webp
 
 > As the main developer of the Discord-Bot used for competitve Mario Kart Lounge on Yuzu Online, I have experience with working on a big codebase and having to rewrite, adapt and improve big chunks of code. Though some people may end up taking your code to take inspiration, or base their own project off it entirely or even copy it. Here is a case where this happened, and how we're able to tell.
 
+![Article thumbnail](/blog-images/no_licsense.png)
+
 ## What happened?
 
 People in the self-proclaimed `Yuzu Lounge - West` / `★ 𝐌𝐊𝐋 & 𝐂𝐨. ★` community wanted to make their own Lounge Bot. But instead of coming up with it themselves, some or all of our code was used without permission. Even after promising us that they wouldn't.
