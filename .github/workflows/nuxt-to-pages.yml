@@ -46,6 +46,9 @@ jobs:
 
       - name: Create .nojekyll
         run: touch ./.output/.nojekyll
+
+      - name: Log exported files
+        run: ls ./.output
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
