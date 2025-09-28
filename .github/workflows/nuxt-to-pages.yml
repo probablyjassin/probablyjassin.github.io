@@ -3,7 +3,7 @@ name: build and deploy nuxt app
 on:
   push:
     branches: ["main"]
-  # allow running this workflow manually from the Actions tab
+  # running this workflow manually from the Actions tab
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN
