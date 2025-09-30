@@ -47,7 +47,7 @@
 				<div class="flex items-center space-x-4">
 					<NuxtPicture src="/blog-previews/probablyjassin.webp" alt="Footer logo"
 						class="h-10 w-10 rounded-full" />
-					<p class="text-[var(--text-900)]">© 2024 <span class="whitespace-nowrap">Jässin ***REMOVED***</span></p>
+					<p class="text-[var(--text-900)]">© 2025 <span class="whitespace-nowrap">Jässin</span></p>
 				</div>
 				<div class="flex space-x-6">
 					<a title="github" href="https://github.com/probablyjassin"
