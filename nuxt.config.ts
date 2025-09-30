@@ -37,6 +37,12 @@ export default defineNuxtConfig({
 		componentDir: "./components/ui",
 	},
 
+	robots: {
+		blockAiBots: true,
+		blockNonSeoBots: true,
+		disallow: ["/blog/me", "/blog/me/*"],
+	},
+
 	site: {
 		url: "https://jassin.aouani.de",
 		name: "probablyjassin - Coding and Blogging",
