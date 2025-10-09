@@ -11,6 +11,10 @@
 	color-scheme: light dark;
 }
 
+body {
+	cursor: url("/wiicursor.png"), auto;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
