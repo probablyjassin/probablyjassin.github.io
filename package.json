@@ -20,7 +20,7 @@
 		"class-variance-authority": "^0.7.0",
 		"clsx": "^2.1.1",
 		"lucide-vue-next": "^0.460.0",
-		"nuxt": "^3.14.1592",
+		"nuxt": "^4.0.0",
 		"radix-vue": "^1.9.10",
 		"shadcn-nuxt": "^0.10.4",
 		"shiki": "^1.23.1",
