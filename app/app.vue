@@ -7,7 +7,7 @@
 						<NuxtLink :to="link.to" class="flex items-center group no-underline text-[var(--text-900)]">
 							<Icon :name="`line-md:${link.linemdicon}`"
 								class="w-8 h-5 text-[var(--text-900)] group-hover:text-[var(--secondary-400)]" />
-							<span class="group-hover:text-[var(--secondary-400)] mx-7">{{ link.name }}</span>
+							<span class="group-hover:text-[var(--secondary-400)]">{{ link.name }}</span>
 						</NuxtLink>
 					</li>
 				</template>
