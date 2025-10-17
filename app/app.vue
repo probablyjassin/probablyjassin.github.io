@@ -13,10 +13,11 @@
 				</template>
 			</ul>
 		</nav>
-		<div>
-			<p class="text-[var(--secondary-300)]">test</p>
-			<NuxtPage />
-		</div>
+		<main class="min-h-screen px-6">
+			<NuxtLayout>
+				<NuxtPage />
+			</NuxtLayout>
+		</main>
 		<footer class="mt-auto p-6 bg-[var(--primary-100)]">
 			<div class="container mx-auto flex justify-between items-center">
 				<div class="flex items-center space-x-4">
@@ -37,6 +38,7 @@
 			</div>
 		</footer>
 	</UApp>
+
 </template>
 
 <script setup lang="ts">
@@ -49,7 +51,7 @@ const links = [
 </script>
 
 <style scoped lang="postcss">
-.main-content {
+main {
 	padding-left: 1.5em;
 }
 
