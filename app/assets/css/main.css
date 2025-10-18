@@ -1,7 +1,5 @@
-@import "@nuxt/ui";
 @import "tailwindcss";
-@import "tailwindcss/preflight";
-@tailwind utilities;
+@import "@nuxt/ui";
 
 body {
 	@apply bg-[var(--background-100)] text-[var(--text-900)] font-sans leading-relaxed;
