@@ -9,7 +9,7 @@
 		</div>
 
 		<div v-else-if="articles?.length" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-			<NuxtLink :to="post.path || ''" v-for="post in articles" :key="post.path" class="article-link">
+			<NuxtLink :to="post.path || ''" v-for="post in articles" :key="post.path" class="block px-6 w-full border rounded-lg transition-colors no-underline">
 				<article class="flex flex-col h-full">
 					<div>
 						<h2 class="article-title">
@@ -49,11 +49,10 @@
 
 <style scoped lang="postcss">
 	.article-link {
-		@apply block px-6 w-full rounded-lg transition-colors;
-		/* padding-inline: calc(var(--spacing) * 6); */
+		/* @apply block px-6 w-full rounded-lg transition-colors;
+		padding-inline: calc(var(--spacing) * 6);
 		border-width: 5px;
-		text-decoration: none;
-		border-color: var(--primary-900);
+		border-color: var(--primary-900); */
 	}
 	.article-link:hover {
 		border-color: var(--primary-400);
