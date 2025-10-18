@@ -8,14 +8,6 @@ body {
 	/* cursor: url("/wiicursor.png"), auto; */
 }
 
-a {
-	text-decoration: underline;
-	color: var(--primary-500);
-}
-a:hover {
-	color: var(--secondary-500);
-}
-
 .container {
 	@apply max-w-4xl mx-auto px-4;
 }

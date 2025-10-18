@@ -47,94 +47,17 @@
 </script>
 
 <style scoped lang="postcss">
-	a {
-		text-decoration: none;
-		color: var(--text-900);
-	}
+	@import "./assets/css/navbar.css";
+</style>
 
-	main {
-		padding-left: 1.5em;
-	}
-
-	#navbar {
-		background-color: var(--primary-300);
-	}
-
-	ul {
-		list-style-type: none;
-	}
-
-	nav ul {
-		padding-top: 0.3rem;
-	}
-
-	nav ul li:first-child {
-		padding-right: 1rem;
-	}
-
-	nav ul li:not(:first-child) {
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
-
-	.placeholder {
-		height: 40px;
-		margin-bottom: 24px;
-		background-color: #f0f0f0;
-		animation: fadeInOut 0.5s infinite;
-	}
-
-	@keyframes fadeInOut {
-		0%,
-		100% {
-			opacity: 0.5;
+<style lang="css">
+	@layer base {
+		a {
+			text-decoration: underline;
+			color: var(--primary-500);
 		}
-
-		50% {
-			opacity: 1;
-		}
-	}
-
-	#navbar {
-		background-color: var(--primary-300);
-	}
-
-	ul {
-		list-style-type: none;
-	}
-
-	nav ul {
-		padding-top: 0.3rem;
-	}
-
-	#navbar ul li {
-		color: var(--text-900);
-	}
-
-	nav ul li:first-child {
-		padding-right: 1rem;
-	}
-
-	nav ul li:not(:first-child) {
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
-
-	.placeholder {
-		height: 40px;
-		margin-bottom: 24px;
-		background-color: #f0f0f0;
-		animation: fadeInOut 0.5s infinite;
-	}
-
-	@keyframes fadeInOut {
-		0%,
-		100% {
-			opacity: 0.5;
-		}
-
-		50% {
-			opacity: 1;
+		a:hover {
+			color: var(--secondary-500);
 		}
 	}
 </style>
