@@ -7,7 +7,7 @@ description: As with most Schools and Universities (especially in Germany), my
   website? These are my biggest problems with my uni's page, and what I did to
   improve my experience.
 date: 02.04.2025
-image: /blog-previews/probablyjassin.webp
+image: /images/blog-thumbnails/probablyjassin.webp
 ---
 
 # Why My Uni Website Sucks - And How I Made It Better
