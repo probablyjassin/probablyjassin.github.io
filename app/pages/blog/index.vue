@@ -1,7 +1,6 @@
 <template>
 	<main class="max-w-4xl mb-4 mx-auto px-4">
 		<h1 class="text-4xl font-bold mb-8">Things I wrote about</h1>
-
 		<div v-if="!articles?.length" class="animate-pulse grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 			<div v-for="i in 6" :key="i" class="mb-8 bg-slate-800 rounded-3xl h-[35em]">
 				<div class="px-6 w-full rounded-lg border border-[var(--primary-200)]"></div>
@@ -42,13 +41,12 @@
 		layout: "blog",
 	});
 
-	const { data: blog } = await useAsyncData(() => queryCollection("content").path("/blog/").first());
 	const { data: articles } = await useAsyncData("blogposts", () =>
 		queryCollection("blog").where("id", "NOT LIKE", "%.draft.md").select("id", "meta", "path", "title", "description").all()
 	);
 
 	useSeoMeta({
-		title: blog.value?.title,
-		description: blog.value?.description,
+		title: "Blog - probablyjassin",
+		description: "Things I've written about...",
 	});
 </script>
