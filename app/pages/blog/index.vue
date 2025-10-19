@@ -42,7 +42,7 @@
 	});
 
 	const { data: articles } = await useAsyncData("blogposts", () =>
-		queryCollection("blog").where("id", "NOT LIKE", "%.draft.md").select("id", "meta", "path", "title", "description").all()
+		queryCollection("blog").where("id", "NOT LIKE", "%.draft.md").where("id", "NOT LIKE", "index.md").select("id", "meta", "path", "title", "description").all()
 	);
 
 	useSeoMeta({
