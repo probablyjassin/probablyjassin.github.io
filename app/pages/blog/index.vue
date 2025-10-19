@@ -15,7 +15,6 @@
 				class="px-6 w-full rounded-lg border border-[var(--primary-200)] hover:border-[var(--primary-400)] transition-colors no-underline">
 				<article class="flex flex-col h-full">
 					<div>
-						{{ post }}
 						<h2 class="text-2xl font-semibold mb-2 text-[var(--text-900)]">
 							{{ post.title }}
 						</h2>
