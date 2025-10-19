@@ -34,7 +34,7 @@
 <script setup lang="ts">
 	const route = useRoute();
 
-	const { data: page } = await useAsyncData(route.path, () => queryCollection("blog").path(route.path).first());
+	const { data: page } = await useAsyncData("blog", () => queryCollection("blog").path(route.path).first());
 
 	definePageMeta({
 		layout: "blog",

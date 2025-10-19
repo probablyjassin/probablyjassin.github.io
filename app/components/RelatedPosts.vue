@@ -22,7 +22,7 @@
 <script setup lang="ts">
 	const route = useRoute();
 
-	const { data: posts } = await useAsyncData("blogposts", () =>
+	const { data: posts } = await useAsyncData("relatedposts", () =>
 		queryCollection("blog")
 			.where("id", "NOT LIKE", "%.draft.md")
 			.where("path", "NOT LIKE", route.path)
