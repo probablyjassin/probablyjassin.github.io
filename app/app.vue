@@ -13,6 +13,7 @@
 			</ul>
 		</nav>
 		<main class="min-h-screen px-6">
+			<NuxtLoadingIndicator color="pink" error-color="red" />
 			<NuxtLayout>
 				<NuxtPage />
 			</NuxtLayout>
