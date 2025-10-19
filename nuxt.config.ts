@@ -1,30 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	devtools: { enabled: false },
-	compatibilityDate: "2024-11-21",
-
-	modules: ["@nuxt/content", "@nuxtjs/tailwindcss", "shadcn-nuxt", "@nuxt/icon", "@nuxthq/studio", "@nuxt/image", "@nuxtjs/sitemap", "@nuxtjs/robots"],
-	css: ["~/assets/css/main.css"],
-
+	compatibilityDate: "2025-07-15",
+	devtools: { enabled: true },
+	modules: ["@nuxt/content", "@nuxt/ui", "@nuxt/image"],
+	css: ["~/assets/css/main.css", "~/assets/css/tailwind.css", "~/assets/css/codeblock.css", "~/assets/css/navbar.css"],
 	app: {
 		pageTransition: { name: "page", mode: "out-in" },
+		layoutTransition: { name: "layout", mode: "out-in" },
 	},
-
-	postcss: {
-		plugins: {
-			tailwindcss: {},
-			autoprefixer: {},
-		},
-	},
-
-	content: {
-		documentDriven: true,
-		highlight: {
-			theme: "github-dark",
-			preload: ["vue", "typescript", "javascript", "bash", "python", "json", "yml", "diff"],
-		},
-	},
-
 	shadcn: {
 		/**
 		 * Prefix for all the imported component
@@ -35,16 +18,5 @@ export default defineNuxtConfig({
 		 * @default "./components/ui"
 		 */
 		componentDir: "./components/ui",
-	},
-
-	robots: {
-		blockAiBots: true,
-		blockNonSeoBots: true,
-		disallow: ["/blog/me", "/blog/me/*"],
-	},
-
-	site: {
-		url: "https://jassin.aouani.de",
-		name: "probablyjassin - Coding and Blogging",
 	},
 });
