@@ -46,4 +46,6 @@ So I'm sure there isn't any more data than needed in this response!
 
 Oh.
 
-**IT FETCHES THE ENTIRE TIMETABLE OF EVERY LESSON THAT I EVER HAD DATING BACK TO OCTOBER 2024??!?!???!?!?!**
+### **IT FETCHES THE ENTIRE TIMETABLE OF EVERY LESSON THAT I EVER HAD DATING BACK TO OCTOBER 2024??!?!???!?!?!**
+
+Soooo yeah, it's quite the mess!
