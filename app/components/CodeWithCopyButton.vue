@@ -2,13 +2,15 @@
 	<div class="code-block-wrapper group max-w-[100%]">
 		<slot></slot>
 		<button class="copy-button" @click="copyCode">
-			<Icon :name="copied ? 'line-md:confirm' : 'line-md:document-code'" class="w-6 h-6 text-[var(--accent-50)]" />
+			<img :src="copied ? checkIcon : docIcon" alt="Copy" class="w-6 h-6" />
 		</button>
 	</div>
 </template>
 
 <script setup>
 	import { ref } from "vue";
+	import checkIcon from "~/assets/images/linemd-check.svg";
+	import docIcon from "~/assets/images/linemd-doc.svg";
 
 	const copied = ref(false);
 
