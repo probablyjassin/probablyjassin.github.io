@@ -1,4 +1,11 @@
-<template>{{ age }}</template>
+<template>
+	<ClientOnly>
+		<span>{{ age }}</span>
+		<template #fallback>
+			<span>..</span>
+		</template>
+	</ClientOnly>
+</template>
 
 <script setup>
 	const birthDate = new Date("2006-04-01");
