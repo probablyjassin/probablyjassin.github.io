@@ -48,15 +48,11 @@
 </script>
 
 <style scoped lang="postcss">
-	.article-link {
-		/* @apply block px-6 w-full rounded-lg transition-colors;
-		padding-inline: calc(var(--spacing) * 6);
-		border-width: 5px;
-		border-color: var(--primary-900); */
+	/* .article-link {
 	}
 	.article-link:hover {
 		border-color: var(--primary-400);
-	}
+	} */
 	.article-title {
 		@apply text-2xl font-semibold mb-2;
 		color: var(--text-900);
