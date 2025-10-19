@@ -1,8 +1,8 @@
 <template>
-	<NuxtLayout>
+	<div>
 		<ContentRenderer v-if="home" :value="home" class="main-content" />
 		<div v-else>Home not found</div>
-	</NuxtLayout>
+	</div>
 </template>
 
 <script setup lang="ts">

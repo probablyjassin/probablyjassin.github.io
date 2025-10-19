@@ -1,20 +1,22 @@
 <template>
-	<Breadcrumb>
-		<BreadcrumbList class="pl-0">
-			<BreadcrumbItem>
-				<BreadcrumbLink class="cursor-pointer" @click="router.push('/')"> Home </BreadcrumbLink>
-			</BreadcrumbItem>
-			<template v-for="(segment, index) in breadcrumbSegments" :key="index">
-				<BreadcrumbSeparator class="mt-1" />
+	<div>
+		<Breadcrumb>
+			<BreadcrumbList class="pl-0">
 				<BreadcrumbItem>
-					<BreadcrumbLink class="cursor-pointer" @click="router.push(segment.path)">
-						{{ segment.title }}
-					</BreadcrumbLink>
+					<BreadcrumbLink class="cursor-pointer" @click="router.push('/')"> Home </BreadcrumbLink>
 				</BreadcrumbItem>
-			</template>
-		</BreadcrumbList>
-	</Breadcrumb>
-	<slot></slot>
+				<template v-for="(segment, index) in breadcrumbSegments" :key="index">
+					<BreadcrumbSeparator class="mt-1" />
+					<BreadcrumbItem>
+						<BreadcrumbLink class="cursor-pointer" @click="router.push(segment.path)">
+							{{ segment.title }}
+						</BreadcrumbLink>
+					</BreadcrumbItem>
+				</template>
+			</BreadcrumbList>
+		</Breadcrumb>
+		<slot></slot>
+	</div>
 </template>
 
 <script setup lang="ts">

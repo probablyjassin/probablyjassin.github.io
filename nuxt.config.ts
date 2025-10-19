@@ -4,4 +4,8 @@ export default defineNuxtConfig({
 	devtools: { enabled: true },
 	modules: ["@nuxt/content", "@nuxt/ui", "@nuxt/image"],
 	css: ["~/assets/css/main.css", "~/assets/css/tailwind.css", "~/assets/css/codeblock.css", "~/assets/css/navbar.css"],
+	app: {
+		pageTransition: { name: "page", mode: "out-in" },
+		layoutTransition: { name: "layout", mode: "out-in" },
+	},
 });
