@@ -10,7 +10,7 @@ Jässin
 
 ---
 
-Hi 👋, I'm 19 and I study computer science while also working in IT.
+Hi 👋, I'm :age and I study computer science while also working in IT.
 
 I enjoy coding things for fun and I wanna learn as much as I can.
 
