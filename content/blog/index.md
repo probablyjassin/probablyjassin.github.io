@@ -1,3 +1,5 @@
-# Blog
+---
+image: /blog-previews/probablyjassin.webp
+---
 
-mrrrp
+# Placeholder
