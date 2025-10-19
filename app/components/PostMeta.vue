@@ -14,7 +14,7 @@
 <script setup lang="ts">
 	const route = useRoute();
 
-	const { data: page } = await useAsyncData(route.path, () => queryCollection("blog").select("body", "meta").path(route.path).first());
+	const { data: page } = await useAsyncData(route.path + "|meta", () => queryCollection("blog").select("body", "meta").path(route.path).first());
 
 	const wordCount = computed(() => {
 		if (!page.value?.body) return 0;

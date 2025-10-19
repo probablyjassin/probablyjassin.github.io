@@ -44,7 +44,7 @@
 		blog: "Blog",
 	};
 
-	const { data: contentData } = await useAsyncData(() => queryCollection("content").path(route.path).first());
+	const { data: contentData } = await useAsyncData(() => queryCollection("content").path(route.path).select("title").first());
 
 	const breadcrumbSegments = computed<BreadcrumbSegment[]>(() => {
 		const cleanPath = route.path.split("?")[0] || "/";
