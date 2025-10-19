@@ -9,16 +9,20 @@
 		</div>
 
 		<div v-else-if="articles?.length" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-			<NuxtLink :to="post.path || ''" v-for="post in articles" :key="post.path" class="block px-6 w-full border rounded-lg transition-colors no-underline">
+			<NuxtLink
+				:to="post.path || ''"
+				v-for="post in articles"
+				:key="post.path"
+				class="px-6 w-full rounded-lg border border-[var(--primary-200)] hover:border-[var(--primary-400)] transition-colors no-underline">
 				<article class="flex flex-col h-full">
 					<div>
-						<h2 class="article-title">
+						<h2 class="text-2xl font-semibold mb-2 text-[var(--text-900)]">
 							{{ post.title }}
 						</h2>
-						<div class="article-date">
+						<div class="text-sm text-[var(--text-600)]">
 							{{ post.meta.date }}
 						</div>
-						<div v-if="post.description" class="article-description">
+						<div v-if="post.description" class="text-[var(--text-700)] mb-4">
 							{{ post.description }}
 						</div>
 					</div>
@@ -48,23 +52,3 @@
 		description: blog.value?.description,
 	});
 </script>
-
-<style scoped lang="postcss">
-	/* .article-link {
-	}
-	.article-link:hover {
-		border-color: var(--primary-400);
-	} */
-	.article-title {
-		@apply text-2xl font-semibold mb-2;
-		color: var(--text-900);
-	}
-	.article-date {
-		@apply text-sm;
-		color: var(--text-500);
-	}
-	.article-description {
-		@apply mb-4;
-		color: var(--text-700);
-	}
-</style>

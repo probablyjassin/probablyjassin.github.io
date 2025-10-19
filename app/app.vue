@@ -1,6 +1,6 @@
 <template>
 	<UApp>
-		<nav id="navbar" class="h-[40px] mb-[24px]">
+		<nav id="navbar" class="h-[40px] mb-[24px] px-6 pl-0">
 			<ul class="flex justify-start text-center">
 				<template v-for="link in links" :key="link.name">
 					<li>
@@ -17,7 +17,7 @@
 				<NuxtPage />
 			</NuxtLayout>
 		</main>
-		<footer class="mt-auto p-6" style="background-color: var(--primary-100)">
+		<footer class="mt-auto p-6 bg-[var(--primary-100)]" style="background-color: var(--primary-100)">
 			<div class="container mx-auto flex justify-between items-center">
 				<div class="flex items-center space-x-4">
 					<NuxtPicture src="images/blog-thumbnails/probablyjassin.webp" alt="Footer logo" class="h-10 w-10 rounded-full" />
