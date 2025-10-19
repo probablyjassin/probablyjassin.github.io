@@ -47,6 +47,7 @@
 </script>
 
 <style>
+	/* Page Transitions */
 	.page-enter-active,
 	.page-leave-active {
 		transition: all 0.4s;
@@ -57,12 +58,14 @@
 		filter: blur(1rem);
 	}
 
+	/* Layout Transitions */
 	.layout-enter-active,
 	.layout-leave-active {
-		transition: all 0.4s;
+		transition: all 0.5s ease;
 	}
 	.layout-enter-from,
 	.layout-leave-to {
-		filter: grayscale(1);
+		opacity: 0;
+		filter: blur(10px);
 	}
 </style>
