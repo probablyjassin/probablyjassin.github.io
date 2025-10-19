@@ -21,7 +21,7 @@
 			<div class="container mx-auto flex justify-between items-center">
 				<div class="flex items-center space-x-4">
 					<NuxtPicture src="images/blog-thumbnails/probablyjassin.webp" alt="Footer logo" class="h-10 w-10 rounded-full" />
-					<p class="text-[var(--text-900)]">© 2025 <span class="whitespace-nowrap">Jässin</span></p>
+					<p class="text-[var(--text-900)]">© {{ new Date().getFullYear() }} <span class="whitespace-nowrap">Jässin</span></p>
 				</div>
 				<div class="flex space-x-6">
 					<a title="github" href="https://github.com/probablyjassin" class="text-[var(--text-900)] hover:text-[var(--secondary-400)] transition-colors">
