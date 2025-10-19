@@ -1,17 +1,6 @@
 <template>
 	<UApp>
-		<nav id="navbar" class="h-[40px] mb-[24px] px-6 pl-0">
-			<ul class="flex justify-start text-center">
-				<template v-for="link in links" :key="link.name">
-					<li>
-						<NuxtLink :to="link.to" class="flex items-center group no-underline text-[var(--text-900)]">
-							<Icon :name="`line-md:${link.linemdicon}`" class="w-8 h-5 text-[var(--text-900)] group-hover:text-[var(--secondary-600)]" />
-							<span class="group-hover:text-[var(--secondary-600)]">{{ link.name }}</span>
-						</NuxtLink>
-					</li>
-				</template>
-			</ul>
-		</nav>
+		<Navbar />
 		<main class="min-h-screen px-6">
 			<NuxtLoadingIndicator color="pink" error-color="red" />
 			<NuxtLayout>
@@ -36,15 +25,6 @@
 		</footer>
 	</UApp>
 </template>
-
-<script setup lang="ts">
-	const links = [
-		{ name: "Home", to: "/", linemdicon: "home" },
-		{ name: "Projects", to: "/projects", linemdicon: "document-code" },
-		{ name: "Blog", to: "/blog", linemdicon: "text-box" },
-		{ name: "Github", to: "https://github.com/probablyjassin", linemdicon: "github-loop", href: true },
-	];
-</script>
 
 <style>
 	/* Page Transitions */

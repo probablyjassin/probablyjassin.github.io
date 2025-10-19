@@ -1,7 +1,9 @@
 <template>
-	<div class="code-block-wrapper group max-w-[100%]">
+	<div class="relative inline-block group max-w-[100%]">
 		<slot></slot>
-		<button class="copy-button" @click="copyCode">
+		<button
+			class="absolute right-2 w-10 h-10 top-2 p-2 rounded-2xl bg-[var(--accent-500)] text-[var(--text-700)] hover:bg-[var(--accent-300)] hover:text-[var(--text-900)] transition-colors duration-200 opacity-0 group-hover:opacity-100"
+			@click="copyCode">
 			<img :src="copied ? checkIcon : docIcon" alt="Copy" class="w-6 h-6" />
 		</button>
 	</div>
