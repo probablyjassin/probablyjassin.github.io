@@ -3,5 +3,5 @@ export default defineNuxtConfig({
 	compatibilityDate: "2025-07-15",
 	devtools: { enabled: true },
 	modules: ["@nuxt/content", "@nuxt/ui", "@nuxt/image"],
-	css: ["~/assets/css/main.css", "~/assets/css/tailwind.css"],
+	css: ["~/assets/css/main.css", "~/assets/css/tailwind.css", "~/assets/css/codeblock.css", "~/assets/css/navbar.css"],
 });
