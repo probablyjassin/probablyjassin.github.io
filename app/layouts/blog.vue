@@ -1,6 +1,6 @@
 <template>
 	<Breadcrumb>
-		<BreadcrumbList>
+		<BreadcrumbList class="pl-0">
 			<BreadcrumbItem>
 				<BreadcrumbLink class="cursor-pointer" @click="router.push('/')"> Home </BreadcrumbLink>
 			</BreadcrumbItem>
@@ -91,6 +91,7 @@
 		text-decoration: none;
 		font-size: var(--text-xl);
 		line-height: var(--tw-leading, var(--text-xl--line-height));
+		padding-left: 0;
 	}
 
 	nav[aria-label="breadcrumb"] ol li a:hover {

@@ -1,1 +1,1 @@
-<template>homelab</template>
+<template>Coming soon...</template>

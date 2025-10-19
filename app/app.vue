@@ -44,19 +44,3 @@
 		{ name: "Github", to: "https://github.com/probablyjassin", linemdicon: "github-loop", href: true },
 	];
 </script>
-
-<style scoped lang="postcss">
-	@import "./assets/css/navbar.css";
-</style>
-
-<style lang="css">
-	@layer base {
-		a {
-			text-decoration: underline;
-			color: var(--primary-500);
-		}
-		a:hover {
-			color: var(--secondary-500);
-		}
-	}
-</style>

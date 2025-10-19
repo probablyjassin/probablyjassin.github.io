@@ -33,6 +33,15 @@ nav ul li:not(:first-child) {
 	background-color: var(--primary-300);
 }
 
+nav[aria-label="breadcrumb"] {
+	padding-left: 0;
+}
+
+nav[aria-label="breadcrumb"] ol {
+	padding-left: 0;
+	margin-left: 0;
+}
+
 ul {
 	list-style-type: none;
 }
