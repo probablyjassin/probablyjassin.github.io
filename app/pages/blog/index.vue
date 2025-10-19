@@ -39,7 +39,9 @@
 	});
 
 	const { data: blog } = await useAsyncData(() => queryCollection("content").path("/blog/").first());
-	const { data: articles } = await useAsyncData("blogposts", () => queryCollection("blog").all());
+	const { data: articles } = await useAsyncData("blogposts", () =>
+		queryCollection("blog").where("id", "NOT LIKE", "%.draft.md").select("id", "meta", "path", "title", "description").all()
+	);
 
 	useSeoMeta({
 		title: blog.value?.title,
