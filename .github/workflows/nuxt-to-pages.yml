@@ -45,18 +45,12 @@ jobs:
         run: npx nuxi generate
 
       - name: Create .nojekyll
-        run: touch ./.output/.nojekyll
-
-      - name: Debugging
-        run: tree .
-
-      - name: Debugging 2
-        run: ls
+        run: touch ./.output/.nojekyll && touch ./.output/public/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./.output
+          path: ./.output/public
 
   deploy:
     environment:
