@@ -10,9 +10,9 @@ date: 02.04.2025
 image: /images/blog-thumbnails/probablyjassin.webp
 ---
 
-# Why My Uni Website Sucks - And How I Made It Better
+# A small rant on the horrible website my university uses - and what alternatives we may have
 
-> As with most Schools and Universities (especially in Germany), my Unis website is very old. Of course, it's okay and understandable that they aren't running their website on the latest and greatest JavaScript library. But shouldn't organizations as important as these at least have a half-decent website? These are my biggest problems with my uni's page, and what I did to improve my experience.
+> As with most Schools and Universities (especially in Germany), my University's website is very old. Of course, it's okay and understandable that they aren't running their website on the latest and greatest JavaScript library. But shouldn't organizations as important as these at least have a half-decent website? These are my biggest problems with my Uni's page, and other ways we have of interacting with our timetable and exam signups.
 
 ## Why it's so bad
 
@@ -45,3 +45,5 @@ So I'm sure there isn't any more data than needed in this response!
 \--image goes here--
 
 Oh.
+
+**IT FETCHES THE ENTIRE TIMETABLE OF EVERY LESSON THAT I EVER HAD DATING BACK TO OCTOBER 2024??!?!???!?!?!**
