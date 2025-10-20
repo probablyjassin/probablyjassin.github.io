@@ -1,5 +1,6 @@
 ---
-title: Why My Uni Timetable Sucks - And How I Made It Better
+title: A small rant on the horrible website my university uses - and what
+  alternatives we may have
 description: As with most Schools and Universities (especially in Germany), my
   Unis website is very old.  These are my biggest problems with my uni's page,
   and what I did to improve my experience.
