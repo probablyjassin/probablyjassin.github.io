@@ -50,6 +50,8 @@ Soooo yeah, it's quite the mess!
 
 Adding insult to injury, at the start of my third semester, **my entire seminar group just decided to disappear from the campus database????**
 
+![missing-seminar-group.webp](/images/blog-images/campus-rant/missing-seminar-group.webp)
+
 This means we **can't even USE our timetable** that was barely functioning in the first place right now; and we can't download any of our important documents, that some of use need for proof of enrollment for their dorms!!
 
 As of right now, we're only able to get these handed out manually. Our timetable is a mess of a PDF. Signing up for exams? Via E-Mail!
@@ -62,7 +64,9 @@ Okay. Look, I just needed an outlet, a place to put all this frustration. At the
 
 All I'm trying to say is that the system has issues, and I think there needs to be some change. Whether this change is possible or not, I can at least show you the alternative I currently use, that managed to use the APIs the campus website provides and package their functionality in a sleek, modern, good looking web app:
 
-["Campus Unbloat - The not-entirely-broken Home for the humble BA Sachsen student"](https://github.com/fnschmidt/campus-unbloat)--image goes here--
+["Campus Unbloat - The not-entirely-broken Home for the humble BA Sachsen student"](https://github.com/fnschmidt/campus-unbloat)
+
+![unbloat.webp](/images/blog-images/campus-rant/unbloat.webp)
 
 This is truly a great solution. It looks great, it feels solid to use, and most importantly: it works.
 
