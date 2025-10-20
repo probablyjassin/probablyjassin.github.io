@@ -7,7 +7,7 @@ description: As with most Schools and Universities (especially in Germany), my
   website? These are my biggest problems with my uni's page, and what I did to
   improve my experience.
 date: 02.04.2025
-image: /images/blog-thumbnails/probablyjassin.webp
+image: /images/blog-thumbnails/sap.webp
 ---
 
 # A small rant on the horrible website my university uses - and what alternatives we may have
@@ -16,7 +16,7 @@ image: /images/blog-thumbnails/probablyjassin.webp
 
 ## Why it's so bad
 
-\--image goes here--
+![campus-main.webp](/images/blog-images/campus-rant/campus-main.webp)![campus-netweaver-mobile.webp](/images/blog-images/campus-rant/campus-netweaver-mobile.webp)
 
 I would complain about the design, but I already have enough to complain about with the functionality, so let's skip this.
 
@@ -24,11 +24,9 @@ Just one thing, why is the main page full of useless information about first sig
 
 Anyway.
 
-\--image goes here--
-
 The one thing one mainly uses this website for is the timetable. At least the timetable is going to be well-functioning right? It's fine if it looks bad but at least it somewhat works right?
 
-\--image goes here--
+![campus-response-time.webp](/images/blog-images/campus-rant/campus-response-time.webp)
 
 Oh.
 
@@ -36,13 +34,11 @@ So it turns out not only does the timetable take more than 5 whole seconds to lo
 
 And why are the requests taking so long? If it's at least only loading one week at the time, that's at least trying to keep the amount of data transfered low right?
 
-\--image with query parameters goes here--
-
 Look! It even uses query parameters to limit the time range it's trying to fetch! (let's ignore that it puts your credentials in the query parameters, probably bad practice)
 
 So I'm sure there isn't any more data than needed in this response!
 
-\--image goes here--
+![campus-timetable.webp](/images/blog-images/campus-rant/campus-timetable.webp)
 
 Oh.
 
