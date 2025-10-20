@@ -32,29 +32,29 @@
 </template>
 
 <script setup lang="ts">
-	const route = useRoute();
+const route = useRoute();
 
-	const { data: page } = await useAsyncData("blog", () => queryCollection("blog").path(route.path).first());
+const { data: page } = await useAsyncData(route.path, () => queryCollection("blog").path(route.path).first());
 
-	definePageMeta({
-		layout: "blog",
-	});
+definePageMeta({
+	layout: "blog",
+});
 
-	useSeoMeta({
-		title: page.value?.title,
-		description: page.value?.description,
-	});
-	const isMounted = ref(false);
+useSeoMeta({
+	title: page.value?.title,
+	description: page.value?.description,
+});
+const isMounted = ref(false);
 
-	// Only show after main content loads
-	onMounted(() => {
-		isMounted.value = true;
-	});
+// Only show after main content loads
+onMounted(() => {
+	isMounted.value = true;
+});
 
-	useHead({
-		meta: [
-			{ name: "description", content: page.value?.description },
-			{ name: "keywords", content: page.value?.meta.tags as string },
-		],
-	});
+useHead({
+	meta: [
+		{ name: "description", content: page.value?.description },
+		{ name: "keywords", content: page.value?.meta.tags as string },
+	],
+});
 </script>
