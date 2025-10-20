@@ -46,6 +46,28 @@ So I'm sure there isn't any more data than needed in this response!
 
 Oh.
 
-### **IT FETCHES THE ENTIRE TIMETABLE OF EVERY LESSON THAT I EVER HAD DATING BACK TO OCTOBER 2024??!?!???!?!?!**
+**IT FETCHES THE ENTIRE TIMETABLE OF EVERY LESSON THAT I EVER HAD DATING BACK TO OCTOBER 2024??!?!???!?!?!**
+
+Which also means that this list will only get longer and longer with every passing semester, increasing the load time even more!
 
 Soooo yeah, it's quite the mess!
+
+Adding insult to injury, at the start of my third semester, **my entire seminar group just decided to disappear from the campus database????**
+
+This means we **can't even USE our timetable** that was barely functioning in the first place right now; and we can't download any of our important documents, that some of use need for proof of enrollment for their dorms!!
+
+As of right now, we're only able to get these handed out manually. Our timetable is a mess of a PDF. Signing up for exams? Via E-Mail!
+
+And if all that wasn't enough proof of how dire the situation is, we recently learned that the ""team"" who is meant to fix all this consists of **ONE SINGLE PERSON**. I don't even know what to say to that.
+
+---
+
+Okay. Look, I just needed an outlet, a place to put all this frustration. At the end of the day, I'm not trying to take a dump on the Uni, and especially not on any of the people working there.
+
+All I'm trying to say is that the system has issues, and I think there needs to be some change. Whether this change is possible or not, I can at least show you the alternative I currently use, that managed to use the APIs the campus website provides and package their functionality in a sleek, modern, good looking web app:
+
+["Campus Unbloat - The not-entirely-broken Home for the humble BA Sachsen student"](https://github.com/fnschmidt/campus-unbloat)--image goes here--
+
+This is truly a great solution. It looks great, it feels solid to use, and most importantly: it works.
+
+It goes to show how even just one or two people can come up with a better frontend to such a site. I just wish that we could have people who are just as engaged on the inside of such systems, making the official thing better as well. But sadly, for the time being we'll have to live with what we have. And as long as that's the case, I'm more than willing to use, work on and support wacky workarounds like this.
