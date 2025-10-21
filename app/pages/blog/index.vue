@@ -8,10 +8,7 @@
 		</div>
 
 		<div v-else-if="articles?.length" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-			<NuxtLink
-				:to="post.path || ''"
-				v-for="post in articles"
-				:key="post.path"
+			<NuxtLink :to="post.path || ''" v-for="post in articles" :key="post.path"
 				class="px-6 w-full rounded-lg border border-[var(--primary-200)] hover:border-[var(--primary-400)] transition-colors no-underline">
 				<article class="flex flex-col h-full">
 					<div>
@@ -26,7 +23,8 @@
 						</div>
 					</div>
 					<div class="mt-auto w-48 h-48">
-						<NuxtImg v-if="post.meta.image" class="w-48 h-48" :src="String(post.meta.image)" :alt="post.title" />
+						<NuxtImg v-if="post.meta.image" class="w-48 h-48" :src="String(post.meta.image)"
+							:alt="post.title" />
 					</div>
 				</article>
 			</NuxtLink>
@@ -37,20 +35,21 @@
 </template>
 
 <script setup lang="ts">
-	definePageMeta({
-		layout: "blog",
-	});
+definePageMeta({
+	layout: "blog",
+});
 
-	const { data: articles } = await useAsyncData("blogposts", () =>
-		queryCollection("blog")
-			.where("id", "NOT LIKE", "%.draft.md")
-			.where("title", "NOT LIKE", "Placeholder")
-			.select("id", "meta", "path", "title", "description")
-			.all()
-	);
+const { data: articles } = await useAsyncData("blogposts", () =>
+	queryCollection("blog")
+		.where("id", "NOT LIKE", "%.draft.md")
+		.where("title", "NOT LIKE", "Placeholder")
+		.where("meta.unlisted", "<>", true)
+		.select("id", "meta", "path", "title", "description")
+		.all()
+);
 
-	useSeoMeta({
-		title: "Blog - probablyjassin",
-		description: "Things I've written about...",
-	});
+useSeoMeta({
+	title: "Blog - probablyjassin",
+	description: "Things I've written about...",
+});
 </script>
