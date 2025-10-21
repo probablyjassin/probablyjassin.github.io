@@ -1,6 +1,7 @@
 --
-unlisted: true
+title: test
 --
 
-# Yuzu Help
+# Yuzu Help (unlisted)
+
 meow

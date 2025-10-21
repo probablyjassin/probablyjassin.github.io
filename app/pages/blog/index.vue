@@ -43,7 +43,7 @@ const { data: articles } = await useAsyncData("blogposts", () =>
 	queryCollection("blog")
 		.where("id", "NOT LIKE", "%.draft.md")
 		.where("title", "NOT LIKE", "Placeholder")
-		.where("meta.unlisted", "<>", true)
+		.where("title", "NOT LIKE", "%unlisted%")
 		.select("id", "meta", "path", "title", "description")
 		.all()
 );
