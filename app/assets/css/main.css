@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
-@layer components {
+@layer base {
   body {
     @apply bg-[var(--background-100)] text-[var(--text-900)] font-sans leading-relaxed;
     margin: 0;
