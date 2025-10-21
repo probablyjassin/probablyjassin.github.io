@@ -1,6 +1,5 @@
 ---
-title: A small rant on the horrible website my university uses - and what
-  alternatives we may have
+title: A small rant on the website my university uses - and the alternatives
 description: As with most Schools and Universities (especially in Germany), my
   Unis website is very old.  These are my biggest problems with my uni's page,
   and what I did to improve my experience.
