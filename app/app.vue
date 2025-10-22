@@ -17,7 +17,7 @@
 					<a title="github" href="https://github.com/probablyjassin" class="text-(--text-900)r:text-[var(--secondary-400)] transition-colors">
 						<Icon name="line-md:github" class="w-6 h-6" />
 					</a>
-					<a title="email" href="mailto:jassin@aouani.de" class="text-(--text-900) hover:text-(--secondary-400) transition-colors">
+					<a title="email" href="mailto:mail@jaess.in" class="text-(--text-900) hover:text-(--secondary-400) transition-colors">
 						<Icon name="line-md:email" class="w-6 h-6" />
 					</a>
 				</div>
