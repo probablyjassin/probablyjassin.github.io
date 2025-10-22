@@ -21,9 +21,15 @@
 				</template>
 				<template #fallback>
 					<div class="animate-pulse">
-						<div class="h-4 bg-[var(--text-200)] rounded w-3/4 mb-4"></div>
-						<div class="h-4 bg-[var(--text-200)] rounded w-1/2 mb-4"></div>
-						<div class="h-4 bg-[var(--text-200)] rounded w-2/3"></div>
+						<span class="flex items-center gap-1">
+							<div class="h-2 bg-(--text-200) rounded w-16 mb-4"></div>
+							<div class="h-1 bg-(--text-200) rounded w-1 mb-4"></div>
+							<div class="h-2 bg-(--text-200) rounded w-16 mb-4"></div>
+						</span>
+						<div class="h-10 bg-(--text-200) rounded w-1/3 mb-4"></div>
+						<div class="h-2 bg-(--text-200) rounded w-1/2 mb-4" v-for="i in 2"></div>
+						<div class="h-10 bg-(--text-200) rounded w-1/3 mb-4"></div>
+						<div class="h-4 bg-(--text-200) rounded w-2/3 mb-2" v-for="i in 10"></div>
 					</div>
 				</template>
 			</Suspense>
@@ -32,29 +38,29 @@
 </template>
 
 <script setup lang="ts">
-const route = useRoute();
+	const route = useRoute();
 
-const { data: page } = await useAsyncData(route.path, () => queryCollection("blog").path(route.path).first());
+	const { data: page } = await useAsyncData(route.path, () => queryCollection("blog").path(route.path).first());
 
-definePageMeta({
-	layout: "blog",
-});
+	definePageMeta({
+		layout: "blog",
+	});
 
-useSeoMeta({
-	title: page.value?.title,
-	description: page.value?.description,
-});
-const isMounted = ref(false);
+	useSeoMeta({
+		title: page.value?.title,
+		description: page.value?.description,
+	});
+	const isMounted = ref(false);
 
-// Only show after main content loads
-onMounted(() => {
-	isMounted.value = true;
-});
+	// Only show after main content loads
+	onMounted(() => {
+		isMounted.value = true;
+	});
 
-useHead({
-	meta: [
-		{ name: "description", content: page.value?.description },
-		{ name: "keywords", content: page.value?.meta.tags as string },
-	],
-});
+	useHead({
+		meta: [
+			{ name: "description", content: page.value?.description },
+			{ name: "keywords", content: page.value?.meta.tags as string },
+		],
+	});
 </script>
