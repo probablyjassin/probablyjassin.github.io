@@ -3,7 +3,7 @@
 
 @layer base {
 	body {
-		@apply bg-(--background-100) text-(--text-900)-sans leading-relaxed;
+		@apply bg-[var(--background-100)] text-[var(--text-900)] font-sans leading-relaxed;
 		margin: 0;
 		padding: 0;
 		/* cursor: url("/wiicursor.png"), auto; */
@@ -15,7 +15,7 @@
 
 	header,
 	footer {
-		@apply bg-(--primary-500) text-(--text-50);
+		@apply bg-[var(--primary-500)] text-[var(--text-50)];
 	}
 
 	header {
@@ -32,7 +32,7 @@
 	h4,
 	h5,
 	h6 {
-		@apply text-(--text-900) font-bold;
+		@apply text-[var(--text-900)] font-bold;
 	}
 
 	h1 {
@@ -80,7 +80,7 @@
 	}
 
 	blockquote {
-		@apply border-l-4 border-(--primary-500) pl-4 italic mb-4;
+		@apply border-l-4 border-[var(--primary-500)] pl-4 italic mb-4;
 	}
 
 	ul {
@@ -100,7 +100,7 @@
 	}
 
 	code:not(pre code) {
-		@apply bg-(--background-200) text-(--text-800) px-1.5 py-0.5 rounded text-sm font-mono;
+		@apply bg-[var(--background-200)] text-[var(--text-800)] px-1.5 py-0.5 rounded text-sm font-mono;
 	}
 
 	pre:has(code) {
@@ -117,12 +117,12 @@
 
 	@media (prefers-color-scheme: dark) {
 		pre {
-			@apply bg-(--background-700) text-(--text-200);
+			@apply bg-[var(--background-700)] text-[var(--text-200)];
 		}
 
 		.copy-button {
-			@apply bg-(--background-600) text-(--text-300)
-			hover:bg-(--background-500) hover:text-(--text-100);
+			@apply bg-[var(--background-600)] text-[var(--text-300)]
+			hover:bg-[var(--background-500)] hover:text-[var(--text-100)];
 		}
 	}
 
@@ -136,31 +136,31 @@
 
 	th,
 	td {
-		@apply border border-(--text-300);
+		@apply border border-[var(--text-300)];
 	}
 
 	th {
-		@apply bg-(--primary-500) text-(--text-50);
+		@apply bg-[var(--primary-500)] text-[var(--text-50)];
 	}
 
 	hr {
-		@apply border-t border-(--text-300) my-8;
+		@apply border-t border-[var(--text-300)] my-8;
 	}
 
 	.bg-primary {
-		@apply bg-(--primary-500);
+		@apply bg-[var(--primary-500)];
 	}
 
 	.bg-secondary {
-		@apply bg-(--secondary-500);
+		@apply bg-[var(--secondary-500)];
 	}
 
 	.text-primary {
-		@apply text-(--primary-500);
+		@apply text-[var(--primary-500)];
 	}
 
 	.text-secondary {
-		@apply text-(--secondary-500);
+		@apply text-[var(--secondary-500)];
 	}
 }
 
