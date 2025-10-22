@@ -7,17 +7,17 @@
 				<NuxtPage />
 			</NuxtLayout>
 		</main>
-		<footer class="mt-auto p-6 bg-[var(--primary-100)]" style="background-color: var(--primary-100)">
+		<footer class="mt-auto p-6 bg-(--primary-100)" style="background-color: var(--primary-100)">
 			<div class="container mx-auto flex justify-between items-center">
 				<div class="flex items-center space-x-4">
 					<NuxtPicture src="images/blog-thumbnails/probablyjassin.webp" alt="Footer logo" class="h-10 w-10 rounded-full" />
-					<p class="text-[var(--text-900)]">© {{ new Date().getFullYear() }} <span class="whitespace-nowrap">Jässin</span></p>
+					<p class="text-(--text-900)">© {{ new Date().getFullYear() }} <span class="whitespace-nowrap">Jässin</span></p>
 				</div>
 				<div class="flex space-x-6">
-					<a title="github" href="https://github.com/probablyjassin" class="text-[var(--text-900)] hover:text-[var(--secondary-400)] transition-colors">
+					<a title="github" href="https://github.com/probablyjassin" class="text-(--text-900)r:text-[var(--secondary-400)] transition-colors">
 						<Icon name="line-md:github" class="w-6 h-6" />
 					</a>
-					<a title="email" href="mailto:jassin@aouani.de" class="text-[var(--text-900)] hover:text-[var(--secondary-400)] transition-colors">
+					<a title="email" href="mailto:jassin@aouani.de" class="text-(--text-900) hover:text-(--secondary-400) transition-colors">
 						<Icon name="line-md:email" class="w-6 h-6" />
 					</a>
 				</div>
