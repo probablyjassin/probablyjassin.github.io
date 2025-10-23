@@ -13,8 +13,9 @@ image: /images/blog-thumbnails/sap.webp
 
 ## Why it's so bad
 
-::span{style="display: flex;"}
-![campus-main.webp](/images/blog-images/campus-rant/campus-main.webp)![campus-netweaver-mobile.webp](/images/blog-images/campus-rant/campus-netweaver-mobile.webp)
+::span{style="display: flex; gap: 10px; align-items: flex-start;"}
+![campus-main.webp](/images/blog-images/campus-rant/campus-main.webp){style="max-width: 50%; height: auto;"}
+![campus-netweaver-mobile.webp](/images/blog-images/campus-rant/campus-netweaver-mobile.webp){style="max-width: 50%; height: auto;"}
 ::
 
 I would complain about the design, but I already have enough to complain about with the functionality, so let's skip this.
