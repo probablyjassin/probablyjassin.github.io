@@ -13,7 +13,9 @@ image: /images/blog-thumbnails/sap.webp
 
 ## Why it's so bad
 
+::span{style="display: flex;"}
 ![campus-main.webp](/images/blog-images/campus-rant/campus-main.webp)![campus-netweaver-mobile.webp](/images/blog-images/campus-rant/campus-netweaver-mobile.webp)
+::
 
 I would complain about the design, but I already have enough to complain about with the functionality, so let's skip this.
 
