@@ -4,6 +4,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxt/content", "@nuxt/ui", "@nuxt/image"],
   css: ["~/assets/css/main.css"],
+  experimental: {
+    viewTransition: true,
+  },
   app: {
     pageTransition: { name: "page", mode: "out-in" },
     layoutTransition: { name: "layout", mode: "out-in" },
