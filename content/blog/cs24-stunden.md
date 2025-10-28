@@ -97,7 +97,7 @@ stunden_map: dict[str, int] = {key: 0 for key in module_set}
 
 **Stunden je Modul im dritten Semester die man theoretisch schwänzen darf (alle Angaben ohne Gewähr lol):**
 
-- 5CS-ENG2F-10: 9
+- 5CS-ENG2F-10: 9 - hotfix: actually sind es nur 4 weilllll Kinizia (gg)
 - 5CS-MA3ST-10: 8
 - 5CS-TI2AD-10: 9
 - 5CS-UIDB-10: 13
