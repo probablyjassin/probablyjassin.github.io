@@ -1,5 +1,7 @@
 ---
 title: unlisted
+date: "28.10.2025"
+thumbnail: "/images/blog-images/cs24-stunden/aufmerksamkeit.webp"
 ---
 
 # Wie viele Stunden dürfen wir im dritten Semester schwänzen? (CS24-1)
@@ -62,6 +64,7 @@ Und jetzt können wir eine Map anlegen, durch die Stunden iterieren und einfach 
 
 Wenn wir von diesen Zahlen den floor (immer Abrunden, weil man ja MINDESTENS 70% braucht) von der Zahl \* 0.3:
 
+::code-with-copy-button
 ```js
 stunden_map: dict[str, int] = {key: 0 for key in module_set}
 
@@ -76,6 +79,7 @@ stunden_map: dict[str, int] = {key: 0 for key in module_set}
 
     print(schwänzbar_map)
 ```
+::
 
 ## Ergebnisse
 
