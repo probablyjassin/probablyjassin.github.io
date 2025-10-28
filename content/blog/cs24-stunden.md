@@ -1,12 +1,16 @@
 ---
 title: unlisted
-date: "28.10.2025"
-thumbnail: "/images/blog-images/cs24-stunden/aufmerksamkeit.webp"
+date: 28.10.2025
+thumbnail: /images/blog-images/cs24-stunden/aufmerksamkeit.webp
+description: Helluuu, die ominöse Zahl von 70% Anwesenheit lässt sich ja bekanntlich nie
+  wirklich ordentlich graspen, deswegen hab ich fix den Stundenplan
+  runtergeladen (6s load time für 150kb danke für nichts CampusKaputt) um
+  auszurechnen, wie viele Stunden wir eigentlich fehlen dürfen.
 ---
 
 # Wie viele Stunden dürfen wir im dritten Semester schwänzen? (CS24-1)
 
-Hellu, die ominöse Zahl von 70% Anwesenheit lässt sich ja bekanntlich nie wirklich ordentlich graspen, deswegen hab ich fix den Stundenplan runtergeladen (6s load time für 150kb danke für nichts CampusKaputt) um auszurechnen, wie viele Stunden wir eigentlich fehlen dürfen.
+> Helluuu, die ominöse Zahl von 70% Anwesenheit lässt sich ja bekanntlich nie wirklich ordentlich graspen, deswegen hab ich fix den Stundenplan runtergeladen (6s load time für 150kb danke für nichts CampusKaputt) um auszurechnen, wie viele Stunden wir eigentlich fehlen dürfen.
 
 Wenn dich der code nicht interessiert zwing ich dich nicht dazu den durchzulesen, du kannst auch gleich zu den [Ergebnissen](/blog/cs24-stunden#ergebnisse) springen.
 
