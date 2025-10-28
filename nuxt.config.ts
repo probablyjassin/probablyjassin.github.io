@@ -15,5 +15,22 @@ export default defineNuxtConfig({
     preview: {
       api: "https://api.nuxt.studio",
     },
+    build: {
+      markdown: {
+        highlight: {
+          theme: "github-dark",
+          langs: [
+            "vue",
+            "typescript",
+            "javascript",
+            "bash",
+            "python",
+            "json",
+            "yml",
+            "diff",
+          ],
+        },
+      },
+    },
   },
 });
