@@ -6,7 +6,7 @@ title: unlisted
 
 Hellu, die ominöse Zahl von 70% Anwesenheit lässt sich ja bekanntlich nie wirklich ordentlich graspen, deswegen hab ich fix den Stundenplan runtergeladen (6s load time für 150kb danke für nichts CampusKaputt) um auszurechnen, wie viele Stunden wir eigentlich fehlen dürfen.
 
-```js [main.py]
+```py [main.py]
 import json, math
 from dataclasses import dataclass
 
