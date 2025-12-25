@@ -1,5 +1,4 @@
-# Build stage
-FROM node:22 AS builder
+FROM node:22
 
 LABEL org.opencontainers.image.source="https://github.com/probablyjassin/probablyjassin.github.io"
 
@@ -10,12 +9,6 @@ RUN npm install
 
 COPY . .
 RUN npx nuxt build
-
-# Production stage
-FROM node:22
-
-WORKDIR /app
-COPY --from=builder /app/. ./
 
 EXPOSE 3000
 ENV NODE_ENV=production
