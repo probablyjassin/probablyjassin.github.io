@@ -14,7 +14,7 @@ export default defineNuxtConfig({
 	},
 	content: {
 		preview: {
-			api: "https://localhost:3000",
+			api: "https://jaess.in",
 		},
 		build: {
 			markdown: {
