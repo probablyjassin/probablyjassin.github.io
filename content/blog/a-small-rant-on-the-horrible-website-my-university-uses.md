@@ -1,8 +1,6 @@
 ---
 title: A small rant on the website my university uses
-description: As with most Schools and Universities (especially in Germany), my
-  Unis website is very old.  These are my biggest problems with their page, and
-  what I alternatives we found
+description: As with most Schools and Universities (especially in Germany), my Unis website is very old.  These are my biggest problems with their page, and what I alternatives we found
 date: 20.10.2025
 image: /images/blog-thumbnails/sap.webp
 ---
@@ -13,10 +11,7 @@ image: /images/blog-thumbnails/sap.webp
 
 ## Why it's so bad
 
-::span{style="display: flex; gap: 10px; align-items: flex-start;"}
-![campus-main.webp](/images/blog-images/campus-rant/campus-main.webp){style="max-width: 50%; height: auto;"}
-![campus-netweaver-mobile.webp](/images/blog-images/campus-rant/campus-netweaver-mobile.webp){style="max-width: 50%; height: auto;"}
-::
+[![campus-main.webp](/images/blog-images/campus-rant/campus-main.webp)![campus-netweaver-mobile.webp](/images/blog-images/campus-rant/campus-netweaver-mobile.webp)]{style="display: flex; gap: 10px; align-items: flex-start;"}
 
 I would complain about the design, but I already have enough to complain about with the functionality, so let's skip this.
 
