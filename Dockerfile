@@ -15,9 +15,7 @@ RUN npx nuxt build
 FROM node:20-slim
 
 WORKDIR /app
-COPY --from=builder /app/.output ./.output
-COPY --from=builder /app/.nuxt ./.nuxt
-COPY --from=builder /app/package*.json ./
+COPY --from=builder /app/. ./
 
 EXPOSE 3000
 ENV NODE_ENV=production
