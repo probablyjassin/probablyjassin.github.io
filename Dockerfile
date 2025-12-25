@@ -9,7 +9,7 @@ COPY package*.json ./
 RUN npm install
 
 COPY . .
-RUN npm run build
+RUN npx nuxt build
 
 # Production stage
 FROM node:22-slim
