@@ -1,5 +1,5 @@
 # Build stage
-FROM node:22-slim AS builder
+FROM node:20-slim AS builder
 
 LABEL org.opencontainers.image.source="https://github.com/probablyjassin/probablyjassin.github.io"
 
@@ -12,7 +12,7 @@ COPY . .
 RUN npx nuxt build
 
 # Production stage
-FROM node:22-slim
+FROM node:20-slim
 
 WORKDIR /app
 COPY --from=builder /app/.output ./.output
