@@ -11,7 +11,7 @@
 				<NuxtLink class="bg-transparent text-black no-underline" to="/">Go to home</NuxtLink>
 			</UButton>
 			<UButton class="text-2xl bg-primary-600 hover:bg-secondary-700 cursor-pointer">
-				<NuxtLink class="bg-transparent text-black no-underline" to="/">Check out all blog articles</NuxtLink>
+				<NuxtLink class="bg-transparent text-black no-underline" to="/blog">Check out all blog articles</NuxtLink>
 			</UButton>
 		</div>
 	</div>
