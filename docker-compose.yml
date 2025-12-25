@@ -5,5 +5,7 @@ services:
     restart: unless-stopped
     ports:
       - "3000:3000"
+    volumes:
+      - ./studio_data:/app/.data
     env_file:
       - .env
