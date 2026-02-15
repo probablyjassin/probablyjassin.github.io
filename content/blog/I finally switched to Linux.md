@@ -1,9 +1,9 @@
 ---
 title: I finally switched to Linux!
-description: For a long time now, it's been pretty obvious that we only use Windows because Microsoft got into the spot they are now early on and then managed to get us locked in on their operating system. The enshittification has gotten to a point where users are actively looking for alternatives now. I was -wanting- to make the switch to Linux for a long time, but just never mustered up the courage to daily drive it for long enough. Well now I finally did! Here are all the interesting bits and pieces to maybe help you upgrade to Linux as well!
+description: The enshittification of Windows has gotten to a point where users are actively looking for alternatives now. I was -wanting- to make the switch to Linux for a long time, but just never mustered up the courage to daily drive it for long enough. Until now!
 tags: docker, mail, email, self-host, mailserver
 date: 15.02.2026
-image: /images/blog-thumbnails/docker-mailserver.webp
+image: /images/blog-thumbnails/linux.webp
 ---
 
 # []{.group.relative.flex.items-center.min-w-0.focus-visible:outline-primary.cursor-pointer.text-primary.font-semibold.text-sm class="gap-1.5"}[I finally switched to Linux!]{.truncate}
@@ -14,7 +14,7 @@ image: /images/blog-thumbnails/docker-mailserver.webp
 
 The best and worst part about Linux, depending on who you ask. There are SO many choices and decisions to make.
 
-Windows just comes in this all-in-one package, that makes you completely forget how many different aspects there are to a fully functioning operating system. *\[Insert&#x20;**[Richard Stallman's rant](https://www.gnu.org/gnu/incorrect-quotation.en.html) about how "Linux" is just the kernel, not the operating system]*. You need a kernel, a shell, a desktop environment and of course all your apps.
+Windows just comes in this all-in-one package, that makes you completely forget how many different aspects there are to a fully functioning operating system. _\[Insert&#x20;\*\*[Richard Stallman's rant](https://www.gnu.org/gnu/incorrect-quotation.en.html) about how "Linux" is just the kernel, not the operating system]_. You need a kernel, a shell, a desktop environment and of course all your apps.
 
 The distro I ended up going with is CachyOS. It reads like it's very much optimized for performance and is widely supported. I heard lots of good things about it from various YouTubers recently, so I thought "let's go with that". 
 
