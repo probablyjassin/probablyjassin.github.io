@@ -25,6 +25,7 @@
 		"vue-router": "^4.5.1"
 	},
 	"devDependencies": {
+		"@iconify-json/line-md": "^1.2.14",
 		"shadcn-nuxt": "^2.3.1"
 	}
 }
