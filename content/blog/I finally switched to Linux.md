@@ -14,7 +14,7 @@ image: /images/blog-thumbnails/linux.webp
 
 The best and worst part about Linux, depending on who you ask. There are SO many choices and decisions to make.
 
-Windows just comes in this all-in-one package, that makes you completely forget how many different aspects there are to a fully functioning operating system. _\[Insert&#x20;\*\*[Richard Stallman's rant](https://www.gnu.org/gnu/incorrect-quotation.en.html) about how "Linux" is just the kernel, not the operating system]_. You need a kernel, a shell, a desktop environment and of course all your apps.
+Windows just comes in this all-in-one package, that makes you completely forget how many different aspects there are to a fully functioning operating system. _\[Insert&#x20;[Richard Stallman's rant](https://www.gnu.org/gnu/incorrect-quotation.en.html) about how "Linux" is just the kernel, not the operating system]_. You need a kernel, a shell, a desktop environment and of course all your apps.
 
 The distro I ended up going with is CachyOS. It reads like it's very much optimized for performance and is widely supported. I heard lots of good things about it from various YouTubers recently, so I thought "let's go with that". 
 
