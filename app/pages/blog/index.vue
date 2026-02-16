@@ -16,7 +16,7 @@
 							{{ post.title }}
 						</h2>
 						<div class="text-sm text-[var(--text-600)]">
-							{{ post.meta.date }}
+							{{ new Date(post.date as string).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })  }}
 						</div>
 						<div v-if="post.description" class="text-[var(--text-700)] mb-4">
 							{{ post.description }}
@@ -44,7 +44,8 @@ const { data: articles } = await useAsyncData("blogposts", () =>
 		.where("id", "NOT LIKE", "%.draft.md")
 		.where("title", "NOT LIKE", "Placeholder")
 		.where("title", "NOT LIKE", "%unlisted%")
-		.select("id", "meta", "path", "title", "description")
+		.select("id", "meta", "date", "path", "title", "description")
+		.order("date", "DESC")
 		.all()
 );
 

@@ -2,7 +2,7 @@
 title: I finally switched to Linux!
 description: The enshittification of Windows has gotten to a point where users are actively looking for alternatives now. I was -wanting- to make the switch to Linux for a long time, but just never mustered up the courage to daily drive it for long enough. Until now!
 tags: docker, mail, email, self-host, mailserver
-date: 15.02.2026
+date: "2026-02-15"
 image: /images/blog-thumbnails/linux.webp
 ---
 

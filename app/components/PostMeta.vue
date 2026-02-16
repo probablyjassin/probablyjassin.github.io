@@ -1,7 +1,7 @@
 <template>
 	<Suspense>
 		<template #default>
-			<p class="min-h-4 text-[var(--background-400)]">{{ page?.meta.date }} · {{ wordCount }} words</p>
+			<p class="min-h-4 text-[var(--background-400)]">{{new Date(page?.date as string).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })  }} · {{ wordCount }} words</p>
 		</template>
 		<template #fallback>
 			<div class="animate-pulse">
@@ -14,7 +14,7 @@
 <script setup lang="ts">
 	const route = useRoute();
 
-	const { data: page } = await useAsyncData(route.path + "|meta", () => queryCollection("blog").select("body", "meta").path(route.path).first());
+	const { data: page } = await useAsyncData(route.path + "|meta", () => queryCollection("blog").select("body", "meta", "date").path(route.path).first());
 
 	const wordCount = computed(() => {
 		if (!page.value?.body) return 0;

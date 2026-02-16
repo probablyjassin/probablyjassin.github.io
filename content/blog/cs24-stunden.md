@@ -1,6 +1,6 @@
 ---
 title: unlisted
-date: 28.10.2025
+date: 2025-10-28
 thumbnail: /images/blog-images/cs24-stunden/aufmerksamkeit.webp
 description:
   Helluuu, die ominöse Zahl von 70% Anwesenheit lässt sich ja bekanntlich nie

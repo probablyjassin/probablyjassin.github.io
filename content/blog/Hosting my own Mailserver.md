@@ -4,7 +4,7 @@ description: My domain provider for my other domain doesn't offer E-Mail. So I
   was wondering how I can self-host a mailserver on my own. It turned out to be
   a lot more of a pain than expected, but here is my process.
 tags: docker, mail, email, self-host, mailserver
-date: 26.11.2024
+date: "2024-11-26"
 image: /images/blog-thumbnails/docker-mailserver.webp
 ---
 
@@ -36,10 +36,12 @@ Funnily enough, that doesn't change that the IP adress range of mine is **blackl
 Actually running the server is as easy as getting the files, setting up the .env variables and running `docker compose up -d`.
 
 ::code-with-copy-button
+
 ```bash [get-docker-mailserver.sh]
 wget "${DMS_GITHUB_URL}/compose.yaml"
 wget "${DMS_GITHUB_URL}/mailserver.env"
 ```
+
 ::
 
 Now your server should be running! Use `docker exec -ti <CONTAINER NAME> setup` to check out all the commands you'll need for adding users and stuff like that.
