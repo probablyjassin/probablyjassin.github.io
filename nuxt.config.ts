@@ -3,7 +3,7 @@ export default defineNuxtConfig({
 	compatibilityDate: "2025-07-15",
 	devtools: { enabled: true },
 	ssr: true,
-	modules: ["@nuxt/content", "nuxt-studio", "@nuxt/ui", "@nuxt/image"],
+	modules: ["@nuxt/content", "@nuxt/ui", "@nuxt/image", "nuxt-studio"],
 	css: ["~/assets/css/main.css"],
 	experimental: {
 		viewTransition: true,
@@ -26,6 +26,7 @@ export default defineNuxtConfig({
 		},
 	},
 	studio: {
+		dev: false,
 		repository: {
 			provider: "github",
 			owner: "probablyjassin",
