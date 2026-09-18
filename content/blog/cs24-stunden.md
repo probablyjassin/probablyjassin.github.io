@@ -1,12 +1,12 @@
 ---
 title: unlisted
 date: 2025-10-28
-thumbnail: /images/blog-images/cs24-stunden/aufmerksamkeit.webp
 description:
   Helluuu, die ominöse Zahl von 70% Anwesenheit lässt sich ja bekanntlich nie
   wirklich ordentlich graspen, deswegen hab ich fix den Stundenplan
   runtergeladen (6s load time für 150kb danke für nichts CampusKaputt) um
   auszurechnen, wie viele Stunden wir eigentlich fehlen dürfen.
+thumbnail: /images/blog-images/cs24-stunden/aufmerksamkeit.webp
 ---
 
 # Wie viele Stunden dürfen wir im dritten Semester schwänzen? (CS24-1)
@@ -18,7 +18,6 @@ Wenn dich der code nicht interessiert zwing ich dich nicht dazu den durchzulesen
 Als erstes habe ich eine Klasse für die Stunden entries angelegt weill OOP oder so:
 
 ::code-with-copy-button
-
 ```python
 import json, math
 from dataclasses import dataclass
@@ -39,7 +38,6 @@ class Stunde:
     start: int
     title: str
 ```
-
 ::
 
 Als nächstes können wir den Stundenplan laden, die Dictionaries in unsere Klasse von gerade eben umwandeln, und im Anschluss die tatsächlichen Stunden rausfiltern.
@@ -47,7 +45,6 @@ Als nächstes können wir den Stundenplan laden, die Dictionaries in unsere Klas
 Dabei müssen wir nicht nur Prüfungen rausfiltern (weil die auch im Stundenplan stehen), sondern auch mit einem Zeitstempel nur nach den Vorlesungen im 3. Semester filtern (weil CampusKaputt sei dank sind natürlich alle Stunden bis zur aller ersten "Einführung in den Studiengang - Oktober 2024" dabei omfg).
 
 ::code-with-copy-button
-
 ```python
 with open("./stundenplan.json", encoding="utf-8") as file:
     data = json.load(file)
@@ -66,7 +63,6 @@ with open("./stundenplan.json", encoding="utf-8") as file:
     for stunde in semester_3_stunden:
         module_set.add(stunde.title)
 ```
-
 ::
 
 Und jetzt können wir eine Map anlegen, durch die Stunden iterieren und einfach zählen wieviele Stunden pro Modul im Plan stehen.
@@ -74,7 +70,6 @@ Und jetzt können wir eine Map anlegen, durch die Stunden iterieren und einfach 
 Wenn wir von diesen Zahlen den floor (immer Abrunden, weil man ja MINDESTENS 70% braucht) von der Zahl \* 0.3:
 
 ::code-with-copy-button
-
 ```python
 stunden_map: dict[str, int] = {key: 0 for key in module_set}
 
@@ -89,7 +84,6 @@ stunden_map: dict[str, int] = {key: 0 for key in module_set}
 
     print(schwänzbar_map)
 ```
-
 ::
 
 ## Ergebnisse
