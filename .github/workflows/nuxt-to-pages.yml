@@ -43,6 +43,8 @@ jobs:
 
       - name: Static HTML export with Nuxt
         run: npx nuxi generate
+        env:
+          NUXT_STUDIO_ENABLED: "false"
 
       - name: Create .nojekyll
         run: touch ./.output/.nojekyll && touch ./.output/public/.nojekyll
