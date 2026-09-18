@@ -1,14 +1,14 @@
 ---
 title: Can Fluxer replace Discord in 2026?
+description: Since Feburary of 2026, I've been closely paying attention to the potential discord alternatives out there, in hopes that one of them may become my replacement for discord. A selfhosted chat app where all my data is mine. These are my thoughts on Fluxer as of September 2026
 date: 2026-09-17
-description: Since Feburary of 2026 I've been closely paying attention to the potential discord alternatives out there, in hopes that I can try them out and pick one to become my new discord. Discord but all my data is mine, and I can self-host. This is my in-depth review of Fluxer as of September 2026
 tags: self-host, fluxer, docker, discord
 image: /images/blog-thumbnails/fluxer.webp
 ---
 
 # Can Fluxer replace Discord in 2026?
 
-> In Feburary 2026, Discord went all-in on being yet another anti-consumer palantir-partnered mass surveillance data harvester. Don't get me wrong, they already were, but moving your entire circle of friends over to a new chat app is incredibly hard. Discord openly announcing that they will soon partner with palantir (this part they've since paddled back on) conduct age verification checks by asking for a picture of your ID was a great trigger for me to finally make the push to invest time and effort into finding an alternative.
+> In Feburary 2026, Discord went all-in on being yet another anti-consumer palantir-partnered mass surveillance data harvester. Don't get me wrong, they already were, but moving your entire circle of friends over to a new chat app is incredibly hard. Discord openly announcing that they will soon partner with palantir to conduct age verification checks by asking for a picture of your ID (only to then leak 70,000 of those) was a great trigger for me to finally make the push to invest time and effort into finding an alternative.
 
 ![image](/images/blog-images/fluxer/proton-article.webp)
 
