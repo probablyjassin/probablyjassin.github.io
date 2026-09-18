@@ -17,7 +17,7 @@
 <script setup>
 const links = [
 	{ name: "Home", to: "/", linemdicon: "home" },
-	{ name: "Projects", to: "/projects", linemdicon: "document-code" },
+	/** { name: "Projects", to: "/projects", linemdicon: "document-code" }, **/
 	{ name: "Blog", to: "/blog", linemdicon: "text-box" },
 	{ name: "Github", to: "https://github.com/probablyjassin", linemdicon: "github-loop", href: true },
 ];
