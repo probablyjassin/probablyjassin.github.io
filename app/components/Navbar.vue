@@ -3,7 +3,7 @@
 		<ul class="flex justify-start text-center">
 			<template v-for="link in links" :key="link.name">
 				<li>
-					<NuxtLink :to="link.to" class="flex items-center group no-underline text-[var(--text-900)]">
+					<NuxtLink :to="link.to" class="flex items-center group no-underline text-[var(--text-900)]" @dblclick="navigateTo('/_studio')">
 						<Icon :name="`line-md:${link.linemdicon}`"
 							class="w-8 h-5 text-[var(--text-900)] group-hover:text-[var(--secondary-600)]" />
 						<span class="group-hover:text-[var(--secondary-600)]">{{ link.name }}</span>
