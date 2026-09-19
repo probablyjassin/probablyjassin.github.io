@@ -1,4 +1,5 @@
 ---
+title: probablyjassin | Coding and Blogging
 image: /blog-previews/probablyjassin.webp
 ---
 
