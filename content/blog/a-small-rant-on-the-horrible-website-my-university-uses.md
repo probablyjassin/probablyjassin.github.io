@@ -1,6 +1,6 @@
 ---
 title: A small rant on the website my university uses
-date: "2025-10-20"
+date: 2025-10-20
 description: As with most Schools and Universities (especially in Germany), my Unis website is very old.  These are my biggest problems with their page, and what I alternatives we found
 image: /images/blog-thumbnails/sap.webp
 ---
