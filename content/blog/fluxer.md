@@ -1,7 +1,7 @@
 ---
 title: Can Fluxer replace Discord in 2026?
-description: Since Feburary of 2026, I've been closely paying attention to the potential discord alternatives out there, in hopes that one of them may become my replacement for discord. A selfhosted chat app where all my data is mine. These are my thoughts on Fluxer as of September 2026
 date: 2026-09-17
+description: Since Feburary of 2026, I've been closely paying attention to the potential discord alternatives out there, in hopes that one of them may become my replacement for discord. A selfhosted chat app where all my data is mine. These are my thoughts on Fluxer as of September 2026
 tags: self-host, fluxer, docker, discord
 image: /images/blog-thumbnails/fluxer.webp
 ---
