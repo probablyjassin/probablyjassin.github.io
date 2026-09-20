@@ -1,7 +1,7 @@
 ---
 title: Can Fluxer replace Discord in 2026?
-date: 2026-09-17
 description: Since Feburary of 2026, I've been closely paying attention to the potential discord alternatives out there, in hopes that one of them may become my replacement for discord. A selfhosted chat app where all my data is mine. These are my thoughts on Fluxer as of September 2026
+date: 2026-09-17
 tags: self-host, fluxer, docker, discord
 image: /images/blog-thumbnails/fluxer.webp
 ---
@@ -24,7 +24,7 @@ I looked at a lot of chat apps that could potentially replace discord. There are
 
 Different apps exceed at different parts of this list, but it's hard to get all of them right. Matrix is the gold standard in terms of privacy. Fully End-To-End-Encrypted, self-hostable and federated. But the learning curve is a bit steep for non-technical people, and - depending on your client - not all the features are there. Apparently screenshare-audio (e.g. audio from the app that is being streamed or the entire desktop of the user) is the hardest excercise, because if any given alternative supports it, it usually seems to be struggling with it. Matrix **can** support it, but from what I saw, it may require workarounds to work at all, especially when using desktop clients instead of the web.
 
-For me, Spacebar, Stoat and Sharkord all fell into the category of "the broad idea is good, but I encountered a dealbreaker". For Stoat it was the lack of a docker-image for selfhosting (it seems to only support being installed directly onto the host), for Spacebar it was the fact that it's still very experimental and that the website was somewhat confusing. "Alright let's try this out. Spacebar explorer? What is this? I can't try it on the web right now? Hmm. Oh there is a lot of clients for it. Are any of these also for Android? What does the UI even look like? There is no pictures here". Sharkord gets an honorary mention. It's a pretty small project (1.5k stars on github at the time of writing) which offers a docker image to host a single-community service. I liked the UI, also quite discord-like. But the biggest headache was screensharing. And the lack of desktop and mobile clients and support for more than one community made it clear to me that I'm not the target audience for this project.
+For me, Spacebar, Stoat and Sharkord all fell into the category of "the broad idea is good, but I encountered a dealbreaker". For Stoat it was the fact that the sign-up was broken/overloaded from having too many new users when I wanted to try it out for the first time, and that the selfhosting-guide seemed very complicated to me at first glance (I completely missed that at the end of the install process you'd be using a docker image, it seemed like a systemd-install to me), for Spacebar it was the fact that it's still very experimental and that the website was somewhat confusing. "Alright let's try this out. Spacebar explorer? What is this? I can't try it on the web right now? Hmm. Oh there is a lot of clients for it. Are any of these also for Android? What does the UI even look like? There is no pictures here". Sharkord gets an honorary mention. It's a pretty small project (1.5k stars on github at the time of writing) which offers a docker image to host a single-community service. I liked the UI, also quite discord-like. But the biggest headache was screensharing. And the lack of desktop and mobile clients and support for more than one community made it clear to me that I'm not the target audience for this project.
 
 ## Fluxer it is!
 
